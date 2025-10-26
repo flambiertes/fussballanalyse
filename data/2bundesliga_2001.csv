@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2001,1,SpVgg Greuther Fürth,Rot-Weiß Oberhausen,2,2
+2001,1,MSV Duisburg,LR Ahlen,1,4
+2001,1,1. FC Saarbrücken,Waldhof Mannheim,1,3
+2001,1,Arminia Bielefeld,SV Babelsberg 03,0,1
+2001,1,Eintracht Frankfurt,SSV Reutlingen,3,1
+2001,1,SpVgg Unterhaching,VfL Bochum,0,2
+2001,1,Alemannia Aachen,1. FSV Mainz 05,0,2
+2001,1,Karlsruher SC,1. FC Schweinfurt 05,1,0
+2001,1,1. FC Union Berlin,Hannover 96,1,1
+2001,2,1. FC Schweinfurt 05,1. FC Saarbrücken,2,1
+2001,2,LR Ahlen,SpVgg Greuther Fürth,1,0
+2001,2,Rot-Weiß Oberhausen,1. FC Union Berlin,0,3
+2001,2,SSV Reutlingen,Arminia Bielefeld,2,3
+2001,2,VfL Bochum,Karlsruher SC,1,1
+2001,2,SV Babelsberg 03,MSV Duisburg,3,1
+2001,2,Hannover 96,Alemannia Aachen,3,0
+2001,2,1. FSV Mainz 05,SpVgg Unterhaching,2,0
+2001,2,Waldhof Mannheim,Eintracht Frankfurt,0,0
+2001,3,MSV Duisburg,SSV Reutlingen,3,3
+2001,3,Arminia Bielefeld,Waldhof Mannheim,5,0
+2001,3,VfL Bochum,1. FSV Mainz 05,2,1
+2001,3,Alemannia Aachen,Rot-Weiß Oberhausen,2,1
+2001,3,1. FC Union Berlin,LR Ahlen,5,0
+2001,3,SpVgg Unterhaching,Hannover 96,1,1
+2001,3,SpVgg Greuther Fürth,SV Babelsberg 03,1,0
+2001,3,Eintracht Frankfurt,1. FC Schweinfurt 05,2,0
+2001,3,Karlsruher SC,1. FC Saarbrücken,2,0
+2001,4,1. FC Schweinfurt 05,Arminia Bielefeld,1,0
+2001,4,SSV Reutlingen,SpVgg Greuther Fürth,0,1
+2001,4,Rot-Weiß Oberhausen,SpVgg Unterhaching,0,2
+2001,4,SV Babelsberg 03,1. FC Union Berlin,3,2
+2001,4,1. FC Saarbrücken,Eintracht Frankfurt,0,2
+2001,4,LR Ahlen,Alemannia Aachen,1,0
+2001,4,Hannover 96,VfL Bochum,2,0
+2001,4,1. FSV Mainz 05,Karlsruher SC,1,0
+2001,4,Waldhof Mannheim,MSV Duisburg,3,1
+2001,5,SpVgg Unterhaching,LR Ahlen,2,3
+2001,5,1. FC Union Berlin,SSV Reutlingen,5,0
+2001,5,1. FSV Mainz 05,Hannover 96,2,2
+2001,5,SpVgg Greuther Fürth,Waldhof Mannheim,3,1
+2001,5,MSV Duisburg,1. FC Schweinfurt 05,0,0
+2001,5,Alemannia Aachen,SV Babelsberg 03,2,2
+2001,5,Arminia Bielefeld,1. FC Saarbrücken,3,1
+2001,5,VfL Bochum,Rot-Weiß Oberhausen,3,3
+2001,5,Karlsruher SC,Eintracht Frankfurt,2,3
+2001,6,LR Ahlen,VfL Bochum,2,5
+2001,6,Rot-Weiß Oberhausen,1. FSV Mainz 05,1,3
+2001,6,1. FC Saarbrücken,MSV Duisburg,1,0
+2001,6,SSV Reutlingen,Alemannia Aachen,3,1
+2001,6,SV Babelsberg 03,SpVgg Unterhaching,1,4
+2001,6,1. FC Schweinfurt 05,SpVgg Greuther Fürth,0,0
+2001,6,Hannover 96,Karlsruher SC,5,0
+2001,6,Waldhof Mannheim,1. FC Union Berlin,1,1
+2001,6,Eintracht Frankfurt,Arminia Bielefeld,0,2
+2001,7,SpVgg Unterhaching,SSV Reutlingen,3,2
+2001,7,Hannover 96,Rot-Weiß Oberhausen,2,0
+2001,7,Karlsruher SC,Arminia Bielefeld,0,1
+2001,7,1. FSV Mainz 05,LR Ahlen,5,1
+2001,7,VfL Bochum,SV Babelsberg 03,4,1
+2001,7,Alemannia Aachen,Waldhof Mannheim,1,0
+2001,7,1. FC Union Berlin,1. FC Schweinfurt 05,3,0
+2001,7,SpVgg Greuther Fürth,1. FC Saarbrücken,3,1
+2001,7,MSV Duisburg,Eintracht Frankfurt,1,1
+2001,8,SSV Reutlingen,VfL Bochum,3,0
+2001,8,Rot-Weiß Oberhausen,Karlsruher SC,1,2
+2001,8,Arminia Bielefeld,MSV Duisburg,2,2
+2001,8,1. FC Schweinfurt 05,Alemannia Aachen,1,0
+2001,8,Waldhof Mannheim,SpVgg Unterhaching,0,1
+2001,8,SV Babelsberg 03,1. FSV Mainz 05,0,1
+2001,8,Eintracht Frankfurt,SpVgg Greuther Fürth,1,4
+2001,8,1. FC Saarbrücken,1. FC Union Berlin,2,3
+2001,8,LR Ahlen,Hannover 96,2,5
+2001,9,SpVgg Unterhaching,1. FC Schweinfurt 05,1,0
+2001,9,Alemannia Aachen,1. FC Saarbrücken,0,0
+2001,9,Karlsruher SC,MSV Duisburg,2,0
+2001,9,1. FC Union Berlin,Eintracht Frankfurt,0,4
+2001,9,Rot-Weiß Oberhausen,LR Ahlen,2,3
+2001,9,SpVgg Greuther Fürth,Arminia Bielefeld,0,1
+2001,9,Hannover 96,SV Babelsberg 03,6,1
+2001,9,1. FSV Mainz 05,SSV Reutlingen,2,1
+2001,9,VfL Bochum,Waldhof Mannheim,1,1
+2001,10,1. FC Schweinfurt 05,VfL Bochum,3,3
+2001,10,LR Ahlen,Karlsruher SC,4,1
+2001,10,Waldhof Mannheim,1. FSV Mainz 05,2,4
+2001,10,SSV Reutlingen,Hannover 96,2,2
+2001,10,SV Babelsberg 03,Rot-Weiß Oberhausen,0,2
+2001,10,MSV Duisburg,SpVgg Greuther Fürth,1,1
+2001,10,Eintracht Frankfurt,Alemannia Aachen,2,2
+2001,10,1. FC Saarbrücken,SpVgg Unterhaching,0,0
+2001,10,Arminia Bielefeld,1. FC Union Berlin,4,1
+2001,11,Alemannia Aachen,Arminia Bielefeld,3,2
+2001,11,1. FC Union Berlin,MSV Duisburg,0,1
+2001,11,1. FSV Mainz 05,1. FC Schweinfurt 05,4,1
+2001,11,Rot-Weiß Oberhausen,SSV Reutlingen,0,1
+2001,11,Karlsruher SC,SpVgg Greuther Fürth,4,2
+2001,11,SpVgg Unterhaching,Eintracht Frankfurt,0,1
+2001,11,LR Ahlen,SV Babelsberg 03,1,1
+2001,11,VfL Bochum,1. FC Saarbrücken,3,2
+2001,11,Hannover 96,Waldhof Mannheim,2,0
+2001,12,1. FC Schweinfurt 05,Hannover 96,1,4
+2001,12,MSV Duisburg,Alemannia Aachen,5,0
+2001,12,1. FC Saarbrücken,1. FSV Mainz 05,0,1
+2001,12,SV Babelsberg 03,Karlsruher SC,2,4
+2001,12,Arminia Bielefeld,SpVgg Unterhaching,2,0
+2001,12,SSV Reutlingen,LR Ahlen,3,2
+2001,12,SpVgg Greuther Fürth,1. FC Union Berlin,0,0
+2001,12,Waldhof Mannheim,Rot-Weiß Oberhausen,1,1
+2001,12,Eintracht Frankfurt,VfL Bochum,1,0
+2001,13,Alemannia Aachen,SpVgg Greuther Fürth,2,1
+2001,13,Hannover 96,1. FC Saarbrücken,0,0
+2001,13,Karlsruher SC,1. FC Union Berlin,1,1
+2001,13,Rot-Weiß Oberhausen,1. FC Schweinfurt 05,5,0
+2001,13,VfL Bochum,Arminia Bielefeld,0,0
+2001,13,SV Babelsberg 03,SSV Reutlingen,0,3
+2001,13,SpVgg Unterhaching,MSV Duisburg,0,1
+2001,13,LR Ahlen,Waldhof Mannheim,0,0
+2001,13,1. FSV Mainz 05,Eintracht Frankfurt,1,1
+2001,14,SpVgg Greuther Fürth,SpVgg Unterhaching,3,1
+2001,14,MSV Duisburg,VfL Bochum,0,1
+2001,14,Eintracht Frankfurt,Hannover 96,1,1
+2001,14,Arminia Bielefeld,1. FSV Mainz 05,0,1
+2001,14,1. FC Saarbrücken,Rot-Weiß Oberhausen,1,0
+2001,14,SSV Reutlingen,Karlsruher SC,1,0
+2001,14,1. FC Union Berlin,Alemannia Aachen,5,1
+2001,14,Waldhof Mannheim,SV Babelsberg 03,4,1
+2001,14,1. FC Schweinfurt 05,LR Ahlen,4,2
+2001,15,LR Ahlen,1. FC Saarbrücken,3,1
+2001,15,1. FSV Mainz 05,MSV Duisburg,4,4
+2001,15,VfL Bochum,SpVgg Greuther Fürth,1,1
+2001,15,Alemannia Aachen,Karlsruher SC,2,0
+2001,15,Waldhof Mannheim,SSV Reutlingen,1,0
+2001,15,SV Babelsberg 03,1. FC Schweinfurt 05,3,1
+2001,15,SpVgg Unterhaching,1. FC Union Berlin,2,1
+2001,15,Rot-Weiß Oberhausen,Eintracht Frankfurt,2,1
+2001,15,Hannover 96,Arminia Bielefeld,4,4
+2001,16,1. FC Union Berlin,VfL Bochum,1,0
+2001,16,MSV Duisburg,Hannover 96,2,6
+2001,16,Arminia Bielefeld,Rot-Weiß Oberhausen,3,1
+2001,16,SpVgg Greuther Fürth,1. FSV Mainz 05,3,2
+2001,16,Karlsruher SC,Waldhof Mannheim,1,2
+2001,16,1. FC Schweinfurt 05,SSV Reutlingen,2,1
+2001,16,Alemannia Aachen,SpVgg Unterhaching,3,1
+2001,16,Eintracht Frankfurt,LR Ahlen,1,2
+2001,16,1. FC Saarbrücken,SV Babelsberg 03,1,1
+2001,17,SpVgg Unterhaching,Karlsruher SC,0,0
+2001,17,LR Ahlen,Arminia Bielefeld,1,1
+2001,17,Rot-Weiß Oberhausen,MSV Duisburg,0,2
+2001,17,SV Babelsberg 03,Eintracht Frankfurt,1,3
+2001,17,SSV Reutlingen,1. FC Saarbrücken,3,0
+2001,17,Hannover 96,SpVgg Greuther Fürth,3,1
+2001,17,1. FSV Mainz 05,1. FC Union Berlin,1,0
+2001,17,VfL Bochum,Alemannia Aachen,5,3
+2001,17,Waldhof Mannheim,1. FC Schweinfurt 05,2,0
+2001,18,SV Babelsberg 03,Arminia Bielefeld,0,2
+2001,18,LR Ahlen,MSV Duisburg,2,2
+2001,18,SSV Reutlingen,Eintracht Frankfurt,2,1
+2001,18,VfL Bochum,SpVgg Unterhaching,4,0
+2001,18,1. FSV Mainz 05,Alemannia Aachen,0,1
+2001,18,Rot-Weiß Oberhausen,SpVgg Greuther Fürth,1,2
+2001,18,Waldhof Mannheim,1. FC Saarbrücken,4,0
+2001,18,1. FC Schweinfurt 05,Karlsruher SC,1,1
+2001,18,Hannover 96,1. FC Union Berlin,3,2
+2001,19,MSV Duisburg,SV Babelsberg 03,4,1
+2001,19,1. FC Union Berlin,Rot-Weiß Oberhausen,3,1
+2001,19,Karlsruher SC,VfL Bochum,4,1
+2001,19,Arminia Bielefeld,SSV Reutlingen,1,1
+2001,19,SpVgg Greuther Fürth,LR Ahlen,3,2
+2001,19,1. FC Saarbrücken,1. FC Schweinfurt 05,2,1
+2001,19,Alemannia Aachen,Hannover 96,2,4
+2001,19,Eintracht Frankfurt,Waldhof Mannheim,2,2
+2001,19,SpVgg Unterhaching,1. FSV Mainz 05,0,0
+2001,20,SSV Reutlingen,MSV Duisburg,0,1
+2001,20,1. FC Schweinfurt 05,Eintracht Frankfurt,0,1
+2001,20,1. FC Saarbrücken,Karlsruher SC,1,1
+2001,20,SV Babelsberg 03,SpVgg Greuther Fürth,1,5
+2001,20,Waldhof Mannheim,Arminia Bielefeld,1,1
+2001,20,Hannover 96,SpVgg Unterhaching,1,0
+2001,20,Rot-Weiß Oberhausen,Alemannia Aachen,4,0
+2001,20,LR Ahlen,1. FC Union Berlin,2,2
+2001,20,1. FSV Mainz 05,VfL Bochum,1,1
+2001,21,Arminia Bielefeld,1. FC Schweinfurt 05,2,1
+2001,21,SpVgg Greuther Fürth,SSV Reutlingen,4,1
+2001,21,Eintracht Frankfurt,1. FC Saarbrücken,2,2
+2001,21,MSV Duisburg,Waldhof Mannheim,3,1
+2001,21,Alemannia Aachen,LR Ahlen,1,2
+2001,21,SpVgg Unterhaching,Rot-Weiß Oberhausen,1,1
+2001,21,VfL Bochum,Hannover 96,4,2
+2001,21,Karlsruher SC,1. FSV Mainz 05,1,4
+2001,21,1. FC Union Berlin,SV Babelsberg 03,2,0
+2001,22,Waldhof Mannheim,SpVgg Greuther Fürth,1,4
+2001,22,1. FC Schweinfurt 05,MSV Duisburg,2,2
+2001,22,1. FC Saarbrücken,Arminia Bielefeld,0,2
+2001,22,LR Ahlen,SpVgg Unterhaching,2,0
+2001,22,Eintracht Frankfurt,Karlsruher SC,3,1
+2001,22,SV Babelsberg 03,Alemannia Aachen,0,2
+2001,22,SSV Reutlingen,1. FC Union Berlin,1,2
+2001,22,Rot-Weiß Oberhausen,VfL Bochum,6,1
+2001,22,Hannover 96,1. FSV Mainz 05,2,0
+2001,23,SpVgg Greuther Fürth,1. FC Schweinfurt 05,2,0
+2001,23,SpVgg Unterhaching,SV Babelsberg 03,3,1
+2001,23,1. FC Union Berlin,Waldhof Mannheim,2,0
+2001,23,Alemannia Aachen,SSV Reutlingen,1,1
+2001,23,1. FSV Mainz 05,Rot-Weiß Oberhausen,3,3
+2001,23,VfL Bochum,LR Ahlen,3,1
+2001,23,Karlsruher SC,Hannover 96,1,2
+2001,23,MSV Duisburg,1. FC Saarbrücken,5,0
+2001,23,Arminia Bielefeld,Eintracht Frankfurt,4,1
+2001,24,Waldhof Mannheim,Alemannia Aachen,3,1
+2001,24,1. FC Saarbrücken,SpVgg Greuther Fürth,0,3
+2001,24,1. FC Schweinfurt 05,1. FC Union Berlin,0,1
+2001,24,Arminia Bielefeld,Karlsruher SC,1,1
+2001,24,SV Babelsberg 03,VfL Bochum,1,2
+2001,24,SSV Reutlingen,SpVgg Unterhaching,1,1
+2001,24,Eintracht Frankfurt,MSV Duisburg,2,0
+2001,24,LR Ahlen,1. FSV Mainz 05,1,4
+2001,24,Rot-Weiß Oberhausen,Hannover 96,0,0
+2001,25,1. FSV Mainz 05,SV Babelsberg 03,2,2
+2001,25,MSV Duisburg,Arminia Bielefeld,2,1
+2001,25,1. FC Union Berlin,1. FC Saarbrücken,3,0
+2001,25,Alemannia Aachen,1. FC Schweinfurt 05,1,0
+2001,25,Karlsruher SC,Rot-Weiß Oberhausen,0,1
+2001,25,SpVgg Greuther Fürth,Eintracht Frankfurt,1,1
+2001,25,SpVgg Unterhaching,Waldhof Mannheim,0,0
+2001,25,Hannover 96,LR Ahlen,3,1
+2001,25,VfL Bochum,SSV Reutlingen,3,1
+2001,26,1. FC Schweinfurt 05,SpVgg Unterhaching,3,1
+2001,26,Waldhof Mannheim,VfL Bochum,1,2
+2001,26,MSV Duisburg,Karlsruher SC,2,0
+2001,26,SV Babelsberg 03,Hannover 96,1,3
+2001,26,SSV Reutlingen,1. FSV Mainz 05,2,0
+2001,26,1. FC Saarbrücken,Alemannia Aachen,2,1
+2001,26,Eintracht Frankfurt,1. FC Union Berlin,2,2
+2001,26,LR Ahlen,Rot-Weiß Oberhausen,2,1
+2001,26,Arminia Bielefeld,SpVgg Greuther Fürth,3,2
+2001,27,VfL Bochum,1. FC Schweinfurt 05,3,1
+2001,27,Hannover 96,SSV Reutlingen,4,0
+2001,27,Alemannia Aachen,Eintracht Frankfurt,2,1
+2001,27,Karlsruher SC,LR Ahlen,2,2
+2001,27,SpVgg Unterhaching,1. FC Saarbrücken,8,0
+2001,27,Rot-Weiß Oberhausen,SV Babelsberg 03,2,1
+2001,27,SpVgg Greuther Fürth,MSV Duisburg,2,1
+2001,27,1. FC Union Berlin,Arminia Bielefeld,2,1
+2001,27,1. FSV Mainz 05,Waldhof Mannheim,3,0
+2001,28,Arminia Bielefeld,Alemannia Aachen,4,1
+2001,28,1. FC Schweinfurt 05,1. FSV Mainz 05,0,3
+2001,28,SpVgg Greuther Fürth,Karlsruher SC,1,1
+2001,28,Eintracht Frankfurt,SpVgg Unterhaching,3,2
+2001,28,SV Babelsberg 03,LR Ahlen,1,2
+2001,28,MSV Duisburg,1. FC Union Berlin,1,1
+2001,28,SSV Reutlingen,Rot-Weiß Oberhausen,0,2
+2001,28,1. FC Saarbrücken,VfL Bochum,0,2
+2001,28,Waldhof Mannheim,Hannover 96,0,1
+2001,29,1. FC Union Berlin,SpVgg Greuther Fürth,0,0
+2001,29,Alemannia Aachen,MSV Duisburg,2,1
+2001,29,1. FSV Mainz 05,1. FC Saarbrücken,2,1
+2001,29,Hannover 96,1. FC Schweinfurt 05,6,0
+2001,29,Karlsruher SC,SV Babelsberg 03,2,1
+2001,29,LR Ahlen,SSV Reutlingen,1,2
+2001,29,SpVgg Unterhaching,Arminia Bielefeld,1,3
+2001,29,Rot-Weiß Oberhausen,Waldhof Mannheim,1,1
+2001,29,VfL Bochum,Eintracht Frankfurt,3,0
+2001,30,1. FC Schweinfurt 05,Rot-Weiß Oberhausen,0,3
+2001,30,1. FC Saarbrücken,Hannover 96,1,1
+2001,30,1. FC Union Berlin,Karlsruher SC,1,3
+2001,30,SpVgg Greuther Fürth,Alemannia Aachen,3,0
+2001,30,Waldhof Mannheim,LR Ahlen,2,0
+2001,30,MSV Duisburg,SpVgg Unterhaching,4,0
+2001,30,SSV Reutlingen,SV Babelsberg 03,3,2
+2001,30,Arminia Bielefeld,VfL Bochum,3,0
+2001,30,Eintracht Frankfurt,1. FSV Mainz 05,0,0
+2001,31,Karlsruher SC,SSV Reutlingen,1,0
+2001,31,VfL Bochum,MSV Duisburg,3,0
+2001,31,SV Babelsberg 03,Waldhof Mannheim,1,2
+2001,31,LR Ahlen,1. FC Schweinfurt 05,3,1
+2001,31,Hannover 96,Eintracht Frankfurt,1,2
+2001,31,Alemannia Aachen,1. FC Union Berlin,1,2
+2001,31,SpVgg Unterhaching,SpVgg Greuther Fürth,1,1
+2001,31,Rot-Weiß Oberhausen,1. FC Saarbrücken,2,1
+2001,31,1. FSV Mainz 05,Arminia Bielefeld,4,1
+2001,32,1. FC Union Berlin,SpVgg Unterhaching,0,2
+2001,32,Eintracht Frankfurt,Rot-Weiß Oberhausen,2,2
+2001,32,SpVgg Greuther Fürth,VfL Bochum,1,1
+2001,32,Karlsruher SC,Alemannia Aachen,1,2
+2001,32,1. FC Schweinfurt 05,SV Babelsberg 03,3,3
+2001,32,1. FC Saarbrücken,LR Ahlen,2,4
+2001,32,MSV Duisburg,1. FSV Mainz 05,1,1
+2001,32,SSV Reutlingen,Waldhof Mannheim,3,0
+2001,32,Arminia Bielefeld,Hannover 96,3,2
+2001,33,SSV Reutlingen,1. FC Schweinfurt 05,3,1
+2001,33,SpVgg Unterhaching,Alemannia Aachen,2,0
+2001,33,VfL Bochum,1. FC Union Berlin,2,1
+2001,33,1. FSV Mainz 05,SpVgg Greuther Fürth,1,1
+2001,33,Hannover 96,MSV Duisburg,4,1
+2001,33,Rot-Weiß Oberhausen,Arminia Bielefeld,0,0
+2001,33,LR Ahlen,Eintracht Frankfurt,0,1
+2001,33,SV Babelsberg 03,1. FC Saarbrücken,1,2
+2001,33,Waldhof Mannheim,Karlsruher SC,2,1
+2001,34,Karlsruher SC,SpVgg Unterhaching,3,0
+2001,34,1. FC Saarbrücken,SSV Reutlingen,4,3
+2001,34,Eintracht Frankfurt,SV Babelsberg 03,1,1
+2001,34,Arminia Bielefeld,LR Ahlen,3,1
+2001,34,MSV Duisburg,Rot-Weiß Oberhausen,1,4
+2001,34,SpVgg Greuther Fürth,Hannover 96,1,5
+2001,34,1. FC Union Berlin,1. FSV Mainz 05,3,1
+2001,34,Alemannia Aachen,VfL Bochum,1,3
+2001,34,1. FC Schweinfurt 05,Waldhof Mannheim,0,1

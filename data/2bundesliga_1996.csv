@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+1996,1,Fortuna Köln,VfL Wolfsburg,2,0
+1996,1,Hertha BSC,1. FSV Mainz 05,1,0
+1996,1,VfB Leipzig,KFC Uerdingen 05,3,1
+1996,1,Rot-Weiss Essen,Stuttgarter Kickers,0,4
+1996,1,FSV Zwickau,Waldhof Mannheim,2,0
+1996,1,VfB Oldenburg,SV Meppen,1,1
+1996,1,VfB Lübeck,Eintracht Frankfurt,1,1
+1996,1,FC Gütersloh,FC Carl Zeiss Jena,0,0
+1996,1,1. FC Kaiserslautern,SpVgg Unterhaching,0,0
+1996,2,1. FSV Mainz 05,VfB Leipzig,2,1
+1996,2,SV Meppen,VfB Lübeck,2,0
+1996,2,Waldhof Mannheim,Fortuna Köln,3,3
+1996,2,Eintracht Frankfurt,FSV Zwickau,2,1
+1996,2,Stuttgarter Kickers,1. FC Kaiserslautern,0,2
+1996,2,FC Carl Zeiss Jena,Rot-Weiss Essen,4,0
+1996,2,KFC Uerdingen 05,FC Gütersloh,0,2
+1996,2,SpVgg Unterhaching,VfB Oldenburg,1,1
+1996,2,VfL Wolfsburg,Hertha BSC,1,1
+1996,3,Fortuna Köln,Hertha BSC,2,0
+1996,3,1. FC Kaiserslautern,FC Carl Zeiss Jena,2,0
+1996,3,FSV Zwickau,SV Meppen,1,1
+1996,3,VfB Leipzig,VfL Wolfsburg,0,2
+1996,3,Rot-Weiss Essen,KFC Uerdingen 05,1,2
+1996,3,VfB Oldenburg,Stuttgarter Kickers,1,1
+1996,3,VfB Lübeck,SpVgg Unterhaching,0,0
+1996,3,FC Gütersloh,1. FSV Mainz 05,0,0
+1996,3,Waldhof Mannheim,Eintracht Frankfurt,1,2
+1996,4,1. FSV Mainz 05,Rot-Weiss Essen,2,1
+1996,4,SpVgg Unterhaching,FSV Zwickau,2,1
+1996,4,VfL Wolfsburg,FC Gütersloh,3,0
+1996,4,SV Meppen,Waldhof Mannheim,1,1
+1996,4,Eintracht Frankfurt,Fortuna Köln,3,1
+1996,4,Stuttgarter Kickers,VfB Lübeck,2,3
+1996,4,FC Carl Zeiss Jena,VfB Oldenburg,3,1
+1996,4,KFC Uerdingen 05,1. FC Kaiserslautern,0,1
+1996,4,Hertha BSC,VfB Leipzig,1,1
+1996,5,1. FC Kaiserslautern,1. FSV Mainz 05,1,1
+1996,5,Rot-Weiss Essen,VfL Wolfsburg,0,1
+1996,5,Waldhof Mannheim,SpVgg Unterhaching,1,1
+1996,5,Fortuna Köln,VfB Leipzig,2,3
+1996,5,FC Gütersloh,Hertha BSC,1,0
+1996,5,VfB Oldenburg,KFC Uerdingen 05,1,2
+1996,5,VfB Lübeck,FC Carl Zeiss Jena,1,0
+1996,5,Eintracht Frankfurt,SV Meppen,0,1
+1996,5,FSV Zwickau,Stuttgarter Kickers,0,1
+1996,6,1. FSV Mainz 05,VfB Oldenburg,3,0
+1996,6,Stuttgarter Kickers,Waldhof Mannheim,2,1
+1996,6,VfB Leipzig,FC Gütersloh,3,1
+1996,6,KFC Uerdingen 05,VfB Lübeck,5,0
+1996,6,Hertha BSC,Rot-Weiss Essen,7,3
+1996,6,SpVgg Unterhaching,Eintracht Frankfurt,2,1
+1996,6,FC Carl Zeiss Jena,FSV Zwickau,2,1
+1996,6,SV Meppen,Fortuna Köln,0,3
+1996,6,VfL Wolfsburg,1. FC Kaiserslautern,0,0
+1996,7,VfB Lübeck,1. FSV Mainz 05,0,2
+1996,7,1. FC Kaiserslautern,Hertha BSC,0,0
+1996,7,Fortuna Köln,FC Gütersloh,3,0
+1996,7,Waldhof Mannheim,FC Carl Zeiss Jena,4,0
+1996,7,Eintracht Frankfurt,Stuttgarter Kickers,0,1
+1996,7,FSV Zwickau,KFC Uerdingen 05,2,1
+1996,7,SV Meppen,SpVgg Unterhaching,1,1
+1996,7,VfB Oldenburg,VfL Wolfsburg,1,4
+1996,7,Rot-Weiss Essen,VfB Leipzig,4,1
+1996,8,KFC Uerdingen 05,Waldhof Mannheim,4,1
+1996,8,VfL Wolfsburg,VfB Lübeck,0,0
+1996,8,Stuttgarter Kickers,SV Meppen,0,0
+1996,8,1. FSV Mainz 05,FSV Zwickau,1,1
+1996,8,VfB Leipzig,1. FC Kaiserslautern,2,2
+1996,8,SpVgg Unterhaching,Fortuna Köln,0,0
+1996,8,FC Gütersloh,Rot-Weiss Essen,2,3
+1996,8,FC Carl Zeiss Jena,Eintracht Frankfurt,1,1
+1996,8,Hertha BSC,VfB Oldenburg,1,0
+1996,9,VfB Oldenburg,VfB Leipzig,4,1
+1996,9,Eintracht Frankfurt,KFC Uerdingen 05,0,1
+1996,9,Fortuna Köln,Rot-Weiss Essen,1,1
+1996,9,VfB Lübeck,Hertha BSC,1,4
+1996,9,1. FC Kaiserslautern,FC Gütersloh,2,0
+1996,9,FSV Zwickau,VfL Wolfsburg,0,0
+1996,9,SpVgg Unterhaching,Stuttgarter Kickers,1,1
+1996,9,Waldhof Mannheim,1. FSV Mainz 05,2,2
+1996,9,SV Meppen,FC Carl Zeiss Jena,0,0
+1996,10,Rot-Weiss Essen,1. FC Kaiserslautern,1,4
+1996,10,VfL Wolfsburg,Waldhof Mannheim,1,1
+1996,10,FC Carl Zeiss Jena,SpVgg Unterhaching,1,1
+1996,10,KFC Uerdingen 05,SV Meppen,0,0
+1996,10,Stuttgarter Kickers,Fortuna Köln,3,1
+1996,10,Hertha BSC,FSV Zwickau,1,0
+1996,10,VfB Leipzig,VfB Lübeck,0,0
+1996,10,FC Gütersloh,VfB Oldenburg,1,0
+1996,10,1. FSV Mainz 05,Eintracht Frankfurt,2,2
+1996,11,Waldhof Mannheim,Hertha BSC,2,1
+1996,11,SV Meppen,1. FSV Mainz 05,5,4
+1996,11,Eintracht Frankfurt,VfL Wolfsburg,1,1
+1996,11,SpVgg Unterhaching,KFC Uerdingen 05,0,0
+1996,11,Stuttgarter Kickers,FC Carl Zeiss Jena,1,2
+1996,11,VfB Oldenburg,Rot-Weiss Essen,2,1
+1996,11,VfB Lübeck,FC Gütersloh,2,3
+1996,11,FSV Zwickau,VfB Leipzig,1,2
+1996,11,Fortuna Köln,1. FC Kaiserslautern,0,0
+1996,12,Rot-Weiss Essen,VfB Lübeck,2,0
+1996,12,FC Carl Zeiss Jena,Fortuna Köln,1,1
+1996,12,KFC Uerdingen 05,Stuttgarter Kickers,3,1
+1996,12,1. FC Kaiserslautern,VfB Oldenburg,6,2
+1996,12,1. FSV Mainz 05,SpVgg Unterhaching,0,0
+1996,12,VfB Leipzig,Waldhof Mannheim,6,1
+1996,12,VfL Wolfsburg,SV Meppen,3,1
+1996,12,FC Gütersloh,FSV Zwickau,3,1
+1996,12,Hertha BSC,Eintracht Frankfurt,1,2
+1996,13,Fortuna Köln,VfB Oldenburg,7,1
+1996,13,FC Carl Zeiss Jena,KFC Uerdingen 05,2,2
+1996,13,Stuttgarter Kickers,1. FSV Mainz 05,2,1
+1996,13,Eintracht Frankfurt,VfB Leipzig,2,3
+1996,13,VfB Lübeck,1. FC Kaiserslautern,0,2
+1996,13,FSV Zwickau,Rot-Weiss Essen,2,1
+1996,13,SV Meppen,Hertha BSC,1,1
+1996,13,Waldhof Mannheim,FC Gütersloh,1,0
+1996,13,SpVgg Unterhaching,VfL Wolfsburg,1,0
+1996,14,Hertha BSC,SpVgg Unterhaching,3,0
+1996,14,VfL Wolfsburg,Stuttgarter Kickers,0,0
+1996,14,1. FC Kaiserslautern,FSV Zwickau,4,1
+1996,14,1. FSV Mainz 05,FC Carl Zeiss Jena,3,2
+1996,14,VfB Leipzig,SV Meppen,1,3
+1996,14,FC Gütersloh,Eintracht Frankfurt,3,1
+1996,14,VfB Oldenburg,VfB Lübeck,1,1
+1996,14,Rot-Weiss Essen,Waldhof Mannheim,2,1
+1996,14,KFC Uerdingen 05,Fortuna Köln,1,2
+1996,15,Eintracht Frankfurt,Rot-Weiss Essen,3,0
+1996,15,FC Carl Zeiss Jena,VfL Wolfsburg,3,3
+1996,15,FSV Zwickau,VfB Oldenburg,1,0
+1996,15,Waldhof Mannheim,1. FC Kaiserslautern,2,0
+1996,15,Stuttgarter Kickers,Hertha BSC,1,2
+1996,15,VfB Lübeck,Fortuna Köln,1,1
+1996,15,SpVgg Unterhaching,VfB Leipzig,1,1
+1996,15,SV Meppen,FC Gütersloh,2,0
+1996,15,1. FSV Mainz 05,KFC Uerdingen 05,3,1
+1996,16,Rot-Weiss Essen,SV Meppen,2,1
+1996,16,VfL Wolfsburg,KFC Uerdingen 05,1,0
+1996,16,VfB Leipzig,Stuttgarter Kickers,0,0
+1996,16,Hertha BSC,FC Carl Zeiss Jena,0,1
+1996,16,FC Gütersloh,SpVgg Unterhaching,1,1
+1996,16,VfB Lübeck,FSV Zwickau,1,1
+1996,16,Fortuna Köln,1. FSV Mainz 05,1,3
+1996,16,1. FC Kaiserslautern,Eintracht Frankfurt,5,0
+1996,16,VfB Oldenburg,Waldhof Mannheim,1,0
+1996,17,1. FSV Mainz 05,VfL Wolfsburg,0,0
+1996,17,FC Carl Zeiss Jena,VfB Leipzig,0,0
+1996,17,FSV Zwickau,Fortuna Köln,2,0
+1996,17,Eintracht Frankfurt,VfB Oldenburg,2,3
+1996,17,Stuttgarter Kickers,FC Gütersloh,1,1
+1996,17,Waldhof Mannheim,VfB Lübeck,3,1
+1996,17,SpVgg Unterhaching,Rot-Weiss Essen,2,0
+1996,17,SV Meppen,1. FC Kaiserslautern,2,1
+1996,17,KFC Uerdingen 05,Hertha BSC,2,3
+1996,18,KFC Uerdingen 05,VfB Leipzig,5,0
+1996,18,SpVgg Unterhaching,1. FC Kaiserslautern,0,0
+1996,18,VfL Wolfsburg,Fortuna Köln,2,1
+1996,18,Waldhof Mannheim,FSV Zwickau,4,0
+1996,18,Stuttgarter Kickers,Rot-Weiss Essen,1,1
+1996,18,SV Meppen,VfB Oldenburg,2,1
+1996,18,Eintracht Frankfurt,VfB Lübeck,3,0
+1996,18,FC Carl Zeiss Jena,FC Gütersloh,2,5
+1996,18,1. FSV Mainz 05,Hertha BSC,0,1
+1996,19,Fortuna Köln,Waldhof Mannheim,4,0
+1996,19,Rot-Weiss Essen,FC Carl Zeiss Jena,0,2
+1996,19,VfB Leipzig,1. FSV Mainz 05,3,0
+1996,19,1. FC Kaiserslautern,Stuttgarter Kickers,2,0
+1996,19,FSV Zwickau,Eintracht Frankfurt,1,0
+1996,19,VfB Oldenburg,SpVgg Unterhaching,1,3
+1996,19,FC Gütersloh,KFC Uerdingen 05,1,1
+1996,19,VfB Lübeck,SV Meppen,4,1
+1996,19,Hertha BSC,VfL Wolfsburg,1,0
+1996,20,1. FSV Mainz 05,FC Gütersloh,3,0
+1996,20,FC Carl Zeiss Jena,1. FC Kaiserslautern,2,2
+1996,20,Hertha BSC,Fortuna Köln,4,2
+1996,20,Stuttgarter Kickers,VfB Oldenburg,5,0
+1996,20,SV Meppen,FSV Zwickau,3,0
+1996,20,SpVgg Unterhaching,VfB Lübeck,0,0
+1996,20,KFC Uerdingen 05,Rot-Weiss Essen,1,0
+1996,20,Eintracht Frankfurt,Waldhof Mannheim,1,0
+1996,20,VfL Wolfsburg,VfB Leipzig,2,0
+1996,21,Rot-Weiss Essen,1. FSV Mainz 05,0,2
+1996,21,Fortuna Köln,Eintracht Frankfurt,0,0
+1996,21,FSV Zwickau,SpVgg Unterhaching,0,2
+1996,21,Waldhof Mannheim,SV Meppen,1,0
+1996,21,VfB Lübeck,Stuttgarter Kickers,1,0
+1996,21,VfB Leipzig,Hertha BSC,0,3
+1996,21,VfB Oldenburg,FC Carl Zeiss Jena,1,0
+1996,21,FC Gütersloh,VfL Wolfsburg,1,1
+1996,21,1. FC Kaiserslautern,KFC Uerdingen 05,3,1
+1996,22,KFC Uerdingen 05,VfB Oldenburg,1,0
+1996,22,FC Carl Zeiss Jena,VfB Lübeck,1,1
+1996,22,Stuttgarter Kickers,FSV Zwickau,1,0
+1996,22,Hertha BSC,FC Gütersloh,5,2
+1996,22,SpVgg Unterhaching,Waldhof Mannheim,2,1
+1996,22,VfB Leipzig,Fortuna Köln,4,1
+1996,22,SV Meppen,Eintracht Frankfurt,1,1
+1996,22,VfL Wolfsburg,Rot-Weiss Essen,5,1
+1996,22,1. FSV Mainz 05,1. FC Kaiserslautern,0,0
+1996,23,Fortuna Köln,SV Meppen,0,0
+1996,23,Waldhof Mannheim,Stuttgarter Kickers,0,1
+1996,23,Rot-Weiss Essen,Hertha BSC,2,1
+1996,23,1. FC Kaiserslautern,VfL Wolfsburg,4,0
+1996,23,VfB Lübeck,KFC Uerdingen 05,2,0
+1996,23,VfB Oldenburg,1. FSV Mainz 05,1,1
+1996,23,FC Gütersloh,VfB Leipzig,2,0
+1996,23,FSV Zwickau,FC Carl Zeiss Jena,1,0
+1996,23,Eintracht Frankfurt,SpVgg Unterhaching,1,0
+1996,24,FC Carl Zeiss Jena,Waldhof Mannheim,1,1
+1996,24,1. FSV Mainz 05,VfB Lübeck,1,1
+1996,24,FC Gütersloh,Fortuna Köln,1,0
+1996,24,Stuttgarter Kickers,Eintracht Frankfurt,0,0
+1996,24,KFC Uerdingen 05,FSV Zwickau,3,0
+1996,24,VfB Leipzig,Rot-Weiss Essen,2,0
+1996,24,VfL Wolfsburg,VfB Oldenburg,2,2
+1996,24,SpVgg Unterhaching,SV Meppen,1,2
+1996,24,Hertha BSC,1. FC Kaiserslautern,2,0
+1996,25,1. FC Kaiserslautern,VfB Leipzig,4,1
+1996,25,Eintracht Frankfurt,FC Carl Zeiss Jena,1,1
+1996,25,Rot-Weiss Essen,FC Gütersloh,2,2
+1996,25,Waldhof Mannheim,KFC Uerdingen 05,1,0
+1996,25,Fortuna Köln,SpVgg Unterhaching,3,1
+1996,25,FSV Zwickau,1. FSV Mainz 05,0,0
+1996,25,VfB Lübeck,VfL Wolfsburg,0,0
+1996,25,VfB Oldenburg,Hertha BSC,2,2
+1996,25,SV Meppen,Stuttgarter Kickers,1,1
+1996,26,1. FSV Mainz 05,Waldhof Mannheim,2,0
+1996,26,VfL Wolfsburg,FSV Zwickau,1,1
+1996,26,KFC Uerdingen 05,Eintracht Frankfurt,3,0
+1996,26,Stuttgarter Kickers,SpVgg Unterhaching,1,0
+1996,26,Rot-Weiss Essen,Fortuna Köln,0,4
+1996,26,FC Carl Zeiss Jena,SV Meppen,2,1
+1996,26,FC Gütersloh,1. FC Kaiserslautern,1,1
+1996,26,VfB Leipzig,VfB Oldenburg,0,0
+1996,26,Hertha BSC,VfB Lübeck,0,0
+1996,27,Waldhof Mannheim,VfL Wolfsburg,1,3
+1996,27,Fortuna Köln,Stuttgarter Kickers,1,2
+1996,27,1. FC Kaiserslautern,Rot-Weiss Essen,3,2
+1996,27,SV Meppen,KFC Uerdingen 05,2,0
+1996,27,FSV Zwickau,Hertha BSC,1,2
+1996,27,VfB Lübeck,VfB Leipzig,0,1
+1996,27,SpVgg Unterhaching,FC Carl Zeiss Jena,2,1
+1996,27,VfB Oldenburg,FC Gütersloh,2,0
+1996,27,Eintracht Frankfurt,1. FSV Mainz 05,1,0
+1996,28,1. FSV Mainz 05,SV Meppen,3,0
+1996,28,Hertha BSC,Waldhof Mannheim,2,2
+1996,28,VfL Wolfsburg,Eintracht Frankfurt,4,1
+1996,28,Rot-Weiss Essen,VfB Oldenburg,5,0
+1996,28,1. FC Kaiserslautern,Fortuna Köln,2,0
+1996,28,FC Carl Zeiss Jena,Stuttgarter Kickers,0,0
+1996,28,VfB Leipzig,FSV Zwickau,4,0
+1996,28,FC Gütersloh,VfB Lübeck,3,1
+1996,28,KFC Uerdingen 05,SpVgg Unterhaching,0,4
+1996,29,Fortuna Köln,FC Carl Zeiss Jena,2,0
+1996,29,SV Meppen,VfL Wolfsburg,0,0
+1996,29,VfB Oldenburg,1. FC Kaiserslautern,0,1
+1996,29,Waldhof Mannheim,VfB Leipzig,1,1
+1996,29,SpVgg Unterhaching,1. FSV Mainz 05,0,0
+1996,29,VfB Lübeck,Rot-Weiss Essen,3,2
+1996,29,Stuttgarter Kickers,KFC Uerdingen 05,1,0
+1996,29,FSV Zwickau,FC Gütersloh,3,1
+1996,29,Eintracht Frankfurt,Hertha BSC,3,1
+1996,30,KFC Uerdingen 05,FC Carl Zeiss Jena,2,2
+1996,30,VfL Wolfsburg,SpVgg Unterhaching,0,0
+1996,30,VfB Oldenburg,Fortuna Köln,1,1
+1996,30,VfB Leipzig,Eintracht Frankfurt,2,3
+1996,30,FC Gütersloh,Waldhof Mannheim,0,0
+1996,30,1. FC Kaiserslautern,VfB Lübeck,7,0
+1996,30,1. FSV Mainz 05,Stuttgarter Kickers,1,0
+1996,30,Rot-Weiss Essen,FSV Zwickau,1,2
+1996,30,Hertha BSC,SV Meppen,3,0
+1996,31,FC Carl Zeiss Jena,1. FSV Mainz 05,2,1
+1996,31,Stuttgarter Kickers,VfL Wolfsburg,0,0
+1996,31,Fortuna Köln,KFC Uerdingen 05,1,2
+1996,31,FSV Zwickau,1. FC Kaiserslautern,2,1
+1996,31,VfB Lübeck,VfB Oldenburg,2,0
+1996,31,SpVgg Unterhaching,Hertha BSC,1,2
+1996,31,SV Meppen,VfB Leipzig,0,0
+1996,31,Waldhof Mannheim,Rot-Weiss Essen,3,3
+1996,31,Eintracht Frankfurt,FC Gütersloh,2,0
+1996,32,VfL Wolfsburg,FC Carl Zeiss Jena,4,1
+1996,32,VfB Leipzig,SpVgg Unterhaching,3,0
+1996,32,Rot-Weiss Essen,Eintracht Frankfurt,4,1
+1996,32,FC Gütersloh,SV Meppen,4,2
+1996,32,Fortuna Köln,VfB Lübeck,0,3
+1996,32,VfB Oldenburg,FSV Zwickau,1,2
+1996,32,KFC Uerdingen 05,1. FSV Mainz 05,0,1
+1996,32,Hertha BSC,Stuttgarter Kickers,0,1
+1996,32,1. FC Kaiserslautern,Waldhof Mannheim,5,0
+1996,33,SpVgg Unterhaching,FC Gütersloh,3,1
+1996,33,1. FSV Mainz 05,Fortuna Köln,2,0
+1996,33,Stuttgarter Kickers,VfB Leipzig,3,1
+1996,33,SV Meppen,Rot-Weiss Essen,1,1
+1996,33,Eintracht Frankfurt,1. FC Kaiserslautern,0,0
+1996,33,Waldhof Mannheim,VfB Oldenburg,2,0
+1996,33,FSV Zwickau,VfB Lübeck,2,0
+1996,33,KFC Uerdingen 05,VfL Wolfsburg,0,3
+1996,33,FC Carl Zeiss Jena,Hertha BSC,2,1
+1996,34,Hertha BSC,KFC Uerdingen 05,0,2
+1996,34,VfL Wolfsburg,1. FSV Mainz 05,5,4
+1996,34,Fortuna Köln,FSV Zwickau,2,1
+1996,34,VfB Leipzig,FC Carl Zeiss Jena,3,3
+1996,34,FC Gütersloh,Stuttgarter Kickers,1,0
+1996,34,Rot-Weiss Essen,SpVgg Unterhaching,1,2
+1996,34,1. FC Kaiserslautern,SV Meppen,7,6
+1996,34,VfB Oldenburg,Eintracht Frankfurt,1,2
+1996,34,VfB Lübeck,Waldhof Mannheim,2,3

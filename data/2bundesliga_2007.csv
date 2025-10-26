@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2007,1,Alemannia Aachen,FC Carl Zeiss Jena,2,2
+2007,1,FC St. Pauli,1. FC Köln,0,2
+2007,1,VfL Osnabrück,SC Freiburg,2,1
+2007,1,1. FSV Mainz 05,TuS Koblenz,4,1
+2007,1,FC Augsburg,TSV 1860 München,2,6
+2007,1,Erzgebirge Aue,SpVgg Greuther Fürth,1,1
+2007,1,SC Paderborn 07,Kickers Offenbach,0,2
+2007,1,1899 Hoffenheim,SV Wehen Wiesbaden,2,3
+2007,1,1. FC Kaiserslautern,Bor. Mönchengladbach,1,1
+2007,2,SC Freiburg,SC Paderborn 07,1,0
+2007,2,TuS Koblenz,FC Augsburg,2,1
+2007,2,SV Wehen Wiesbaden,VfL Osnabrück,1,1
+2007,2,Bor. Mönchengladbach,1899 Hoffenheim,0,0
+2007,2,SpVgg Greuther Fürth,1. FSV Mainz 05,3,0
+2007,2,TSV 1860 München,1. FC Kaiserslautern,3,1
+2007,2,FC Carl Zeiss Jena,FC St. Pauli,0,1
+2007,2,Kickers Offenbach,Erzgebirge Aue,3,2
+2007,2,1. FC Köln,Alemannia Aachen,0,1
+2007,3,1. FSV Mainz 05,Bor. Mönchengladbach,4,1
+2007,3,1. FC Köln,FC Carl Zeiss Jena,4,3
+2007,3,VfL Osnabrück,SC Paderborn 07,0,0
+2007,3,Alemannia Aachen,Kickers Offenbach,4,0
+2007,3,1. FC Kaiserslautern,SpVgg Greuther Fürth,0,1
+2007,3,Erzgebirge Aue,SV Wehen Wiesbaden,3,0
+2007,3,1899 Hoffenheim,TSV 1860 München,0,3
+2007,3,FC St. Pauli,TuS Koblenz,1,0
+2007,3,FC Augsburg,SC Freiburg,1,1
+2007,4,TSV 1860 München,1. FC Köln,1,1
+2007,4,TuS Koblenz,1. FC Kaiserslautern,2,2
+2007,4,Kickers Offenbach,FC Augsburg,1,0
+2007,4,Bor. Mönchengladbach,VfL Osnabrück,2,1
+2007,4,SpVgg Greuther Fürth,FC St. Pauli,2,1
+2007,4,SC Paderborn 07,Erzgebirge Aue,0,1
+2007,4,FC Carl Zeiss Jena,1. FSV Mainz 05,1,2
+2007,4,SV Wehen Wiesbaden,Alemannia Aachen,3,0
+2007,4,SC Freiburg,1899 Hoffenheim,3,2
+2007,5,1. FC Kaiserslautern,SC Paderborn 07,0,0
+2007,5,FC Carl Zeiss Jena,TuS Koblenz,1,2
+2007,5,FC St. Pauli,Kickers Offenbach,3,1
+2007,5,1. FSV Mainz 05,SC Freiburg,1,1
+2007,5,Alemannia Aachen,TSV 1860 München,0,0
+2007,5,FC Augsburg,SV Wehen Wiesbaden,5,1
+2007,5,1. FC Köln,SpVgg Greuther Fürth,0,0
+2007,5,1899 Hoffenheim,VfL Osnabrück,3,1
+2007,5,Erzgebirge Aue,Bor. Mönchengladbach,2,3
+2007,6,Bor. Mönchengladbach,FC Augsburg,4,2
+2007,6,SpVgg Greuther Fürth,Alemannia Aachen,2,0
+2007,6,TSV 1860 München,FC St. Pauli,2,1
+2007,6,SC Paderborn 07,1899 Hoffenheim,0,2
+2007,6,VfL Osnabrück,Erzgebirge Aue,2,1
+2007,6,SC Freiburg,1. FC Kaiserslautern,1,0
+2007,6,TuS Koblenz,1. FC Köln,1,2
+2007,6,Kickers Offenbach,1. FSV Mainz 05,2,0
+2007,6,SV Wehen Wiesbaden,FC Carl Zeiss Jena,5,1
+2007,7,Alemannia Aachen,SC Paderborn 07,3,1
+2007,7,FC Augsburg,VfL Osnabrück,2,0
+2007,7,Erzgebirge Aue,1899 Hoffenheim,2,2
+2007,7,FC St. Pauli,Bor. Mönchengladbach,0,3
+2007,7,1. FC Kaiserslautern,SV Wehen Wiesbaden,0,2
+2007,7,1. FC Köln,SC Freiburg,1,3
+2007,7,TuS Koblenz,SpVgg Greuther Fürth,3,0
+2007,7,FC Carl Zeiss Jena,Kickers Offenbach,2,0
+2007,7,1. FSV Mainz 05,TSV 1860 München,3,0
+2007,8,Bor. Mönchengladbach,Alemannia Aachen,2,1
+2007,8,SC Paderborn 07,FC Augsburg,1,1
+2007,8,VfL Osnabrück,FC St. Pauli,3,1
+2007,8,SC Freiburg,Erzgebirge Aue,2,0
+2007,8,SpVgg Greuther Fürth,FC Carl Zeiss Jena,2,2
+2007,8,TSV 1860 München,TuS Koblenz,2,2
+2007,8,SV Wehen Wiesbaden,1. FC Köln,4,3
+2007,8,1899 Hoffenheim,1. FSV Mainz 05,1,0
+2007,8,Kickers Offenbach,1. FC Kaiserslautern,0,0
+2007,9,SpVgg Greuther Fürth,SV Wehen Wiesbaden,1,1
+2007,9,1. FC Köln,Kickers Offenbach,4,1
+2007,9,FC Carl Zeiss Jena,TSV 1860 München,0,2
+2007,9,1. FSV Mainz 05,Erzgebirge Aue,4,1
+2007,9,1. FC Kaiserslautern,VfL Osnabrück,3,0
+2007,9,FC Augsburg,1899 Hoffenheim,2,2
+2007,9,TuS Koblenz,Bor. Mönchengladbach,0,5
+2007,9,FC St. Pauli,SC Paderborn 07,2,1
+2007,9,Alemannia Aachen,SC Freiburg,2,0
+2007,10,Kickers Offenbach,TuS Koblenz,1,1
+2007,10,1899 Hoffenheim,1. FC Kaiserslautern,1,0
+2007,10,VfL Osnabrück,Alemannia Aachen,2,2
+2007,10,SC Freiburg,FC St. Pauli,2,0
+2007,10,TSV 1860 München,SpVgg Greuther Fürth,0,3
+2007,10,Erzgebirge Aue,FC Augsburg,3,0
+2007,10,SC Paderborn 07,FC Carl Zeiss Jena,2,2
+2007,10,SV Wehen Wiesbaden,1. FSV Mainz 05,1,3
+2007,10,Bor. Mönchengladbach,1. FC Köln,2,2
+2007,11,1. FSV Mainz 05,FC Augsburg,1,1
+2007,11,Alemannia Aachen,1899 Hoffenheim,2,2
+2007,11,SpVgg Greuther Fürth,Bor. Mönchengladbach,1,3
+2007,11,TSV 1860 München,Kickers Offenbach,3,0
+2007,11,FC St. Pauli,SV Wehen Wiesbaden,1,1
+2007,11,1. FC Kaiserslautern,Erzgebirge Aue,2,0
+2007,11,1. FC Köln,SC Paderborn 07,2,1
+2007,11,TuS Koblenz,VfL Osnabrück,1,0
+2007,11,FC Carl Zeiss Jena,SC Freiburg,1,2
+2007,12,VfL Osnabrück,1. FC Köln,2,1
+2007,12,Erzgebirge Aue,Alemannia Aachen,2,1
+2007,12,Kickers Offenbach,SpVgg Greuther Fürth,1,2
+2007,12,1899 Hoffenheim,FC St. Pauli,1,1
+2007,12,SC Freiburg,TuS Koblenz,4,2
+2007,12,FC Augsburg,1. FC Kaiserslautern,0,0
+2007,12,SC Paderborn 07,1. FSV Mainz 05,1,1
+2007,12,SV Wehen Wiesbaden,TSV 1860 München,0,0
+2007,12,Bor. Mönchengladbach,FC Carl Zeiss Jena,2,1
+2007,13,1. FSV Mainz 05,VfL Osnabrück,4,1
+2007,13,1. FC Köln,Erzgebirge Aue,3,2
+2007,13,Kickers Offenbach,SV Wehen Wiesbaden,0,0
+2007,13,Alemannia Aachen,1. FC Kaiserslautern,2,1
+2007,13,SpVgg Greuther Fürth,SC Freiburg,1,1
+2007,13,FC Carl Zeiss Jena,1899 Hoffenheim,0,1
+2007,13,FC St. Pauli,FC Augsburg,2,0
+2007,13,TSV 1860 München,Bor. Mönchengladbach,0,0
+2007,13,TuS Koblenz,SC Paderborn 07,0,0
+2007,14,Bor. Mönchengladbach,Kickers Offenbach,3,0
+2007,14,SC Paderborn 07,SpVgg Greuther Fürth,1,0
+2007,14,SV Wehen Wiesbaden,TuS Koblenz,0,2
+2007,14,VfL Osnabrück,FC Carl Zeiss Jena,1,1
+2007,14,SC Freiburg,TSV 1860 München,2,2
+2007,14,FC Augsburg,Alemannia Aachen,1,0
+2007,14,Erzgebirge Aue,FC St. Pauli,0,0
+2007,14,1899 Hoffenheim,1. FC Köln,0,2
+2007,14,1. FC Kaiserslautern,1. FSV Mainz 05,0,0
+2007,15,FC Carl Zeiss Jena,Erzgebirge Aue,2,1
+2007,15,SV Wehen Wiesbaden,Bor. Mönchengladbach,1,1
+2007,15,FC St. Pauli,1. FC Kaiserslautern,3,4
+2007,15,SpVgg Greuther Fürth,VfL Osnabrück,6,3
+2007,15,TSV 1860 München,SC Paderborn 07,0,0
+2007,15,1. FC Köln,FC Augsburg,3,0
+2007,15,TuS Koblenz,1899 Hoffenheim,2,2
+2007,15,Kickers Offenbach,SC Freiburg,0,0
+2007,15,Alemannia Aachen,1. FSV Mainz 05,0,3
+2007,16,1. FSV Mainz 05,1. FC Köln,1,0
+2007,16,Alemannia Aachen,FC St. Pauli,2,2
+2007,16,Erzgebirge Aue,TuS Koblenz,0,0
+2007,16,1. FC Kaiserslautern,FC Carl Zeiss Jena,2,3
+2007,16,FC Augsburg,SpVgg Greuther Fürth,3,0
+2007,16,SC Paderborn 07,SV Wehen Wiesbaden,1,1
+2007,16,1899 Hoffenheim,Kickers Offenbach,2,2
+2007,16,VfL Osnabrück,TSV 1860 München,3,0
+2007,16,SC Freiburg,Bor. Mönchengladbach,1,3
+2007,17,TuS Koblenz,Alemannia Aachen,0,0
+2007,17,Kickers Offenbach,VfL Osnabrück,3,3
+2007,17,FC St. Pauli,1. FSV Mainz 05,1,0
+2007,17,Bor. Mönchengladbach,SC Paderborn 07,1,1
+2007,17,SpVgg Greuther Fürth,1899 Hoffenheim,4,1
+2007,17,TSV 1860 München,Erzgebirge Aue,5,0
+2007,17,FC Carl Zeiss Jena,FC Augsburg,1,2
+2007,17,SV Wehen Wiesbaden,SC Freiburg,2,2
+2007,17,1. FC Köln,1. FC Kaiserslautern,2,1
+2007,18,Bor. Mönchengladbach,1. FC Kaiserslautern,1,1
+2007,18,SV Wehen Wiesbaden,1899 Hoffenheim,0,2
+2007,18,1. FC Köln,FC St. Pauli,1,1
+2007,18,TuS Koblenz,1. FSV Mainz 05,1,1
+2007,18,TSV 1860 München,FC Augsburg,0,3
+2007,18,SpVgg Greuther Fürth,Erzgebirge Aue,2,0
+2007,18,Kickers Offenbach,SC Paderborn 07,2,1
+2007,18,SC Freiburg,VfL Osnabrück,1,1
+2007,18,FC Carl Zeiss Jena,Alemannia Aachen,2,3
+2007,19,1. FC Kaiserslautern,TSV 1860 München,1,2
+2007,19,FC St. Pauli,FC Carl Zeiss Jena,2,2
+2007,19,Erzgebirge Aue,Kickers Offenbach,3,1
+2007,19,1899 Hoffenheim,Bor. Mönchengladbach,4,2
+2007,19,SC Paderborn 07,SC Freiburg,3,2
+2007,19,1. FSV Mainz 05,SpVgg Greuther Fürth,1,2
+2007,19,VfL Osnabrück,SV Wehen Wiesbaden,0,2
+2007,19,FC Augsburg,TuS Koblenz,1,0
+2007,19,Alemannia Aachen,1. FC Köln,3,2
+2007,20,FC Carl Zeiss Jena,1. FC Köln,1,3
+2007,20,SV Wehen Wiesbaden,Erzgebirge Aue,3,0
+2007,20,TuS Koblenz,FC St. Pauli,1,1
+2007,20,Kickers Offenbach,Alemannia Aachen,1,1
+2007,20,SpVgg Greuther Fürth,1. FC Kaiserslautern,0,1
+2007,20,SC Freiburg,FC Augsburg,1,0
+2007,20,TSV 1860 München,1899 Hoffenheim,0,1
+2007,20,SC Paderborn 07,VfL Osnabrück,1,3
+2007,20,Bor. Mönchengladbach,1. FSV Mainz 05,0,1
+2007,21,1899 Hoffenheim,SC Freiburg,2,0
+2007,21,1. FC Köln,TSV 1860 München,0,0
+2007,21,1. FSV Mainz 05,FC Carl Zeiss Jena,2,2
+2007,21,VfL Osnabrück,Bor. Mönchengladbach,2,2
+2007,21,FC St. Pauli,SpVgg Greuther Fürth,1,1
+2007,21,Erzgebirge Aue,SC Paderborn 07,6,0
+2007,21,FC Augsburg,Kickers Offenbach,1,1
+2007,21,Alemannia Aachen,SV Wehen Wiesbaden,2,3
+2007,21,1. FC Kaiserslautern,TuS Koblenz,2,3
+2007,22,SV Wehen Wiesbaden,FC Augsburg,2,1
+2007,22,SpVgg Greuther Fürth,1. FC Köln,2,2
+2007,22,Bor. Mönchengladbach,Erzgebirge Aue,2,0
+2007,22,TSV 1860 München,Alemannia Aachen,0,0
+2007,22,SC Paderborn 07,1. FC Kaiserslautern,0,0
+2007,22,TuS Koblenz,FC Carl Zeiss Jena,2,0
+2007,22,VfL Osnabrück,1899 Hoffenheim,0,3
+2007,22,Kickers Offenbach,FC St. Pauli,4,3
+2007,22,SC Freiburg,1. FSV Mainz 05,1,1
+2007,23,FC Augsburg,Bor. Mönchengladbach,0,2
+2007,23,1. FC Kaiserslautern,SC Freiburg,0,0
+2007,23,Alemannia Aachen,SpVgg Greuther Fürth,2,5
+2007,23,1899 Hoffenheim,SC Paderborn 07,1,0
+2007,23,1. FC Köln,TuS Koblenz,1,0
+2007,23,1. FSV Mainz 05,Kickers Offenbach,1,0
+2007,23,FC Carl Zeiss Jena,SV Wehen Wiesbaden,2,2
+2007,23,Erzgebirge Aue,VfL Osnabrück,0,1
+2007,23,FC St. Pauli,TSV 1860 München,0,0
+2007,24,SC Paderborn 07,Alemannia Aachen,0,1
+2007,24,SV Wehen Wiesbaden,1. FC Kaiserslautern,0,2
+2007,24,Kickers Offenbach,FC Carl Zeiss Jena,2,1
+2007,24,TSV 1860 München,1. FSV Mainz 05,1,1
+2007,24,VfL Osnabrück,FC Augsburg,0,2
+2007,24,1899 Hoffenheim,Erzgebirge Aue,1,0
+2007,24,SpVgg Greuther Fürth,TuS Koblenz,0,1
+2007,24,Bor. Mönchengladbach,FC St. Pauli,1,0
+2007,24,SC Freiburg,1. FC Köln,1,0
+2007,25,FC Augsburg,SC Paderborn 07,0,1
+2007,25,1. FC Kaiserslautern,Kickers Offenbach,1,1
+2007,25,FC St. Pauli,VfL Osnabrück,2,1
+2007,25,Erzgebirge Aue,SC Freiburg,2,2
+2007,25,FC Carl Zeiss Jena,SpVgg Greuther Fürth,1,0
+2007,25,TuS Koblenz,TSV 1860 München,3,1
+2007,25,1. FC Köln,SV Wehen Wiesbaden,2,1
+2007,25,1. FSV Mainz 05,1899 Hoffenheim,1,1
+2007,25,Alemannia Aachen,Bor. Mönchengladbach,1,1
+2007,26,Erzgebirge Aue,1. FSV Mainz 05,3,3
+2007,26,SC Freiburg,Alemannia Aachen,1,0
+2007,26,1899 Hoffenheim,FC Augsburg,2,0
+2007,26,SV Wehen Wiesbaden,SpVgg Greuther Fürth,1,1
+2007,26,Kickers Offenbach,1. FC Köln,1,3
+2007,26,Bor. Mönchengladbach,TuS Koblenz,1,0
+2007,26,TSV 1860 München,FC Carl Zeiss Jena,1,2
+2007,26,SC Paderborn 07,FC St. Pauli,4,1
+2007,26,VfL Osnabrück,1. FC Kaiserslautern,2,0
+2007,27,SpVgg Greuther Fürth,TSV 1860 München,3,1
+2007,27,TuS Koblenz,Kickers Offenbach,1,1
+2007,27,1. FC Kaiserslautern,1899 Hoffenheim,0,2
+2007,27,FC St. Pauli,SC Freiburg,5,0
+2007,27,FC Augsburg,Erzgebirge Aue,1,1
+2007,27,FC Carl Zeiss Jena,SC Paderborn 07,3,0
+2007,27,1. FSV Mainz 05,SV Wehen Wiesbaden,3,0
+2007,27,Alemannia Aachen,VfL Osnabrück,3,0
+2007,27,1. FC Köln,Bor. Mönchengladbach,1,1
+2007,28,FC Augsburg,1. FSV Mainz 05,2,1
+2007,28,Erzgebirge Aue,1. FC Kaiserslautern,0,0
+2007,28,SC Paderborn 07,1. FC Köln,2,2
+2007,28,VfL Osnabrück,TuS Koblenz,2,0
+2007,28,SV Wehen Wiesbaden,FC St. Pauli,1,3
+2007,28,1899 Hoffenheim,Alemannia Aachen,1,2
+2007,28,Bor. Mönchengladbach,SpVgg Greuther Fürth,3,0
+2007,28,Kickers Offenbach,TSV 1860 München,2,0
+2007,28,SC Freiburg,FC Carl Zeiss Jena,2,0
+2007,29,1. FC Kaiserslautern,FC Augsburg,2,0
+2007,29,1. FSV Mainz 05,SC Paderborn 07,6,1
+2007,29,1. FC Köln,VfL Osnabrück,2,0
+2007,29,FC Carl Zeiss Jena,Bor. Mönchengladbach,2,2
+2007,29,TuS Koblenz,SC Freiburg,3,2
+2007,29,Alemannia Aachen,Erzgebirge Aue,1,0
+2007,29,SpVgg Greuther Fürth,Kickers Offenbach,2,1
+2007,29,FC St. Pauli,1899 Hoffenheim,3,1
+2007,29,TSV 1860 München,SV Wehen Wiesbaden,2,1
+2007,30,1. FC Kaiserslautern,Alemannia Aachen,2,1
+2007,30,Erzgebirge Aue,1. FC Köln,3,3
+2007,30,SC Paderborn 07,TuS Koblenz,3,2
+2007,30,VfL Osnabrück,1. FSV Mainz 05,1,2
+2007,30,Bor. Mönchengladbach,TSV 1860 München,2,2
+2007,30,1899 Hoffenheim,FC Carl Zeiss Jena,5,0
+2007,30,SV Wehen Wiesbaden,Kickers Offenbach,2,1
+2007,30,FC Augsburg,FC St. Pauli,1,0
+2007,30,SC Freiburg,SpVgg Greuther Fürth,3,2
+2007,31,TSV 1860 München,SC Freiburg,0,3
+2007,31,1. FSV Mainz 05,1. FC Kaiserslautern,2,1
+2007,31,FC St. Pauli,Erzgebirge Aue,4,2
+2007,31,SpVgg Greuther Fürth,SC Paderborn 07,1,1
+2007,31,FC Carl Zeiss Jena,VfL Osnabrück,1,1
+2007,31,Kickers Offenbach,Bor. Mönchengladbach,1,7
+2007,31,Alemannia Aachen,FC Augsburg,3,0
+2007,31,TuS Koblenz,SV Wehen Wiesbaden,2,0
+2007,31,1. FC Köln,1899 Hoffenheim,3,1
+2007,32,VfL Osnabrück,SpVgg Greuther Fürth,0,0
+2007,32,SC Paderborn 07,TSV 1860 München,3,1
+2007,32,Erzgebirge Aue,FC Carl Zeiss Jena,5,0
+2007,32,1. FC Kaiserslautern,FC St. Pauli,2,0
+2007,32,1. FSV Mainz 05,Alemannia Aachen,0,1
+2007,32,FC Augsburg,1. FC Köln,1,3
+2007,32,1899 Hoffenheim,TuS Koblenz,3,1
+2007,32,SC Freiburg,Kickers Offenbach,0,1
+2007,32,Bor. Mönchengladbach,SV Wehen Wiesbaden,3,0
+2007,33,1. FC Köln,1. FSV Mainz 05,2,0
+2007,33,FC St. Pauli,Alemannia Aachen,0,2
+2007,33,Bor. Mönchengladbach,SC Freiburg,2,3
+2007,33,FC Carl Zeiss Jena,1. FC Kaiserslautern,2,2
+2007,33,SpVgg Greuther Fürth,FC Augsburg,3,2
+2007,33,TuS Koblenz,Erzgebirge Aue,2,2
+2007,33,SV Wehen Wiesbaden,SC Paderborn 07,1,1
+2007,33,Kickers Offenbach,1899 Hoffenheim,1,1
+2007,33,TSV 1860 München,VfL Osnabrück,1,1
+2007,34,SC Paderborn 07,Bor. Mönchengladbach,2,3
+2007,34,1899 Hoffenheim,SpVgg Greuther Fürth,5,0
+2007,34,Erzgebirge Aue,TSV 1860 München,1,1
+2007,34,1. FC Kaiserslautern,1. FC Köln,3,0
+2007,34,Alemannia Aachen,TuS Koblenz,1,3
+2007,34,FC Augsburg,FC Carl Zeiss Jena,1,1
+2007,34,VfL Osnabrück,Kickers Offenbach,3,0
+2007,34,SC Freiburg,SV Wehen Wiesbaden,0,2
+2007,34,1. FSV Mainz 05,FC St. Pauli,5,1

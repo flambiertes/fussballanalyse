@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2008,1,1. FSV Mainz 05,1. FC Kaiserslautern,3,3
+2008,1,Alemannia Aachen,SV Wehen Wiesbaden,2,1
+2008,1,FC St. Pauli,VfL Osnabrück,2,2
+2008,1,1. FC Nürnberg,FC Augsburg,2,1
+2008,1,SC Freiburg,TSV 1860 München,2,1
+2008,1,Rot Weiss Ahlen,FSV Frankfurt,2,1
+2008,1,FC Ingolstadt 04,SpVgg Greuther Fürth,3,2
+2008,1,TuS Koblenz,Rot-Weiß Oberhausen,3,0
+2008,1,MSV Duisburg,Hansa Rostock,2,2
+2008,2,SpVgg Greuther Fürth,FC St. Pauli,5,2
+2008,2,VfL Osnabrück,SC Freiburg,2,2
+2008,2,FSV Frankfurt,TuS Koblenz,0,0
+2008,2,Hansa Rostock,Alemannia Aachen,1,0
+2008,2,SV Wehen Wiesbaden,MSV Duisburg,1,1
+2008,2,TSV 1860 München,1. FSV Mainz 05,1,2
+2008,2,FC Augsburg,Rot Weiss Ahlen,3,0
+2008,2,Rot-Weiß Oberhausen,FC Ingolstadt 04,2,1
+2008,2,1. FC Kaiserslautern,1. FC Nürnberg,2,1
+2008,3,MSV Duisburg,FC Augsburg,2,0
+2008,3,1. FSV Mainz 05,VfL Osnabrück,4,2
+2008,3,FC Ingolstadt 04,1. FC Kaiserslautern,1,3
+2008,3,1. FC Nürnberg,Alemannia Aachen,2,2
+2008,3,FC St. Pauli,Rot-Weiß Oberhausen,4,1
+2008,3,TuS Koblenz,SV Wehen Wiesbaden,0,0
+2008,3,Rot Weiss Ahlen,TSV 1860 München,2,1
+2008,3,FSV Frankfurt,SpVgg Greuther Fürth,1,1
+2008,3,SC Freiburg,Hansa Rostock,1,0
+2008,4,Alemannia Aachen,FC Ingolstadt 04,1,0
+2008,4,1. FC Kaiserslautern,FC St. Pauli,4,1
+2008,4,Rot-Weiß Oberhausen,Rot Weiss Ahlen,1,3
+2008,4,Hansa Rostock,1. FSV Mainz 05,2,2
+2008,4,SpVgg Greuther Fürth,TuS Koblenz,4,3
+2008,4,SV Wehen Wiesbaden,1. FC Nürnberg,2,2
+2008,4,VfL Osnabrück,FSV Frankfurt,3,2
+2008,4,FC Augsburg,SC Freiburg,1,3
+2008,4,TSV 1860 München,MSV Duisburg,2,0
+2008,5,MSV Duisburg,Alemannia Aachen,3,2
+2008,5,1. FSV Mainz 05,1. FC Nürnberg,2,0
+2008,5,FC St. Pauli,TSV 1860 München,1,0
+2008,5,TuS Koblenz,FC Augsburg,2,1
+2008,5,Rot Weiss Ahlen,Hansa Rostock,2,2
+2008,5,SC Freiburg,SV Wehen Wiesbaden,5,0
+2008,5,FSV Frankfurt,Rot-Weiß Oberhausen,3,1
+2008,5,FC Ingolstadt 04,VfL Osnabrück,2,1
+2008,5,SpVgg Greuther Fürth,1. FC Kaiserslautern,0,1
+2008,6,Hansa Rostock,FC St. Pauli,3,0
+2008,6,VfL Osnabrück,TuS Koblenz,1,0
+2008,6,Rot-Weiß Oberhausen,SpVgg Greuther Fürth,0,4
+2008,6,Alemannia Aachen,SC Freiburg,1,0
+2008,6,SV Wehen Wiesbaden,Rot Weiss Ahlen,1,3
+2008,6,TSV 1860 München,FC Ingolstadt 04,1,1
+2008,6,1. FC Kaiserslautern,FSV Frankfurt,2,1
+2008,6,FC Augsburg,1. FSV Mainz 05,0,2
+2008,6,1. FC Nürnberg,MSV Duisburg,0,1
+2008,7,SC Freiburg,MSV Duisburg,2,0
+2008,7,FSV Frankfurt,TSV 1860 München,0,3
+2008,7,Rot-Weiß Oberhausen,FC Augsburg,2,1
+2008,7,SpVgg Greuther Fürth,VfL Osnabrück,4,2
+2008,7,FC St. Pauli,Alemannia Aachen,3,2
+2008,7,TuS Koblenz,1. FC Kaiserslautern,5,0
+2008,7,Rot Weiss Ahlen,1. FC Nürnberg,1,1
+2008,7,FC Ingolstadt 04,Hansa Rostock,4,2
+2008,7,1. FSV Mainz 05,SV Wehen Wiesbaden,5,0
+2008,8,1. FC Nürnberg,SC Freiburg,2,0
+2008,8,VfL Osnabrück,Rot-Weiß Oberhausen,2,1
+2008,8,1. FC Kaiserslautern,Rot Weiss Ahlen,4,1
+2008,8,Hansa Rostock,TuS Koblenz,9,0
+2008,8,MSV Duisburg,FC Ingolstadt 04,6,1
+2008,8,SV Wehen Wiesbaden,FSV Frankfurt,3,1
+2008,8,TSV 1860 München,SpVgg Greuther Fürth,3,1
+2008,8,FC Augsburg,FC St. Pauli,3,2
+2008,8,Alemannia Aachen,1. FSV Mainz 05,2,0
+2008,9,SpVgg Greuther Fürth,Alemannia Aachen,1,1
+2008,9,FC St. Pauli,SV Wehen Wiesbaden,2,0
+2008,9,Rot Weiss Ahlen,SC Freiburg,0,3
+2008,9,FSV Frankfurt,Hansa Rostock,0,0
+2008,9,FC Ingolstadt 04,FC Augsburg,1,2
+2008,9,1. FSV Mainz 05,MSV Duisburg,0,0
+2008,9,TuS Koblenz,1. FC Nürnberg,1,1
+2008,9,VfL Osnabrück,TSV 1860 München,0,2
+2008,9,Rot-Weiß Oberhausen,1. FC Kaiserslautern,2,1
+2008,10,Hansa Rostock,SpVgg Greuther Fürth,1,2
+2008,10,Alemannia Aachen,Rot Weiss Ahlen,0,2
+2008,10,SV Wehen Wiesbaden,FC Ingolstadt 04,0,0
+2008,10,FC Augsburg,FSV Frankfurt,2,2
+2008,10,1. FC Nürnberg,Rot-Weiß Oberhausen,2,1
+2008,10,MSV Duisburg,FC St. Pauli,1,2
+2008,10,SC Freiburg,1. FSV Mainz 05,0,1
+2008,10,TSV 1860 München,TuS Koblenz,1,0
+2008,10,1. FC Kaiserslautern,VfL Osnabrück,2,0
+2008,11,SpVgg Greuther Fürth,SV Wehen Wiesbaden,1,1
+2008,11,FSV Frankfurt,Alemannia Aachen,0,3
+2008,11,FC St. Pauli,1. FC Nürnberg,1,0
+2008,11,TuS Koblenz,MSV Duisburg,1,1
+2008,11,VfL Osnabrück,FC Augsburg,1,1
+2008,11,Rot Weiss Ahlen,1. FSV Mainz 05,0,2
+2008,11,Rot-Weiß Oberhausen,Hansa Rostock,1,0
+2008,11,FC Ingolstadt 04,SC Freiburg,4,0
+2008,11,1. FC Kaiserslautern,TSV 1860 München,0,0
+2008,12,1. FC Nürnberg,FSV Frankfurt,0,0
+2008,12,Alemannia Aachen,TuS Koblenz,2,0
+2008,12,SV Wehen Wiesbaden,1. FC Kaiserslautern,4,2
+2008,12,Hansa Rostock,VfL Osnabrück,2,2
+2008,12,MSV Duisburg,Rot Weiss Ahlen,0,1
+2008,12,1. FSV Mainz 05,FC Ingolstadt 04,0,3
+2008,12,TSV 1860 München,Rot-Weiß Oberhausen,0,1
+2008,12,FC Augsburg,SpVgg Greuther Fürth,1,1
+2008,12,SC Freiburg,FC St. Pauli,2,0
+2008,13,FC St. Pauli,Rot Weiss Ahlen,2,2
+2008,13,TSV 1860 München,FC Augsburg,0,1
+2008,13,VfL Osnabrück,SV Wehen Wiesbaden,1,1
+2008,13,SpVgg Greuther Fürth,MSV Duisburg,4,3
+2008,13,TuS Koblenz,1. FSV Mainz 05,0,3
+2008,13,FSV Frankfurt,SC Freiburg,1,2
+2008,13,Rot-Weiß Oberhausen,Alemannia Aachen,1,1
+2008,13,FC Ingolstadt 04,1. FC Nürnberg,0,3
+2008,13,1. FC Kaiserslautern,Hansa Rostock,6,0
+2008,14,MSV Duisburg,FSV Frankfurt,0,0
+2008,14,Alemannia Aachen,VfL Osnabrück,3,1
+2008,14,Rot Weiss Ahlen,FC Ingolstadt 04,3,0
+2008,14,1. FC Nürnberg,SpVgg Greuther Fürth,2,1
+2008,14,1. FSV Mainz 05,FC St. Pauli,2,2
+2008,14,SC Freiburg,TuS Koblenz,1,1
+2008,14,SV Wehen Wiesbaden,Rot-Weiß Oberhausen,0,0
+2008,14,FC Augsburg,1. FC Kaiserslautern,1,0
+2008,14,Hansa Rostock,TSV 1860 München,0,1
+2008,15,TuS Koblenz,Rot Weiss Ahlen,4,1
+2008,15,VfL Osnabrück,1. FC Nürnberg,1,1
+2008,15,1. FC Kaiserslautern,Alemannia Aachen,1,1
+2008,15,SpVgg Greuther Fürth,SC Freiburg,1,1
+2008,15,FC St. Pauli,FC Ingolstadt 04,1,0
+2008,15,TSV 1860 München,SV Wehen Wiesbaden,3,3
+2008,15,FC Augsburg,Hansa Rostock,2,0
+2008,15,Rot-Weiß Oberhausen,MSV Duisburg,0,3
+2008,15,FSV Frankfurt,1. FSV Mainz 05,1,4
+2008,16,1. FSV Mainz 05,SpVgg Greuther Fürth,0,1
+2008,16,Alemannia Aachen,TSV 1860 München,2,0
+2008,16,FC Ingolstadt 04,FSV Frankfurt,1,1
+2008,16,MSV Duisburg,1. FC Kaiserslautern,0,0
+2008,16,SC Freiburg,Rot-Weiß Oberhausen,2,1
+2008,16,SV Wehen Wiesbaden,FC Augsburg,1,2
+2008,16,FC St. Pauli,TuS Koblenz,3,2
+2008,16,Rot Weiss Ahlen,VfL Osnabrück,1,2
+2008,16,1. FC Nürnberg,Hansa Rostock,4,0
+2008,17,TuS Koblenz,FC Ingolstadt 04,0,1
+2008,17,VfL Osnabrück,MSV Duisburg,1,1
+2008,17,FSV Frankfurt,FC St. Pauli,1,0
+2008,17,Hansa Rostock,SV Wehen Wiesbaden,1,0
+2008,17,SpVgg Greuther Fürth,Rot Weiss Ahlen,3,0
+2008,17,TSV 1860 München,1. FC Nürnberg,1,1
+2008,17,FC Augsburg,Alemannia Aachen,3,1
+2008,17,Rot-Weiß Oberhausen,1. FSV Mainz 05,2,1
+2008,17,1. FC Kaiserslautern,SC Freiburg,2,0
+2008,18,FC Augsburg,1. FC Nürnberg,0,0
+2008,18,VfL Osnabrück,FC St. Pauli,2,2
+2008,18,Rot-Weiß Oberhausen,TuS Koblenz,0,0
+2008,18,Hansa Rostock,MSV Duisburg,0,1
+2008,18,TSV 1860 München,SC Freiburg,0,2
+2008,18,SV Wehen Wiesbaden,Alemannia Aachen,1,0
+2008,18,FSV Frankfurt,Rot Weiss Ahlen,4,0
+2008,18,SpVgg Greuther Fürth,FC Ingolstadt 04,6,1
+2008,18,1. FC Kaiserslautern,1. FSV Mainz 05,1,1
+2008,19,Alemannia Aachen,Hansa Rostock,3,3
+2008,19,SC Freiburg,VfL Osnabrück,4,1
+2008,19,TuS Koblenz,FSV Frankfurt,1,3
+2008,19,FC St. Pauli,SpVgg Greuther Fürth,0,3
+2008,19,MSV Duisburg,SV Wehen Wiesbaden,2,1
+2008,19,1. FSV Mainz 05,TSV 1860 München,2,2
+2008,19,Rot Weiss Ahlen,FC Augsburg,2,1
+2008,19,FC Ingolstadt 04,Rot-Weiß Oberhausen,0,0
+2008,19,1. FC Nürnberg,1. FC Kaiserslautern,3,0
+2008,20,Rot-Weiß Oberhausen,FC St. Pauli,3,2
+2008,20,SV Wehen Wiesbaden,TuS Koblenz,1,3
+2008,20,SpVgg Greuther Fürth,FSV Frankfurt,0,0
+2008,20,Alemannia Aachen,1. FC Nürnberg,6,2
+2008,20,FC Augsburg,MSV Duisburg,1,1
+2008,20,VfL Osnabrück,1. FSV Mainz 05,1,3
+2008,20,TSV 1860 München,Rot Weiss Ahlen,2,1
+2008,20,1. FC Kaiserslautern,FC Ingolstadt 04,2,0
+2008,20,Hansa Rostock,SC Freiburg,1,3
+2008,21,1. FSV Mainz 05,Hansa Rostock,3,1
+2008,21,FC Ingolstadt 04,Alemannia Aachen,0,0
+2008,21,SC Freiburg,FC Augsburg,1,0
+2008,21,TuS Koblenz,SpVgg Greuther Fürth,3,0
+2008,21,1. FC Nürnberg,SV Wehen Wiesbaden,1,0
+2008,21,MSV Duisburg,TSV 1860 München,4,1
+2008,21,FSV Frankfurt,VfL Osnabrück,1,0
+2008,21,Rot Weiss Ahlen,Rot-Weiß Oberhausen,1,3
+2008,21,FC St. Pauli,1. FC Kaiserslautern,2,0
+2008,22,1. FC Nürnberg,1. FSV Mainz 05,0,0
+2008,22,SV Wehen Wiesbaden,SC Freiburg,0,1
+2008,22,Hansa Rostock,Rot Weiss Ahlen,0,0
+2008,22,1. FC Kaiserslautern,SpVgg Greuther Fürth,1,2
+2008,22,TSV 1860 München,FC St. Pauli,5,1
+2008,22,FC Augsburg,TuS Koblenz,0,2
+2008,22,Rot-Weiß Oberhausen,FSV Frankfurt,2,0
+2008,22,VfL Osnabrück,FC Ingolstadt 04,1,0
+2008,22,Alemannia Aachen,MSV Duisburg,1,2
+2008,23,FC St. Pauli,Hansa Rostock,3,2
+2008,23,TuS Koblenz,VfL Osnabrück,3,0
+2008,23,FSV Frankfurt,1. FC Kaiserslautern,1,0
+2008,23,SC Freiburg,Alemannia Aachen,2,1
+2008,23,Rot Weiss Ahlen,SV Wehen Wiesbaden,1,0
+2008,23,FC Ingolstadt 04,TSV 1860 München,2,3
+2008,23,1. FSV Mainz 05,FC Augsburg,1,1
+2008,23,SpVgg Greuther Fürth,Rot-Weiß Oberhausen,3,1
+2008,23,MSV Duisburg,1. FC Nürnberg,2,2
+2008,24,1. FC Kaiserslautern,TuS Koblenz,2,1
+2008,24,1. FC Nürnberg,Rot Weiss Ahlen,4,0
+2008,24,TSV 1860 München,FSV Frankfurt,1,1
+2008,24,MSV Duisburg,SC Freiburg,2,0
+2008,24,VfL Osnabrück,SpVgg Greuther Fürth,5,1
+2008,24,Alemannia Aachen,FC St. Pauli,1,3
+2008,24,FC Augsburg,Rot-Weiß Oberhausen,1,2
+2008,24,Hansa Rostock,FC Ingolstadt 04,1,1
+2008,24,SV Wehen Wiesbaden,1. FSV Mainz 05,0,2
+2008,25,TuS Koblenz,Hansa Rostock,1,1
+2008,25,FSV Frankfurt,SV Wehen Wiesbaden,2,1
+2008,25,Rot-Weiß Oberhausen,VfL Osnabrück,0,0
+2008,25,FC Ingolstadt 04,MSV Duisburg,0,0
+2008,25,1. FSV Mainz 05,Alemannia Aachen,1,4
+2008,25,SpVgg Greuther Fürth,TSV 1860 München,1,0
+2008,25,Rot Weiss Ahlen,1. FC Kaiserslautern,0,1
+2008,25,FC St. Pauli,FC Augsburg,1,1
+2008,25,SC Freiburg,1. FC Nürnberg,0,1
+2008,26,MSV Duisburg,1. FSV Mainz 05,0,1
+2008,26,1. FC Nürnberg,TuS Koblenz,2,0
+2008,26,FC Augsburg,FC Ingolstadt 04,1,1
+2008,26,Alemannia Aachen,SpVgg Greuther Fürth,1,0
+2008,26,SV Wehen Wiesbaden,FC St. Pauli,3,1
+2008,26,TSV 1860 München,VfL Osnabrück,1,1
+2008,26,Hansa Rostock,FSV Frankfurt,2,0
+2008,26,1. FC Kaiserslautern,Rot-Weiß Oberhausen,1,1
+2008,26,SC Freiburg,Rot Weiss Ahlen,1,1
+2008,27,Rot-Weiß Oberhausen,1. FC Nürnberg,0,3
+2008,27,SpVgg Greuther Fürth,Hansa Rostock,0,1
+2008,27,FC Ingolstadt 04,SV Wehen Wiesbaden,0,0
+2008,27,FC St. Pauli,MSV Duisburg,2,2
+2008,27,Rot Weiss Ahlen,Alemannia Aachen,0,2
+2008,27,TuS Koblenz,TSV 1860 München,3,2
+2008,27,VfL Osnabrück,1. FC Kaiserslautern,0,2
+2008,27,FSV Frankfurt,FC Augsburg,2,1
+2008,27,1. FSV Mainz 05,SC Freiburg,1,2
+2008,28,FC Augsburg,VfL Osnabrück,3,0
+2008,28,1. FSV Mainz 05,Rot Weiss Ahlen,0,0
+2008,28,Hansa Rostock,Rot-Weiß Oberhausen,3,1
+2008,28,SV Wehen Wiesbaden,SpVgg Greuther Fürth,0,1
+2008,28,1. FC Nürnberg,FC St. Pauli,2,0
+2008,28,MSV Duisburg,TuS Koblenz,2,3
+2008,28,Alemannia Aachen,FSV Frankfurt,2,0
+2008,28,SC Freiburg,FC Ingolstadt 04,3,2
+2008,28,TSV 1860 München,1. FC Kaiserslautern,1,1
+2008,29,Rot Weiss Ahlen,MSV Duisburg,0,2
+2008,29,FC St. Pauli,SC Freiburg,1,2
+2008,29,SpVgg Greuther Fürth,FC Augsburg,2,1
+2008,29,FSV Frankfurt,1. FC Nürnberg,2,1
+2008,29,FC Ingolstadt 04,1. FSV Mainz 05,3,4
+2008,29,TuS Koblenz,Alemannia Aachen,0,2
+2008,29,1. FC Kaiserslautern,SV Wehen Wiesbaden,1,0
+2008,29,Rot-Weiß Oberhausen,TSV 1860 München,1,1
+2008,29,VfL Osnabrück,Hansa Rostock,0,0
+2008,30,FC Augsburg,TSV 1860 München,3,0
+2008,30,SV Wehen Wiesbaden,VfL Osnabrück,0,1
+2008,30,Hansa Rostock,1. FC Kaiserslautern,5,1
+2008,30,Rot Weiss Ahlen,FC St. Pauli,1,0
+2008,30,1. FSV Mainz 05,TuS Koblenz,2,0
+2008,30,SC Freiburg,FSV Frankfurt,4,1
+2008,30,Alemannia Aachen,Rot-Weiß Oberhausen,2,2
+2008,30,1. FC Nürnberg,FC Ingolstadt 04,1,0
+2008,30,MSV Duisburg,SpVgg Greuther Fürth,2,0
+2008,31,TSV 1860 München,Hansa Rostock,3,3
+2008,31,FSV Frankfurt,MSV Duisburg,0,0
+2008,31,VfL Osnabrück,Alemannia Aachen,2,1
+2008,31,Rot-Weiß Oberhausen,SV Wehen Wiesbaden,0,1
+2008,31,1. FC Kaiserslautern,FC Augsburg,1,0
+2008,31,SpVgg Greuther Fürth,1. FC Nürnberg,1,1
+2008,31,FC St. Pauli,1. FSV Mainz 05,2,0
+2008,31,TuS Koblenz,SC Freiburg,2,5
+2008,31,FC Ingolstadt 04,Rot Weiss Ahlen,0,2
+2008,32,SV Wehen Wiesbaden,TSV 1860 München,0,0
+2008,32,Alemannia Aachen,1. FC Kaiserslautern,1,0
+2008,32,Hansa Rostock,FC Augsburg,3,3
+2008,32,MSV Duisburg,Rot-Weiß Oberhausen,1,1
+2008,32,SC Freiburg,SpVgg Greuther Fürth,0,0
+2008,32,Rot Weiss Ahlen,TuS Koblenz,1,1
+2008,32,1. FC Nürnberg,VfL Osnabrück,2,0
+2008,32,1. FSV Mainz 05,FSV Frankfurt,2,1
+2008,32,FC Ingolstadt 04,FC St. Pauli,0,1
+2008,33,Hansa Rostock,1. FC Nürnberg,0,0
+2008,33,1. FC Kaiserslautern,MSV Duisburg,3,5
+2008,33,SpVgg Greuther Fürth,1. FSV Mainz 05,0,2
+2008,33,Rot-Weiß Oberhausen,SC Freiburg,1,0
+2008,33,TSV 1860 München,Alemannia Aachen,1,1
+2008,33,FC Augsburg,SV Wehen Wiesbaden,1,1
+2008,33,TuS Koblenz,FC St. Pauli,2,1
+2008,33,VfL Osnabrück,Rot Weiss Ahlen,2,2
+2008,33,FSV Frankfurt,FC Ingolstadt 04,1,1
+2008,34,SV Wehen Wiesbaden,Hansa Rostock,1,1
+2008,34,Rot Weiss Ahlen,SpVgg Greuther Fürth,2,4
+2008,34,FC Ingolstadt 04,TuS Koblenz,4,0
+2008,34,1. FC Nürnberg,TSV 1860 München,2,1
+2008,34,MSV Duisburg,VfL Osnabrück,4,1
+2008,34,SC Freiburg,1. FC Kaiserslautern,4,3
+2008,34,Alemannia Aachen,FC Augsburg,4,0
+2008,34,FC St. Pauli,FSV Frankfurt,2,0
+2008,34,1. FSV Mainz 05,Rot-Weiß Oberhausen,4,0

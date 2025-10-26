@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2016,1,1. FC Kaiserslautern,Hannover 96,0,4
+2016,1,VfL Bochum,1. FC Union Berlin,2,1
+2016,1,SV Sandhausen,Fortuna Düsseldorf,2,2
+2016,1,Dynamo Dresden,1. FC Nürnberg,1,1
+2016,1,SpVgg Greuther Fürth,TSV 1860 München,1,0
+2016,1,Eintracht Braunschweig,Würzburger Kickers,2,1
+2016,1,1. FC Heidenheim 1846,Erzgebirge Aue,1,0
+2016,1,Arminia Bielefeld,Karlsruher SC,0,0
+2016,1,VfB Stuttgart,FC St. Pauli,2,1
+2016,2,1. FC Nürnberg,1. FC Heidenheim 1846,1,1
+2016,2,Erzgebirge Aue,SV Sandhausen,2,0
+2016,2,Fortuna Düsseldorf,VfB Stuttgart,1,0
+2016,2,Karlsruher SC,VfL Bochum,1,1
+2016,2,FC St. Pauli,Eintracht Braunschweig,0,2
+2016,2,Hannover 96,SpVgg Greuther Fürth,3,1
+2016,2,TSV 1860 München,Arminia Bielefeld,1,0
+2016,2,Würzburger Kickers,1. FC Kaiserslautern,1,1
+2016,2,1. FC Union Berlin,Dynamo Dresden,2,2
+2016,3,VfL Bochum,Hannover 96,1,1
+2016,3,1. FC Heidenheim 1846,Würzburger Kickers,1,2
+2016,3,SV Sandhausen,VfB Stuttgart,1,2
+2016,3,Karlsruher SC,TSV 1860 München,0,0
+2016,3,SpVgg Greuther Fürth,Erzgebirge Aue,3,2
+2016,3,Eintracht Braunschweig,1. FC Nürnberg,6,1
+2016,3,Arminia Bielefeld,1. FC Union Berlin,4,4
+2016,3,Dynamo Dresden,FC St. Pauli,1,0
+2016,3,1. FC Kaiserslautern,Fortuna Düsseldorf,0,0
+2016,4,VfB Stuttgart,1. FC Heidenheim 1846,1,2
+2016,4,Erzgebirge Aue,Eintracht Braunschweig,0,2
+2016,4,Würzburger Kickers,VfL Bochum,2,0
+2016,4,FC St. Pauli,Arminia Bielefeld,2,1
+2016,4,1. FC Union Berlin,Karlsruher SC,4,0
+2016,4,Hannover 96,Dynamo Dresden,0,2
+2016,4,SV Sandhausen,1. FC Kaiserslautern,2,0
+2016,4,Fortuna Düsseldorf,SpVgg Greuther Fürth,1,1
+2016,4,1. FC Nürnberg,TSV 1860 München,1,2
+2016,5,VfL Bochum,1. FC Nürnberg,5,4
+2016,5,SpVgg Greuther Fürth,Würzburger Kickers,0,3
+2016,5,TSV 1860 München,1. FC Union Berlin,1,2
+2016,5,Eintracht Braunschweig,SV Sandhausen,2,1
+2016,5,1. FC Kaiserslautern,VfB Stuttgart,0,1
+2016,5,1. FC Heidenheim 1846,Fortuna Düsseldorf,2,0
+2016,5,Karlsruher SC,FC St. Pauli,1,1
+2016,5,Arminia Bielefeld,Hannover 96,3,3
+2016,5,Dynamo Dresden,Erzgebirge Aue,0,3
+2016,6,VfB Stuttgart,Eintracht Braunschweig,2,0
+2016,6,1. FC Nürnberg,SpVgg Greuther Fürth,1,2
+2016,6,SV Sandhausen,1. FC Heidenheim 1846,0,0
+2016,6,Fortuna Düsseldorf,VfL Bochum,3,0
+2016,6,Hannover 96,Karlsruher SC,1,0
+2016,6,1. FC Kaiserslautern,Dynamo Dresden,3,0
+2016,6,Erzgebirge Aue,Arminia Bielefeld,1,1
+2016,6,Würzburger Kickers,1. FC Union Berlin,0,1
+2016,6,FC St. Pauli,TSV 1860 München,2,2
+2016,7,VfL Bochum,VfB Stuttgart,1,1
+2016,7,Eintracht Braunschweig,Fortuna Düsseldorf,2,1
+2016,7,SpVgg Greuther Fürth,SV Sandhausen,1,1
+2016,7,Karlsruher SC,Erzgebirge Aue,2,0
+2016,7,1. FC Heidenheim 1846,1. FC Kaiserslautern,3,0
+2016,7,Arminia Bielefeld,1. FC Nürnberg,1,3
+2016,7,TSV 1860 München,Hannover 96,0,2
+2016,7,Dynamo Dresden,Würzburger Kickers,2,2
+2016,7,1. FC Union Berlin,FC St. Pauli,2,0
+2016,8,1. FC Nürnberg,1. FC Union Berlin,2,0
+2016,8,SV Sandhausen,Dynamo Dresden,2,0
+2016,8,Erzgebirge Aue,VfL Bochum,2,4
+2016,8,Hannover 96,FC St. Pauli,2,0
+2016,8,Fortuna Düsseldorf,Karlsruher SC,1,1
+2016,8,1. FC Kaiserslautern,Arminia Bielefeld,0,0
+2016,8,1. FC Heidenheim 1846,Eintracht Braunschweig,1,1
+2016,8,Würzburger Kickers,TSV 1860 München,2,0
+2016,8,VfB Stuttgart,SpVgg Greuther Fürth,4,0
+2016,9,FC St. Pauli,Erzgebirge Aue,1,2
+2016,9,VfL Bochum,SV Sandhausen,2,2
+2016,9,Arminia Bielefeld,Würzburger Kickers,0,1
+2016,9,SpVgg Greuther Fürth,1. FC Heidenheim 1846,0,2
+2016,9,Dynamo Dresden,VfB Stuttgart,5,0
+2016,9,1. FC Union Berlin,Hannover 96,2,1
+2016,9,Karlsruher SC,1. FC Nürnberg,0,3
+2016,9,TSV 1860 München,Fortuna Düsseldorf,1,3
+2016,9,Eintracht Braunschweig,1. FC Kaiserslautern,1,0
+2016,10,VfB Stuttgart,TSV 1860 München,2,1
+2016,10,Fortuna Düsseldorf,Arminia Bielefeld,4,0
+2016,10,Würzburger Kickers,Karlsruher SC,0,2
+2016,10,1. FC Heidenheim 1846,Dynamo Dresden,0,0
+2016,10,SV Sandhausen,FC St. Pauli,3,0
+2016,10,1. FC Nürnberg,Hannover 96,2,0
+2016,10,Eintracht Braunschweig,SpVgg Greuther Fürth,1,0
+2016,10,Erzgebirge Aue,1. FC Union Berlin,1,3
+2016,10,1. FC Kaiserslautern,VfL Bochum,3,0
+2016,11,Arminia Bielefeld,SV Sandhausen,1,0
+2016,11,TSV 1860 München,Erzgebirge Aue,6,2
+2016,11,Dynamo Dresden,Eintracht Braunschweig,3,2
+2016,11,1. FC Union Berlin,Fortuna Düsseldorf,0,1
+2016,11,SpVgg Greuther Fürth,1. FC Kaiserslautern,0,1
+2016,11,Hannover 96,Würzburger Kickers,3,1
+2016,11,VfL Bochum,1. FC Heidenheim 1846,2,1
+2016,11,Karlsruher SC,VfB Stuttgart,1,3
+2016,11,FC St. Pauli,1. FC Nürnberg,1,1
+2016,12,1. FC Heidenheim 1846,Karlsruher SC,2,1
+2016,12,Fortuna Düsseldorf,Dynamo Dresden,0,3
+2016,12,Erzgebirge Aue,1. FC Nürnberg,1,2
+2016,12,SpVgg Greuther Fürth,VfL Bochum,2,1
+2016,12,1. FC Kaiserslautern,1. FC Union Berlin,1,0
+2016,12,VfB Stuttgart,Arminia Bielefeld,3,1
+2016,12,Eintracht Braunschweig,Hannover 96,2,2
+2016,12,SV Sandhausen,TSV 1860 München,3,2
+2016,12,Würzburger Kickers,FC St. Pauli,1,0
+2016,13,1. FC Nürnberg,Würzburger Kickers,2,2
+2016,13,VfL Bochum,Eintracht Braunschweig,1,1
+2016,13,Arminia Bielefeld,1. FC Heidenheim 1846,2,1
+2016,13,Hannover 96,Erzgebirge Aue,2,0
+2016,13,Karlsruher SC,SV Sandhausen,1,3
+2016,13,FC St. Pauli,Fortuna Düsseldorf,0,1
+2016,13,1. FC Union Berlin,VfB Stuttgart,1,1
+2016,13,Dynamo Dresden,SpVgg Greuther Fürth,2,1
+2016,13,TSV 1860 München,1. FC Kaiserslautern,1,1
+2016,14,SpVgg Greuther Fürth,Arminia Bielefeld,2,1
+2016,14,Fortuna Düsseldorf,Hannover 96,2,2
+2016,14,Würzburger Kickers,Erzgebirge Aue,1,1
+2016,14,1. FC Heidenheim 1846,FC St. Pauli,2,0
+2016,14,Dynamo Dresden,VfL Bochum,2,2
+2016,14,Eintracht Braunschweig,TSV 1860 München,2,1
+2016,14,1. FC Kaiserslautern,Karlsruher SC,0,0
+2016,14,SV Sandhausen,1. FC Union Berlin,0,1
+2016,14,VfB Stuttgart,1. FC Nürnberg,3,1
+2016,15,Hannover 96,1. FC Heidenheim 1846,3,2
+2016,15,FC St. Pauli,1. FC Kaiserslautern,0,0
+2016,15,Karlsruher SC,SpVgg Greuther Fürth,1,2
+2016,15,1. FC Nürnberg,SV Sandhausen,1,3
+2016,15,TSV 1860 München,Dynamo Dresden,1,0
+2016,15,Arminia Bielefeld,VfL Bochum,1,0
+2016,15,Erzgebirge Aue,VfB Stuttgart,0,4
+2016,15,Würzburger Kickers,Fortuna Düsseldorf,0,0
+2016,15,1. FC Union Berlin,Eintracht Braunschweig,2,0
+2016,16,1. FC Heidenheim 1846,1. FC Union Berlin,3,0
+2016,16,Fortuna Düsseldorf,1. FC Nürnberg,0,2
+2016,16,Dynamo Dresden,Karlsruher SC,0,0
+2016,16,VfL Bochum,TSV 1860 München,1,0
+2016,16,1. FC Kaiserslautern,Erzgebirge Aue,0,0
+2016,16,Eintracht Braunschweig,Arminia Bielefeld,3,2
+2016,16,SpVgg Greuther Fürth,FC St. Pauli,0,2
+2016,16,SV Sandhausen,Würzburger Kickers,0,0
+2016,16,VfB Stuttgart,Hannover 96,1,2
+2016,17,1. FC Union Berlin,SpVgg Greuther Fürth,1,1
+2016,17,TSV 1860 München,1. FC Heidenheim 1846,1,1
+2016,17,Erzgebirge Aue,Fortuna Düsseldorf,0,0
+2016,17,FC St. Pauli,VfL Bochum,1,1
+2016,17,Karlsruher SC,Eintracht Braunschweig,0,0
+2016,17,Hannover 96,SV Sandhausen,0,0
+2016,17,Arminia Bielefeld,Dynamo Dresden,1,2
+2016,17,Würzburger Kickers,VfB Stuttgart,3,0
+2016,17,1. FC Nürnberg,1. FC Kaiserslautern,2,1
+2016,18,1. FC Union Berlin,VfL Bochum,2,1
+2016,18,TSV 1860 München,SpVgg Greuther Fürth,2,1
+2016,18,Fortuna Düsseldorf,SV Sandhausen,0,3
+2016,18,Würzburger Kickers,Eintracht Braunschweig,1,1
+2016,18,Erzgebirge Aue,1. FC Heidenheim 1846,2,1
+2016,18,FC St. Pauli,VfB Stuttgart,0,1
+2016,18,Karlsruher SC,Arminia Bielefeld,3,2
+2016,18,1. FC Nürnberg,Dynamo Dresden,1,2
+2016,18,Hannover 96,1. FC Kaiserslautern,1,0
+2016,19,SpVgg Greuther Fürth,Hannover 96,4,1
+2016,19,Arminia Bielefeld,TSV 1860 München,2,1
+2016,19,1. FC Kaiserslautern,Würzburger Kickers,1,0
+2016,19,1. FC Heidenheim 1846,1. FC Nürnberg,2,3
+2016,19,SV Sandhausen,Erzgebirge Aue,2,0
+2016,19,Eintracht Braunschweig,FC St. Pauli,1,2
+2016,19,Dynamo Dresden,1. FC Union Berlin,0,0
+2016,19,VfL Bochum,Karlsruher SC,1,1
+2016,19,VfB Stuttgart,Fortuna Düsseldorf,2,0
+2016,20,1. FC Nürnberg,Eintracht Braunschweig,1,1
+2016,20,Erzgebirge Aue,SpVgg Greuther Fürth,0,0
+2016,20,Fortuna Düsseldorf,1. FC Kaiserslautern,1,1
+2016,20,TSV 1860 München,Karlsruher SC,2,1
+2016,20,Würzburger Kickers,1. FC Heidenheim 1846,0,2
+2016,20,1. FC Union Berlin,Arminia Bielefeld,3,1
+2016,20,VfB Stuttgart,SV Sandhausen,2,1
+2016,20,FC St. Pauli,Dynamo Dresden,2,0
+2016,20,Hannover 96,VfL Bochum,2,1
+2016,21,1. FC Heidenheim 1846,VfB Stuttgart,1,2
+2016,21,1. FC Kaiserslautern,SV Sandhausen,3,0
+2016,21,Eintracht Braunschweig,Erzgebirge Aue,1,1
+2016,21,SpVgg Greuther Fürth,Fortuna Düsseldorf,1,0
+2016,21,VfL Bochum,Würzburger Kickers,2,1
+2016,21,Dynamo Dresden,Hannover 96,1,2
+2016,21,Arminia Bielefeld,FC St. Pauli,1,1
+2016,21,Karlsruher SC,1. FC Union Berlin,1,2
+2016,21,TSV 1860 München,1. FC Nürnberg,2,0
+2016,22,SV Sandhausen,Eintracht Braunschweig,0,1
+2016,22,Würzburger Kickers,SpVgg Greuther Fürth,1,1
+2016,22,1. FC Union Berlin,TSV 1860 München,2,0
+2016,22,Fortuna Düsseldorf,1. FC Heidenheim 1846,0,0
+2016,22,Hannover 96,Arminia Bielefeld,2,2
+2016,22,1. FC Nürnberg,VfL Bochum,0,1
+2016,22,VfB Stuttgart,1. FC Kaiserslautern,2,0
+2016,22,Erzgebirge Aue,Dynamo Dresden,1,4
+2016,22,FC St. Pauli,Karlsruher SC,5,0
+2016,23,Dynamo Dresden,1. FC Kaiserslautern,3,3
+2016,23,VfL Bochum,Fortuna Düsseldorf,1,2
+2016,23,1. FC Union Berlin,Würzburger Kickers,2,0
+2016,23,Karlsruher SC,Hannover 96,2,0
+2016,23,TSV 1860 München,FC St. Pauli,1,2
+2016,23,SpVgg Greuther Fürth,1. FC Nürnberg,1,0
+2016,23,1. FC Heidenheim 1846,SV Sandhausen,2,2
+2016,23,Arminia Bielefeld,Erzgebirge Aue,2,2
+2016,23,Eintracht Braunschweig,VfB Stuttgart,1,1
+2016,24,VfB Stuttgart,VfL Bochum,1,1
+2016,24,FC St. Pauli,1. FC Union Berlin,1,2
+2016,24,Erzgebirge Aue,Karlsruher SC,1,0
+2016,24,Hannover 96,TSV 1860 München,1,0
+2016,24,Würzburger Kickers,Dynamo Dresden,0,2
+2016,24,SV Sandhausen,SpVgg Greuther Fürth,1,1
+2016,24,1. FC Kaiserslautern,1. FC Heidenheim 1846,1,1
+2016,24,1. FC Nürnberg,Arminia Bielefeld,1,0
+2016,24,Fortuna Düsseldorf,Eintracht Braunschweig,1,2
+2016,25,Arminia Bielefeld,1. FC Kaiserslautern,2,0
+2016,25,Eintracht Braunschweig,1. FC Heidenheim 1846,3,2
+2016,25,TSV 1860 München,Würzburger Kickers,2,1
+2016,25,SpVgg Greuther Fürth,VfB Stuttgart,1,0
+2016,25,FC St. Pauli,Hannover 96,0,0
+2016,25,Dynamo Dresden,SV Sandhausen,2,0
+2016,25,Karlsruher SC,Fortuna Düsseldorf,0,3
+2016,25,VfL Bochum,Erzgebirge Aue,1,1
+2016,25,1. FC Union Berlin,1. FC Nürnberg,1,0
+2016,26,Erzgebirge Aue,FC St. Pauli,1,0
+2016,26,1. FC Nürnberg,Karlsruher SC,2,1
+2016,26,Fortuna Düsseldorf,TSV 1860 München,0,1
+2016,26,SV Sandhausen,VfL Bochum,0,0
+2016,26,Hannover 96,1. FC Union Berlin,2,0
+2016,26,Würzburger Kickers,Arminia Bielefeld,1,1
+2016,26,1. FC Kaiserslautern,Eintracht Braunschweig,0,1
+2016,26,1. FC Heidenheim 1846,SpVgg Greuther Fürth,0,2
+2016,26,VfB Stuttgart,Dynamo Dresden,3,3
+2016,27,Hannover 96,1. FC Nürnberg,1,0
+2016,27,FC St. Pauli,SV Sandhausen,0,0
+2016,27,Arminia Bielefeld,Fortuna Düsseldorf,2,1
+2016,27,Karlsruher SC,Würzburger Kickers,1,1
+2016,27,TSV 1860 München,VfB Stuttgart,1,1
+2016,27,SpVgg Greuther Fürth,Eintracht Braunschweig,0,0
+2016,27,VfL Bochum,1. FC Kaiserslautern,0,0
+2016,27,Dynamo Dresden,1. FC Heidenheim 1846,2,1
+2016,27,1. FC Union Berlin,Erzgebirge Aue,0,1
+2016,28,Würzburger Kickers,Hannover 96,0,0
+2016,28,1. FC Nürnberg,FC St. Pauli,0,2
+2016,28,SV Sandhausen,Arminia Bielefeld,1,3
+2016,28,1. FC Heidenheim 1846,VfL Bochum,0,0
+2016,28,1. FC Kaiserslautern,SpVgg Greuther Fürth,2,0
+2016,28,Fortuna Düsseldorf,1. FC Union Berlin,2,2
+2016,28,VfB Stuttgart,Karlsruher SC,2,0
+2016,28,Erzgebirge Aue,TSV 1860 München,3,0
+2016,28,Eintracht Braunschweig,Dynamo Dresden,1,0
+2016,29,Hannover 96,Eintracht Braunschweig,1,0
+2016,29,1. FC Nürnberg,Erzgebirge Aue,2,1
+2016,29,VfL Bochum,SpVgg Greuther Fürth,1,0
+2016,29,1. FC Union Berlin,1. FC Kaiserslautern,3,1
+2016,29,Karlsruher SC,1. FC Heidenheim 1846,0,1
+2016,29,TSV 1860 München,SV Sandhausen,1,1
+2016,29,Dynamo Dresden,Fortuna Düsseldorf,1,1
+2016,29,FC St. Pauli,Würzburger Kickers,1,0
+2016,29,Arminia Bielefeld,VfB Stuttgart,2,3
+2016,30,Fortuna Düsseldorf,FC St. Pauli,1,3
+2016,30,1. FC Kaiserslautern,TSV 1860 München,1,0
+2016,30,SpVgg Greuther Fürth,Dynamo Dresden,1,0
+2016,30,Erzgebirge Aue,Hannover 96,2,2
+2016,30,1. FC Heidenheim 1846,Arminia Bielefeld,2,2
+2016,30,Würzburger Kickers,1. FC Nürnberg,1,1
+2016,30,Eintracht Braunschweig,VfL Bochum,2,0
+2016,30,SV Sandhausen,Karlsruher SC,4,0
+2016,30,VfB Stuttgart,1. FC Union Berlin,3,1
+2016,31,FC St. Pauli,1. FC Heidenheim 1846,3,0
+2016,31,1. FC Union Berlin,SV Sandhausen,2,1
+2016,31,VfL Bochum,Dynamo Dresden,4,2
+2016,31,1. FC Nürnberg,VfB Stuttgart,2,3
+2016,31,Arminia Bielefeld,SpVgg Greuther Fürth,1,1
+2016,31,Karlsruher SC,1. FC Kaiserslautern,1,3
+2016,31,TSV 1860 München,Eintracht Braunschweig,0,1
+2016,31,Hannover 96,Fortuna Düsseldorf,1,0
+2016,31,Erzgebirge Aue,Würzburger Kickers,3,1
+2016,32,1. FC Heidenheim 1846,Hannover 96,0,2
+2016,32,1. FC Kaiserslautern,FC St. Pauli,1,2
+2016,32,Dynamo Dresden,TSV 1860 München,1,2
+2016,32,SV Sandhausen,1. FC Nürnberg,0,1
+2016,32,Fortuna Düsseldorf,Würzburger Kickers,1,1
+2016,32,SpVgg Greuther Fürth,Karlsruher SC,0,1
+2016,32,VfL Bochum,Arminia Bielefeld,1,1
+2016,32,VfB Stuttgart,Erzgebirge Aue,3,0
+2016,32,Eintracht Braunschweig,1. FC Union Berlin,3,1
+2016,33,Hannover 96,VfB Stuttgart,1,0
+2016,33,TSV 1860 München,VfL Bochum,1,2
+2016,33,Arminia Bielefeld,Eintracht Braunschweig,6,0
+2016,33,FC St. Pauli,SpVgg Greuther Fürth,1,1
+2016,33,Erzgebirge Aue,1. FC Kaiserslautern,1,0
+2016,33,1. FC Union Berlin,1. FC Heidenheim 1846,0,1
+2016,33,Würzburger Kickers,SV Sandhausen,0,1
+2016,33,1. FC Nürnberg,Fortuna Düsseldorf,2,3
+2016,33,Karlsruher SC,Dynamo Dresden,3,4
+2016,34,SV Sandhausen,Hannover 96,1,1
+2016,34,1. FC Kaiserslautern,1. FC Nürnberg,1,0
+2016,34,VfL Bochum,FC St. Pauli,1,3
+2016,34,SpVgg Greuther Fürth,1. FC Union Berlin,1,2
+2016,34,Eintracht Braunschweig,Karlsruher SC,2,1
+2016,34,Dynamo Dresden,Arminia Bielefeld,1,1
+2016,34,1. FC Heidenheim 1846,TSV 1860 München,2,1
+2016,34,Fortuna Düsseldorf,Erzgebirge Aue,1,0
+2016,34,VfB Stuttgart,Würzburger Kickers,4,1

@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2024,1,1. FC Köln,Hamburger SV,1,2
+2024,1,Karlsruher SC,1. FC Nürnberg,3,2
+2024,1,Hannover 96,Jahn Regensburg,2,0
+2024,1,Hertha BSC,SC Paderborn 07,1,2
+2024,1,1. FC Magdeburg,SV 07 Elversberg,0,0
+2024,1,FC Schalke 04,Eintracht Braunschweig,5,1
+2024,1,SV Darmstadt 98,Fortuna Düsseldorf,0,2
+2024,1,SpVgg Greuther Fürth,Preußen Münster,3,1
+2024,1,SSV Ulm 1846,1. FC Kaiserslautern,1,2
+2024,2,1. FC Kaiserslautern,SpVgg Greuther Fürth,2,2
+2024,2,Jahn Regensburg,SSV Ulm 1846,1,0
+2024,2,Fortuna Düsseldorf,Karlsruher SC,0,0
+2024,2,SV 07 Elversberg,1. FC Köln,2,2
+2024,2,1. FC Nürnberg,FC Schalke 04,3,1
+2024,2,Hamburger SV,Hertha BSC,1,1
+2024,2,SC Paderborn 07,SV Darmstadt 98,3,1
+2024,2,Eintracht Braunschweig,1. FC Magdeburg,1,3
+2024,2,Preußen Münster,Hannover 96,0,0
+2024,3,Karlsruher SC,SV 07 Elversberg,3,2
+2024,3,Hannover 96,Hamburger SV,1,0
+2024,3,SpVgg Greuther Fürth,SC Paderborn 07,1,1
+2024,3,Hertha BSC,Jahn Regensburg,2,0
+2024,3,Preußen Münster,1. FC Kaiserslautern,0,1
+2024,3,1. FC Köln,Eintracht Braunschweig,5,0
+2024,3,SV Darmstadt 98,1. FC Nürnberg,1,1
+2024,3,1. FC Magdeburg,FC Schalke 04,2,2
+2024,3,SSV Ulm 1846,Fortuna Düsseldorf,1,2
+2024,4,Fortuna Düsseldorf,Hannover 96,1,0
+2024,4,Jahn Regensburg,SpVgg Greuther Fürth,0,4
+2024,4,Hamburger SV,Preußen Münster,4,1
+2024,4,SV 07 Elversberg,SV Darmstadt 98,4,0
+2024,4,1. FC Nürnberg,1. FC Magdeburg,0,4
+2024,4,1. FC Kaiserslautern,Hertha BSC,3,4
+2024,4,SC Paderborn 07,SSV Ulm 1846,0,0
+2024,4,FC Schalke 04,1. FC Köln,1,3
+2024,4,Eintracht Braunschweig,Karlsruher SC,1,2
+2024,5,Karlsruher SC,FC Schalke 04,2,0
+2024,5,Preußen Münster,SC Paderborn 07,3,3
+2024,5,SV Darmstadt 98,Eintracht Braunschweig,1,1
+2024,5,Hannover 96,1. FC Kaiserslautern,3,1
+2024,5,SSV Ulm 1846,1. FC Nürnberg,1,2
+2024,5,1. FC Köln,1. FC Magdeburg,1,2
+2024,5,Hamburger SV,Jahn Regensburg,5,0
+2024,5,SpVgg Greuther Fürth,SV 07 Elversberg,0,0
+2024,5,Hertha BSC,Fortuna Düsseldorf,0,2
+2024,6,SC Paderborn 07,Hannover 96,2,1
+2024,6,FC Schalke 04,SV Darmstadt 98,3,5
+2024,6,Fortuna Düsseldorf,1. FC Köln,2,2
+2024,6,1. FC Nürnberg,Hertha BSC,0,2
+2024,6,Eintracht Braunschweig,SpVgg Greuther Fürth,2,0
+2024,6,1. FC Kaiserslautern,Hamburger SV,2,2
+2024,6,SV 07 Elversberg,SSV Ulm 1846,1,3
+2024,6,1. FC Magdeburg,Karlsruher SC,2,2
+2024,6,Jahn Regensburg,Preußen Münster,0,3
+2024,7,SpVgg Greuther Fürth,Fortuna Düsseldorf,1,2
+2024,7,SSV Ulm 1846,Eintracht Braunschweig,3,1
+2024,7,SV Darmstadt 98,1. FC Magdeburg,1,2
+2024,7,Hamburger SV,SC Paderborn 07,2,2
+2024,7,Jahn Regensburg,1. FC Kaiserslautern,0,0
+2024,7,Preußen Münster,FC Schalke 04,1,2
+2024,7,Hannover 96,1. FC Nürnberg,2,0
+2024,7,Hertha BSC,SV 07 Elversberg,1,4
+2024,7,1. FC Köln,Karlsruher SC,4,4
+2024,8,Karlsruher SC,SV Darmstadt 98,3,3
+2024,8,SC Paderborn 07,Jahn Regensburg,3,0
+2024,8,1. FC Köln,SSV Ulm 1846,2,0
+2024,8,SV 07 Elversberg,1. FC Kaiserslautern,1,0
+2024,8,1. FC Nürnberg,Preußen Münster,3,2
+2024,8,FC Schalke 04,Hertha BSC,2,2
+2024,8,Fortuna Düsseldorf,Hamburger SV,0,3
+2024,8,1. FC Magdeburg,SpVgg Greuther Fürth,2,2
+2024,8,Eintracht Braunschweig,Hannover 96,2,0
+2024,9,SV Darmstadt 98,1. FC Köln,5,1
+2024,9,Hertha BSC,Eintracht Braunschweig,3,1
+2024,9,Hannover 96,FC Schalke 04,1,0
+2024,9,Preußen Münster,SV 07 Elversberg,1,1
+2024,9,Jahn Regensburg,Fortuna Düsseldorf,0,3
+2024,9,1. FC Kaiserslautern,SC Paderborn 07,3,0
+2024,9,Hamburger SV,1. FC Magdeburg,3,1
+2024,9,SpVgg Greuther Fürth,1. FC Nürnberg,0,4
+2024,9,SSV Ulm 1846,Karlsruher SC,0,1
+2024,10,1. FC Köln,SC Paderborn 07,1,2
+2024,10,1. FC Nürnberg,Jahn Regensburg,8,3
+2024,10,Karlsruher SC,Hertha BSC,1,3
+2024,10,FC Schalke 04,SpVgg Greuther Fürth,3,4
+2024,10,SV 07 Elversberg,Hamburger SV,4,2
+2024,10,Fortuna Düsseldorf,1. FC Kaiserslautern,3,4
+2024,10,SV Darmstadt 98,SSV Ulm 1846,1,1
+2024,10,1. FC Magdeburg,Hannover 96,0,3
+2024,10,Eintracht Braunschweig,Preußen Münster,1,1
+2024,11,SSV Ulm 1846,FC Schalke 04,0,0
+2024,11,Preußen Münster,Fortuna Düsseldorf,1,0
+2024,11,Hannover 96,Karlsruher SC,2,1
+2024,11,SpVgg Greuther Fürth,SV Darmstadt 98,1,5
+2024,11,Jahn Regensburg,SV 07 Elversberg,1,0
+2024,11,Hertha BSC,1. FC Köln,0,1
+2024,11,Hamburger SV,1. FC Nürnberg,1,1
+2024,11,SC Paderborn 07,Eintracht Braunschweig,0,0
+2024,11,1. FC Kaiserslautern,1. FC Magdeburg,2,2
+2024,12,1. FC Nürnberg,1. FC Kaiserslautern,0,0
+2024,12,Eintracht Braunschweig,Hamburger SV,3,1
+2024,12,1. FC Köln,SpVgg Greuther Fürth,1,0
+2024,12,SV Darmstadt 98,Hertha BSC,3,1
+2024,12,1. FC Magdeburg,SSV Ulm 1846,0,0
+2024,12,Fortuna Düsseldorf,SC Paderborn 07,1,1
+2024,12,Karlsruher SC,Preußen Münster,1,1
+2024,12,FC Schalke 04,Jahn Regensburg,2,0
+2024,12,SV 07 Elversberg,Hannover 96,3,1
+2024,13,SC Paderborn 07,1. FC Nürnberg,3,2
+2024,13,Preußen Münster,1. FC Köln,0,1
+2024,13,Fortuna Düsseldorf,SV 07 Elversberg,0,2
+2024,13,Hannover 96,SV Darmstadt 98,1,2
+2024,13,SpVgg Greuther Fürth,Karlsruher SC,2,3
+2024,13,Hertha BSC,SSV Ulm 1846,2,2
+2024,13,Hamburger SV,FC Schalke 04,2,2
+2024,13,1. FC Kaiserslautern,Eintracht Braunschweig,3,2
+2024,13,Jahn Regensburg,1. FC Magdeburg,0,1
+2024,14,FC Schalke 04,1. FC Kaiserslautern,0,3
+2024,14,1. FC Magdeburg,Hertha BSC,1,3
+2024,14,1. FC Köln,Hannover 96,2,2
+2024,14,SV 07 Elversberg,SC Paderborn 07,1,3
+2024,14,Eintracht Braunschweig,Jahn Regensburg,0,0
+2024,14,SV Darmstadt 98,Preußen Münster,0,0
+2024,14,Karlsruher SC,Hamburger SV,1,3
+2024,14,1. FC Nürnberg,Fortuna Düsseldorf,2,2
+2024,14,SSV Ulm 1846,SpVgg Greuther Fürth,1,1
+2024,15,SC Paderborn 07,FC Schalke 04,2,4
+2024,15,SV 07 Elversberg,1. FC Nürnberg,2,1
+2024,15,Hannover 96,SSV Ulm 1846,3,2
+2024,15,SpVgg Greuther Fürth,Hertha BSC,2,1
+2024,15,1. FC Kaiserslautern,Karlsruher SC,3,1
+2024,15,Preußen Münster,1. FC Magdeburg,1,2
+2024,15,Fortuna Düsseldorf,Eintracht Braunschweig,5,0
+2024,15,Hamburger SV,SV Darmstadt 98,2,2
+2024,15,Jahn Regensburg,1. FC Köln,0,1
+2024,16,Karlsruher SC,Jahn Regensburg,4,2
+2024,16,Hertha BSC,Preußen Münster,1,2
+2024,16,FC Schalke 04,Fortuna Düsseldorf,1,1
+2024,16,1. FC Magdeburg,SC Paderborn 07,1,1
+2024,16,SSV Ulm 1846,Hamburger SV,1,1
+2024,16,SV Darmstadt 98,1. FC Kaiserslautern,5,1
+2024,16,1. FC Köln,1. FC Nürnberg,3,1
+2024,16,SpVgg Greuther Fürth,Hannover 96,1,0
+2024,16,Eintracht Braunschweig,SV 07 Elversberg,0,3
+2024,17,Fortuna Düsseldorf,1. FC Magdeburg,2,5
+2024,17,SV 07 Elversberg,FC Schalke 04,1,4
+2024,17,Hamburger SV,SpVgg Greuther Fürth,5,0
+2024,17,SC Paderborn 07,Karlsruher SC,1,2
+2024,17,Preußen Münster,SSV Ulm 1846,0,0
+2024,17,1. FC Nürnberg,Eintracht Braunschweig,1,0
+2024,17,Hannover 96,Hertha BSC,0,0
+2024,17,1. FC Kaiserslautern,1. FC Köln,0,1
+2024,17,Jahn Regensburg,SV Darmstadt 98,2,1
+2024,18,Fortuna Düsseldorf,SV Darmstadt 98,2,2
+2024,18,Jahn Regensburg,Hannover 96,0,1
+2024,18,Preußen Münster,SpVgg Greuther Fürth,2,1
+2024,18,Eintracht Braunschweig,FC Schalke 04,0,0
+2024,18,1. FC Kaiserslautern,SSV Ulm 1846,2,1
+2024,18,Hamburger SV,1. FC Köln,1,0
+2024,18,1. FC Nürnberg,Karlsruher SC,2,1
+2024,18,SC Paderborn 07,Hertha BSC,1,2
+2024,18,SV 07 Elversberg,1. FC Magdeburg,2,5
+2024,19,SpVgg Greuther Fürth,1. FC Kaiserslautern,2,4
+2024,19,1. FC Magdeburg,Eintracht Braunschweig,1,1
+2024,19,Karlsruher SC,Fortuna Düsseldorf,2,3
+2024,19,1. FC Köln,SV 07 Elversberg,1,0
+2024,19,FC Schalke 04,1. FC Nürnberg,3,1
+2024,19,Hertha BSC,Hamburger SV,2,3
+2024,19,SV Darmstadt 98,SC Paderborn 07,0,1
+2024,19,Hannover 96,Preußen Münster,2,2
+2024,19,SSV Ulm 1846,Jahn Regensburg,5,1
+2024,20,1. FC Nürnberg,SV Darmstadt 98,1,0
+2024,20,SV 07 Elversberg,Karlsruher SC,2,2
+2024,20,Eintracht Braunschweig,1. FC Köln,1,2
+2024,20,Jahn Regensburg,Hertha BSC,2,0
+2024,20,Fortuna Düsseldorf,SSV Ulm 1846,3,2
+2024,20,FC Schalke 04,1. FC Magdeburg,2,5
+2024,20,Hamburger SV,Hannover 96,2,2
+2024,20,SC Paderborn 07,SpVgg Greuther Fürth,1,2
+2024,20,1. FC Kaiserslautern,Preußen Münster,2,1
+2024,21,Preußen Münster,Hamburger SV,1,2
+2024,21,SpVgg Greuther Fürth,Jahn Regensburg,2,1
+2024,21,SSV Ulm 1846,SC Paderborn 07,0,2
+2024,21,SV Darmstadt 98,SV 07 Elversberg,0,3
+2024,21,1. FC Magdeburg,1. FC Nürnberg,3,4
+2024,21,Hertha BSC,1. FC Kaiserslautern,0,1
+2024,21,Hannover 96,Fortuna Düsseldorf,1,1
+2024,21,1. FC Köln,FC Schalke 04,1,0
+2024,21,Karlsruher SC,Eintracht Braunschweig,0,2
+2024,22,1. FC Magdeburg,1. FC Köln,3,0
+2024,22,SC Paderborn 07,Preußen Münster,2,0
+2024,22,Eintracht Braunschweig,SV Darmstadt 98,1,0
+2024,22,1. FC Kaiserslautern,Hannover 96,0,0
+2024,22,SV 07 Elversberg,SpVgg Greuther Fürth,2,0
+2024,22,Fortuna Düsseldorf,Hertha BSC,2,1
+2024,22,Jahn Regensburg,Hamburger SV,1,1
+2024,22,FC Schalke 04,Karlsruher SC,2,1
+2024,22,1. FC Nürnberg,SSV Ulm 1846,2,0
+2024,23,Hertha BSC,1. FC Nürnberg,0,0
+2024,23,Hamburger SV,1. FC Kaiserslautern,3,0
+2024,23,SSV Ulm 1846,SV 07 Elversberg,0,0
+2024,23,Karlsruher SC,1. FC Magdeburg,3,1
+2024,23,Preußen Münster,Jahn Regensburg,2,0
+2024,23,Hannover 96,SC Paderborn 07,1,1
+2024,23,1. FC Köln,Fortuna Düsseldorf,1,1
+2024,23,SV Darmstadt 98,FC Schalke 04,2,0
+2024,23,SpVgg Greuther Fürth,Eintracht Braunschweig,3,0
+2024,24,Fortuna Düsseldorf,SpVgg Greuther Fürth,1,2
+2024,24,FC Schalke 04,Preußen Münster,1,0
+2024,24,1. FC Nürnberg,Hannover 96,1,2
+2024,24,Eintracht Braunschweig,SSV Ulm 1846,1,1
+2024,24,1. FC Kaiserslautern,Jahn Regensburg,3,0
+2024,24,Karlsruher SC,1. FC Köln,1,0
+2024,24,1. FC Magdeburg,SV Darmstadt 98,4,1
+2024,24,SC Paderborn 07,Hamburger SV,2,0
+2024,24,SV 07 Elversberg,Hertha BSC,4,0
+2024,25,SV Darmstadt 98,Karlsruher SC,3,0
+2024,25,1. FC Kaiserslautern,SV 07 Elversberg,1,1
+2024,25,SSV Ulm 1846,1. FC Köln,0,1
+2024,25,Hertha BSC,FC Schalke 04,1,2
+2024,25,SpVgg Greuther Fürth,1. FC Magdeburg,1,1
+2024,25,Hamburger SV,Fortuna Düsseldorf,4,1
+2024,25,Jahn Regensburg,SC Paderborn 07,0,0
+2024,25,Preußen Münster,1. FC Nürnberg,0,1
+2024,25,Hannover 96,Eintracht Braunschweig,1,1
+2024,26,1. FC Magdeburg,Hamburger SV,0,3
+2024,26,FC Schalke 04,Hannover 96,1,2
+2024,26,SC Paderborn 07,1. FC Kaiserslautern,5,3
+2024,26,SV 07 Elversberg,Preußen Münster,0,1
+2024,26,Fortuna Düsseldorf,Jahn Regensburg,1,0
+2024,26,1. FC Köln,SV Darmstadt 98,2,1
+2024,26,1. FC Nürnberg,SpVgg Greuther Fürth,3,0
+2024,26,Eintracht Braunschweig,Hertha BSC,1,5
+2024,26,Karlsruher SC,SSV Ulm 1846,0,0
+2024,27,SSV Ulm 1846,SV Darmstadt 98,2,1
+2024,27,Hamburger SV,SV 07 Elversberg,0,0
+2024,27,SC Paderborn 07,1. FC Köln,1,2
+2024,27,Hertha BSC,Karlsruher SC,3,1
+2024,27,Hannover 96,1. FC Magdeburg,0,0
+2024,27,1. FC Kaiserslautern,Fortuna Düsseldorf,3,1
+2024,27,SpVgg Greuther Fürth,FC Schalke 04,3,3
+2024,27,Jahn Regensburg,1. FC Nürnberg,2,1
+2024,27,Preußen Münster,Eintracht Braunschweig,1,1
+2024,28,Karlsruher SC,Hannover 96,1,0
+2024,28,Eintracht Braunschweig,SC Paderborn 07,3,2
+2024,28,1. FC Nürnberg,Hamburger SV,0,3
+2024,28,SV Darmstadt 98,SpVgg Greuther Fürth,1,0
+2024,28,Fortuna Düsseldorf,Preußen Münster,1,0
+2024,28,1. FC Köln,Hertha BSC,0,1
+2024,28,1. FC Magdeburg,1. FC Kaiserslautern,2,0
+2024,28,FC Schalke 04,SSV Ulm 1846,2,1
+2024,28,SV 07 Elversberg,Jahn Regensburg,6,0
+2024,29,SpVgg Greuther Fürth,1. FC Köln,1,1
+2024,29,Hamburger SV,Eintracht Braunschweig,2,4
+2024,29,Hertha BSC,SV Darmstadt 98,1,1
+2024,29,Hannover 96,SV 07 Elversberg,1,3
+2024,29,SSV Ulm 1846,1. FC Magdeburg,1,0
+2024,29,1. FC Kaiserslautern,1. FC Nürnberg,1,2
+2024,29,SC Paderborn 07,Fortuna Düsseldorf,1,2
+2024,29,Preußen Münster,Karlsruher SC,1,1
+2024,29,Jahn Regensburg,FC Schalke 04,2,0
+2024,30,SV 07 Elversberg,Fortuna Düsseldorf,1,1
+2024,30,1. FC Nürnberg,SC Paderborn 07,2,3
+2024,30,Eintracht Braunschweig,1. FC Kaiserslautern,2,0
+2024,30,FC Schalke 04,Hamburger SV,2,2
+2024,30,SV Darmstadt 98,Hannover 96,3,1
+2024,30,Karlsruher SC,SpVgg Greuther Fürth,1,0
+2024,30,SSV Ulm 1846,Hertha BSC,2,3
+2024,30,1. FC Köln,Preußen Münster,3,1
+2024,30,1. FC Magdeburg,Jahn Regensburg,3,0
+2024,31,Hertha BSC,1. FC Magdeburg,1,1
+2024,31,SpVgg Greuther Fürth,SSV Ulm 1846,0,1
+2024,31,Preußen Münster,SV Darmstadt 98,1,1
+2024,31,SC Paderborn 07,SV 07 Elversberg,1,1
+2024,31,Jahn Regensburg,Eintracht Braunschweig,1,1
+2024,31,Fortuna Düsseldorf,1. FC Nürnberg,3,3
+2024,31,Hannover 96,1. FC Köln,1,0
+2024,31,Hamburger SV,Karlsruher SC,1,2
+2024,31,1. FC Kaiserslautern,FC Schalke 04,2,1
+2024,32,FC Schalke 04,SC Paderborn 07,0,2
+2024,32,1. FC Magdeburg,Preußen Münster,0,5
+2024,32,Eintracht Braunschweig,Fortuna Düsseldorf,2,2
+2024,32,SV Darmstadt 98,Hamburger SV,0,4
+2024,32,SSV Ulm 1846,Hannover 96,1,2
+2024,32,1. FC Köln,Jahn Regensburg,1,1
+2024,32,Hertha BSC,SpVgg Greuther Fürth,1,0
+2024,32,1. FC Nürnberg,SV 07 Elversberg,1,3
+2024,32,Karlsruher SC,1. FC Kaiserslautern,2,2
+2024,33,1. FC Nürnberg,1. FC Köln,1,2
+2024,33,Preußen Münster,Hertha BSC,2,0
+2024,33,Fortuna Düsseldorf,FC Schalke 04,2,0
+2024,33,SC Paderborn 07,1. FC Magdeburg,2,1
+2024,33,SV 07 Elversberg,Eintracht Braunschweig,3,0
+2024,33,Hamburger SV,SSV Ulm 1846,6,1
+2024,33,1. FC Kaiserslautern,SV Darmstadt 98,2,1
+2024,33,Jahn Regensburg,Karlsruher SC,2,2
+2024,33,Hannover 96,SpVgg Greuther Fürth,1,1
+2024,34,1. FC Magdeburg,Fortuna Düsseldorf,4,2
+2024,34,SpVgg Greuther Fürth,Hamburger SV,3,2
+2024,34,Hertha BSC,Hannover 96,1,1
+2024,34,Karlsruher SC,SC Paderborn 07,3,0
+2024,34,FC Schalke 04,SV 07 Elversberg,1,2
+2024,34,Eintracht Braunschweig,1. FC Nürnberg,1,4
+2024,34,1. FC Köln,1. FC Kaiserslautern,4,0
+2024,34,SSV Ulm 1846,Preußen Münster,2,2
+2024,34,SV Darmstadt 98,Jahn Regensburg,3,1

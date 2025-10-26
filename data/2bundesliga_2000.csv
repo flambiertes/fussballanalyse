@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2000,1,Hannover 96,1. FC Nürnberg,1,1
+2000,1,Stuttgarter Kickers,Rot-Weiß Oberhausen,1,0
+2000,1,LR Ahlen,FC St. Pauli,3,6
+2000,1,Bor. Mönchengladbach,1. FC Saarbrücken,0,0
+2000,1,Waldhof Mannheim,Alemannia Aachen,3,0
+2000,1,SSV Reutlingen,1. FSV Mainz 05,3,2
+2000,1,SpVgg Greuther Fürth,Chemnitzer FC,4,1
+2000,1,Arminia Bielefeld,VfL Osnabrück,3,1
+2000,1,MSV Duisburg,SSV Ulm 1846,1,2
+2000,2,Chemnitzer FC,Hannover 96,0,2
+2000,2,FC St. Pauli,Waldhof Mannheim,5,0
+2000,2,VfL Osnabrück,Bor. Mönchengladbach,1,3
+2000,2,Alemannia Aachen,SSV Reutlingen,4,1
+2000,2,1. FC Saarbrücken,SpVgg Greuther Fürth,2,1
+2000,2,Rot-Weiß Oberhausen,MSV Duisburg,1,0
+2000,2,1. FC Nürnberg,LR Ahlen,2,0
+2000,2,1. FSV Mainz 05,Stuttgarter Kickers,2,2
+2000,2,SSV Ulm 1846,Arminia Bielefeld,0,1
+2000,3,Bor. Mönchengladbach,SSV Ulm 1846,5,0
+2000,3,Chemnitzer FC,1. FC Saarbrücken,1,3
+2000,3,Hannover 96,LR Ahlen,1,1
+2000,3,MSV Duisburg,1. FSV Mainz 05,0,0
+2000,3,SSV Reutlingen,FC St. Pauli,2,0
+2000,3,Arminia Bielefeld,Rot-Weiß Oberhausen,2,0
+2000,3,Waldhof Mannheim,1. FC Nürnberg,1,4
+2000,3,Stuttgarter Kickers,Alemannia Aachen,0,3
+2000,3,SpVgg Greuther Fürth,VfL Osnabrück,2,0
+2000,4,1. FC Saarbrücken,Hannover 96,2,1
+2000,4,1. FSV Mainz 05,Arminia Bielefeld,2,4
+2000,4,LR Ahlen,Waldhof Mannheim,1,2
+2000,4,1. FC Nürnberg,SSV Reutlingen,2,0
+2000,4,FC St. Pauli,Stuttgarter Kickers,4,0
+2000,4,Rot-Weiß Oberhausen,Bor. Mönchengladbach,1,1
+2000,4,SSV Ulm 1846,SpVgg Greuther Fürth,2,2
+2000,4,VfL Osnabrück,Chemnitzer FC,1,1
+2000,4,Alemannia Aachen,MSV Duisburg,1,0
+2000,5,MSV Duisburg,FC St. Pauli,4,1
+2000,5,Hannover 96,Waldhof Mannheim,3,0
+2000,5,SSV Reutlingen,LR Ahlen,5,1
+2000,5,Bor. Mönchengladbach,1. FSV Mainz 05,1,1
+2000,5,1. FC Saarbrücken,VfL Osnabrück,2,1
+2000,5,Chemnitzer FC,SSV Ulm 1846,1,0
+2000,5,Stuttgarter Kickers,1. FC Nürnberg,0,2
+2000,5,SpVgg Greuther Fürth,Rot-Weiß Oberhausen,1,2
+2000,5,Arminia Bielefeld,Alemannia Aachen,1,1
+2000,6,SSV Ulm 1846,1. FC Saarbrücken,3,1
+2000,6,1. FC Nürnberg,MSV Duisburg,3,1
+2000,6,Waldhof Mannheim,SSV Reutlingen,1,1
+2000,6,FC St. Pauli,Arminia Bielefeld,2,0
+2000,6,LR Ahlen,Stuttgarter Kickers,1,1
+2000,6,Rot-Weiß Oberhausen,Chemnitzer FC,4,1
+2000,6,VfL Osnabrück,Hannover 96,0,1
+2000,6,1. FSV Mainz 05,SpVgg Greuther Fürth,1,0
+2000,6,Alemannia Aachen,Bor. Mönchengladbach,1,1
+2000,7,1. FC Saarbrücken,Rot-Weiß Oberhausen,3,2
+2000,7,MSV Duisburg,LR Ahlen,3,3
+2000,7,Stuttgarter Kickers,Waldhof Mannheim,2,2
+2000,7,Bor. Mönchengladbach,FC St. Pauli,4,2
+2000,7,Chemnitzer FC,1. FSV Mainz 05,0,2
+2000,7,Hannover 96,SSV Reutlingen,5,1
+2000,7,VfL Osnabrück,SSV Ulm 1846,2,1
+2000,7,SpVgg Greuther Fürth,Alemannia Aachen,3,0
+2000,7,Arminia Bielefeld,1. FC Nürnberg,1,2
+2000,8,Waldhof Mannheim,MSV Duisburg,1,0
+2000,8,Alemannia Aachen,Chemnitzer FC,1,2
+2000,8,LR Ahlen,Arminia Bielefeld,1,1
+2000,8,1. FSV Mainz 05,1. FC Saarbrücken,1,0
+2000,8,FC St. Pauli,SpVgg Greuther Fürth,3,3
+2000,8,Rot-Weiß Oberhausen,VfL Osnabrück,5,2
+2000,8,SSV Ulm 1846,Hannover 96,3,3
+2000,8,SSV Reutlingen,Stuttgarter Kickers,1,0
+2000,8,1. FC Nürnberg,Bor. Mönchengladbach,2,1
+2000,9,Chemnitzer FC,FC St. Pauli,1,3
+2000,9,Arminia Bielefeld,Waldhof Mannheim,0,0
+2000,9,Hannover 96,Stuttgarter Kickers,1,0
+2000,9,SpVgg Greuther Fürth,1. FC Nürnberg,0,0
+2000,9,1. FC Saarbrücken,Alemannia Aachen,1,3
+2000,9,MSV Duisburg,SSV Reutlingen,4,3
+2000,9,SSV Ulm 1846,Rot-Weiß Oberhausen,0,1
+2000,9,VfL Osnabrück,1. FSV Mainz 05,2,1
+2000,9,Bor. Mönchengladbach,LR Ahlen,1,2
+2000,10,SSV Reutlingen,Arminia Bielefeld,3,2
+2000,10,1. FC Nürnberg,Chemnitzer FC,3,1
+2000,10,Alemannia Aachen,VfL Osnabrück,0,0
+2000,10,1. FSV Mainz 05,SSV Ulm 1846,0,3
+2000,10,Waldhof Mannheim,Bor. Mönchengladbach,4,0
+2000,10,LR Ahlen,SpVgg Greuther Fürth,2,0
+2000,10,FC St. Pauli,1. FC Saarbrücken,2,2
+2000,10,Rot-Weiß Oberhausen,Hannover 96,0,0
+2000,10,Stuttgarter Kickers,MSV Duisburg,0,0
+2000,11,Chemnitzer FC,LR Ahlen,2,2
+2000,11,Arminia Bielefeld,Stuttgarter Kickers,0,0
+2000,11,Hannover 96,MSV Duisburg,0,2
+2000,11,Rot-Weiß Oberhausen,1. FSV Mainz 05,1,0
+2000,11,SSV Ulm 1846,Alemannia Aachen,3,1
+2000,11,VfL Osnabrück,FC St. Pauli,0,0
+2000,11,SpVgg Greuther Fürth,Waldhof Mannheim,2,1
+2000,11,Bor. Mönchengladbach,SSV Reutlingen,1,1
+2000,11,1. FC Saarbrücken,1. FC Nürnberg,2,2
+2000,12,Waldhof Mannheim,Chemnitzer FC,0,0
+2000,12,MSV Duisburg,Arminia Bielefeld,2,1
+2000,12,FC St. Pauli,SSV Ulm 1846,1,0
+2000,12,1. FSV Mainz 05,Hannover 96,0,2
+2000,12,LR Ahlen,1. FC Saarbrücken,2,0
+2000,12,Stuttgarter Kickers,Bor. Mönchengladbach,1,1
+2000,12,SSV Reutlingen,SpVgg Greuther Fürth,2,2
+2000,12,Alemannia Aachen,Rot-Weiß Oberhausen,3,1
+2000,12,1. FC Nürnberg,VfL Osnabrück,3,1
+2000,13,SSV Ulm 1846,1. FC Nürnberg,0,1
+2000,13,1. FSV Mainz 05,Alemannia Aachen,1,1
+2000,13,VfL Osnabrück,LR Ahlen,1,1
+2000,13,Chemnitzer FC,SSV Reutlingen,1,3
+2000,13,Rot-Weiß Oberhausen,FC St. Pauli,2,3
+2000,13,SpVgg Greuther Fürth,Stuttgarter Kickers,2,0
+2000,13,Bor. Mönchengladbach,MSV Duisburg,1,1
+2000,13,1. FC Saarbrücken,Waldhof Mannheim,3,3
+2000,13,Hannover 96,Arminia Bielefeld,4,2
+2000,14,MSV Duisburg,SpVgg Greuther Fürth,0,0
+2000,14,Alemannia Aachen,Hannover 96,0,4
+2000,14,LR Ahlen,SSV Ulm 1846,1,0
+2000,14,Arminia Bielefeld,Bor. Mönchengladbach,1,2
+2000,14,Waldhof Mannheim,VfL Osnabrück,2,0
+2000,14,Stuttgarter Kickers,Chemnitzer FC,4,0
+2000,14,SSV Reutlingen,1. FC Saarbrücken,8,2
+2000,14,1. FC Nürnberg,Rot-Weiß Oberhausen,2,1
+2000,14,FC St. Pauli,1. FSV Mainz 05,2,2
+2000,15,Chemnitzer FC,MSV Duisburg,1,3
+2000,15,SpVgg Greuther Fürth,Arminia Bielefeld,1,0
+2000,15,1. FC Saarbrücken,Stuttgarter Kickers,1,0
+2000,15,VfL Osnabrück,SSV Reutlingen,0,2
+2000,15,FC St. Pauli,Alemannia Aachen,3,3
+2000,15,Rot-Weiß Oberhausen,LR Ahlen,1,0
+2000,15,SSV Ulm 1846,Waldhof Mannheim,1,0
+2000,15,1. FSV Mainz 05,1. FC Nürnberg,2,0
+2000,15,Bor. Mönchengladbach,Hannover 96,2,0
+2000,16,MSV Duisburg,1. FC Saarbrücken,2,1
+2000,16,SSV Reutlingen,SSV Ulm 1846,2,2
+2000,16,Stuttgarter Kickers,VfL Osnabrück,2,1
+2000,16,Arminia Bielefeld,Chemnitzer FC,5,1
+2000,16,Waldhof Mannheim,Rot-Weiß Oberhausen,5,0
+2000,16,LR Ahlen,1. FSV Mainz 05,1,0
+2000,16,1. FC Nürnberg,Alemannia Aachen,6,1
+2000,16,Bor. Mönchengladbach,SpVgg Greuther Fürth,3,1
+2000,16,Hannover 96,FC St. Pauli,1,1
+2000,17,1. FC Saarbrücken,Arminia Bielefeld,1,0
+2000,17,SSV Ulm 1846,Stuttgarter Kickers,1,1
+2000,17,VfL Osnabrück,MSV Duisburg,1,3
+2000,17,Chemnitzer FC,Bor. Mönchengladbach,0,3
+2000,17,Rot-Weiß Oberhausen,SSV Reutlingen,2,0
+2000,17,Alemannia Aachen,LR Ahlen,4,3
+2000,17,1. FSV Mainz 05,Waldhof Mannheim,0,1
+2000,17,SpVgg Greuther Fürth,Hannover 96,2,1
+2000,17,FC St. Pauli,1. FC Nürnberg,1,0
+2000,18,VfL Osnabrück,Arminia Bielefeld,1,0
+2000,18,SSV Ulm 1846,MSV Duisburg,1,3
+2000,18,Rot-Weiß Oberhausen,Stuttgarter Kickers,1,3
+2000,18,1. FSV Mainz 05,SSV Reutlingen,1,1
+2000,18,1. FC Nürnberg,Hannover 96,4,2
+2000,18,FC St. Pauli,LR Ahlen,3,2
+2000,18,1. FC Saarbrücken,Bor. Mönchengladbach,0,4
+2000,18,Chemnitzer FC,SpVgg Greuther Fürth,0,2
+2000,18,Alemannia Aachen,Waldhof Mannheim,0,1
+2000,19,Hannover 96,Chemnitzer FC,0,0
+2000,19,Waldhof Mannheim,FC St. Pauli,2,1
+2000,19,Bor. Mönchengladbach,VfL Osnabrück,0,0
+2000,19,SSV Reutlingen,Alemannia Aachen,3,1
+2000,19,SpVgg Greuther Fürth,1. FC Saarbrücken,0,1
+2000,19,MSV Duisburg,Rot-Weiß Oberhausen,1,2
+2000,19,LR Ahlen,1. FC Nürnberg,0,1
+2000,19,Stuttgarter Kickers,1. FSV Mainz 05,0,0
+2000,19,Arminia Bielefeld,SSV Ulm 1846,1,1
+2000,20,1. FC Nürnberg,Waldhof Mannheim,1,0
+2000,20,LR Ahlen,Hannover 96,2,1
+2000,20,VfL Osnabrück,SpVgg Greuther Fürth,2,1
+2000,20,SSV Ulm 1846,Bor. Mönchengladbach,2,4
+2000,20,1. FC Saarbrücken,Chemnitzer FC,4,1
+2000,20,Rot-Weiß Oberhausen,Arminia Bielefeld,0,0
+2000,20,Alemannia Aachen,Stuttgarter Kickers,3,0
+2000,20,1. FSV Mainz 05,MSV Duisburg,1,0
+2000,20,FC St. Pauli,SSV Reutlingen,1,0
+2000,21,Hannover 96,1. FC Saarbrücken,3,0
+2000,21,Stuttgarter Kickers,FC St. Pauli,0,2
+2000,21,Bor. Mönchengladbach,Rot-Weiß Oberhausen,1,0
+2000,21,Chemnitzer FC,VfL Osnabrück,1,2
+2000,21,Arminia Bielefeld,1. FSV Mainz 05,4,1
+2000,21,Waldhof Mannheim,LR Ahlen,0,3
+2000,21,SSV Reutlingen,1. FC Nürnberg,3,2
+2000,21,SpVgg Greuther Fürth,SSV Ulm 1846,1,0
+2000,21,MSV Duisburg,Alemannia Aachen,4,0
+2000,22,Waldhof Mannheim,Hannover 96,2,1
+2000,22,1. FC Nürnberg,Stuttgarter Kickers,2,1
+2000,22,1. FSV Mainz 05,Bor. Mönchengladbach,0,1
+2000,22,Rot-Weiß Oberhausen,SpVgg Greuther Fürth,2,2
+2000,22,FC St. Pauli,MSV Duisburg,1,0
+2000,22,LR Ahlen,SSV Reutlingen,3,1
+2000,22,VfL Osnabrück,1. FC Saarbrücken,2,2
+2000,22,SSV Ulm 1846,Chemnitzer FC,3,0
+2000,22,Alemannia Aachen,Arminia Bielefeld,1,0
+2000,23,1. FC Saarbrücken,SSV Ulm 1846,1,1
+2000,23,MSV Duisburg,1. FC Nürnberg,3,2
+2000,23,Arminia Bielefeld,FC St. Pauli,3,3
+2000,23,Bor. Mönchengladbach,Alemannia Aachen,6,1
+2000,23,SSV Reutlingen,Waldhof Mannheim,1,1
+2000,23,SpVgg Greuther Fürth,1. FSV Mainz 05,3,1
+2000,23,Hannover 96,VfL Osnabrück,1,1
+2000,23,Stuttgarter Kickers,LR Ahlen,1,1
+2000,23,Chemnitzer FC,Rot-Weiß Oberhausen,0,1
+2000,24,SSV Ulm 1846,VfL Osnabrück,1,1
+2000,24,1. FSV Mainz 05,Chemnitzer FC,3,1
+2000,24,1. FC Nürnberg,Arminia Bielefeld,2,1
+2000,24,LR Ahlen,MSV Duisburg,3,2
+2000,24,Waldhof Mannheim,Stuttgarter Kickers,4,2
+2000,24,SSV Reutlingen,Hannover 96,3,0
+2000,24,Alemannia Aachen,SpVgg Greuther Fürth,0,0
+2000,24,FC St. Pauli,Bor. Mönchengladbach,0,2
+2000,24,Rot-Weiß Oberhausen,1. FC Saarbrücken,4,1
+2000,25,MSV Duisburg,Waldhof Mannheim,0,1
+2000,25,VfL Osnabrück,Rot-Weiß Oberhausen,0,0
+2000,25,Arminia Bielefeld,LR Ahlen,1,1
+2000,25,1. FC Saarbrücken,1. FSV Mainz 05,1,1
+2000,25,Chemnitzer FC,Alemannia Aachen,2,3
+2000,25,SpVgg Greuther Fürth,FC St. Pauli,5,1
+2000,25,Hannover 96,SSV Ulm 1846,2,0
+2000,25,Stuttgarter Kickers,SSV Reutlingen,1,0
+2000,25,Bor. Mönchengladbach,1. FC Nürnberg,1,1
+2000,26,Stuttgarter Kickers,Hannover 96,2,0
+2000,26,Alemannia Aachen,1. FC Saarbrücken,1,0
+2000,26,1. FC Nürnberg,SpVgg Greuther Fürth,0,1
+2000,26,Rot-Weiß Oberhausen,SSV Ulm 1846,3,1
+2000,26,FC St. Pauli,Chemnitzer FC,3,0
+2000,26,SSV Reutlingen,MSV Duisburg,0,1
+2000,26,1. FSV Mainz 05,VfL Osnabrück,2,0
+2000,26,LR Ahlen,Bor. Mönchengladbach,2,1
+2000,26,Waldhof Mannheim,Arminia Bielefeld,3,3
+2000,27,Chemnitzer FC,1. FC Nürnberg,1,1
+2000,27,1. FC Saarbrücken,FC St. Pauli,1,0
+2000,27,Arminia Bielefeld,SSV Reutlingen,3,1
+2000,27,Hannover 96,Rot-Weiß Oberhausen,3,0
+2000,27,VfL Osnabrück,Alemannia Aachen,5,1
+2000,27,SSV Ulm 1846,1. FSV Mainz 05,0,2
+2000,27,SpVgg Greuther Fürth,LR Ahlen,2,4
+2000,27,MSV Duisburg,Stuttgarter Kickers,0,0
+2000,27,Bor. Mönchengladbach,Waldhof Mannheim,3,0
+2000,28,MSV Duisburg,Hannover 96,2,1
+2000,28,1. FC Nürnberg,1. FC Saarbrücken,0,1
+2000,28,LR Ahlen,Chemnitzer FC,5,2
+2000,28,Waldhof Mannheim,SpVgg Greuther Fürth,2,1
+2000,28,Stuttgarter Kickers,Arminia Bielefeld,2,1
+2000,28,1. FSV Mainz 05,Rot-Weiß Oberhausen,1,0
+2000,28,Alemannia Aachen,SSV Ulm 1846,1,0
+2000,28,FC St. Pauli,VfL Osnabrück,2,4
+2000,28,SSV Reutlingen,Bor. Mönchengladbach,3,1
+2000,29,Chemnitzer FC,Waldhof Mannheim,0,0
+2000,29,Arminia Bielefeld,MSV Duisburg,1,1
+2000,29,Hannover 96,1. FSV Mainz 05,2,4
+2000,29,Rot-Weiß Oberhausen,Alemannia Aachen,3,0
+2000,29,SSV Ulm 1846,FC St. Pauli,1,4
+2000,29,Bor. Mönchengladbach,Stuttgarter Kickers,1,0
+2000,29,SpVgg Greuther Fürth,SSV Reutlingen,1,0
+2000,29,VfL Osnabrück,1. FC Nürnberg,2,1
+2000,29,1. FC Saarbrücken,LR Ahlen,1,2
+2000,30,Alemannia Aachen,1. FSV Mainz 05,1,0
+2000,30,Waldhof Mannheim,1. FC Saarbrücken,2,3
+2000,30,FC St. Pauli,Rot-Weiß Oberhausen,4,1
+2000,30,1. FC Nürnberg,SSV Ulm 1846,1,2
+2000,30,LR Ahlen,VfL Osnabrück,1,0
+2000,30,Stuttgarter Kickers,SpVgg Greuther Fürth,0,5
+2000,30,Arminia Bielefeld,Hannover 96,5,2
+2000,30,MSV Duisburg,Bor. Mönchengladbach,0,2
+2000,30,SSV Reutlingen,Chemnitzer FC,2,0
+2000,31,Hannover 96,Alemannia Aachen,0,0
+2000,31,Bor. Mönchengladbach,Arminia Bielefeld,0,1
+2000,31,Chemnitzer FC,Stuttgarter Kickers,0,2
+2000,31,1. FSV Mainz 05,FC St. Pauli,1,1
+2000,31,SSV Ulm 1846,LR Ahlen,2,0
+2000,31,VfL Osnabrück,Waldhof Mannheim,0,2
+2000,31,1. FC Saarbrücken,SSV Reutlingen,2,2
+2000,31,Rot-Weiß Oberhausen,1. FC Nürnberg,1,2
+2000,31,SpVgg Greuther Fürth,MSV Duisburg,1,0
+2000,32,MSV Duisburg,Chemnitzer FC,1,1
+2000,32,Stuttgarter Kickers,1. FC Saarbrücken,0,1
+2000,32,Alemannia Aachen,FC St. Pauli,0,1
+2000,32,Arminia Bielefeld,SpVgg Greuther Fürth,1,1
+2000,32,SSV Reutlingen,VfL Osnabrück,2,0
+2000,32,1. FC Nürnberg,1. FSV Mainz 05,1,0
+2000,32,Hannover 96,Bor. Mönchengladbach,0,0
+2000,32,LR Ahlen,Rot-Weiß Oberhausen,4,1
+2000,32,Waldhof Mannheim,SSV Ulm 1846,5,0
+2000,33,1. FC Saarbrücken,MSV Duisburg,1,0
+2000,33,SSV Ulm 1846,SSV Reutlingen,2,3
+2000,33,VfL Osnabrück,Stuttgarter Kickers,4,1
+2000,33,Chemnitzer FC,Arminia Bielefeld,1,0
+2000,33,Rot-Weiß Oberhausen,Waldhof Mannheim,1,2
+2000,33,1. FSV Mainz 05,LR Ahlen,2,2
+2000,33,Alemannia Aachen,1. FC Nürnberg,0,1
+2000,33,SpVgg Greuther Fürth,Bor. Mönchengladbach,2,2
+2000,33,FC St. Pauli,Hannover 96,2,2
+2000,34,Arminia Bielefeld,1. FC Saarbrücken,4,2
+2000,34,Stuttgarter Kickers,SSV Ulm 1846,2,4
+2000,34,MSV Duisburg,VfL Osnabrück,2,2
+2000,34,Bor. Mönchengladbach,Chemnitzer FC,3,0
+2000,34,SSV Reutlingen,Rot-Weiß Oberhausen,1,1
+2000,34,LR Ahlen,Alemannia Aachen,1,2
+2000,34,Waldhof Mannheim,1. FSV Mainz 05,4,0
+2000,34,Hannover 96,SpVgg Greuther Fürth,2,1
+2000,34,1. FC Nürnberg,FC St. Pauli,1,2

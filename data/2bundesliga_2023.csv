@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+2023,1,Hamburger SV,FC Schalke 04,5,3
+2023,1,1. FC Kaiserslautern,FC St. Pauli,1,2
+2023,1,Hannover 96,SV 07 Elversberg,2,2
+2023,1,VfL Osnabrück,Karlsruher SC,2,3
+2023,1,SV Wehen Wiesbaden,1. FC Magdeburg,1,1
+2023,1,Fortuna Düsseldorf,Hertha BSC,1,0
+2023,1,SpVgg Greuther Fürth,SC Paderborn 07,5,0
+2023,1,Hansa Rostock,1. FC Nürnberg,2,0
+2023,1,Eintracht Braunschweig,Holstein Kiel,0,1
+2023,2,Hertha BSC,SV Wehen Wiesbaden,0,1
+2023,2,SC Paderborn 07,VfL Osnabrück,1,1
+2023,2,FC St. Pauli,Fortuna Düsseldorf,0,0
+2023,2,Holstein Kiel,SpVgg Greuther Fürth,2,1
+2023,2,SV 07 Elversberg,Hansa Rostock,1,2
+2023,2,FC Schalke 04,1. FC Kaiserslautern,3,0
+2023,2,Karlsruher SC,Hamburger SV,2,2
+2023,2,1. FC Magdeburg,Eintracht Braunschweig,2,1
+2023,2,1. FC Nürnberg,Hannover 96,2,2
+2023,3,1. FC Kaiserslautern,SV 07 Elversberg,3,2
+2023,3,SV Wehen Wiesbaden,Karlsruher SC,1,0
+2023,3,Fortuna Düsseldorf,SC Paderborn 07,1,2
+2023,3,SpVgg Greuther Fürth,FC St. Pauli,0,0
+2023,3,Hansa Rostock,Hannover 96,1,2
+2023,3,Hamburger SV,Hertha BSC,3,0
+2023,3,Holstein Kiel,1. FC Magdeburg,2,4
+2023,3,Eintracht Braunschweig,FC Schalke 04,1,0
+2023,3,VfL Osnabrück,1. FC Nürnberg,2,3
+2023,4,FC Schalke 04,Holstein Kiel,0,2
+2023,4,SC Paderborn 07,1. FC Kaiserslautern,1,2
+2023,4,Hertha BSC,SpVgg Greuther Fürth,5,0
+2023,4,Hansa Rostock,VfL Osnabrück,2,1
+2023,4,SV 07 Elversberg,Fortuna Düsseldorf,0,5
+2023,4,Hannover 96,Hamburger SV,0,1
+2023,4,FC St. Pauli,1. FC Magdeburg,0,0
+2023,4,Karlsruher SC,Eintracht Braunschweig,2,0
+2023,4,1. FC Nürnberg,SV Wehen Wiesbaden,2,1
+2023,5,Fortuna Düsseldorf,Karlsruher SC,3,1
+2023,5,Eintracht Braunschweig,FC St. Pauli,1,1
+2023,5,Holstein Kiel,SC Paderborn 07,2,1
+2023,5,1. FC Magdeburg,Hertha BSC,6,4
+2023,5,SV Wehen Wiesbaden,FC Schalke 04,1,1
+2023,5,1. FC Kaiserslautern,1. FC Nürnberg,3,1
+2023,5,Hamburger SV,Hansa Rostock,2,0
+2023,5,SpVgg Greuther Fürth,Hannover 96,1,3
+2023,5,VfL Osnabrück,SV 07 Elversberg,0,1
+2023,6,SC Paderborn 07,SV Wehen Wiesbaden,2,1
+2023,6,1. FC Nürnberg,SpVgg Greuther Fürth,1,1
+2023,6,Karlsruher SC,1. FC Kaiserslautern,1,1
+2023,6,Hansa Rostock,Fortuna Düsseldorf,1,3
+2023,6,SV 07 Elversberg,Hamburger SV,2,1
+2023,6,FC Schalke 04,1. FC Magdeburg,4,3
+2023,6,Hertha BSC,Eintracht Braunschweig,3,0
+2023,6,FC St. Pauli,Holstein Kiel,5,1
+2023,6,Hannover 96,VfL Osnabrück,7,0
+2023,7,1. FC Magdeburg,SC Paderborn 07,1,1
+2023,7,VfL Osnabrück,Hamburger SV,2,1
+2023,7,SpVgg Greuther Fürth,Karlsruher SC,4,3
+2023,7,Eintracht Braunschweig,1. FC Nürnberg,2,2
+2023,7,SV Wehen Wiesbaden,SV 07 Elversberg,0,2
+2023,7,FC St. Pauli,FC Schalke 04,3,1
+2023,7,Fortuna Düsseldorf,Hannover 96,1,1
+2023,7,Holstein Kiel,Hertha BSC,2,3
+2023,7,1. FC Kaiserslautern,Hansa Rostock,3,1
+2023,8,Hamburger SV,Fortuna Düsseldorf,1,0
+2023,8,SC Paderborn 07,FC Schalke 04,3,1
+2023,8,Karlsruher SC,Holstein Kiel,0,2
+2023,8,Hannover 96,SV Wehen Wiesbaden,2,0
+2023,8,Hansa Rostock,Eintracht Braunschweig,1,0
+2023,8,Hertha BSC,FC St. Pauli,1,2
+2023,8,1. FC Nürnberg,1. FC Magdeburg,1,0
+2023,8,SV 07 Elversberg,SpVgg Greuther Fürth,1,1
+2023,8,VfL Osnabrück,1. FC Kaiserslautern,2,2
+2023,9,Fortuna Düsseldorf,VfL Osnabrück,1,1
+2023,9,1. FC Kaiserslautern,Hannover 96,3,1
+2023,9,1. FC Magdeburg,Karlsruher SC,1,1
+2023,9,SpVgg Greuther Fürth,Hansa Rostock,1,0
+2023,9,SV Wehen Wiesbaden,Hamburger SV,1,1
+2023,9,FC St. Pauli,1. FC Nürnberg,5,1
+2023,9,FC Schalke 04,Hertha BSC,1,2
+2023,9,Holstein Kiel,SV 07 Elversberg,1,1
+2023,9,Eintracht Braunschweig,SC Paderborn 07,1,3
+2023,10,Hannover 96,1. FC Magdeburg,2,1
+2023,10,SV 07 Elversberg,Eintracht Braunschweig,3,0
+2023,10,Hamburger SV,SpVgg Greuther Fürth,2,0
+2023,10,SC Paderborn 07,FC St. Pauli,2,2
+2023,10,VfL Osnabrück,SV Wehen Wiesbaden,0,2
+2023,10,Fortuna Düsseldorf,1. FC Kaiserslautern,4,3
+2023,10,Karlsruher SC,FC Schalke 04,3,0
+2023,10,Hansa Rostock,Holstein Kiel,1,3
+2023,10,1. FC Nürnberg,Hertha BSC,3,1
+2023,11,SpVgg Greuther Fürth,VfL Osnabrück,4,0
+2023,11,Eintracht Braunschweig,Fortuna Düsseldorf,1,4
+2023,11,FC Schalke 04,Hannover 96,3,2
+2023,11,Hertha BSC,SC Paderborn 07,3,1
+2023,11,FC St. Pauli,Karlsruher SC,2,1
+2023,11,1. FC Kaiserslautern,Hamburger SV,3,3
+2023,11,Holstein Kiel,1. FC Nürnberg,0,2
+2023,11,1. FC Magdeburg,SV 07 Elversberg,1,2
+2023,11,SV Wehen Wiesbaden,Hansa Rostock,1,0
+2023,12,Fortuna Düsseldorf,SV Wehen Wiesbaden,1,3
+2023,12,SV 07 Elversberg,FC St. Pauli,0,2
+2023,12,1. FC Kaiserslautern,SpVgg Greuther Fürth,0,2
+2023,12,1. FC Nürnberg,FC Schalke 04,1,2
+2023,12,VfL Osnabrück,Holstein Kiel,1,1
+2023,12,Hamburger SV,1. FC Magdeburg,2,0
+2023,12,Karlsruher SC,SC Paderborn 07,0,3
+2023,12,Hannover 96,Eintracht Braunschweig,2,0
+2023,12,Hansa Rostock,Hertha BSC,0,0
+2023,13,FC Schalke 04,SV 07 Elversberg,1,2
+2023,13,FC St. Pauli,Hannover 96,0,0
+2023,13,SC Paderborn 07,1. FC Nürnberg,1,3
+2023,13,Holstein Kiel,Hamburger SV,4,2
+2023,13,Eintracht Braunschweig,VfL Osnabrück,3,2
+2023,13,Hertha BSC,Karlsruher SC,2,2
+2023,13,1. FC Magdeburg,Hansa Rostock,1,2
+2023,13,SpVgg Greuther Fürth,Fortuna Düsseldorf,1,0
+2023,13,SV Wehen Wiesbaden,1. FC Kaiserslautern,2,1
+2023,14,Hamburger SV,Eintracht Braunschweig,2,1
+2023,14,Hannover 96,Hertha BSC,2,2
+2023,14,Hansa Rostock,FC St. Pauli,2,3
+2023,14,SV 07 Elversberg,SC Paderborn 07,4,1
+2023,14,VfL Osnabrück,1. FC Magdeburg,0,2
+2023,14,Fortuna Düsseldorf,FC Schalke 04,5,3
+2023,14,Karlsruher SC,1. FC Nürnberg,4,1
+2023,14,1. FC Kaiserslautern,Holstein Kiel,0,3
+2023,14,SpVgg Greuther Fürth,SV Wehen Wiesbaden,2,0
+2023,15,FC Schalke 04,VfL Osnabrück,4,0
+2023,15,FC St. Pauli,Hamburger SV,2,2
+2023,15,Holstein Kiel,SV Wehen Wiesbaden,3,2
+2023,15,1. FC Nürnberg,Fortuna Düsseldorf,0,5
+2023,15,Eintracht Braunschweig,SpVgg Greuther Fürth,0,1
+2023,15,1. FC Magdeburg,1. FC Kaiserslautern,4,1
+2023,15,Hertha BSC,SV 07 Elversberg,5,1
+2023,15,SC Paderborn 07,Hannover 96,1,0
+2023,15,Karlsruher SC,Hansa Rostock,2,2
+2023,16,Hannover 96,Karlsruher SC,2,2
+2023,16,SV Wehen Wiesbaden,Eintracht Braunschweig,1,3
+2023,16,Hamburger SV,SC Paderborn 07,1,2
+2023,16,1. FC Kaiserslautern,Hertha BSC,1,2
+2023,16,SpVgg Greuther Fürth,1. FC Magdeburg,1,1
+2023,16,VfL Osnabrück,FC St. Pauli,1,1
+2023,16,Fortuna Düsseldorf,Holstein Kiel,0,1
+2023,16,Hansa Rostock,FC Schalke 04,0,2
+2023,16,SV 07 Elversberg,1. FC Nürnberg,0,1
+2023,17,FC Schalke 04,SpVgg Greuther Fürth,2,2
+2023,17,SC Paderborn 07,Hansa Rostock,3,0
+2023,17,Hertha BSC,VfL Osnabrück,0,0
+2023,17,1. FC Magdeburg,Fortuna Düsseldorf,2,3
+2023,17,1. FC Nürnberg,Hamburger SV,0,2
+2023,17,Holstein Kiel,Hannover 96,3,0
+2023,17,FC St. Pauli,SV Wehen Wiesbaden,1,1
+2023,17,Karlsruher SC,SV 07 Elversberg,3,2
+2023,17,Eintracht Braunschweig,1. FC Kaiserslautern,2,1
+2023,18,Holstein Kiel,Eintracht Braunschweig,1,2
+2023,18,Karlsruher SC,VfL Osnabrück,2,1
+2023,18,FC St. Pauli,1. FC Kaiserslautern,2,0
+2023,18,SV 07 Elversberg,Hannover 96,2,2
+2023,18,1. FC Nürnberg,Hansa Rostock,3,0
+2023,18,FC Schalke 04,Hamburger SV,0,2
+2023,18,Hertha BSC,Fortuna Düsseldorf,2,2
+2023,18,SC Paderborn 07,SpVgg Greuther Fürth,0,1
+2023,18,1. FC Magdeburg,SV Wehen Wiesbaden,1,0
+2023,19,1. FC Kaiserslautern,FC Schalke 04,4,1
+2023,19,Hannover 96,1. FC Nürnberg,3,0
+2023,19,SV Wehen Wiesbaden,Hertha BSC,3,1
+2023,19,VfL Osnabrück,SC Paderborn 07,0,0
+2023,19,Hansa Rostock,SV 07 Elversberg,2,1
+2023,19,Fortuna Düsseldorf,FC St. Pauli,1,2
+2023,19,Hamburger SV,Karlsruher SC,3,4
+2023,19,SpVgg Greuther Fürth,Holstein Kiel,2,1
+2023,19,Eintracht Braunschweig,1. FC Magdeburg,1,0
+2023,20,1. FC Magdeburg,Holstein Kiel,1,1
+2023,20,Karlsruher SC,SV Wehen Wiesbaden,2,2
+2023,20,FC St. Pauli,SpVgg Greuther Fürth,3,2
+2023,20,FC Schalke 04,Eintracht Braunschweig,1,0
+2023,20,1. FC Nürnberg,VfL Osnabrück,2,2
+2023,20,Hertha BSC,Hamburger SV,1,2
+2023,20,SC Paderborn 07,Fortuna Düsseldorf,4,3
+2023,20,SV 07 Elversberg,1. FC Kaiserslautern,2,1
+2023,20,Hannover 96,Hansa Rostock,2,1
+2023,21,Hamburger SV,Hannover 96,3,4
+2023,21,SV Wehen Wiesbaden,1. FC Nürnberg,1,1
+2023,21,1. FC Magdeburg,FC St. Pauli,1,0
+2023,21,Eintracht Braunschweig,Karlsruher SC,2,0
+2023,21,Fortuna Düsseldorf,SV 07 Elversberg,1,1
+2023,21,1. FC Kaiserslautern,SC Paderborn 07,1,2
+2023,21,Holstein Kiel,FC Schalke 04,1,0
+2023,21,SpVgg Greuther Fürth,Hertha BSC,1,2
+2023,21,VfL Osnabrück,Hansa Rostock,0,0
+2023,22,Hertha BSC,1. FC Magdeburg,3,2
+2023,22,Hannover 96,SpVgg Greuther Fürth,2,1
+2023,22,Hansa Rostock,Hamburger SV,2,2
+2023,22,SC Paderborn 07,Holstein Kiel,0,4
+2023,22,FC Schalke 04,SV Wehen Wiesbaden,1,0
+2023,22,Karlsruher SC,Fortuna Düsseldorf,2,2
+2023,22,1. FC Nürnberg,1. FC Kaiserslautern,1,1
+2023,22,FC St. Pauli,Eintracht Braunschweig,1,0
+2023,22,SV 07 Elversberg,VfL Osnabrück,3,1
+2023,23,Holstein Kiel,FC St. Pauli,3,4
+2023,23,SV Wehen Wiesbaden,SC Paderborn 07,1,2
+2023,23,Eintracht Braunschweig,Hertha BSC,1,1
+2023,23,1. FC Kaiserslautern,Karlsruher SC,0,4
+2023,23,VfL Osnabrück,Hannover 96,1,0
+2023,23,1. FC Magdeburg,FC Schalke 04,3,0
+2023,23,Fortuna Düsseldorf,Hansa Rostock,2,0
+2023,23,SpVgg Greuther Fürth,1. FC Nürnberg,2,1
+2023,23,Hamburger SV,SV 07 Elversberg,1,0
+2023,24,FC Schalke 04,FC St. Pauli,3,1
+2023,24,Hertha BSC,Holstein Kiel,2,2
+2023,24,Hannover 96,Fortuna Düsseldorf,2,2
+2023,24,Hansa Rostock,1. FC Kaiserslautern,0,3
+2023,24,1. FC Nürnberg,Eintracht Braunschweig,2,1
+2023,24,Karlsruher SC,SpVgg Greuther Fürth,4,0
+2023,24,SC Paderborn 07,1. FC Magdeburg,0,0
+2023,24,Hamburger SV,VfL Osnabrück,1,2
+2023,24,SV 07 Elversberg,SV Wehen Wiesbaden,0,3
+2023,25,Fortuna Düsseldorf,Hamburger SV,2,0
+2023,25,Eintracht Braunschweig,Hansa Rostock,0,1
+2023,25,FC Schalke 04,SC Paderborn 07,3,3
+2023,25,Holstein Kiel,Karlsruher SC,1,0
+2023,25,SV Wehen Wiesbaden,Hannover 96,1,1
+2023,25,1. FC Magdeburg,1. FC Nürnberg,0,1
+2023,25,FC St. Pauli,Hertha BSC,2,0
+2023,25,SpVgg Greuther Fürth,SV 07 Elversberg,1,4
+2023,25,1. FC Kaiserslautern,VfL Osnabrück,3,2
+2023,26,VfL Osnabrück,Fortuna Düsseldorf,0,4
+2023,26,SC Paderborn 07,Eintracht Braunschweig,1,2
+2023,26,1. FC Nürnberg,FC St. Pauli,0,2
+2023,26,SV 07 Elversberg,Holstein Kiel,0,2
+2023,26,Hansa Rostock,SpVgg Greuther Fürth,1,0
+2023,26,Hannover 96,1. FC Kaiserslautern,1,1
+2023,26,Hertha BSC,FC Schalke 04,5,2
+2023,26,Karlsruher SC,1. FC Magdeburg,7,0
+2023,26,Hamburger SV,SV Wehen Wiesbaden,3,0
+2023,27,1. FC Kaiserslautern,Fortuna Düsseldorf,1,3
+2023,27,Holstein Kiel,Hansa Rostock,2,0
+2023,27,Eintracht Braunschweig,SV 07 Elversberg,5,0
+2023,27,Hertha BSC,1. FC Nürnberg,3,3
+2023,27,SpVgg Greuther Fürth,Hamburger SV,1,1
+2023,27,FC St. Pauli,SC Paderborn 07,2,1
+2023,27,FC Schalke 04,Karlsruher SC,0,0
+2023,27,1. FC Magdeburg,Hannover 96,0,3
+2023,27,SV Wehen Wiesbaden,VfL Osnabrück,0,1
+2023,28,SC Paderborn 07,Hertha BSC,2,3
+2023,28,Hansa Rostock,SV Wehen Wiesbaden,3,1
+2023,28,1. FC Nürnberg,Holstein Kiel,0,4
+2023,28,Hamburger SV,1. FC Kaiserslautern,2,1
+2023,28,SV 07 Elversberg,1. FC Magdeburg,0,0
+2023,28,Karlsruher SC,FC St. Pauli,2,1
+2023,28,Hannover 96,FC Schalke 04,1,1
+2023,28,VfL Osnabrück,SpVgg Greuther Fürth,2,0
+2023,28,Fortuna Düsseldorf,Eintracht Braunschweig,2,0
+2023,29,SpVgg Greuther Fürth,1. FC Kaiserslautern,2,1
+2023,29,Hertha BSC,Hansa Rostock,4,0
+2023,29,SV Wehen Wiesbaden,Fortuna Düsseldorf,0,2
+2023,29,SC Paderborn 07,Karlsruher SC,1,1
+2023,29,Holstein Kiel,VfL Osnabrück,4,0
+2023,29,FC Schalke 04,1. FC Nürnberg,2,0
+2023,29,1. FC Magdeburg,Hamburger SV,2,2
+2023,29,Eintracht Braunschweig,Hannover 96,0,0
+2023,29,FC St. Pauli,SV 07 Elversberg,3,4
+2023,30,SV 07 Elversberg,FC Schalke 04,1,1
+2023,30,1. FC Nürnberg,SC Paderborn 07,0,2
+2023,30,Fortuna Düsseldorf,SpVgg Greuther Fürth,1,0
+2023,30,VfL Osnabrück,Eintracht Braunschweig,0,3
+2023,30,1. FC Kaiserslautern,SV Wehen Wiesbaden,1,1
+2023,30,Hamburger SV,Holstein Kiel,0,1
+2023,30,Karlsruher SC,Hertha BSC,3,2
+2023,30,Hannover 96,FC St. Pauli,1,2
+2023,30,Hansa Rostock,1. FC Magdeburg,0,2
+2023,31,Hertha BSC,Hannover 96,1,1
+2023,31,FC St. Pauli,Hansa Rostock,1,0
+2023,31,Eintracht Braunschweig,Hamburger SV,0,4
+2023,31,Holstein Kiel,1. FC Kaiserslautern,1,3
+2023,31,SC Paderborn 07,SV 07 Elversberg,3,1
+2023,31,FC Schalke 04,Fortuna Düsseldorf,1,1
+2023,31,1. FC Nürnberg,Karlsruher SC,0,1
+2023,31,SV Wehen Wiesbaden,SpVgg Greuther Fürth,3,5
+2023,31,1. FC Magdeburg,VfL Osnabrück,1,1
+2023,32,Hamburger SV,FC St. Pauli,1,0
+2023,32,Fortuna Düsseldorf,1. FC Nürnberg,3,1
+2023,32,Hansa Rostock,Karlsruher SC,1,2
+2023,32,SpVgg Greuther Fürth,Eintracht Braunschweig,3,3
+2023,32,1. FC Kaiserslautern,1. FC Magdeburg,4,1
+2023,32,SV 07 Elversberg,Hertha BSC,4,2
+2023,32,Hannover 96,SC Paderborn 07,3,2
+2023,32,SV Wehen Wiesbaden,Holstein Kiel,0,1
+2023,32,VfL Osnabrück,FC Schalke 04,0,4
+2023,33,SC Paderborn 07,Hamburger SV,1,0
+2023,33,1. FC Magdeburg,SpVgg Greuther Fürth,0,0
+2023,33,Hertha BSC,1. FC Kaiserslautern,3,1
+2023,33,FC Schalke 04,Hansa Rostock,2,1
+2023,33,1. FC Nürnberg,SV 07 Elversberg,3,0
+2023,33,Holstein Kiel,Fortuna Düsseldorf,1,1
+2023,33,Karlsruher SC,Hannover 96,1,2
+2023,33,FC St. Pauli,VfL Osnabrück,3,1
+2023,33,Eintracht Braunschweig,SV Wehen Wiesbaden,1,0
+2023,34,SpVgg Greuther Fürth,FC Schalke 04,2,0
+2023,34,VfL Osnabrück,Hertha BSC,2,1
+2023,34,SV Wehen Wiesbaden,FC St. Pauli,1,2
+2023,34,Hansa Rostock,SC Paderborn 07,1,2
+2023,34,SV 07 Elversberg,Karlsruher SC,0,3
+2023,34,Hannover 96,Holstein Kiel,1,2
+2023,34,Fortuna Düsseldorf,1. FC Magdeburg,3,2
+2023,34,Hamburger SV,1. FC Nürnberg,4,1
+2023,34,1. FC Kaiserslautern,Eintracht Braunschweig,5,0

@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+1995,1,FC Carl Zeiss Jena,FSV Zwickau,2,0
+1995,1,Chemnitzer FC,VfB Leipzig,1,2
+1995,1,Arminia Bielefeld,VfB Lübeck,2,1
+1995,1,MSV Duisburg,VfL Bochum,0,0
+1995,1,SpVgg Unterhaching,SV Meppen,1,1
+1995,1,Waldhof Mannheim,Fortuna Köln,2,0
+1995,1,SG Wattenscheid 09,1. FC Nürnberg,1,2
+1995,1,VfL Wolfsburg,Hertha BSC,1,4
+1995,1,1. FSV Mainz 05,Hannover 96,0,2
+1995,2,SV Meppen,FC Carl Zeiss Jena,1,1
+1995,2,VfB Lübeck,1. FSV Mainz 05,3,0
+1995,2,Hertha BSC,SpVgg Unterhaching,1,0
+1995,2,Hannover 96,MSV Duisburg,2,2
+1995,2,FSV Zwickau,Chemnitzer FC,1,0
+1995,2,VfB Leipzig,Arminia Bielefeld,0,0
+1995,2,1. FC Nürnberg,VfL Wolfsburg,0,0
+1995,2,VfL Bochum,Waldhof Mannheim,3,1
+1995,2,Fortuna Köln,SG Wattenscheid 09,2,0
+1995,3,MSV Duisburg,VfB Lübeck,2,1
+1995,3,FC Carl Zeiss Jena,Hertha BSC,0,3
+1995,3,Chemnitzer FC,SV Meppen,2,0
+1995,3,Waldhof Mannheim,SG Wattenscheid 09,5,2
+1995,3,Arminia Bielefeld,FSV Zwickau,4,0
+1995,3,VfL Wolfsburg,Fortuna Köln,1,3
+1995,3,1. FSV Mainz 05,VfB Leipzig,0,1
+1995,3,SpVgg Unterhaching,1. FC Nürnberg,0,0
+1995,3,VfL Bochum,Hannover 96,1,0
+1995,4,VfB Leipzig,MSV Duisburg,2,2
+1995,4,Hannover 96,Waldhof Mannheim,1,0
+1995,4,FSV Zwickau,1. FSV Mainz 05,3,0
+1995,4,Fortuna Köln,SpVgg Unterhaching,0,2
+1995,4,SG Wattenscheid 09,VfL Wolfsburg,1,2
+1995,4,SV Meppen,Arminia Bielefeld,2,2
+1995,4,VfB Lübeck,VfL Bochum,3,0
+1995,4,1. FC Nürnberg,FC Carl Zeiss Jena,0,2
+1995,4,Hertha BSC,Chemnitzer FC,1,1
+1995,5,Chemnitzer FC,1. FC Nürnberg,1,1
+1995,5,FC Carl Zeiss Jena,Fortuna Köln,1,0
+1995,5,MSV Duisburg,FSV Zwickau,3,0
+1995,5,Arminia Bielefeld,Hertha BSC,1,0
+1995,5,SpVgg Unterhaching,SG Wattenscheid 09,1,0
+1995,5,VfL Bochum,VfB Leipzig,3,0
+1995,5,Waldhof Mannheim,VfL Wolfsburg,3,0
+1995,5,Hannover 96,VfB Lübeck,0,0
+1995,5,1. FSV Mainz 05,SV Meppen,0,0
+1995,6,1. FC Nürnberg,Arminia Bielefeld,0,2
+1995,6,Fortuna Köln,Chemnitzer FC,1,2
+1995,6,VfL Wolfsburg,SpVgg Unterhaching,3,1
+1995,6,VfB Leipzig,Hannover 96,1,0
+1995,6,Hertha BSC,1. FSV Mainz 05,2,0
+1995,6,SG Wattenscheid 09,FC Carl Zeiss Jena,1,1
+1995,6,SV Meppen,MSV Duisburg,1,1
+1995,6,VfB Lübeck,Waldhof Mannheim,3,1
+1995,6,FSV Zwickau,VfL Bochum,2,1
+1995,7,MSV Duisburg,Hertha BSC,2,0
+1995,7,VfL Bochum,SV Meppen,4,1
+1995,7,Chemnitzer FC,SG Wattenscheid 09,2,0
+1995,7,Waldhof Mannheim,SpVgg Unterhaching,0,1
+1995,7,1. FSV Mainz 05,1. FC Nürnberg,0,2
+1995,7,Hannover 96,FSV Zwickau,1,1
+1995,7,VfB Lübeck,VfB Leipzig,0,2
+1995,7,FC Carl Zeiss Jena,VfL Wolfsburg,1,1
+1995,7,Arminia Bielefeld,Fortuna Köln,2,1
+1995,8,VfL Wolfsburg,Chemnitzer FC,1,1
+1995,8,1. FC Nürnberg,MSV Duisburg,0,0
+1995,8,SpVgg Unterhaching,FC Carl Zeiss Jena,2,0
+1995,8,SG Wattenscheid 09,Arminia Bielefeld,3,2
+1995,8,VfB Leipzig,Waldhof Mannheim,2,0
+1995,8,SV Meppen,Hannover 96,0,0
+1995,8,Hertha BSC,VfL Bochum,0,2
+1995,8,FSV Zwickau,VfB Lübeck,1,0
+1995,8,Fortuna Köln,1. FSV Mainz 05,1,0
+1995,9,VfL Bochum,1. FC Nürnberg,4,0
+1995,9,Hannover 96,Hertha BSC,1,0
+1995,9,1. FSV Mainz 05,SG Wattenscheid 09,2,0
+1995,9,VfB Leipzig,FSV Zwickau,2,0
+1995,9,VfB Lübeck,SV Meppen,1,1
+1995,9,Chemnitzer FC,SpVgg Unterhaching,2,0
+1995,9,Arminia Bielefeld,VfL Wolfsburg,1,0
+1995,9,Waldhof Mannheim,FC Carl Zeiss Jena,1,0
+1995,9,MSV Duisburg,Fortuna Köln,2,2
+1995,10,SG Wattenscheid 09,MSV Duisburg,0,2
+1995,10,1. FC Nürnberg,Hannover 96,0,2
+1995,10,FSV Zwickau,Waldhof Mannheim,2,1
+1995,10,VfL Wolfsburg,1. FSV Mainz 05,2,2
+1995,10,Fortuna Köln,VfL Bochum,0,2
+1995,10,FC Carl Zeiss Jena,Chemnitzer FC,4,1
+1995,10,SV Meppen,VfB Leipzig,0,2
+1995,10,SpVgg Unterhaching,Arminia Bielefeld,3,0
+1995,10,Hertha BSC,VfB Lübeck,0,0
+1995,11,Waldhof Mannheim,Chemnitzer FC,4,1
+1995,11,MSV Duisburg,VfL Wolfsburg,2,1
+1995,11,1. FSV Mainz 05,SpVgg Unterhaching,3,1
+1995,11,FSV Zwickau,SV Meppen,4,1
+1995,11,Hannover 96,Fortuna Köln,2,0
+1995,11,VfB Lübeck,1. FC Nürnberg,0,0
+1995,11,VfB Leipzig,Hertha BSC,2,2
+1995,11,VfL Bochum,SG Wattenscheid 09,2,2
+1995,11,Arminia Bielefeld,FC Carl Zeiss Jena,1,2
+1995,12,SG Wattenscheid 09,Hannover 96,5,1
+1995,12,FC Carl Zeiss Jena,1. FSV Mainz 05,6,1
+1995,12,VfL Wolfsburg,VfL Bochum,0,5
+1995,12,SV Meppen,Waldhof Mannheim,2,1
+1995,12,Fortuna Köln,VfB Lübeck,1,3
+1995,12,SpVgg Unterhaching,MSV Duisburg,1,2
+1995,12,Chemnitzer FC,Arminia Bielefeld,5,1
+1995,12,Hertha BSC,FSV Zwickau,0,0
+1995,12,1. FC Nürnberg,VfB Leipzig,1,0
+1995,13,Waldhof Mannheim,Arminia Bielefeld,3,5
+1995,13,VfB Leipzig,Fortuna Köln,1,1
+1995,13,SV Meppen,Hertha BSC,1,1
+1995,13,Hannover 96,VfL Wolfsburg,0,1
+1995,13,FSV Zwickau,1. FC Nürnberg,1,0
+1995,13,VfB Lübeck,SG Wattenscheid 09,2,1
+1995,13,MSV Duisburg,FC Carl Zeiss Jena,4,1
+1995,13,1. FSV Mainz 05,Chemnitzer FC,4,2
+1995,13,VfL Bochum,SpVgg Unterhaching,3,1
+1995,14,FC Carl Zeiss Jena,VfL Bochum,0,4
+1995,14,Arminia Bielefeld,1. FSV Mainz 05,2,0
+1995,14,1. FC Nürnberg,SV Meppen,2,1
+1995,14,Fortuna Köln,FSV Zwickau,1,1
+1995,14,SG Wattenscheid 09,VfB Leipzig,2,1
+1995,14,VfL Wolfsburg,VfB Lübeck,2,1
+1995,14,SpVgg Unterhaching,Hannover 96,1,0
+1995,14,Chemnitzer FC,MSV Duisburg,1,0
+1995,14,Hertha BSC,Waldhof Mannheim,1,0
+1995,15,VfL Bochum,Chemnitzer FC,2,2
+1995,15,1. FSV Mainz 05,Waldhof Mannheim,0,0
+1995,15,FSV Zwickau,SG Wattenscheid 09,2,0
+1995,15,1. FC Nürnberg,Hertha BSC,1,0
+1995,15,Hannover 96,FC Carl Zeiss Jena,1,1
+1995,15,VfB Leipzig,VfL Wolfsburg,2,0
+1995,15,SV Meppen,Fortuna Köln,2,2
+1995,15,VfB Lübeck,SpVgg Unterhaching,3,1
+1995,15,MSV Duisburg,Arminia Bielefeld,1,1
+1995,16,FC Carl Zeiss Jena,VfB Lübeck,3,1
+1995,16,SpVgg Unterhaching,VfB Leipzig,4,1
+1995,16,VfL Wolfsburg,FSV Zwickau,0,1
+1995,16,Chemnitzer FC,Hannover 96,2,1
+1995,16,SG Wattenscheid 09,SV Meppen,3,0
+1995,16,Waldhof Mannheim,1. FC Nürnberg,1,4
+1995,16,Fortuna Köln,Hertha BSC,0,1
+1995,16,1. FSV Mainz 05,MSV Duisburg,0,1
+1995,16,Arminia Bielefeld,VfL Bochum,1,3
+1995,17,VfL Bochum,1. FSV Mainz 05,3,0
+1995,17,Hannover 96,Arminia Bielefeld,0,1
+1995,17,FSV Zwickau,SpVgg Unterhaching,1,2
+1995,17,VfB Leipzig,FC Carl Zeiss Jena,2,0
+1995,17,Hertha BSC,SG Wattenscheid 09,1,2
+1995,17,VfB Lübeck,Chemnitzer FC,0,2
+1995,17,SV Meppen,VfL Wolfsburg,2,1
+1995,17,1. FC Nürnberg,Fortuna Köln,1,1
+1995,17,MSV Duisburg,Waldhof Mannheim,1,1
+1995,18,Hannover 96,1. FSV Mainz 05,0,2
+1995,18,VfB Leipzig,Chemnitzer FC,0,0
+1995,18,FSV Zwickau,FC Carl Zeiss Jena,2,1
+1995,18,Hertha BSC,VfL Wolfsburg,2,2
+1995,18,SV Meppen,SpVgg Unterhaching,0,0
+1995,18,VfB Lübeck,Arminia Bielefeld,0,2
+1995,18,1. FC Nürnberg,SG Wattenscheid 09,3,0
+1995,18,Fortuna Köln,Waldhof Mannheim,1,0
+1995,18,VfL Bochum,MSV Duisburg,0,1
+1995,19,SpVgg Unterhaching,Hertha BSC,0,0
+1995,19,1. FSV Mainz 05,VfB Lübeck,0,1
+1995,19,VfL Wolfsburg,1. FC Nürnberg,1,1
+1995,19,Chemnitzer FC,FSV Zwickau,0,1
+1995,19,FC Carl Zeiss Jena,SV Meppen,2,2
+1995,19,Waldhof Mannheim,VfL Bochum,1,0
+1995,19,MSV Duisburg,Hannover 96,4,0
+1995,19,Arminia Bielefeld,VfB Leipzig,3,0
+1995,19,SG Wattenscheid 09,Fortuna Köln,2,3
+1995,20,SG Wattenscheid 09,Waldhof Mannheim,0,0
+1995,20,Hertha BSC,FC Carl Zeiss Jena,2,4
+1995,20,Hannover 96,VfL Bochum,2,0
+1995,20,Fortuna Köln,VfL Wolfsburg,2,0
+1995,20,VfB Leipzig,1. FSV Mainz 05,0,0
+1995,20,SV Meppen,Chemnitzer FC,2,0
+1995,20,1. FC Nürnberg,SpVgg Unterhaching,2,2
+1995,20,VfB Lübeck,MSV Duisburg,2,1
+1995,20,FSV Zwickau,Arminia Bielefeld,1,3
+1995,21,FC Carl Zeiss Jena,1. FC Nürnberg,1,0
+1995,21,1. FSV Mainz 05,FSV Zwickau,1,0
+1995,21,VfL Wolfsburg,SG Wattenscheid 09,1,0
+1995,21,Waldhof Mannheim,Hannover 96,1,0
+1995,21,Arminia Bielefeld,SV Meppen,2,2
+1995,21,SpVgg Unterhaching,Fortuna Köln,2,0
+1995,21,VfL Bochum,VfB Lübeck,3,1
+1995,21,MSV Duisburg,VfB Leipzig,5,1
+1995,21,Chemnitzer FC,Hertha BSC,1,2
+1995,22,VfL Wolfsburg,Waldhof Mannheim,2,0
+1995,22,Hertha BSC,Arminia Bielefeld,0,0
+1995,22,1. FC Nürnberg,Chemnitzer FC,1,1
+1995,22,VfB Leipzig,VfL Bochum,0,1
+1995,22,VfB Lübeck,Hannover 96,2,0
+1995,22,SV Meppen,1. FSV Mainz 05,2,1
+1995,22,SG Wattenscheid 09,SpVgg Unterhaching,0,0
+1995,22,Fortuna Köln,FC Carl Zeiss Jena,6,0
+1995,22,FSV Zwickau,MSV Duisburg,1,0
+1995,23,SpVgg Unterhaching,VfL Wolfsburg,2,2
+1995,23,Arminia Bielefeld,1. FC Nürnberg,2,2
+1995,23,MSV Duisburg,SV Meppen,3,1
+1995,23,FC Carl Zeiss Jena,SG Wattenscheid 09,1,1
+1995,23,Waldhof Mannheim,VfB Lübeck,2,0
+1995,23,1. FSV Mainz 05,Hertha BSC,0,0
+1995,23,Hannover 96,VfB Leipzig,4,0
+1995,23,VfL Bochum,FSV Zwickau,3,0
+1995,23,Chemnitzer FC,Fortuna Köln,1,1
+1995,24,FSV Zwickau,Hannover 96,2,1
+1995,24,VfB Leipzig,VfB Lübeck,2,1
+1995,24,VfL Wolfsburg,FC Carl Zeiss Jena,1,1
+1995,24,Fortuna Köln,Arminia Bielefeld,1,0
+1995,24,Hertha BSC,MSV Duisburg,1,0
+1995,24,1. FC Nürnberg,1. FSV Mainz 05,1,2
+1995,24,SG Wattenscheid 09,Chemnitzer FC,2,2
+1995,24,SV Meppen,VfL Bochum,2,3
+1995,24,SpVgg Unterhaching,Waldhof Mannheim,3,1
+1995,25,Chemnitzer FC,VfL Wolfsburg,0,4
+1995,25,1. FSV Mainz 05,Fortuna Köln,2,0
+1995,25,VfL Bochum,Hertha BSC,2,2
+1995,25,Arminia Bielefeld,SG Wattenscheid 09,1,0
+1995,25,VfB Lübeck,FSV Zwickau,3,1
+1995,25,FC Carl Zeiss Jena,SpVgg Unterhaching,1,0
+1995,25,Waldhof Mannheim,VfB Leipzig,2,0
+1995,25,MSV Duisburg,1. FC Nürnberg,1,1
+1995,25,Hannover 96,SV Meppen,1,0
+1995,26,FC Carl Zeiss Jena,Waldhof Mannheim,0,0
+1995,26,SpVgg Unterhaching,Chemnitzer FC,0,1
+1995,26,Fortuna Köln,MSV Duisburg,1,1
+1995,26,Hertha BSC,Hannover 96,4,1
+1995,26,SG Wattenscheid 09,1. FSV Mainz 05,2,1
+1995,26,1. FC Nürnberg,VfL Bochum,0,1
+1995,26,FSV Zwickau,VfB Leipzig,3,1
+1995,26,SV Meppen,VfB Lübeck,2,0
+1995,26,VfL Wolfsburg,Arminia Bielefeld,1,1
+1995,27,MSV Duisburg,SG Wattenscheid 09,0,2
+1995,27,Waldhof Mannheim,FSV Zwickau,3,1
+1995,27,1. FSV Mainz 05,VfL Wolfsburg,2,2
+1995,27,VfB Leipzig,SV Meppen,0,3
+1995,27,Arminia Bielefeld,SpVgg Unterhaching,2,2
+1995,27,VfB Lübeck,Hertha BSC,0,1
+1995,27,VfL Bochum,Fortuna Köln,3,1
+1995,27,Chemnitzer FC,FC Carl Zeiss Jena,3,0
+1995,27,Hannover 96,1. FC Nürnberg,2,2
+1995,28,Chemnitzer FC,Waldhof Mannheim,1,1
+1995,28,Hertha BSC,VfB Leipzig,2,0
+1995,28,VfL Wolfsburg,MSV Duisburg,3,1
+1995,28,SV Meppen,FSV Zwickau,3,0
+1995,28,Fortuna Köln,Hannover 96,1,0
+1995,28,FC Carl Zeiss Jena,Arminia Bielefeld,2,1
+1995,28,SpVgg Unterhaching,1. FSV Mainz 05,0,0
+1995,28,1. FC Nürnberg,VfB Lübeck,0,1
+1995,28,SG Wattenscheid 09,VfL Bochum,1,3
+1995,29,FSV Zwickau,Hertha BSC,3,1
+1995,29,Arminia Bielefeld,Chemnitzer FC,3,1
+1995,29,Hannover 96,SG Wattenscheid 09,3,0
+1995,29,VfL Bochum,VfL Wolfsburg,0,0
+1995,29,MSV Duisburg,SpVgg Unterhaching,1,1
+1995,29,VfB Leipzig,1. FC Nürnberg,2,1
+1995,29,Waldhof Mannheim,SV Meppen,2,0
+1995,29,VfB Lübeck,Fortuna Köln,0,1
+1995,29,1. FSV Mainz 05,FC Carl Zeiss Jena,3,0
+1995,30,FC Carl Zeiss Jena,MSV Duisburg,2,4
+1995,30,VfL Wolfsburg,Hannover 96,3,3
+1995,30,Chemnitzer FC,1. FSV Mainz 05,0,3
+1995,30,1. FC Nürnberg,FSV Zwickau,2,1
+1995,30,Arminia Bielefeld,Waldhof Mannheim,2,2
+1995,30,Hertha BSC,SV Meppen,1,4
+1995,30,SpVgg Unterhaching,VfL Bochum,4,2
+1995,30,SG Wattenscheid 09,VfB Lübeck,2,3
+1995,30,Fortuna Köln,VfB Leipzig,2,1
+1995,31,SV Meppen,1. FC Nürnberg,2,0
+1995,31,VfB Leipzig,SG Wattenscheid 09,1,0
+1995,31,VfB Lübeck,VfL Wolfsburg,1,1
+1995,31,FSV Zwickau,Fortuna Köln,0,0
+1995,31,VfL Bochum,FC Carl Zeiss Jena,1,1
+1995,31,1. FSV Mainz 05,Arminia Bielefeld,2,0
+1995,31,Waldhof Mannheim,Hertha BSC,3,2
+1995,31,Hannover 96,SpVgg Unterhaching,1,3
+1995,31,MSV Duisburg,Chemnitzer FC,1,0
+1995,32,FC Carl Zeiss Jena,Hannover 96,4,1
+1995,32,Chemnitzer FC,VfL Bochum,0,2
+1995,32,Waldhof Mannheim,1. FSV Mainz 05,2,2
+1995,32,Fortuna Köln,SV Meppen,0,0
+1995,32,SpVgg Unterhaching,VfB Lübeck,5,0
+1995,32,SG Wattenscheid 09,FSV Zwickau,3,1
+1995,32,VfL Wolfsburg,VfB Leipzig,1,0
+1995,32,Arminia Bielefeld,MSV Duisburg,3,2
+1995,32,Hertha BSC,1. FC Nürnberg,0,1
+1995,33,Hannover 96,Chemnitzer FC,4,2
+1995,33,Hertha BSC,Fortuna Köln,0,0
+1995,33,1. FC Nürnberg,Waldhof Mannheim,2,4
+1995,33,SV Meppen,SG Wattenscheid 09,4,0
+1995,33,FSV Zwickau,VfL Wolfsburg,0,1
+1995,33,VfB Lübeck,FC Carl Zeiss Jena,2,1
+1995,33,VfL Bochum,Arminia Bielefeld,2,0
+1995,33,MSV Duisburg,1. FSV Mainz 05,0,3
+1995,33,VfB Leipzig,SpVgg Unterhaching,3,2
+1995,34,Arminia Bielefeld,Hannover 96,2,1
+1995,34,SpVgg Unterhaching,FSV Zwickau,4,2
+1995,34,Fortuna Köln,1. FC Nürnberg,1,0
+1995,34,1. FSV Mainz 05,VfL Bochum,1,0
+1995,34,Waldhof Mannheim,MSV Duisburg,1,3
+1995,34,VfL Wolfsburg,SV Meppen,0,0
+1995,34,SG Wattenscheid 09,Hertha BSC,0,0
+1995,34,Chemnitzer FC,VfB Lübeck,2,1
+1995,34,FC Carl Zeiss Jena,VfB Leipzig,3,1

@@ -1,0 +1,307 @@
+season,matchday,home,away,goals_home,goals_away
+1999,1,Chemnitzer FC,Bor. Mönchengladbach,2,0
+1999,1,FC St. Pauli,SpVgg Greuther Fürth,0,0
+1999,1,1. FSV Mainz 05,Kickers Offenbach,1,1
+1999,1,Energie Cottbus,Fortuna Köln,2,0
+1999,1,1. FC Köln,Rot-Weiß Oberhausen,1,0
+1999,1,Alemannia Aachen,Stuttgarter Kickers,4,1
+1999,1,Hannover 96,TeBe Berlin,2,3
+1999,1,1. FC Nürnberg,Waldhof Mannheim,3,0
+1999,1,Karlsruher SC,VfL Bochum,1,3
+1999,2,Waldhof Mannheim,Chemnitzer FC,4,0
+1999,2,VfL Bochum,Alemannia Aachen,5,0
+1999,2,SpVgg Greuther Fürth,1. FC Köln,0,0
+1999,2,TeBe Berlin,Karlsruher SC,2,2
+1999,2,Fortuna Köln,1. FSV Mainz 05,2,1
+1999,2,Bor. Mönchengladbach,Hannover 96,2,3
+1999,2,Stuttgarter Kickers,FC St. Pauli,2,1
+1999,2,Rot-Weiß Oberhausen,Energie Cottbus,0,4
+1999,2,Kickers Offenbach,1. FC Nürnberg,1,3
+1999,3,Chemnitzer FC,Kickers Offenbach,3,0
+1999,3,1. FC Köln,Stuttgarter Kickers,4,1
+1999,3,Hannover 96,Waldhof Mannheim,2,2
+1999,3,Alemannia Aachen,TeBe Berlin,2,2
+1999,3,FC St. Pauli,VfL Bochum,0,0
+1999,3,1. FC Nürnberg,Fortuna Köln,2,1
+1999,3,Rot-Weiß Oberhausen,SpVgg Greuther Fürth,3,4
+1999,3,Energie Cottbus,1. FSV Mainz 05,3,0
+1999,3,Karlsruher SC,Bor. Mönchengladbach,3,0
+1999,4,Waldhof Mannheim,Karlsruher SC,1,1
+1999,4,TeBe Berlin,FC St. Pauli,2,0
+1999,4,Kickers Offenbach,Hannover 96,0,2
+1999,4,Bor. Mönchengladbach,Alemannia Aachen,1,2
+1999,4,Fortuna Köln,Chemnitzer FC,1,0
+1999,4,Stuttgarter Kickers,Rot-Weiß Oberhausen,2,2
+1999,4,SpVgg Greuther Fürth,Energie Cottbus,1,0
+1999,4,1. FSV Mainz 05,1. FC Nürnberg,1,1
+1999,4,VfL Bochum,1. FC Köln,2,3
+1999,5,FC St. Pauli,Bor. Mönchengladbach,0,2
+1999,5,Karlsruher SC,Kickers Offenbach,1,1
+1999,5,Rot-Weiß Oberhausen,VfL Bochum,3,0
+1999,5,Chemnitzer FC,1. FSV Mainz 05,1,1
+1999,5,Alemannia Aachen,Waldhof Mannheim,2,1
+1999,5,Hannover 96,Fortuna Köln,3,1
+1999,5,SpVgg Greuther Fürth,Stuttgarter Kickers,0,0
+1999,5,Energie Cottbus,1. FC Nürnberg,2,0
+1999,5,1. FC Köln,TeBe Berlin,1,1
+1999,6,VfL Bochum,SpVgg Greuther Fürth,1,2
+1999,6,1. FC Nürnberg,Chemnitzer FC,1,0
+1999,6,1. FSV Mainz 05,Hannover 96,1,0
+1999,6,Fortuna Köln,Karlsruher SC,2,3
+1999,6,Waldhof Mannheim,FC St. Pauli,1,3
+1999,6,TeBe Berlin,Rot-Weiß Oberhausen,1,0
+1999,6,Stuttgarter Kickers,Energie Cottbus,1,0
+1999,6,Kickers Offenbach,Alemannia Aachen,1,2
+1999,6,Bor. Mönchengladbach,1. FC Köln,3,1
+1999,7,1. FC Köln,Waldhof Mannheim,3,0
+1999,7,FC St. Pauli,Kickers Offenbach,1,1
+1999,7,Alemannia Aachen,Fortuna Köln,1,1
+1999,7,Karlsruher SC,1. FSV Mainz 05,1,2
+1999,7,Stuttgarter Kickers,VfL Bochum,0,0
+1999,7,SpVgg Greuther Fürth,TeBe Berlin,2,0
+1999,7,Rot-Weiß Oberhausen,Bor. Mönchengladbach,1,1
+1999,7,Energie Cottbus,Chemnitzer FC,2,4
+1999,7,Hannover 96,1. FC Nürnberg,2,0
+1999,8,Fortuna Köln,FC St. Pauli,2,0
+1999,8,Bor. Mönchengladbach,SpVgg Greuther Fürth,2,0
+1999,8,Kickers Offenbach,1. FC Köln,0,1
+1999,8,VfL Bochum,Energie Cottbus,2,4
+1999,8,Waldhof Mannheim,Rot-Weiß Oberhausen,2,0
+1999,8,TeBe Berlin,Stuttgarter Kickers,2,0
+1999,8,Chemnitzer FC,Hannover 96,2,1
+1999,8,1. FSV Mainz 05,Alemannia Aachen,4,2
+1999,8,1. FC Nürnberg,Karlsruher SC,4,3
+1999,9,Alemannia Aachen,1. FC Nürnberg,3,1
+1999,9,Rot-Weiß Oberhausen,Kickers Offenbach,1,0
+1999,9,Energie Cottbus,Hannover 96,1,0
+1999,9,Stuttgarter Kickers,Bor. Mönchengladbach,3,1
+1999,9,FC St. Pauli,1. FSV Mainz 05,2,2
+1999,9,Karlsruher SC,Chemnitzer FC,1,2
+1999,9,VfL Bochum,TeBe Berlin,2,6
+1999,9,SpVgg Greuther Fürth,Waldhof Mannheim,0,0
+1999,9,1. FC Köln,Fortuna Köln,3,0
+1999,10,Waldhof Mannheim,Stuttgarter Kickers,4,3
+1999,10,1. FC Nürnberg,FC St. Pauli,2,2
+1999,10,1. FSV Mainz 05,1. FC Köln,0,0
+1999,10,TeBe Berlin,Energie Cottbus,1,3
+1999,10,Chemnitzer FC,Alemannia Aachen,2,2
+1999,10,Fortuna Köln,Rot-Weiß Oberhausen,0,0
+1999,10,Hannover 96,Karlsruher SC,1,1
+1999,10,Kickers Offenbach,SpVgg Greuther Fürth,1,0
+1999,10,Bor. Mönchengladbach,VfL Bochum,0,1
+1999,11,FC St. Pauli,Chemnitzer FC,0,0
+1999,11,Alemannia Aachen,Hannover 96,1,2
+1999,11,VfL Bochum,Waldhof Mannheim,2,0
+1999,11,Energie Cottbus,Karlsruher SC,3,2
+1999,11,1. FC Köln,1. FC Nürnberg,6,1
+1999,11,Stuttgarter Kickers,Kickers Offenbach,2,1
+1999,11,SpVgg Greuther Fürth,Fortuna Köln,0,0
+1999,11,Rot-Weiß Oberhausen,1. FSV Mainz 05,0,0
+1999,11,TeBe Berlin,Bor. Mönchengladbach,2,2
+1999,12,Waldhof Mannheim,TeBe Berlin,0,0
+1999,12,Fortuna Köln,Stuttgarter Kickers,1,1
+1999,12,Hannover 96,FC St. Pauli,1,2
+1999,12,Kickers Offenbach,VfL Bochum,2,1
+1999,12,Bor. Mönchengladbach,Energie Cottbus,2,2
+1999,12,1. FSV Mainz 05,SpVgg Greuther Fürth,1,0
+1999,12,Karlsruher SC,Alemannia Aachen,0,0
+1999,12,1. FC Nürnberg,Rot-Weiß Oberhausen,2,1
+1999,12,Chemnitzer FC,1. FC Köln,1,3
+1999,13,1. FC Köln,Hannover 96,3,1
+1999,13,Stuttgarter Kickers,1. FSV Mainz 05,3,4
+1999,13,Energie Cottbus,Alemannia Aachen,4,1
+1999,13,VfL Bochum,Fortuna Köln,3,0
+1999,13,FC St. Pauli,Karlsruher SC,3,1
+1999,13,Bor. Mönchengladbach,Waldhof Mannheim,2,0
+1999,13,TeBe Berlin,Kickers Offenbach,0,0
+1999,13,Rot-Weiß Oberhausen,Chemnitzer FC,1,0
+1999,13,SpVgg Greuther Fürth,1. FC Nürnberg,1,1
+1999,14,Hannover 96,Rot-Weiß Oberhausen,1,1
+1999,14,Chemnitzer FC,SpVgg Greuther Fürth,5,0
+1999,14,Kickers Offenbach,Bor. Mönchengladbach,1,1
+1999,14,Waldhof Mannheim,Energie Cottbus,2,1
+1999,14,Fortuna Köln,TeBe Berlin,0,0
+1999,14,Alemannia Aachen,FC St. Pauli,3,1
+1999,14,1. FC Nürnberg,Stuttgarter Kickers,3,2
+1999,14,1. FSV Mainz 05,VfL Bochum,0,1
+1999,14,Karlsruher SC,1. FC Köln,0,0
+1999,15,1. FC Köln,Alemannia Aachen,4,0
+1999,15,TeBe Berlin,1. FSV Mainz 05,2,1
+1999,15,Stuttgarter Kickers,Chemnitzer FC,2,2
+1999,15,SpVgg Greuther Fürth,Hannover 96,0,0
+1999,15,VfL Bochum,1. FC Nürnberg,2,1
+1999,15,Kickers Offenbach,Waldhof Mannheim,1,1
+1999,15,FC St. Pauli,Energie Cottbus,1,0
+1999,15,Bor. Mönchengladbach,Fortuna Köln,0,0
+1999,15,Rot-Weiß Oberhausen,Karlsruher SC,0,0
+1999,16,Hannover 96,Stuttgarter Kickers,2,1
+1999,16,Chemnitzer FC,VfL Bochum,3,3
+1999,16,1. FC Nürnberg,TeBe Berlin,2,0
+1999,16,Fortuna Köln,Waldhof Mannheim,1,5
+1999,16,FC St. Pauli,1. FC Köln,1,2
+1999,16,Alemannia Aachen,Rot-Weiß Oberhausen,0,0
+1999,16,Karlsruher SC,SpVgg Greuther Fürth,0,1
+1999,16,1. FSV Mainz 05,Bor. Mönchengladbach,0,0
+1999,16,Energie Cottbus,Kickers Offenbach,5,0
+1999,17,TeBe Berlin,Chemnitzer FC,0,0
+1999,17,1. FC Köln,Energie Cottbus,4,1
+1999,17,Waldhof Mannheim,1. FSV Mainz 05,2,1
+1999,17,Rot-Weiß Oberhausen,FC St. Pauli,2,2
+1999,17,Kickers Offenbach,Fortuna Köln,4,3
+1999,17,Bor. Mönchengladbach,1. FC Nürnberg,4,0
+1999,17,SpVgg Greuther Fürth,Alemannia Aachen,1,1
+1999,17,VfL Bochum,Hannover 96,2,1
+1999,17,Stuttgarter Kickers,Karlsruher SC,2,1
+1999,18,Stuttgarter Kickers,Alemannia Aachen,1,2
+1999,18,Bor. Mönchengladbach,Chemnitzer FC,1,0
+1999,18,Waldhof Mannheim,1. FC Nürnberg,2,1
+1999,18,Kickers Offenbach,1. FSV Mainz 05,2,2
+1999,18,Rot-Weiß Oberhausen,1. FC Köln,1,0
+1999,18,SpVgg Greuther Fürth,FC St. Pauli,0,0
+1999,18,TeBe Berlin,Hannover 96,2,1
+1999,18,Fortuna Köln,Energie Cottbus,2,0
+1999,18,VfL Bochum,Karlsruher SC,2,1
+1999,19,Chemnitzer FC,Waldhof Mannheim,0,0
+1999,19,1. FC Köln,SpVgg Greuther Fürth,2,2
+1999,19,1. FC Nürnberg,Kickers Offenbach,1,1
+1999,19,Hannover 96,Bor. Mönchengladbach,2,3
+1999,19,1. FSV Mainz 05,Fortuna Köln,0,0
+1999,19,Karlsruher SC,TeBe Berlin,0,0
+1999,19,Alemannia Aachen,VfL Bochum,0,1
+1999,19,FC St. Pauli,Stuttgarter Kickers,2,1
+1999,19,Energie Cottbus,Rot-Weiß Oberhausen,0,1
+1999,20,VfL Bochum,FC St. Pauli,2,0
+1999,20,TeBe Berlin,Alemannia Aachen,1,2
+1999,20,Kickers Offenbach,Chemnitzer FC,2,0
+1999,20,1. FSV Mainz 05,Energie Cottbus,1,0
+1999,20,Stuttgarter Kickers,1. FC Köln,1,2
+1999,20,Waldhof Mannheim,Hannover 96,2,2
+1999,20,Fortuna Köln,1. FC Nürnberg,1,1
+1999,20,SpVgg Greuther Fürth,Rot-Weiß Oberhausen,0,1
+1999,20,Bor. Mönchengladbach,Karlsruher SC,4,1
+1999,21,Chemnitzer FC,Fortuna Köln,2,1
+1999,21,Alemannia Aachen,Bor. Mönchengladbach,1,1
+1999,21,1. FC Köln,VfL Bochum,3,0
+1999,21,Energie Cottbus,SpVgg Greuther Fürth,4,2
+1999,21,1. FC Nürnberg,1. FSV Mainz 05,2,0
+1999,21,FC St. Pauli,TeBe Berlin,1,1
+1999,21,Rot-Weiß Oberhausen,Stuttgarter Kickers,2,2
+1999,21,Hannover 96,Kickers Offenbach,1,1
+1999,21,Karlsruher SC,Waldhof Mannheim,1,1
+1999,22,Bor. Mönchengladbach,FC St. Pauli,2,1
+1999,22,1. FSV Mainz 05,Chemnitzer FC,5,0
+1999,22,1. FC Nürnberg,Energie Cottbus,1,1
+1999,22,Kickers Offenbach,Karlsruher SC,1,0
+1999,22,Waldhof Mannheim,Alemannia Aachen,1,1
+1999,22,Fortuna Köln,Hannover 96,1,1
+1999,22,Stuttgarter Kickers,SpVgg Greuther Fürth,1,5
+1999,22,VfL Bochum,Rot-Weiß Oberhausen,1,0
+1999,22,TeBe Berlin,1. FC Köln,2,0
+1999,23,FC St. Pauli,Waldhof Mannheim,1,1
+1999,23,Hannover 96,1. FSV Mainz 05,2,1
+1999,23,SpVgg Greuther Fürth,VfL Bochum,2,2
+1999,23,Energie Cottbus,Stuttgarter Kickers,1,0
+1999,23,Karlsruher SC,Fortuna Köln,2,1
+1999,23,Rot-Weiß Oberhausen,TeBe Berlin,3,0
+1999,23,Alemannia Aachen,Kickers Offenbach,2,1
+1999,23,1. FC Köln,Bor. Mönchengladbach,1,1
+1999,23,Chemnitzer FC,1. FC Nürnberg,1,1
+1999,24,1. FC Nürnberg,Hannover 96,5,1
+1999,24,Kickers Offenbach,FC St. Pauli,0,1
+1999,24,TeBe Berlin,SpVgg Greuther Fürth,3,1
+1999,24,VfL Bochum,Stuttgarter Kickers,2,1
+1999,24,Bor. Mönchengladbach,Rot-Weiß Oberhausen,4,2
+1999,24,Waldhof Mannheim,1. FC Köln,2,1
+1999,24,Fortuna Köln,Alemannia Aachen,0,0
+1999,24,1. FSV Mainz 05,Karlsruher SC,2,2
+1999,24,Chemnitzer FC,Energie Cottbus,1,2
+1999,25,Rot-Weiß Oberhausen,Waldhof Mannheim,1,1
+1999,25,Stuttgarter Kickers,TeBe Berlin,2,0
+1999,25,Hannover 96,Chemnitzer FC,2,0
+1999,25,1. FC Köln,Kickers Offenbach,1,1
+1999,25,Alemannia Aachen,1. FSV Mainz 05,1,0
+1999,25,FC St. Pauli,Fortuna Köln,0,0
+1999,25,SpVgg Greuther Fürth,Bor. Mönchengladbach,1,1
+1999,25,Karlsruher SC,1. FC Nürnberg,0,1
+1999,25,Energie Cottbus,VfL Bochum,1,1
+1999,26,1. FSV Mainz 05,FC St. Pauli,1,1
+1999,26,1. FC Nürnberg,Alemannia Aachen,3,1
+1999,26,Hannover 96,Energie Cottbus,3,2
+1999,26,Bor. Mönchengladbach,Stuttgarter Kickers,1,1
+1999,26,Fortuna Köln,1. FC Köln,4,1
+1999,26,Chemnitzer FC,Karlsruher SC,3,1
+1999,26,Waldhof Mannheim,SpVgg Greuther Fürth,3,3
+1999,26,Kickers Offenbach,Rot-Weiß Oberhausen,2,1
+1999,26,TeBe Berlin,VfL Bochum,0,4
+1999,27,Stuttgarter Kickers,Waldhof Mannheim,3,0
+1999,27,Alemannia Aachen,Chemnitzer FC,0,1
+1999,27,FC St. Pauli,1. FC Nürnberg,0,0
+1999,27,Energie Cottbus,TeBe Berlin,2,0
+1999,27,1. FC Köln,1. FSV Mainz 05,1,0
+1999,27,Rot-Weiß Oberhausen,Fortuna Köln,4,0
+1999,27,Karlsruher SC,Hannover 96,1,3
+1999,27,SpVgg Greuther Fürth,Kickers Offenbach,1,1
+1999,27,VfL Bochum,Bor. Mönchengladbach,2,2
+1999,28,1. FC Nürnberg,1. FC Köln,1,1
+1999,28,Hannover 96,Alemannia Aachen,3,1
+1999,28,1. FSV Mainz 05,Rot-Weiß Oberhausen,1,1
+1999,28,Bor. Mönchengladbach,TeBe Berlin,4,2
+1999,28,Waldhof Mannheim,VfL Bochum,4,2
+1999,28,Karlsruher SC,Energie Cottbus,1,0
+1999,28,Kickers Offenbach,Stuttgarter Kickers,0,4
+1999,28,Fortuna Köln,SpVgg Greuther Fürth,0,1
+1999,28,Chemnitzer FC,FC St. Pauli,1,3
+1999,29,FC St. Pauli,Hannover 96,0,2
+1999,29,Rot-Weiß Oberhausen,1. FC Nürnberg,1,0
+1999,29,VfL Bochum,Kickers Offenbach,6,1
+1999,29,TeBe Berlin,Waldhof Mannheim,3,1
+1999,29,1. FC Köln,Chemnitzer FC,2,1
+1999,29,Stuttgarter Kickers,Fortuna Köln,2,1
+1999,29,Alemannia Aachen,Karlsruher SC,4,1
+1999,29,SpVgg Greuther Fürth,1. FSV Mainz 05,2,0
+1999,29,Energie Cottbus,Bor. Mönchengladbach,2,2
+1999,30,Karlsruher SC,FC St. Pauli,0,0
+1999,30,Alemannia Aachen,Energie Cottbus,1,0
+1999,30,Fortuna Köln,VfL Bochum,2,3
+1999,30,1. FC Nürnberg,SpVgg Greuther Fürth,2,2
+1999,30,Kickers Offenbach,TeBe Berlin,2,1
+1999,30,1. FSV Mainz 05,Stuttgarter Kickers,2,0
+1999,30,Chemnitzer FC,Rot-Weiß Oberhausen,1,1
+1999,30,Hannover 96,1. FC Köln,3,5
+1999,30,Waldhof Mannheim,Bor. Mönchengladbach,2,1
+1999,31,TeBe Berlin,Fortuna Köln,1,2
+1999,31,FC St. Pauli,Alemannia Aachen,2,1
+1999,31,Rot-Weiß Oberhausen,Hannover 96,2,1
+1999,31,Stuttgarter Kickers,1. FC Nürnberg,0,3
+1999,31,Bor. Mönchengladbach,Kickers Offenbach,1,0
+1999,31,Energie Cottbus,Waldhof Mannheim,3,2
+1999,31,1. FC Köln,Karlsruher SC,1,2
+1999,31,SpVgg Greuther Fürth,Chemnitzer FC,0,1
+1999,31,VfL Bochum,1. FSV Mainz 05,0,1
+1999,32,Fortuna Köln,Bor. Mönchengladbach,1,2
+1999,32,Alemannia Aachen,1. FC Köln,1,2
+1999,32,Energie Cottbus,FC St. Pauli,3,2
+1999,32,1. FSV Mainz 05,TeBe Berlin,2,1
+1999,32,Chemnitzer FC,Stuttgarter Kickers,1,1
+1999,32,Hannover 96,SpVgg Greuther Fürth,1,2
+1999,32,Karlsruher SC,Rot-Weiß Oberhausen,0,3
+1999,32,Waldhof Mannheim,Kickers Offenbach,2,3
+1999,32,1. FC Nürnberg,VfL Bochum,0,1
+1999,33,Waldhof Mannheim,Fortuna Köln,1,3
+1999,33,1. FC Köln,FC St. Pauli,6,3
+1999,33,Rot-Weiß Oberhausen,Alemannia Aachen,3,0
+1999,33,SpVgg Greuther Fürth,Karlsruher SC,2,0
+1999,33,Stuttgarter Kickers,Hannover 96,2,1
+1999,33,VfL Bochum,Chemnitzer FC,5,1
+1999,33,TeBe Berlin,1. FC Nürnberg,1,3
+1999,33,Bor. Mönchengladbach,1. FSV Mainz 05,6,1
+1999,33,Kickers Offenbach,Energie Cottbus,1,2
+1999,34,Energie Cottbus,1. FC Köln,2,0
+1999,34,1. FSV Mainz 05,Waldhof Mannheim,2,0
+1999,34,1. FC Nürnberg,Bor. Mönchengladbach,2,1
+1999,34,Chemnitzer FC,TeBe Berlin,1,0
+1999,34,Hannover 96,VfL Bochum,3,3
+1999,34,Karlsruher SC,Stuttgarter Kickers,1,1
+1999,34,Alemannia Aachen,SpVgg Greuther Fürth,2,2
+1999,34,FC St. Pauli,Rot-Weiß Oberhausen,1,1
+1999,34,Fortuna Köln,Kickers Offenbach,4,1
