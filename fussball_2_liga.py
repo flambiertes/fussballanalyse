@@ -37,24 +37,24 @@ def get_matchday_data(season, matchday):
     try:
         r = requests.get(url, headers=headers, timeout=10) 
     except requests.exceptions.ReadTimeout as e:
-        print(f"❌ Read Timeout beim Abrufen von {url}. Überspringe diesen Spieltag. ({e})")
+        print(f"Read Timeout beim Abrufen von {url}. Überspringe diesen Spieltag. ({e})")
         # Bei Timeout eine längere Pause machen, bevor die Schleife fortgesetzt wird
         time.sleep(10)
         return pd.DataFrame()
     except requests.exceptions.RequestException as e:
-        print(f"❌ Ein allgemeiner Fehler ist beim Abrufen von {url} aufgetreten. ({e})")
+        print(f"Ein allgemeiner Fehler ist beim Abrufen von {url} aufgetreten. ({e})")
         time.sleep(10)
         return pd.DataFrame()
 
     if r.status_code != 200:
-        print(f"⚠️ Fehler beim Abrufen {url} ({r.status_code})")
+        print(f"Fehler beim Abrufen {url} ({r.status_code})")
         return pd.DataFrame()
 
     soup = BeautifulSoup(r.text, "html.parser")
     # Suche die Tabelle, die die Spieldaten enthält
     table = soup.find("table", class_="standard_tabelle")
     if not table:
-        print(f"⚠️ Keine Tabelle gefunden in {url}")
+        print(f"Keine Tabelle gefunden in {url}")
         return pd.DataFrame()
 
     # !--- KORREKTUR: Alle Zeilen durchgehen, nicht nur ab [1:] ---!
@@ -97,7 +97,7 @@ def get_matchday_data(season, matchday):
         })
 
     if not matches:
-        print(f"⚠️ Keine Spiele gefunden in {url}")
+        print(f"Keine Spiele gefunden in {url}")
         return pd.DataFrame()
 
     # Nach jedem Spieltag eine Pause von 1 Sekunde einlegen
@@ -181,16 +181,6 @@ def compute_table(matches):
         history.append(table)
         
     return pd.concat(history, ignore_index=True)
-
-
-# -----------------------------
-# 3️⃣ Auswertung
-# -----------------------------
-import os
-import pandas as pd
-from tqdm import tqdm
-
-DATA_DIR = "data"  # ggf. anpassen, falls dein Pfad anders heißt
 
 def analyze_progress(all_tables, analyze_md=9):
     """
@@ -314,31 +304,81 @@ def run_full_analysis(all_tables):
         excel_path_places = os.path.join(DATA_DIR, "2_bundesliga_analyse.xlsx")
         try:
             all_df.to_excel(excel_path_places, sheet_name="Platzentwicklung", float_format="%.2f", index=False)
-            print(f"💾 Platzbasierte Analyse erfolgreich in '{excel_path_places}' gespeichert.")
+            print(f"Platzbasierte Analyse erfolgreich in '{excel_path_places}' gespeichert.")
         except Exception as e:
-            print(f"❌ Fehler beim Speichern der platzbasierten Excel-Datei: {e}")
+            print(f"Fehler beim Speichern der platzbasierten Excel-Datei: {e}")
 
     if all_matchday_summaries_points:
         all_points_df = pd.concat(all_matchday_summaries_points, ignore_index=True)
         excel_path_points = os.path.join(DATA_DIR, "2_bundesliga_analyse_punktebasiert.xlsx")
         try:
             all_points_df.to_excel(excel_path_points, sheet_name="Punkteentwicklung", float_format="%.2f", index=False)
-            print(f"💾 Punktebasierte Analyse erfolgreich in '{excel_path_points}' gespeichert.")
+            print(f"Punktebasierte Analyse erfolgreich in '{excel_path_points}' gespeichert.")
         except Exception as e:
-            print(f"❌ Fehler beim Speichern der punktbasierten Excel-Datei: {e}")
+            print(f"Fehler beim Speichern der punktbasierten Excel-Datei: {e}")
 
+def analyze_future_outcomes(all_tables: pd.DataFrame):
+    print("Berechne Wahrscheinlichkeiten für Platz- und Punktverläufe...")
+    
+    # Sicherstellen, dass alle nötigen Spalten existieren
+    cols_needed = {"season", "matchday", "team", "place", "points"}
+    if not cols_needed.issubset(all_tables.columns):
+        raise ValueError(f"Fehlende Spalten: {cols_needed - set(all_tables.columns)}")
 
-# -------------------------------------------------------
-# Hauptanalyse – alle Spieltage und beide Methoden
-# -------------------------------------------------------
+    # Endplatz jedes Teams in jeder Saison
+    final_places = (
+    all_tables.groupby(["season", "team"], group_keys=False)
+    .apply(lambda df: df.loc[df["matchday"].idxmax(), "place"])
+    .reset_index(name="endplatz")
+    )
 
+    # Merge Endplatz zu allen Zeilen
+    merged = pd.merge(all_tables, final_places, on=["season", "team"])
 
+    # 1️⃣ Platzbasierte Analyse
+    platz_stats = (
+        merged.groupby(["matchday", "place"])["endplatz"]
+        .agg(["mean", "median", lambda x: (x <= 2).mean(), lambda x: (x <= 3).mean()])
+        .reset_index()
+        .rename(columns={"mean": "durchschnittlicher_endplatz",
+                         "median": "median_endplatz",
+                         "<lambda_0>": "wahrscheinlichkeit_top2",
+                         "<lambda_1>": "wahrscheinlichkeit_top3"})
+    )
+    
+    # 2️⃣ Punktebasierte Analyse
+    punkt_stats = (
+        merged.groupby(["matchday", "points"])["endplatz"]
+        .agg(["mean", "median", lambda x: (x <= 2).mean(), lambda x: (x <= 3).mean()])
+        .reset_index()
+        .rename(columns={"mean": "durchschnittlicher_endplatz",
+                         "median": "median_endplatz",
+                         "<lambda_0>": "wahrscheinlichkeit_top2",
+                         "<lambda_1>": "wahrscheinlichkeit_top3"})
+    )
+    
+    excel_path_places = os.path.join(DATA_DIR, "2_bundesliga_prognose_platzbasiert.xlsx")
+    excel_path_points = os.path.join(DATA_DIR, "2_bundesliga_prognose_punktbasiert.xlsx")
+    
+    try:
+        platz_stats.to_excel(excel_path_places, index=False, sheet_name="Platzprognose", float_format="%.2f")
+        print(f"💾 Prognose (platzbasiert) erfolgreich in '{excel_path_places}' gespeichert.")
+    except Exception as e:
+        print(f"❌ Fehler beim Speichern der platzbasierten Prognose: {e}")
+    
+    try:
+        punkt_stats.to_excel(excel_path_points, index=False, sheet_name="Punkteprognose", float_format="%.2f")
+        print(f"💾 Prognose (punktbasiert) erfolgreich in '{excel_path_points}' gespeichert.")
+    except Exception as e:
+        print(f"❌ Fehler beim Speichern der punktbasierten Prognose: {e}")
+    
+    excel_path = os.path.join(DATA_DIR, "2_bundesliga_prognose_gesamt.xlsx")
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+        platz_stats.to_excel(writer, sheet_name="Platzprognose", index=False, float_format="%.2f")
+        punkt_stats.to_excel(writer, sheet_name="Punkteprognose", index=False, float_format="%.2f")
+    
+    print(f"💾 Gesamtprognose erfolgreich in '{excel_path}' gespeichert.")
 
-
-
-# -----------------------------
-# 4️⃣ Hauptprogramm
-# -----------------------------
 def load_or_scrape_season(season):
     """Lädt CSV, falls vorhanden – prüft Vollständigkeit – sonst scrapet und speichert sie."""
     path = os.path.join(DATA_DIR, f"2bundesliga_{season}.csv")
@@ -359,7 +399,7 @@ def load_or_scrape_season(season):
             return df_loaded
         else:
             # Datei ist unvollständig (z.B. falsche Anzahl Spieltage oder Zeilen), lösche sie und erzwinge erneutes Scraping
-            print(f"⚠️ Saison {season} (aus Datei) ist UNVOLLSTÄNDIG!")
+            print(f"Saison {season} (aus Datei) ist UNVOLLSTÄNDIG!")
             print(f"   -> Gefundene Spieltage: {df_loaded['matchday'].nunique()}/{REQUIRED_MATCHDAYS}")
             print(f"   -> Gefundene Spiele (Zeilen): {len(df_loaded)}/{REQUIRED_ROWS}")
             print(f"   -> Lösche unvollständige Datei und scrape erneut...")
@@ -367,7 +407,7 @@ def load_or_scrape_season(season):
             # Fahren Sie mit dem Scraping-Teil fort
     
     # 2. Scraping Logik
-    print(f"⏳ Scraping Saison {season} (Timeout: 10s, Pause: 1s pro Spieltag)...")
+    print(f"Scraping Saison {season} (Timeout: 10s, Pause: 1s pro Spieltag)...")
     df = get_season_data(season)
     
     # 3. Speichern nur, wenn vollständig
@@ -377,10 +417,10 @@ def load_or_scrape_season(season):
         
         if is_complete_scraped:
             df.to_csv(path, index=False)
-            print(f"💾 Saison {season} gespeichert.")
+            print(f"Saison {season} gespeichert.")
         else:
             # Wird nur gedruckt, wenn Daten da sind, aber unvollständig
-            print(f"⚠️ Saison {season} konnte nicht vollständig gescrapt werden ({df['matchday'].nunique()}/{REQUIRED_MATCHDAYS} Spieltage, {len(df)}/{REQUIRED_ROWS} Spiele). Nicht gespeichert.")
+            print(f"Saison {season} konnte nicht vollständig gescrapt werden ({df['matchday'].nunique()}/{REQUIRED_MATCHDAYS} Spieltage, {len(df)}/{REQUIRED_ROWS} Spiele). Nicht gespeichert.")
             
     return df
 
@@ -394,7 +434,7 @@ for season in tqdm(range(1994, 2025), desc="Loading/scraping seasons"):
         
 print(f"✅ Erfolgreich geladene Saisons: {len(all_data)}")
 if not all_data:
-    print("❌ Keine Daten zum Verarbeiten gefunden.")
+    print("Keine Daten zum Verarbeiten gefunden.")
     # Füge exit() nicht in Canvas Code ein, um die Ausführung nicht zu beenden, falls nötig
     # exit() 
 
@@ -402,7 +442,7 @@ if not all_data:
 matches = pd.concat(all_data, ignore_index=True)
 print(f"Gesamtspiele: {len(matches)}")
 
-print("📊 Berechne Tabellenstände für jede Saison...")
+print("Berechne Tabellenstände für jede Saison...")
 
 all_tables = []
 for season in tqdm(matches["season"].unique(), desc="Berechne Tabellen"):
@@ -420,5 +460,5 @@ all_tables.rename(columns={"rank": "place"}, inplace=True)
 # Analysen durchführen
 # -------------------------------------------------------
 print("📈 Starte Gesamtanalyse...")
-run_full_analysis(all_tables)
-
+#run_full_analysis(all_tables)
+analyze_future_outcomes(all_tables)
