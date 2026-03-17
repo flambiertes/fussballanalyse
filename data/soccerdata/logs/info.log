@@ -1,0 +1,233 @@
+INFO 2026-03-17 13:57:15,937 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 13:57:15,958 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 13:57:15,966 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 13:57:15,970 [libraries.py:load:435]
+Downloading required library version v1.13.1...
+
+INFO 2026-03-17 13:57:15,972 [libraries.py:download:314]
+System Info - Platform: windows, Machine: amd64, File Ext : dll.
+
+INFO 2026-03-17 13:57:16,470 [libraries.py:export_config:193]
+Saved release config to C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\release.json
+
+INFO 2026-03-17 13:57:16,475 [libraries.py:fetch_api:239]
+Fetched release data from GitHub API.
+
+INFO 2026-03-17 13:57:16,476 [libraries.py:download:328]
+Trying to download library from: https://github.com/bogdanfinn/tls-client/releases/download/v1.13.1/tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 13:57:17,743 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+ERROR 2026-03-17 13:57:17,807 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 1 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:17,853 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 2 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:17,902 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 3 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:17,953 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 4 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:18,001 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 5 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+INFO 2026-03-17 14:09:12,023 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 14:09:12,026 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 14:09:12,035 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 14:09:12,037 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+ERROR 2026-03-17 14:09:12,120 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 1 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,184 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 2 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,235 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 3 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,286 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 4 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,336 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 5 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+INFO 2026-03-17 14:10:39,593 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 14:10:39,605 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 14:10:39,614 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 14:10:39,616 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 14:13:12,792 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 14:13:12,796 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 14:13:12,804 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 14:13:12,806 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 14:18:02,424 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 14:18:02,428 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 14:18:02,437 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 14:18:02,439 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 14:33:39,993 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 14:33:39,997 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 14:33:40,018 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 14:33:40,025 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 14:55:08,747 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 14:55:08,751 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 14:55:08,776 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 14:55:08,782 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 16:00:46,130 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 16:00:46,133 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 16:00:46,157 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 16:00:46,162 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-17 16:11:46,806 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-17 16:11:46,810 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-17 16:11:46,843 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-17 16:11:46,845 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+

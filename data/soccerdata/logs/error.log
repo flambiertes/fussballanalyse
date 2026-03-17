@@ -1,0 +1,110 @@
+ERROR 2026-03-17 13:57:17,807 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 1 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:17,853 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 2 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:17,902 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 3 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:17,953 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 4 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 13:57:18,001 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 5 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,120 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 1 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,184 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 2 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,235 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 3 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,286 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 4 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv
+ERROR 2026-03-17 14:09:12,336 [_common.py:_download_and_save:526]
+Error while scraping https://www.football-data.co.uk/mmz4281/2526/D2.csv. Retrying... (attempt 5 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 506, in _download_and_save
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\models\response.py", line 207, in raise_for_status
+    raise HTTPError(
+    ...<6 lines>...
+    )
+tls_requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://www.football-data.co.uk/mmz4281/2526/D2.csv

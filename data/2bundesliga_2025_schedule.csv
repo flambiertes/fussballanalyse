@@ -1,0 +1,307 @@
+season,home,away,matchday,date,game_id,league_id,source,goals_home,goals_away,played
+2025,Schalke 04,Hertha Berlin,1,2025-08-01 18:30:00+00:00,747024,ger.2,real,2.0,1.0,True
+2025,Karlsruher SC,Preußen Münster,1,2025-08-02 11:00:00+00:00,747032,ger.2,real,3.0,2.0,True
+2025,SC Paderborn 07,Holstein Kiel,1,2025-08-02 11:00:00+00:00,747029,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,1. FC Nürnberg,1,2025-08-02 11:00:00+00:00,747030,ger.2,real,1.0,0.0,True
+2025,SV Darmstadt 98,VfL Bochum,1,2025-08-02 11:00:00+00:00,747031,ger.2,real,4.0,1.0,True
+2025,Arminia Bielefeld,Fortuna Düsseldorf,1,2025-08-02 18:30:00+00:00,747026,ger.2,real,5.0,1.0,True
+2025,1. FC Magdeburg,TSV Eintracht Braunschweig,1,2025-08-03 11:30:00+00:00,747025,ger.2,real,0.0,1.0,True
+2025,Hannover 96,Kaiserslautern,1,2025-08-03 11:30:00+00:00,747028,ger.2,real,1.0,0.0,True
+2025,SpVgg Greuther Fürth,Dynamo Dresden,1,2025-08-03 11:30:00+00:00,747027,ger.2,real,3.0,2.0,True
+2025,1. FC Nürnberg,SV Darmstadt 98,2,2025-08-08 16:30:00+00:00,747034,ger.2,real,0.0,1.0,True
+2025,Preußen Münster,SC Paderborn 07,2,2025-08-08 16:30:00+00:00,747039,ger.2,real,1.0,1.0,True
+2025,Dynamo Dresden,1. FC Magdeburg,2,2025-08-09 11:00:00+00:00,747040,ger.2,real,1.0,2.0,True
+2025,Fortuna Düsseldorf,Hannover 96,2,2025-08-09 11:00:00+00:00,747036,ger.2,real,0.0,2.0,True
+2025,TSV Eintracht Braunschweig,SpVgg Greuther Fürth,2,2025-08-09 11:00:00+00:00,747035,ger.2,real,3.0,2.0,True
+2025,Kaiserslautern,Schalke 04,2,2025-08-09 18:30:00+00:00,747033,ger.2,real,1.0,0.0,True
+2025,Hertha Berlin,Karlsruher SC,2,2025-08-10 11:30:00+00:00,747037,ger.2,real,0.0,0.0,True
+2025,Holstein Kiel,Arminia Bielefeld,2,2025-08-10 11:30:00+00:00,747038,ger.2,real,0.0,2.0,True
+2025,VfL Bochum,SV 07 Elversberg,2,2025-08-10 11:30:00+00:00,747041,ger.2,real,2.0,0.0,True
+2025,Preußen Münster,1. FC Nürnberg,3,2025-08-22 16:30:00+00:00,747047,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,Kaiserslautern,3,2025-08-22 16:30:00+00:00,747048,ger.2,real,2.0,1.0,True
+2025,Hannover 96,1. FC Magdeburg,3,2025-08-23 11:00:00+00:00,747044,ger.2,real,3.0,1.0,True
+2025,Karlsruher SC,TSV Eintracht Braunschweig,3,2025-08-23 11:00:00+00:00,747045,ger.2,real,2.0,0.0,True
+2025,SC Paderborn 07,Fortuna Düsseldorf,3,2025-08-23 11:00:00+00:00,747046,ger.2,real,1.0,2.0,True
+2025,Schalke 04,VfL Bochum,3,2025-08-23 18:30:00+00:00,747043,ger.2,real,2.0,1.0,True
+2025,Arminia Bielefeld,Dynamo Dresden,3,2025-08-24 11:30:00+00:00,747042,ger.2,real,1.0,2.0,True
+2025,SV Darmstadt 98,Hertha Berlin,3,2025-08-24 11:30:00+00:00,747049,ger.2,real,0.0,0.0,True
+2025,SpVgg Greuther Fürth,Holstein Kiel,3,2025-08-24 11:30:00+00:00,747050,ger.2,real,0.0,2.0,True
+2025,1. FC Nürnberg,SC Paderborn 07,4,2025-08-29 16:30:00+00:00,747053,ger.2,real,0.0,0.0,True
+2025,Hertha Berlin,SV 07 Elversberg,4,2025-08-29 16:30:00+00:00,747056,ger.2,real,0.0,2.0,True
+2025,Holstein Kiel,Hannover 96,4,2025-08-30 11:00:00+00:00,747057,ger.2,real,1.0,2.0,True
+2025,TSV Eintracht Braunschweig,Arminia Bielefeld,4,2025-08-30 11:00:00+00:00,747054,ger.2,real,1.0,1.0,True
+2025,VfL Bochum,Preußen Münster,4,2025-08-30 11:00:00+00:00,747059,ger.2,real,1.0,2.0,True
+2025,Fortuna Düsseldorf,Karlsruher SC,4,2025-08-30 18:30:00+00:00,747055,ger.2,real,0.0,0.0,True
+2025,1. FC Magdeburg,SpVgg Greuther Fürth,4,2025-08-31 11:30:00+00:00,747052,ger.2,real,4.0,5.0,True
+2025,Dynamo Dresden,Schalke 04,4,2025-08-31 11:30:00+00:00,747058,ger.2,real,0.0,1.0,True
+2025,Kaiserslautern,SV Darmstadt 98,4,2025-08-31 11:30:00+00:00,747051,ger.2,real,3.0,1.0,True
+2025,Arminia Bielefeld,1. FC Magdeburg,5,2025-09-12 16:30:00+00:00,747060,ger.2,real,2.0,0.0,True
+2025,SC Paderborn 07,VfL Bochum,5,2025-09-12 16:30:00+00:00,747064,ger.2,real,1.0,0.0,True
+2025,Karlsruher SC,1. FC Nürnberg,5,2025-09-13 11:00:00+00:00,747063,ger.2,real,2.0,1.0,True
+2025,SV Darmstadt 98,TSV Eintracht Braunschweig,5,2025-09-13 11:00:00+00:00,747067,ger.2,real,2.0,1.0,True
+2025,Schalke 04,Holstein Kiel,5,2025-09-13 11:00:00+00:00,747061,ger.2,real,0.0,1.0,True
+2025,Hannover 96,Hertha Berlin,5,2025-09-13 18:30:00+00:00,747062,ger.2,real,0.0,3.0,True
+2025,Preußen Münster,Fortuna Düsseldorf,5,2025-09-14 11:30:00+00:00,747065,ger.2,real,1.0,2.0,True
+2025,SV 07 Elversberg,Dynamo Dresden,5,2025-09-14 11:30:00+00:00,747066,ger.2,real,2.0,2.0,True
+2025,SpVgg Greuther Fürth,Kaiserslautern,5,2025-09-14 11:30:00+00:00,747068,ger.2,real,0.0,3.0,True
+2025,Arminia Bielefeld,SpVgg Greuther Fürth,6,2025-09-19 16:30:00+00:00,747072,ger.2,real,1.0,3.0,True
+2025,Kaiserslautern,Preußen Münster,6,2025-09-19 16:30:00+00:00,747069,ger.2,real,4.0,1.0,True
+2025,1. FC Magdeburg,Schalke 04,6,2025-09-20 11:00:00+00:00,747070,ger.2,real,0.0,2.0,True
+2025,Hertha Berlin,SC Paderborn 07,6,2025-09-20 11:00:00+00:00,747075,ger.2,real,0.0,2.0,True
+2025,TSV Eintracht Braunschweig,SV 07 Elversberg,6,2025-09-20 11:00:00+00:00,747073,ger.2,real,1.0,4.0,True
+2025,1. FC Nürnberg,VfL Bochum,6,2025-09-20 18:30:00+00:00,747071,ger.2,real,2.0,1.0,True
+2025,Dynamo Dresden,Hannover 96,6,2025-09-21 11:30:00+00:00,747077,ger.2,real,2.0,2.0,True
+2025,Fortuna Düsseldorf,SV Darmstadt 98,6,2025-09-21 11:30:00+00:00,747074,ger.2,real,0.0,3.0,True
+2025,Holstein Kiel,Karlsruher SC,6,2025-09-21 11:30:00+00:00,747076,ger.2,real,3.0,0.0,True
+2025,SV Darmstadt 98,Dynamo Dresden,7,2025-09-26 16:30:00+00:00,747082,ger.2,real,2.0,0.0,True
+2025,Schalke 04,SpVgg Greuther Fürth,7,2025-09-26 16:30:00+00:00,747079,ger.2,real,1.0,0.0,True
+2025,Karlsruher SC,1. FC Magdeburg,7,2025-09-27 11:00:00+00:00,747081,ger.2,real,1.0,0.0,True
+2025,SC Paderborn 07,Kaiserslautern,7,2025-09-27 11:00:00+00:00,747086,ger.2,real,2.0,0.0,True
+2025,SV 07 Elversberg,Holstein Kiel,7,2025-09-27 11:00:00+00:00,747084,ger.2,real,1.0,0.0,True
+2025,VfL Bochum,Fortuna Düsseldorf,7,2025-09-27 18:30:00+00:00,747085,ger.2,real,0.0,1.0,True
+2025,1. FC Nürnberg,Hertha Berlin,7,2025-09-28 11:30:00+00:00,747078,ger.2,real,0.0,3.0,True
+2025,Hannover 96,Arminia Bielefeld,7,2025-09-28 11:30:00+00:00,747080,ger.2,real,3.0,1.0,True
+2025,Preußen Münster,TSV Eintracht Braunschweig,7,2025-09-28 11:30:00+00:00,747083,ger.2,real,3.0,1.0,True
+2025,Fortuna Düsseldorf,1. FC Nürnberg,8,2025-10-03 16:30:00+00:00,747087,ger.2,real,2.0,3.0,True
+2025,TSV Eintracht Braunschweig,SC Paderborn 07,8,2025-10-03 16:30:00+00:00,747088,ger.2,real,1.0,2.0,True
+2025,Hertha Berlin,Preußen Münster,8,2025-10-04 11:00:00+00:00,747091,ger.2,real,2.0,1.0,True
+2025,Holstein Kiel,SV Darmstadt 98,8,2025-10-04 11:00:00+00:00,747092,ger.2,real,1.0,1.0,True
+2025,Kaiserslautern,VfL Bochum,8,2025-10-04 11:00:00+00:00,747095,ger.2,real,3.0,2.0,True
+2025,Dynamo Dresden,Karlsruher SC,8,2025-10-04 18:30:00+00:00,747093,ger.2,real,3.0,3.0,True
+2025,1. FC Magdeburg,SV 07 Elversberg,8,2025-10-05 11:30:00+00:00,747090,ger.2,real,0.0,4.0,True
+2025,Arminia Bielefeld,Schalke 04,8,2025-10-05 11:30:00+00:00,747089,ger.2,real,1.0,2.0,True
+2025,SpVgg Greuther Fürth,Hannover 96,8,2025-10-05 11:30:00+00:00,747094,ger.2,real,2.0,2.0,True
+2025,Fortuna Düsseldorf,TSV Eintracht Braunschweig,9,2025-10-17 16:30:00+00:00,747098,ger.2,real,1.0,2.0,True
+2025,Hannover 96,Schalke 04,9,2025-10-17 16:30:00+00:00,747097,ger.2,real,0.0,3.0,True
+2025,Karlsruher SC,Kaiserslautern,9,2025-10-18 11:00:00+00:00,747096,ger.2,real,2.0,3.0,True
+2025,Preußen Münster,Dynamo Dresden,9,2025-10-18 11:00:00+00:00,747104,ger.2,real,2.0,2.0,True
+2025,SC Paderborn 07,Arminia Bielefeld,9,2025-10-18 11:00:00+00:00,747100,ger.2,real,4.0,3.0,True
+2025,VfL Bochum,Hertha Berlin,9,2025-10-18 18:30:00+00:00,747101,ger.2,real,3.0,2.0,True
+2025,1. FC Nürnberg,Holstein Kiel,9,2025-10-19 11:30:00+00:00,747099,ger.2,real,1.0,1.0,True
+2025,SV 07 Elversberg,SpVgg Greuther Fürth,9,2025-10-19 11:30:00+00:00,747103,ger.2,real,6.0,0.0,True
+2025,SV Darmstadt 98,1. FC Magdeburg,9,2025-10-19 11:30:00+00:00,747102,ger.2,real,0.0,0.0,True
+2025,Schalke 04,SV Darmstadt 98,10,2025-10-24 16:30:00+00:00,747109,ger.2,real,1.0,0.0,True
+2025,SpVgg Greuther Fürth,Karlsruher SC,10,2025-10-24 16:30:00+00:00,747112,ger.2,real,1.0,4.0,True
+2025,Arminia Bielefeld,SV 07 Elversberg,10,2025-10-25 11:00:00+00:00,747107,ger.2,real,2.0,0.0,True
+2025,Dynamo Dresden,SC Paderborn 07,10,2025-10-25 11:00:00+00:00,747113,ger.2,real,1.0,2.0,True
+2025,Holstein Kiel,VfL Bochum,10,2025-10-25 11:00:00+00:00,747110,ger.2,real,1.0,1.0,True
+2025,Hertha Berlin,Fortuna Düsseldorf,10,2025-10-25 18:30:00+00:00,747111,ger.2,real,1.0,0.0,True
+2025,1. FC Magdeburg,Preußen Münster,10,2025-10-26 12:30:00+00:00,747106,ger.2,real,2.0,0.0,True
+2025,Kaiserslautern,1. FC Nürnberg,10,2025-10-26 12:30:00+00:00,747105,ger.2,real,1.0,1.0,True
+2025,TSV Eintracht Braunschweig,Hannover 96,10,2025-10-26 12:30:00+00:00,747108,ger.2,real,0.0,3.0,True
+2025,Preußen Münster,Holstein Kiel,11,2025-10-31 17:30:00+00:00,747122,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,Hannover 96,11,2025-10-31 17:30:00+00:00,747115,ger.2,real,2.0,2.0,True
+2025,1. FC Nürnberg,TSV Eintracht Braunschweig,11,2025-11-01 12:00:00+00:00,747117,ger.2,real,2.0,1.0,True
+2025,Hertha Berlin,Dynamo Dresden,11,2025-11-01 12:00:00+00:00,747119,ger.2,real,2.0,0.0,True
+2025,Karlsruher SC,Schalke 04,11,2025-11-01 12:00:00+00:00,747116,ger.2,real,2.0,1.0,True
+2025,SV Darmstadt 98,Arminia Bielefeld,11,2025-11-01 19:30:00+00:00,747114,ger.2,real,2.0,2.0,True
+2025,Fortuna Düsseldorf,Kaiserslautern,11,2025-11-02 12:30:00+00:00,747118,ger.2,real,1.0,1.0,True
+2025,SC Paderborn 07,SpVgg Greuther Fürth,11,2025-11-02 12:30:00+00:00,747121,ger.2,real,2.0,1.0,True
+2025,VfL Bochum,1. FC Magdeburg,11,2025-11-02 12:30:00+00:00,747120,ger.2,real,2.0,0.0,True
+2025,Dynamo Dresden,1. FC Nürnberg,12,2025-11-07 17:30:00+00:00,747123,ger.2,real,1.0,2.0,True
+2025,SpVgg Greuther Fürth,Preußen Münster,12,2025-11-07 17:30:00+00:00,747127,ger.2,real,1.0,0.0,True
+2025,Arminia Bielefeld,Karlsruher SC,12,2025-11-08 12:00:00+00:00,747126,ger.2,real,4.0,0.0,True
+2025,Hannover 96,SV Darmstadt 98,12,2025-11-08 12:00:00+00:00,747129,ger.2,real,2.0,3.0,True
+2025,Schalke 04,SV 07 Elversberg,12,2025-11-08 12:00:00+00:00,747128,ger.2,real,1.0,0.0,True
+2025,Kaiserslautern,Hertha Berlin,12,2025-11-08 19:30:00+00:00,747124,ger.2,real,0.0,1.0,True
+2025,1. FC Magdeburg,SC Paderborn 07,12,2025-11-09 12:30:00+00:00,747125,ger.2,real,0.0,1.0,True
+2025,Holstein Kiel,Fortuna Düsseldorf,12,2025-11-09 12:30:00+00:00,747130,ger.2,real,1.0,0.0,True
+2025,TSV Eintracht Braunschweig,VfL Bochum,12,2025-11-09 12:30:00+00:00,747131,ger.2,real,0.0,2.0,True
+2025,Hertha Berlin,TSV Eintracht Braunschweig,13,2025-11-21 17:30:00+00:00,747137,ger.2,real,1.0,0.0,True
+2025,VfL Bochum,Dynamo Dresden,13,2025-11-21 17:30:00+00:00,747132,ger.2,real,1.0,2.0,True
+2025,Fortuna Düsseldorf,1. FC Magdeburg,13,2025-11-22 12:00:00+00:00,747138,ger.2,real,2.0,1.0,True
+2025,Preußen Münster,Schalke 04,13,2025-11-22 12:00:00+00:00,747134,ger.2,real,0.0,0.0,True
+2025,SC Paderborn 07,Hannover 96,13,2025-11-22 12:00:00+00:00,747135,ger.2,real,0.0,2.0,True
+2025,SV Darmstadt 98,SpVgg Greuther Fürth,13,2025-11-22 19:30:00+00:00,747133,ger.2,real,4.0,2.0,True
+2025,1. FC Nürnberg,Arminia Bielefeld,13,2025-11-23 12:30:00+00:00,747140,ger.2,real,2.0,0.0,True
+2025,Kaiserslautern,Holstein Kiel,13,2025-11-23 12:30:00+00:00,747139,ger.2,real,4.0,1.0,True
+2025,Karlsruher SC,SV 07 Elversberg,13,2025-11-23 12:30:00+00:00,747136,ger.2,real,2.0,3.0,True
+2025,Hannover 96,Karlsruher SC,14,2025-11-28 17:30:00+00:00,747145,ger.2,real,3.0,0.0,True
+2025,Schalke 04,SC Paderborn 07,14,2025-11-28 17:30:00+00:00,747143,ger.2,real,2.0,1.0,True
+2025,Holstein Kiel,Hertha Berlin,14,2025-11-29 12:00:00+00:00,747149,ger.2,real,0.0,1.0,True
+2025,SpVgg Greuther Fürth,VfL Bochum,14,2025-11-29 12:00:00+00:00,747144,ger.2,real,0.0,3.0,True
+2025,TSV Eintracht Braunschweig,Kaiserslautern,14,2025-11-29 12:00:00+00:00,747142,ger.2,real,2.0,0.0,True
+2025,1. FC Magdeburg,1. FC Nürnberg,14,2025-11-29 19:30:00+00:00,747148,ger.2,real,3.0,0.0,True
+2025,Arminia Bielefeld,Preußen Münster,14,2025-11-30 12:30:00+00:00,747141,ger.2,real,1.0,2.0,True
+2025,Dynamo Dresden,Fortuna Düsseldorf,14,2025-11-30 12:30:00+00:00,747146,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,SV Darmstadt 98,14,2025-11-30 12:30:00+00:00,747147,ger.2,real,0.0,0.0,True
+2025,Fortuna Düsseldorf,Schalke 04,15,2025-12-05 17:30:00+00:00,747150,ger.2,real,0.0,2.0,True
+2025,Preußen Münster,Hannover 96,15,2025-12-05 17:30:00+00:00,747153,ger.2,real,2.0,2.0,True
+2025,Kaiserslautern,Dynamo Dresden,15,2025-12-06 12:00:00+00:00,747158,ger.2,real,3.0,1.0,True
+2025,SC Paderborn 07,SV 07 Elversberg,15,2025-12-06 12:00:00+00:00,747154,ger.2,real,1.0,2.0,True
+2025,VfL Bochum,Arminia Bielefeld,15,2025-12-06 12:00:00+00:00,747151,ger.2,real,1.0,0.0,True
+2025,SV Darmstadt 98,Karlsruher SC,15,2025-12-06 19:30:00+00:00,747152,ger.2,real,3.0,2.0,True
+2025,1. FC Nürnberg,SpVgg Greuther Fürth,15,2025-12-07 12:30:00+00:00,747156,ger.2,real,2.0,2.0,True
+2025,Hertha Berlin,1. FC Magdeburg,15,2025-12-07 12:30:00+00:00,747155,ger.2,real,0.0,2.0,True
+2025,TSV Eintracht Braunschweig,Holstein Kiel,15,2025-12-07 12:30:00+00:00,747157,ger.2,real,1.0,1.0,True
+2025,Dynamo Dresden,TSV Eintracht Braunschweig,16,2025-12-12 17:30:00+00:00,747166,ger.2,real,2.0,3.0,True
+2025,SpVgg Greuther Fürth,Hertha Berlin,16,2025-12-12 17:30:00+00:00,747163,ger.2,real,3.0,3.0,True
+2025,1. FC Magdeburg,Holstein Kiel,16,2025-12-13 12:00:00+00:00,747160,ger.2,real,3.0,3.0,True
+2025,Arminia Bielefeld,Kaiserslautern,16,2025-12-13 12:00:00+00:00,747161,ger.2,real,0.0,0.0,True
+2025,Karlsruher SC,SC Paderborn 07,16,2025-12-13 12:00:00+00:00,747167,ger.2,real,0.0,4.0,True
+2025,Hannover 96,VfL Bochum,16,2025-12-13 19:30:00+00:00,747162,ger.2,real,0.0,0.0,True
+2025,SV 07 Elversberg,Fortuna Düsseldorf,16,2025-12-14 12:30:00+00:00,747165,ger.2,real,1.0,0.0,True
+2025,SV Darmstadt 98,Preußen Münster,16,2025-12-14 12:30:00+00:00,747164,ger.2,real,1.0,0.0,True
+2025,Schalke 04,1. FC Nürnberg,16,2025-12-14 12:30:00+00:00,747159,ger.2,real,1.0,0.0,True
+2025,Hertha Berlin,Arminia Bielefeld,17,2025-12-19 17:30:00+00:00,747174,ger.2,real,1.0,1.0,True
+2025,SC Paderborn 07,SV Darmstadt 98,17,2025-12-19 17:30:00+00:00,747172,ger.2,real,2.0,2.0,True
+2025,Fortuna Düsseldorf,SpVgg Greuther Fürth,17,2025-12-20 12:00:00+00:00,747175,ger.2,real,2.0,1.0,True
+2025,Kaiserslautern,1. FC Magdeburg,17,2025-12-20 12:00:00+00:00,747176,ger.2,real,2.0,3.0,True
+2025,VfL Bochum,Karlsruher SC,17,2025-12-20 12:00:00+00:00,747170,ger.2,real,2.0,2.0,True
+2025,Holstein Kiel,Dynamo Dresden,17,2025-12-20 19:30:00+00:00,747173,ger.2,real,2.0,1.0,True
+2025,1. FC Nürnberg,Hannover 96,17,2025-12-21 12:30:00+00:00,747169,ger.2,real,2.0,1.0,True
+2025,Preußen Münster,SV 07 Elversberg,17,2025-12-21 12:30:00+00:00,747171,ger.2,real,1.0,1.0,True
+2025,TSV Eintracht Braunschweig,Schalke 04,17,2025-12-21 12:30:00+00:00,747168,ger.2,real,2.0,1.0,True
+2025,Fortuna Düsseldorf,Arminia Bielefeld,18,2026-01-16 17:30:00+00:00,747177,ger.2,real,1.0,0.0,True
+2025,TSV Eintracht Braunschweig,1. FC Magdeburg,18,2026-01-16 17:30:00+00:00,747178,ger.2,real,0.0,3.0,True
+2025,1. FC Nürnberg,SV 07 Elversberg,18,2026-01-17 12:00:00+00:00,747179,ger.2,real,3.0,2.0,True
+2025,Dynamo Dresden,SpVgg Greuther Fürth,18,2026-01-17 12:00:00+00:00,747184,ger.2,real,2.0,0.0,True
+2025,Preußen Münster,Karlsruher SC,18,2026-01-17 12:00:00+00:00,747183,ger.2,real,0.0,2.0,True
+2025,Hertha Berlin,Schalke 04,18,2026-01-17 19:30:00+00:00,747185,ger.2,real,0.0,0.0,True
+2025,Holstein Kiel,SC Paderborn 07,18,2026-01-18 12:30:00+00:00,747182,ger.2,real,2.0,0.0,True
+2025,Kaiserslautern,Hannover 96,18,2026-01-18 12:30:00+00:00,747180,ger.2,real,3.0,1.0,True
+2025,VfL Bochum,SV Darmstadt 98,18,2026-01-18 12:30:00+00:00,747181,ger.2,real,3.0,3.0,True
+2025,Arminia Bielefeld,Holstein Kiel,19,2026-01-23 17:30:00+00:00,747188,ger.2,real,2.0,2.0,True
+2025,SV Darmstadt 98,1. FC Nürnberg,19,2026-01-23 17:30:00+00:00,747186,ger.2,real,2.0,0.0,True
+2025,Hannover 96,Fortuna Düsseldorf,19,2026-01-24 12:00:00+00:00,747192,ger.2,real,2.0,1.0,True
+2025,Karlsruher SC,Hertha Berlin,19,2026-01-24 12:00:00+00:00,747193,ger.2,real,2.0,2.0,True
+2025,SpVgg Greuther Fürth,TSV Eintracht Braunschweig,19,2026-01-24 12:00:00+00:00,747187,ger.2,real,0.0,0.0,True
+2025,1. FC Magdeburg,Dynamo Dresden,19,2026-01-24 19:30:00+00:00,747189,ger.2,real,1.0,2.0,True
+2025,SC Paderborn 07,Preußen Münster,19,2026-01-25 12:30:00+00:00,747194,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,VfL Bochum,19,2026-01-25 12:30:00+00:00,747190,ger.2,real,1.0,1.0,True
+2025,Schalke 04,Kaiserslautern,19,2026-01-25 12:30:00+00:00,747191,ger.2,real,2.0,2.0,True
+2025,1. FC Magdeburg,Hannover 96,20,2026-01-30 17:30:00+00:00,747203,ger.2,real,1.0,2.0,True
+2025,1. FC Nürnberg,Preußen Münster,20,2026-01-30 17:30:00+00:00,747200,ger.2,real,1.0,1.0,True
+2025,Holstein Kiel,SpVgg Greuther Fürth,20,2026-01-31 12:00:00+00:00,747197,ger.2,real,1.0,2.0,True
+2025,TSV Eintracht Braunschweig,Karlsruher SC,20,2026-01-31 12:00:00+00:00,747201,ger.2,real,1.0,0.0,True
+2025,VfL Bochum,Schalke 04,20,2026-01-31 12:00:00+00:00,747202,ger.2,real,2.0,0.0,True
+2025,Kaiserslautern,SV 07 Elversberg,20,2026-01-31 19:30:00+00:00,747195,ger.2,real,1.0,3.0,True
+2025,Dynamo Dresden,Arminia Bielefeld,20,2026-02-01 12:30:00+00:00,747196,ger.2,real,1.0,1.0,True
+2025,Fortuna Düsseldorf,SC Paderborn 07,20,2026-02-01 12:30:00+00:00,747199,ger.2,real,2.0,1.0,True
+2025,Hertha Berlin,SV Darmstadt 98,20,2026-02-01 12:30:00+00:00,747198,ger.2,real,2.0,2.0,True
+2025,Preußen Münster,VfL Bochum,21,2026-02-06 17:30:00+00:00,747209,ger.2,real,1.0,1.0,True
+2025,SpVgg Greuther Fürth,1. FC Magdeburg,21,2026-02-06 17:30:00+00:00,747207,ger.2,real,4.0,5.0,True
+2025,SC Paderborn 07,1. FC Nürnberg,21,2026-02-07 12:00:00+00:00,747212,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,Hertha Berlin,21,2026-02-07 12:00:00+00:00,747210,ger.2,real,0.0,3.0,True
+2025,Schalke 04,Dynamo Dresden,21,2026-02-07 12:00:00+00:00,747205,ger.2,real,2.0,2.0,True
+2025,SV Darmstadt 98,Kaiserslautern,21,2026-02-07 19:30:00+00:00,747211,ger.2,real,4.0,0.0,True
+2025,Arminia Bielefeld,TSV Eintracht Braunschweig,21,2026-02-08 12:30:00+00:00,747204,ger.2,real,3.0,2.0,True
+2025,Hannover 96,Holstein Kiel,21,2026-02-08 12:30:00+00:00,747206,ger.2,real,3.0,1.0,True
+2025,Karlsruher SC,Fortuna Düsseldorf,21,2026-02-08 12:30:00+00:00,747208,ger.2,real,1.0,1.0,True
+2025,1. FC Nürnberg,Karlsruher SC,22,2026-02-13 17:30:00+00:00,747215,ger.2,real,5.0,1.0,True
+2025,Fortuna Düsseldorf,Preußen Münster,22,2026-02-13 17:30:00+00:00,747217,ger.2,real,0.0,0.0,True
+2025,Hertha Berlin,Hannover 96,22,2026-02-14 12:00:00+00:00,747218,ger.2,real,2.0,3.0,True
+2025,Kaiserslautern,SpVgg Greuther Fürth,22,2026-02-14 12:00:00+00:00,747213,ger.2,real,1.0,0.0,True
+2025,TSV Eintracht Braunschweig,SV Darmstadt 98,22,2026-02-14 12:00:00+00:00,747216,ger.2,real,2.0,2.0,True
+2025,Dynamo Dresden,SV 07 Elversberg,22,2026-02-14 19:30:00+00:00,747220,ger.2,real,1.0,2.0,True
+2025,1. FC Magdeburg,Arminia Bielefeld,22,2026-02-15 12:30:00+00:00,747214,ger.2,real,0.0,2.0,True
+2025,Holstein Kiel,Schalke 04,22,2026-02-15 12:30:00+00:00,747219,ger.2,real,1.0,2.0,True
+2025,VfL Bochum,SC Paderborn 07,22,2026-02-15 12:30:00+00:00,747221,ger.2,real,0.0,0.0,True
+2025,SpVgg Greuther Fürth,Arminia Bielefeld,23,2026-02-20 17:30:00+00:00,747229,ger.2,real,2.0,1.0,True
+2025,VfL Bochum,1. FC Nürnberg,23,2026-02-20 17:30:00+00:00,747230,ger.2,real,1.0,1.0,True
+2025,Karlsruher SC,Holstein Kiel,23,2026-02-21 12:00:00+00:00,747224,ger.2,real,3.0,1.0,True
+2025,SV 07 Elversberg,TSV Eintracht Braunschweig,23,2026-02-21 12:00:00+00:00,747227,ger.2,real,3.0,1.0,True
+2025,SV Darmstadt 98,Fortuna Düsseldorf,23,2026-02-21 12:00:00+00:00,747228,ger.2,real,2.0,1.0,True
+2025,Schalke 04,1. FC Magdeburg,23,2026-02-21 19:30:00+00:00,747222,ger.2,real,5.0,3.0,True
+2025,Hannover 96,Dynamo Dresden,23,2026-02-22 12:30:00+00:00,747223,ger.2,real,0.0,0.0,True
+2025,Preußen Münster,Kaiserslautern,23,2026-02-22 12:30:00+00:00,747226,ger.2,real,2.0,3.0,True
+2025,SC Paderborn 07,Hertha Berlin,23,2026-02-22 12:30:00+00:00,747225,ger.2,real,5.0,2.0,True
+2025,Dynamo Dresden,SV Darmstadt 98,24,2026-02-27 17:30:00+00:00,747238,ger.2,real,3.0,1.0,True
+2025,Fortuna Düsseldorf,VfL Bochum,24,2026-02-27 17:30:00+00:00,747235,ger.2,real,2.0,1.0,True
+2025,Arminia Bielefeld,Hannover 96,24,2026-02-28 12:00:00+00:00,747233,ger.2,real,0.0,1.0,True
+2025,Holstein Kiel,SV 07 Elversberg,24,2026-02-28 12:00:00+00:00,747237,ger.2,real,1.0,1.0,True
+2025,Kaiserslautern,SC Paderborn 07,24,2026-02-28 12:00:00+00:00,747231,ger.2,real,1.0,2.0,True
+2025,SpVgg Greuther Fürth,Schalke 04,24,2026-02-28 19:30:00+00:00,747239,ger.2,real,1.0,1.0,True
+2025,1. FC Magdeburg,Karlsruher SC,24,2026-03-01 12:30:00+00:00,747232,ger.2,real,1.0,3.0,True
+2025,Hertha Berlin,1. FC Nürnberg,24,2026-03-01 12:30:00+00:00,747236,ger.2,real,2.0,1.0,True
+2025,TSV Eintracht Braunschweig,Preußen Münster,24,2026-03-01 12:30:00+00:00,747234,ger.2,real,1.0,2.0,True
+2025,SV 07 Elversberg,1. FC Magdeburg,25,2026-03-06 17:30:00+00:00,747245,ger.2,real,1.0,0.0,True
+2025,Schalke 04,Arminia Bielefeld,25,2026-03-06 17:30:00+00:00,747241,ger.2,real,1.0,0.0,True
+2025,1. FC Nürnberg,Fortuna Düsseldorf,25,2026-03-07 12:00:00+00:00,747242,ger.2,real,0.0,1.0,True
+2025,SC Paderborn 07,TSV Eintracht Braunschweig,25,2026-03-07 12:00:00+00:00,747247,ger.2,real,1.0,1.0,True
+2025,SV Darmstadt 98,Holstein Kiel,25,2026-03-07 12:00:00+00:00,747246,ger.2,real,2.0,0.0,True
+2025,VfL Bochum,Kaiserslautern,25,2026-03-07 19:30:00+00:00,747243,ger.2,real,3.0,2.0,True
+2025,Hannover 96,SpVgg Greuther Fürth,25,2026-03-08 12:30:00+00:00,747240,ger.2,real,1.0,2.0,True
+2025,Karlsruher SC,Dynamo Dresden,25,2026-03-08 12:30:00+00:00,747244,ger.2,real,3.0,3.0,True
+2025,Preußen Münster,Hertha Berlin,25,2026-03-08 12:30:00+00:00,747248,ger.2,real,1.0,2.0,True
+2025,1. FC Magdeburg,SV Darmstadt 98,26,2026-03-13 17:30:00+00:00,747251,ger.2,real,1.0,1.0,True
+2025,SpVgg Greuther Fürth,SV 07 Elversberg,26,2026-03-13 17:30:00+00:00,747254,ger.2,real,2.0,0.0,True
+2025,Arminia Bielefeld,SC Paderborn 07,26,2026-03-14 12:00:00+00:00,747250,ger.2,real,2.0,2.0,True
+2025,Holstein Kiel,1. FC Nürnberg,26,2026-03-14 12:00:00+00:00,747256,ger.2,real,2.0,3.0,True
+2025,TSV Eintracht Braunschweig,Fortuna Düsseldorf,26,2026-03-14 12:00:00+00:00,747249,ger.2,real,1.0,0.0,True
+2025,Hertha Berlin,VfL Bochum,26,2026-03-14 19:30:00+00:00,747257,ger.2,real,1.0,1.0,True
+2025,Dynamo Dresden,Preußen Münster,26,2026-03-15 12:30:00+00:00,747255,ger.2,real,6.0,0.0,True
+2025,Kaiserslautern,Karlsruher SC,26,2026-03-15 12:30:00+00:00,747252,ger.2,real,3.0,0.0,True
+2025,Schalke 04,Hannover 96,26,2026-03-15 12:30:00+00:00,747253,ger.2,real,2.0,2.0,True
+2025,Hannover 96,TSV Eintracht Braunschweig,27,2026-03-20 17:30:00+00:00,747260,ger.2,real,,,False
+2025,Karlsruher SC,SpVgg Greuther Fürth,27,2026-03-20 17:30:00+00:00,747261,ger.2,real,,,False
+2025,1. FC Nürnberg,Kaiserslautern,27,2026-03-21 12:00:00+00:00,747258,ger.2,real,,,False
+2025,SC Paderborn 07,Dynamo Dresden,27,2026-03-21 12:00:00+00:00,747265,ger.2,real,,,False
+2025,SV 07 Elversberg,Arminia Bielefeld,27,2026-03-21 12:00:00+00:00,747263,ger.2,real,,,False
+2025,SV Darmstadt 98,Schalke 04,27,2026-03-21 19:30:00+00:00,747262,ger.2,real,,,False
+2025,Fortuna Düsseldorf,Hertha Berlin,27,2026-03-22 12:30:00+00:00,747259,ger.2,real,,,False
+2025,Preußen Münster,1. FC Magdeburg,27,2026-03-22 12:30:00+00:00,747264,ger.2,real,,,False
+2025,VfL Bochum,Holstein Kiel,27,2026-03-22 12:30:00+00:00,747266,ger.2,real,,,False
+2025,1. FC Magdeburg,VfL Bochum,28,2026-04-04 11:00:00+00:00,747268,ger.2,real,,,False
+2025,Arminia Bielefeld,SV Darmstadt 98,28,2026-04-04 11:00:00+00:00,747269,ger.2,real,,,False
+2025,Kaiserslautern,Fortuna Düsseldorf,28,2026-04-04 11:00:00+00:00,747267,ger.2,real,,,False
+2025,Dynamo Dresden,Hertha Berlin,28,2026-04-04 18:30:00+00:00,747274,ger.2,real,,,False
+2025,Hannover 96,SV 07 Elversberg,28,2026-04-05 11:30:00+00:00,747272,ger.2,real,,,False
+2025,Holstein Kiel,Preußen Münster,28,2026-04-05 11:30:00+00:00,747273,ger.2,real,,,False
+2025,Schalke 04,Karlsruher SC,28,2026-04-05 11:30:00+00:00,747275,ger.2,real,,,False
+2025,SpVgg Greuther Fürth,SC Paderborn 07,28,2026-04-05 11:30:00+00:00,747270,ger.2,real,,,False
+2025,TSV Eintracht Braunschweig,1. FC Nürnberg,28,2026-04-05 11:30:00+00:00,747271,ger.2,real,,,False
+2025,Fortuna Düsseldorf,Holstein Kiel,29,2026-04-10 16:30:00+00:00,747277,ger.2,real,,,False
+2025,Karlsruher SC,Arminia Bielefeld,29,2026-04-10 16:30:00+00:00,747279,ger.2,real,,,False
+2025,1. FC Nürnberg,Dynamo Dresden,29,2026-04-11 11:00:00+00:00,747276,ger.2,real,,,False
+2025,Hertha Berlin,Kaiserslautern,29,2026-04-11 11:00:00+00:00,747278,ger.2,real,,,False
+2025,Preußen Münster,SpVgg Greuther Fürth,29,2026-04-11 11:00:00+00:00,747281,ger.2,real,,,False
+2025,SV Darmstadt 98,Hannover 96,29,2026-04-11 18:30:00+00:00,747283,ger.2,real,,,False
+2025,SC Paderborn 07,1. FC Magdeburg,29,2026-04-12 11:30:00+00:00,747280,ger.2,real,,,False
+2025,SV 07 Elversberg,Schalke 04,29,2026-04-12 11:30:00+00:00,747282,ger.2,real,,,False
+2025,VfL Bochum,TSV Eintracht Braunschweig,29,2026-04-12 11:30:00+00:00,747284,ger.2,real,,,False
+2025,Holstein Kiel,Kaiserslautern,30,2026-04-17 16:30:00+00:00,747290,ger.2,real,,,False
+2025,SV 07 Elversberg,Karlsruher SC,30,2026-04-17 16:30:00+00:00,747292,ger.2,real,,,False
+2025,1. FC Magdeburg,Fortuna Düsseldorf,30,2026-04-18 11:00:00+00:00,747285,ger.2,real,,,False
+2025,Arminia Bielefeld,1. FC Nürnberg,30,2026-04-18 11:00:00+00:00,747286,ger.2,real,,,False
+2025,Dynamo Dresden,VfL Bochum,30,2026-04-18 11:00:00+00:00,747291,ger.2,real,,,False
+2025,Hannover 96,SC Paderborn 07,30,2026-04-18 18:30:00+00:00,747289,ger.2,real,,,False
+2025,Schalke 04,Preußen Münster,30,2026-04-19 11:30:00+00:00,747288,ger.2,real,,,False
+2025,SpVgg Greuther Fürth,SV Darmstadt 98,30,2026-04-19 11:30:00+00:00,747293,ger.2,real,,,False
+2025,TSV Eintracht Braunschweig,Hertha Berlin,30,2026-04-19 11:30:00+00:00,747287,ger.2,real,,,False
+2025,1. FC Nürnberg,1. FC Magdeburg,31,2026-04-25 18:00:00+00:00,747295,ger.2,real,,,False
+2025,Fortuna Düsseldorf,Dynamo Dresden,31,2026-04-25 18:00:00+00:00,747296,ger.2,real,,,False
+2025,Hertha Berlin,Holstein Kiel,31,2026-04-25 18:00:00+00:00,747297,ger.2,real,,,False
+2025,Kaiserslautern,TSV Eintracht Braunschweig,31,2026-04-25 18:00:00+00:00,747294,ger.2,real,,,False
+2025,Karlsruher SC,Hannover 96,31,2026-04-25 18:00:00+00:00,747298,ger.2,real,,,False
+2025,Preußen Münster,Arminia Bielefeld,31,2026-04-25 18:00:00+00:00,747300,ger.2,real,,,False
+2025,SC Paderborn 07,Schalke 04,31,2026-04-25 18:00:00+00:00,747299,ger.2,real,,,False
+2025,SV Darmstadt 98,SV 07 Elversberg,31,2026-04-25 18:00:00+00:00,747301,ger.2,real,,,False
+2025,VfL Bochum,SpVgg Greuther Fürth,31,2026-04-25 18:00:00+00:00,747302,ger.2,real,,,False
+2025,1. FC Magdeburg,Hertha Berlin,32,2026-05-02 18:00:00+00:00,747310,ger.2,real,,,False
+2025,Arminia Bielefeld,VfL Bochum,32,2026-05-02 18:00:00+00:00,747303,ger.2,real,,,False
+2025,Dynamo Dresden,Kaiserslautern,32,2026-05-02 18:00:00+00:00,747307,ger.2,real,,,False
+2025,Hannover 96,Preußen Münster,32,2026-05-02 18:00:00+00:00,747311,ger.2,real,,,False
+2025,Holstein Kiel,TSV Eintracht Braunschweig,32,2026-05-02 18:00:00+00:00,747309,ger.2,real,,,False
+2025,Karlsruher SC,SV Darmstadt 98,32,2026-05-02 18:00:00+00:00,747306,ger.2,real,,,False
+2025,SV 07 Elversberg,SC Paderborn 07,32,2026-05-02 18:00:00+00:00,747308,ger.2,real,,,False
+2025,Schalke 04,Fortuna Düsseldorf,32,2026-05-02 18:00:00+00:00,747304,ger.2,real,,,False
+2025,SpVgg Greuther Fürth,1. FC Nürnberg,32,2026-05-02 18:00:00+00:00,747305,ger.2,real,,,False
+2025,1. FC Nürnberg,Schalke 04,33,2026-05-09 18:00:00+00:00,747312,ger.2,real,,,False
+2025,Fortuna Düsseldorf,SV 07 Elversberg,33,2026-05-09 18:00:00+00:00,747313,ger.2,real,,,False
+2025,Hertha Berlin,SpVgg Greuther Fürth,33,2026-05-09 18:00:00+00:00,747314,ger.2,real,,,False
+2025,Holstein Kiel,1. FC Magdeburg,33,2026-05-09 18:00:00+00:00,747318,ger.2,real,,,False
+2025,Kaiserslautern,Arminia Bielefeld,33,2026-05-09 18:00:00+00:00,747319,ger.2,real,,,False
+2025,Preußen Münster,SV Darmstadt 98,33,2026-05-09 18:00:00+00:00,747316,ger.2,real,,,False
+2025,SC Paderborn 07,Karlsruher SC,33,2026-05-09 18:00:00+00:00,747317,ger.2,real,,,False
+2025,TSV Eintracht Braunschweig,Dynamo Dresden,33,2026-05-09 18:00:00+00:00,747320,ger.2,real,,,False
+2025,VfL Bochum,Hannover 96,33,2026-05-09 18:00:00+00:00,747315,ger.2,real,,,False
+2025,1. FC Magdeburg,Kaiserslautern,34,2026-05-17 13:30:00+00:00,747325,ger.2,real,,,False
+2025,Arminia Bielefeld,Hertha Berlin,34,2026-05-17 13:30:00+00:00,747328,ger.2,real,,,False
+2025,Dynamo Dresden,Holstein Kiel,34,2026-05-17 13:30:00+00:00,747329,ger.2,real,,,False
+2025,Hannover 96,1. FC Nürnberg,34,2026-05-17 13:30:00+00:00,747322,ger.2,real,,,False
+2025,Karlsruher SC,VfL Bochum,34,2026-05-17 13:30:00+00:00,747326,ger.2,real,,,False
+2025,SV 07 Elversberg,Preußen Münster,34,2026-05-17 13:30:00+00:00,747324,ger.2,real,,,False
+2025,SV Darmstadt 98,SC Paderborn 07,34,2026-05-17 13:30:00+00:00,747327,ger.2,real,,,False
+2025,Schalke 04,TSV Eintracht Braunschweig,34,2026-05-17 13:30:00+00:00,747321,ger.2,real,,,False
+2025,SpVgg Greuther Fürth,Fortuna Düsseldorf,34,2026-05-17 13:30:00+00:00,747323,ger.2,real,,,False
