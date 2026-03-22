@@ -11,6 +11,7 @@ from typing import Dict, List, Tuple
 import numpy as np
 import pandas as pd
 import requests
+from tqdm.auto import tqdm
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 SOCCERDATA_BASE_DIR = PROJECT_ROOT / "data" / "soccerdata"
@@ -225,7 +226,12 @@ def enrich_espn_schedule_with_scores(raw_df: pd.DataFrame, timeout: int = 15) ->
     session = requests.Session()
     session.headers.update({"User-Agent": "Mozilla/5.0"})
 
-    for idx, row in df.iterrows():
+    for idx, row in tqdm(
+        df.iterrows(),
+        total=len(df),
+        desc="ESPN-Ergebnisse laden",
+        leave=False,
+    ):
         match_date = parse_date(row.get("date"))
         game_id = row.get("game_id")
         league_id = row.get("league_id")
@@ -285,7 +291,12 @@ def update_existing_schedule_scores(schedule_df: pd.DataFrame, timeout: int = 15
     pending_mask = (~df["played"].fillna(False)) & df["date"].apply(parse_date).le(now_utc + pd.Timedelta(days=1))
     pending_games = df[pending_mask].copy()
 
-    for idx, row in pending_games.iterrows():
+    for idx, row in tqdm(
+        pending_games.iterrows(),
+        total=len(pending_games),
+        desc="Offene Spiele aktualisieren",
+        leave=False,
+    ):
         game_id = row.get("game_id")
         league_id = row.get("league_id")
         if pd.isna(game_id) or not league_id:
@@ -710,6 +721,7 @@ def simulate_season(
     season_matches: pd.DataFrame,
     n_sims: int = 10000,
     random_seed: int = 42,
+    show_progress: bool = True,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     season_matches = season_matches.copy()
     season_matches["played"] = season_matches["played"].astype(bool)
@@ -735,7 +747,11 @@ def simulate_season(
     placements = []
     point_totals = []
 
-    for sim_id in range(n_sims):
+    simulation_iterator = range(n_sims)
+    if show_progress:
+        simulation_iterator = tqdm(simulation_iterator, total=n_sims, desc="Saison simulieren")
+
+    for sim_id in simulation_iterator:
         sim_played = played.copy()
         for matchday in sorted(remaining["matchday"].dropna().unique()):
             strengths, league = compute_team_strengths(sim_played)
@@ -833,12 +849,17 @@ def backtest_cutoff(
     cutoff_matchday: int = 25,
     n_sims: int = 2000,
     seasons: List[int] = None,
+    show_progress: bool = True,
 ) -> pd.DataFrame:
     if seasons is None:
         seasons = sorted(historical_matches["season"].unique())
 
     rows = []
-    for season in seasons:
+    season_iterator = seasons
+    if show_progress:
+        season_iterator = tqdm(seasons, desc="Backtest-Saisons")
+
+    for season in season_iterator:
         season_df = historical_matches[historical_matches["season"] == season].copy()
         if season_df["matchday"].max() < 34 or cutoff_matchday >= season_df["matchday"].max():
             continue
@@ -848,7 +869,12 @@ def backtest_cutoff(
         future["played"] = False
         simulation_input = pd.concat([observed, future], ignore_index=True)
 
-        summary, _, _, _ = simulate_season(simulation_input, n_sims=n_sims, random_seed=season + cutoff_matchday)
+        summary, _, _, _ = simulate_season(
+            simulation_input,
+            n_sims=n_sims,
+            random_seed=season + cutoff_matchday,
+            show_progress=False,
+        )
         actual_table = compute_table(season_df)[["team", "rank"]].rename(columns={"rank": "actual_rank"})
         merged = summary.merge(actual_table, on="team", how="left")
         merged["season"] = season
@@ -861,6 +887,22 @@ def backtest_cutoff(
     backtest["actual_top2"] = (backtest["actual_rank"] <= 2).astype(int)
     backtest["brier_top2"] = (backtest["top2_prob"] - backtest["actual_top2"]) ** 2
     return backtest
+
+
+def get_latest_completed_matchday(season_matches: pd.DataFrame) -> int:
+    if season_matches.empty or "matchday" not in season_matches.columns:
+        return 0
+
+    completed_matchdays = []
+    grouped = season_matches.groupby("matchday", dropna=True)
+
+    for matchday, matches in grouped:
+        if matches.empty:
+            continue
+        if matches["played"].fillna(False).all():
+            completed_matchdays.append(int(matchday))
+
+    return max(completed_matchdays, default=0)
 
 
 def save_prediction_outputs(
@@ -925,13 +967,14 @@ def main():
     current = fetch_current_season_schedule(season=args.season, force_refresh=args.refresh_current)
     summary, distribution, rank_matrix, points_distribution = simulate_season(current, n_sims=args.simulations)
     match_predictions = match_prediction_table(current)
+    latest_matchday = get_latest_completed_matchday(current)
     output_path = save_prediction_outputs(
         summary,
         distribution,
         rank_matrix,
         points_distribution,
         match_predictions,
-        output_prefix=f"2_bundesliga_prediction_{args.season}",
+        output_prefix=f"2_bundesliga_prediction_matchday_{latest_matchday}_{args.season}",
     )
 
     print(f"Prognose gespeichert: {output_path}")

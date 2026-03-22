@@ -233,12 +233,12 @@ season,home,away,matchday,date,game_id,league_id,source,goals_home,goals_away,pl
 2025,Dynamo Dresden,Preußen Münster,26,2026-03-15 12:30:00+00:00,747255,ger.2,real,6.0,0.0,True
 2025,Kaiserslautern,Karlsruher SC,26,2026-03-15 12:30:00+00:00,747252,ger.2,real,3.0,0.0,True
 2025,Schalke 04,Hannover 96,26,2026-03-15 12:30:00+00:00,747253,ger.2,real,2.0,2.0,True
-2025,Hannover 96,TSV Eintracht Braunschweig,27,2026-03-20 17:30:00+00:00,747260,ger.2,real,,,False
-2025,Karlsruher SC,SpVgg Greuther Fürth,27,2026-03-20 17:30:00+00:00,747261,ger.2,real,,,False
-2025,1. FC Nürnberg,Kaiserslautern,27,2026-03-21 12:00:00+00:00,747258,ger.2,real,,,False
-2025,SC Paderborn 07,Dynamo Dresden,27,2026-03-21 12:00:00+00:00,747265,ger.2,real,,,False
-2025,SV 07 Elversberg,Arminia Bielefeld,27,2026-03-21 12:00:00+00:00,747263,ger.2,real,,,False
-2025,SV Darmstadt 98,Schalke 04,27,2026-03-21 19:30:00+00:00,747262,ger.2,real,,,False
+2025,Hannover 96,TSV Eintracht Braunschweig,27,2026-03-20 17:30:00+00:00,747260,ger.2,real,1.0,0.0,True
+2025,Karlsruher SC,SpVgg Greuther Fürth,27,2026-03-20 17:30:00+00:00,747261,ger.2,real,3.0,1.0,True
+2025,1. FC Nürnberg,Kaiserslautern,27,2026-03-21 12:00:00+00:00,747258,ger.2,real,3.0,0.0,True
+2025,SC Paderborn 07,Dynamo Dresden,27,2026-03-21 12:00:00+00:00,747265,ger.2,real,2.0,1.0,True
+2025,SV 07 Elversberg,Arminia Bielefeld,27,2026-03-21 12:00:00+00:00,747263,ger.2,real,3.0,1.0,True
+2025,SV Darmstadt 98,Schalke 04,27,2026-03-21 19:30:00+00:00,747262,ger.2,real,1.0,1.0,True
 2025,Fortuna Düsseldorf,Hertha Berlin,27,2026-03-22 12:30:00+00:00,747259,ger.2,real,,,False
 2025,Preußen Münster,1. FC Magdeburg,27,2026-03-22 12:30:00+00:00,747264,ger.2,real,,,False
 2025,VfL Bochum,Holstein Kiel,27,2026-03-22 12:30:00+00:00,747266,ger.2,real,,,False

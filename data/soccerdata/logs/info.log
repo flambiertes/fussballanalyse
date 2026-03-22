@@ -231,3 +231,30 @@ Saving cached data to data\soccerdata_cache
 INFO 2026-03-17 16:11:46,845 [libraries.py:_load_library:397]
 Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
 
+INFO 2026-03-22 09:22:25,824 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/teamname_replacements.json.
+
+INFO 2026-03-22 09:22:25,829 [_config.py:<module>:196]
+Custom league dict loaded from /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/league_dict.json.
+
+INFO 2026-03-22 09:22:25,868 [_common.py:__init__:249]
+Saving cached data to data/soccerdata_cache
+
+INFO 2026-03-22 09:22:25,870 [libraries.py:load:435]
+Downloading required library version v1.13.1...
+
+INFO 2026-03-22 09:22:25,871 [libraries.py:download:314]
+System Info - Platform: darwin, Machine: arm64, File Ext : dylib.
+
+INFO 2026-03-22 09:22:27,514 [libraries.py:export_config:193]
+Saved release config to /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/release.json
+
+INFO 2026-03-22 09:22:27,528 [libraries.py:fetch_api:239]
+Fetched release data from GitHub API.
+
+INFO 2026-03-22 09:22:27,532 [libraries.py:download:328]
+Trying to download library from: https://github.com/bogdanfinn/tls-client/releases/download/v1.13.1/tls-client-darwin-arm64-1.13.1.dylib
+
+INFO 2026-03-22 09:22:36,996 [libraries.py:_load_library:397]
+Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
+
