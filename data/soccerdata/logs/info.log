@@ -258,3 +258,49 @@ Trying to download library from: https://github.com/bogdanfinn/tls-client/releas
 INFO 2026-03-22 09:22:36,996 [libraries.py:_load_library:397]
 Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
 
+INFO 2026-03-23 09:29:26,243 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-23 09:29:26,251 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-23 09:29:26,294 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-23 09:29:26,402 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+ERROR 2026-03-23 09:29:36,255 [_common.py:_download_and_save:526]
+Error while scraping http://site.api.espn.com/apis/site/v2/sports/soccer/ger.2/scoreboard?dates=20251018. Retrying... (attempt 1 of 5).
+Traceback (most recent call last):
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\soccerdata\_common.py", line 522, in _download_and_save
+    with filepath.open(mode="wb") as fh:
+         ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'data\\soccerdata_cache\\Schedule_ger.2_20251018.json'
+INFO 2026-03-23 09:30:47,710 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-23 09:30:47,715 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-23 09:30:47,733 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-23 09:30:47,734 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
+INFO 2026-03-23 09:36:40,153 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\teamname_replacements.json.
+
+INFO 2026-03-23 09:36:40,156 [_config.py:<module>:196]
+Custom league dict loaded from C:\Users\Meinert\Documents\fussballanalyse\data\soccerdata\config\league_dict.json.
+
+INFO 2026-03-23 09:36:40,196 [_common.py:__init__:249]
+Saving cached data to data\soccerdata_cache
+
+INFO 2026-03-23 09:36:40,199 [libraries.py:_load_library:397]
+Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
+
