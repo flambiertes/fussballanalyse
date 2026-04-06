@@ -304,3 +304,20 @@ Saving cached data to data\soccerdata_cache
 INFO 2026-03-23 09:36:40,199 [libraries.py:_load_library:397]
 Successfully loaded TLS library: C:\Users\Meinert\AppData\Local\Programs\Python\Python313\Lib\site-packages\tls_requests\bin\tls-client-xgo-1.13.1-windows-amd64.dll
 
+INFO 2026-04-05 18:40:46,275 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/teamname_replacements.json.
+
+INFO 2026-04-05 18:40:46,279 [_config.py:<module>:196]
+Custom league dict loaded from /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/league_dict.json.
+
+INFO 2026-04-05 18:40:46,315 [_common.py:__init__:249]
+Saving cached data to data/soccerdata_cache
+
+INFO 2026-04-05 18:40:46,451 [libraries.py:_load_library:397]
+Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
+
+WARNING 2026-04-05 18:43:37,563 [warnings.py:_showwarnmsg:110]
+/Users/tobiasmeinert/Documents/GitHub/fussballanalyse/prediction_2_liga.py:353: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  new_played = merged["played_new"].fillna(False)
+
+
