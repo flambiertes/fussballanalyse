@@ -355,3 +355,56 @@ WARNING 2026-04-21 21:44:03,221 [warnings.py:_showwarnmsg:110]
   new_played = merged["played_new"].fillna(False)
 
 
+INFO 2026-04-26 15:37:57,627 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/teamname_replacements.json.
+
+INFO 2026-04-26 15:37:57,631 [_config.py:<module>:196]
+Custom league dict loaded from /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/league_dict.json.
+
+INFO 2026-04-26 15:37:57,684 [_common.py:__init__:249]
+Saving cached data to data/soccerdata_cache
+
+INFO 2026-04-26 15:37:57,746 [libraries.py:_load_library:397]
+Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
+
+INFO 2026-04-26 15:38:42,692 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/teamname_replacements.json.
+
+INFO 2026-04-26 15:38:42,695 [_config.py:<module>:196]
+Custom league dict loaded from /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/league_dict.json.
+
+INFO 2026-04-26 15:38:42,717 [_common.py:__init__:249]
+Saving cached data to data/soccerdata_cache
+
+INFO 2026-04-26 15:38:42,722 [libraries.py:_load_library:397]
+Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
+
+INFO 2026-04-26 15:40:23,487 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/teamname_replacements.json.
+
+INFO 2026-04-26 15:40:23,490 [_config.py:<module>:196]
+Custom league dict loaded from /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/league_dict.json.
+
+INFO 2026-04-26 15:40:23,515 [_common.py:__init__:249]
+Saving cached data to data/soccerdata_cache
+
+INFO 2026-04-26 15:40:23,522 [libraries.py:_load_library:397]
+Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
+
+INFO 2026-04-26 15:40:50,756 [_config.py:<module>:92]
+No custom team name replacements found. You can configure these in /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/teamname_replacements.json.
+
+INFO 2026-04-26 15:40:50,760 [_config.py:<module>:196]
+Custom league dict loaded from /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/data/soccerdata/config/league_dict.json.
+
+INFO 2026-04-26 15:40:50,793 [_common.py:__init__:249]
+Saving cached data to data/soccerdata_cache
+
+INFO 2026-04-26 15:40:50,806 [libraries.py:_load_library:397]
+Successfully loaded TLS library: /Users/tobiasmeinert/Documents/GitHub/fussballanalyse/.venv/lib/python3.13/site-packages/tls_requests/bin/tls-client-darwin-arm64-1.13.1.dylib
+
+WARNING 2026-04-26 15:47:07,888 [warnings.py:_showwarnmsg:110]
+/Users/tobiasmeinert/Documents/GitHub/fussballanalyse/prediction_2_liga.py:353: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  new_played = merged["played_new"].fillna(False)
+
+

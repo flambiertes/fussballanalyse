@@ -269,15 +269,15 @@ season,home,away,matchday,date,game_id,league_id,source,goals_home,goals_away,pl
 2025,Schalke 04,Preußen Münster,30,2026-04-19 11:30:00+00:00,747288.0,ger.2,real,4.0,1.0,True
 2025,SpVgg Greuther Fürth,SV Darmstadt 98,30,2026-04-19 11:30:00+00:00,747293.0,ger.2,real,3.0,2.0,True
 2025,TSV Eintracht Braunschweig,Hertha Berlin,30,2026-04-19 11:30:00+00:00,747287.0,ger.2,real,1.0,1.0,True
-2025,Hertha Berlin,Holstein Kiel,31,2026-04-25 11:00:00+00:00,747297.0,ger.2,real,,,False
-2025,Karlsruher SC,Hannover 96,31,2026-04-25 11:00:00+00:00,747298.0,ger.2,real,,,False
-2025,Preußen Münster,Arminia Bielefeld,31,2026-04-25 11:00:00+00:00,747300.0,ger.2,real,,,False
-2025,1. FC Nürnberg,1. FC Magdeburg,31,2026-04-25 18:00:00+00:00,747295.0,ger.2,real,,,False
-2025,Fortuna Düsseldorf,Dynamo Dresden,31,2026-04-25 18:00:00+00:00,747296.0,ger.2,real,,,False
-2025,Kaiserslautern,TSV Eintracht Braunschweig,31,2026-04-25 18:00:00+00:00,747294.0,ger.2,real,,,False
-2025,SC Paderborn 07,Schalke 04,31,2026-04-25 18:00:00+00:00,747299.0,ger.2,real,,,False
-2025,VfL Bochum,SpVgg Greuther Fürth,31,2026-04-25 18:00:00+00:00,747302.0,ger.2,real,,,False
-2025,SV Darmstadt 98,SV 07 Elversberg,31,2026-04-25 18:30:00+00:00,747301.0,ger.2,real,,,False
+2025,Hertha Berlin,Holstein Kiel,31,2026-04-25 11:00:00+00:00,747297.0,ger.2,real,0.0,1.0,True
+2025,Karlsruher SC,Hannover 96,31,2026-04-25 11:00:00+00:00,747298.0,ger.2,real,1.0,3.0,True
+2025,Preußen Münster,Arminia Bielefeld,31,2026-04-25 11:00:00+00:00,747300.0,ger.2,real,2.0,3.0,True
+2025,1. FC Nürnberg,1. FC Magdeburg,31,2026-04-25 18:00:00+00:00,747295.0,ger.2,real,1.0,0.0,True
+2025,Fortuna Düsseldorf,Dynamo Dresden,31,2026-04-25 18:00:00+00:00,747296.0,ger.2,real,3.0,1.0,True
+2025,Kaiserslautern,TSV Eintracht Braunschweig,31,2026-04-25 18:00:00+00:00,747294.0,ger.2,real,0.0,2.0,True
+2025,SC Paderborn 07,Schalke 04,31,2026-04-25 18:00:00+00:00,747299.0,ger.2,real,2.0,3.0,True
+2025,VfL Bochum,SpVgg Greuther Fürth,31,2026-04-25 18:00:00+00:00,747302.0,ger.2,real,2.0,1.0,True
+2025,SV Darmstadt 98,SV 07 Elversberg,31,2026-04-25 18:30:00+00:00,747301.0,ger.2,real,3.0,3.0,True
 2025,Arminia Bielefeld,VfL Bochum,32,2026-05-02 11:00:00+00:00,747303.0,ger.2,real,,,False
 2025,Dynamo Dresden,Kaiserslautern,32,2026-05-02 11:00:00+00:00,747307.0,ger.2,real,,,False
 2025,Holstein Kiel,TSV Eintracht Braunschweig,32,2026-05-02 11:00:00+00:00,747309.0,ger.2,real,,,False
