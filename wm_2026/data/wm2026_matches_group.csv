@@ -1,0 +1,73 @@
+group,match_nr,matchday,team_home,team_away,date
+A,1,1,Mexico,South Africa,2026-06-11
+A,2,1,South Korea,Czech Republic,2026-06-11
+A,25,2,Czech Republic,South Africa,2026-06-18
+A,28,2,Mexico,South Korea,2026-06-18
+A,53,3,Czech Republic,Mexico,2026-06-24
+A,54,3,South Africa,South Korea,2026-06-24
+B,3,1,Canada,Bosnia and Herzegovina,2026-06-12
+B,8,1,Qatar,Switzerland,2026-06-13
+B,26,2,Switzerland,Bosnia and Herzegovina,2026-06-18
+B,27,2,Canada,Qatar,2026-06-18
+B,51,3,Switzerland,Canada,2026-06-24
+B,52,3,Bosnia and Herzegovina,Qatar,2026-06-24
+C,7,1,Brazil,Morocco,2026-06-13
+C,5,1,Haiti,Scotland,2026-06-13
+C,30,2,Scotland,Morocco,2026-06-19
+C,29,2,Brazil,Haiti,2026-06-19
+C,49,3,Scotland,Brazil,2026-06-24
+C,50,3,Morocco,Haiti,2026-06-24
+D,4,1,United States,Paraguay,2026-06-12
+D,6,1,Australia,Turkey,2026-06-13
+D,32,2,United States,Australia,2026-06-19
+D,31,2,Turkey,Paraguay,2026-06-19
+D,59,3,Turkey,United States,2026-06-25
+D,60,3,Paraguay,Australia,2026-06-25
+E,10,1,Germany,Curacao,2026-06-14
+E,9,1,Ivory Coast,Ecuador,2026-06-14
+E,33,2,Germany,Ivory Coast,2026-06-20
+E,34,2,Ecuador,Curacao,2026-06-20
+E,55,3,Curacao,Ivory Coast,2026-06-25
+E,56,3,Ecuador,Germany,2026-06-25
+F,11,1,Netherlands,Japan,2026-06-14
+F,12,1,Sweden,Tunisia,2026-06-14
+F,35,2,Netherlands,Sweden,2026-06-20
+F,36,2,Tunisia,Japan,2026-06-20
+F,57,3,Japan,Sweden,2026-06-25
+F,58,3,Tunisia,Netherlands,2026-06-25
+G,16,1,Belgium,Egypt,2026-06-15
+G,15,1,Iran,New Zealand,2026-06-15
+G,39,2,Belgium,Iran,2026-06-21
+G,40,2,New Zealand,Egypt,2026-06-21
+G,63,3,Egypt,Iran,2026-06-26
+G,64,3,New Zealand,Belgium,2026-06-26
+H,14,1,Spain,Cape Verde,2026-06-15
+H,13,1,Saudi Arabia,Uruguay,2026-06-15
+H,38,2,Spain,Saudi Arabia,2026-06-21
+H,37,2,Uruguay,Cape Verde,2026-06-21
+H,65,3,Cape Verde,Saudi Arabia,2026-06-26
+H,66,3,Uruguay,Spain,2026-06-26
+I,17,1,France,Senegal,2026-06-16
+I,18,1,Iraq,Norway,2026-06-16
+I,42,2,France,Iraq,2026-06-22
+I,41,2,Norway,Senegal,2026-06-22
+I,61,3,Norway,France,2026-06-26
+I,62,3,Senegal,Iraq,2026-06-26
+J,19,1,Argentina,Algeria,2026-06-16
+J,20,1,Austria,Jordan,2026-06-16
+J,43,2,Argentina,Austria,2026-06-22
+J,44,2,Jordan,Algeria,2026-06-22
+J,69,3,Algeria,Austria,2026-06-27
+J,70,3,Jordan,Argentina,2026-06-27
+K,23,1,Portugal,DR Congo,2026-06-17
+K,24,1,Uzbekistan,Colombia,2026-06-17
+K,47,2,Portugal,Uzbekistan,2026-06-23
+K,48,2,Colombia,DR Congo,2026-06-23
+K,71,3,Colombia,Portugal,2026-06-27
+K,72,3,DR Congo,Uzbekistan,2026-06-27
+L,22,1,England,Croatia,2026-06-17
+L,21,1,Ghana,Panama,2026-06-17
+L,45,2,England,Ghana,2026-06-23
+L,46,2,Panama,Croatia,2026-06-23
+L,67,3,Panama,England,2026-06-27
+L,68,3,Croatia,Ghana,2026-06-27
