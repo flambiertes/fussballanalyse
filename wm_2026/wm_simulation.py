@@ -25,6 +25,9 @@ from openpyxl.utils import get_column_letter
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 N_TOURNAMENTS = 1000
+MARKET_ATTACK_LOG_ADJ = 0.35
+MARKET_DEFENSE_LOG_ADJ = 0.35
+ELO_MAX_GOAL_BOOST = 0.08
 
 # ---------------------------------------------------------------------------
 # Fester KO-Spielplan: Slot-Beschreibung -> Bracket-Position
@@ -119,8 +122,32 @@ def expected_goals(team_a, team_b, strengths, neutral=True):
         return strengths.at[t, col] if (t in strengths.index and col in strengths.columns) else d
     if "att" in strengths.columns:
         h_adv = 0.0 if neutral else get(team_a, "home_adv", 0.25)
-        lam_a = np.exp(np.clip(get(team_a,"att",0) + get(team_b,"def",0) + h_adv, -6, 6))
-        lam_b = np.exp(np.clip(get(team_b,"att",0) + get(team_a,"def",0), -6, 6))
+        mv_att_a = get(team_a, "mv_att_norm", get(team_a, "mv_norm", 0.5))
+        mv_att_b = get(team_b, "mv_att_norm", get(team_b, "mv_norm", 0.5))
+        mv_def_a = get(team_a, "mv_def_norm", get(team_a, "mv_norm", 0.5))
+        mv_def_b = get(team_b, "mv_def_norm", get(team_b, "mv_norm", 0.5))
+        elo_a = get(team_a, "elo_norm", 0.5)
+        elo_b = get(team_b, "elo_norm", 0.5)
+        elo_boost_a = np.log(1 + ELO_MAX_GOAL_BOOST * max(elo_a - elo_b, 0))
+        elo_boost_b = np.log(1 + ELO_MAX_GOAL_BOOST * max(elo_b - elo_a, 0))
+
+        log_lam_a = (
+            get(team_a, "att", 0) +
+            get(team_b, "def", 0) +
+            h_adv +
+            MARKET_ATTACK_LOG_ADJ * (mv_att_a - 0.5) -
+            MARKET_DEFENSE_LOG_ADJ * (mv_def_b - 0.5) +
+            elo_boost_a
+        )
+        log_lam_b = (
+            get(team_b, "att", 0) +
+            get(team_a, "def", 0) +
+            MARKET_ATTACK_LOG_ADJ * (mv_att_b - 0.5) -
+            MARKET_DEFENSE_LOG_ADJ * (mv_def_a - 0.5) +
+            elo_boost_b
+        )
+        lam_a = np.exp(np.clip(log_lam_a, -6, 6))
+        lam_b = np.exp(np.clip(log_lam_b, -6, 6))
     else:
         s_a = get(team_a,"strength_combined",0.5); s_b = get(team_b,"strength_combined",0.5)
         lam_a = 2.75 * s_a / (s_a + s_b + 1e-9)
@@ -357,17 +384,29 @@ def rank_representative_tournaments(tournament_paths, group_pos_counts, team_sta
     """
     def score(path):
         value = 0.0
+        position_scores = [0.0, 0.0, 0.0, 0.0]
         for grp, (ranking, _) in path["group_standings"].items():
-            for pos, team in enumerate(ranking):
-                value += group_pos_counts[grp][team][pos] / n
+            for pos, team in enumerate(ranking[:4]):
+                position_scores[pos] += group_pos_counts[grp][team][pos] / n
+        value += sum(pos_score / max(len(path["group_standings"]), 1) for pos_score in position_scores)
 
-        for team in set(path["qualifiers"].values()):
-            value += team_stage_counts[team]["p_R32_entry"] / n
+        qualified_teams = set(path["qualifiers"].values())
+        value += sum(team_stage_counts[team]["p_R32_entry"] / n for team in qualified_teams) / max(len(qualified_teams), 1)
 
+        stage_slots = {
+            "p_R16": 16,
+            "p_QF": 8,
+            "p_SF": 4,
+            "p_F": 2,
+            "p_Winner": 1,
+        }
+        stage_scores = defaultdict(float)
         for mnr, winner in path["ko_results"].items():
             stage = STAGE_OF_MATCH.get(mnr)
             if stage:
-                value += team_stage_counts[winner][stage] / n
+                stage_scores[stage] += team_stage_counts[winner][stage] / n
+        for stage, slots in stage_slots.items():
+            value += stage_scores[stage] / slots
         return value
 
     ranked = []
@@ -506,6 +545,126 @@ def get_most_likely_bracket(groups, group_pos_counts, strengths, ko_df, n):
 
 
 # ---------------------------------------------------------------------------
+# Excel: Erklaerung
+# ---------------------------------------------------------------------------
+def write_explanation_sheet(wb, strengths):
+    ws = wb.create_sheet("Erklaerung")
+
+    def get(team, col, default=0.0):
+        return strengths.at[team, col] if team in strengths.index and col in strengths.columns else default
+
+    teams = [t for t in ["France", "Spain"] if t in strengths.index]
+    if len(teams) < 2:
+        teams = list(strengths.sort_values("strength_combined", ascending=False).head(2).index)
+    team_a, team_b = teams[0], teams[1]
+
+    raw_lam_a = np.exp(np.clip(get(team_a, "att") + get(team_b, "def"), -6, 6))
+    raw_lam_b = np.exp(np.clip(get(team_b, "att") + get(team_a, "def"), -6, 6))
+    mv_att_a = get(team_a, "mv_att_norm", get(team_a, "mv_norm", 0.5))
+    mv_att_b = get(team_b, "mv_att_norm", get(team_b, "mv_norm", 0.5))
+    mv_def_a = get(team_a, "mv_def_norm", get(team_a, "mv_norm", 0.5))
+    mv_def_b = get(team_b, "mv_def_norm", get(team_b, "mv_norm", 0.5))
+    elo_a = get(team_a, "elo_norm", 0.5)
+    elo_b = get(team_b, "elo_norm", 0.5)
+    market_adj_a = MARKET_ATTACK_LOG_ADJ * (mv_att_a - 0.5) - MARKET_DEFENSE_LOG_ADJ * (mv_def_b - 0.5)
+    market_adj_b = MARKET_ATTACK_LOG_ADJ * (mv_att_b - 0.5) - MARKET_DEFENSE_LOG_ADJ * (mv_def_a - 0.5)
+    elo_boost_a = np.log(1 + ELO_MAX_GOAL_BOOST * max(elo_a - elo_b, 0))
+    elo_boost_b = np.log(1 + ELO_MAX_GOAL_BOOST * max(elo_b - elo_a, 0))
+    lam_a, lam_b = expected_goals(team_a, team_b, strengths)
+
+    ws.cell(1, 1, "WM-2026-Simulation - Rechenlogik").font = Font(bold=True, size=14)
+    ws.cell(2, 1, "Dieses Blatt erklaert, wie aus historischen Torwerten, Elo und Transfermarkt-Werten ein simuliertes Match entsteht.").font = FONT_ITALIC
+
+    sections = [
+        ("1. Datenbasis",
+         "Das Poisson-Modell wird aus Laenderspielen ab 2015 geschaetzt. Elo wird kumulativ aus historischen Laenderspielen berechnet. Transfermarkt liefert Kaderwerte; wenn Positionswerte vorhanden sind, werden Angriff und Defensive getrennt bewertet."),
+        ("2. Poisson-Grundidee",
+         "Fuer jedes Team wird eine erwartete Torzahl lambda berechnet. Danach wird die echte Torzahl zufaellig aus einer Poisson-Verteilung gezogen: P(Tore=k) = exp(-lambda) * lambda^k / k!."),
+        ("3. Roh-Lambda",
+         "Rohwert Team A = exp(Angriff A + Abwehr B). Rohwert Team B = exp(Angriff B + Abwehr A). Der Abwehrparameter ist dabei der Beitrag zur gegnerischen Torerwartung: niedriger ist besser."),
+        ("4. Kombinierte Staerke",
+         "Die Gesamt-Staerke ist nur noch ein Ranking- und Elfmeterschießen-Anker: 35% Angriff, 25% Defensive, 30% Marktwert, 10% Elo."),
+        ("5. Positions-Marktwerte",
+         "MW Angriff = 2/3 Mittelfeld + Sturm. MW Abwehr = Torwart + Abwehr + 1/3 Mittelfeld. Damit zaehlt das Mittelfeld anteilig in beide Richtungen."),
+        ("6. Anpassung im Match",
+         f"Der Marktwert wird direkt im Lambda verrechnet: eigener MW Angriff erhoeht die Torerwartung, gegnerischer MW Abwehr senkt sie. Elo gibt dem Elo-staerkeren Team maximal {int(ELO_MAX_GOAL_BOOST * 100)}% Bonus auf die Torerwartung."),
+        ("7. KO-Spiele",
+         "In KO-Spielen wird erst das 90-Minuten-Ergebnis gezogen. Bei Gleichstand folgt eine simulierte Verlaengerung mit lambda/3. Ist es danach noch gleich, entscheidet ein Elfmeterspiel mit leichtem Vorteil fuer das staerkere Team."),
+        ("8. Turnierauswahl",
+         "Alle Turniere werden komplett simuliert. Danach wird ein Referenzturnier gewaehlt: Der Matching-Score bewertet, wie gut ein konkreter Verlauf zu den Gesamtwahrscheinlichkeiten aller Simulationen passt."),
+    ]
+
+    row = 4
+    for title, text in sections:
+        ws.cell(row, 1, title).font = FONT_BOLD
+        ws.cell(row, 2, text).alignment = Alignment(wrap_text=True, vertical="top")
+        row += 1
+
+    row += 2
+    ws.cell(row, 1, f"Beispielmatch: {team_a} vs {team_b}").font = Font(bold=True, size=12)
+    row += 1
+    headers = ["Kennzahl", team_a, team_b, "Kommentar"]
+    for ci, header in enumerate(headers, 1):
+        hdr(ws, row, ci, header)
+    row += 1
+
+    example_rows = [
+        ("Angriff", get(team_a, "att"), get(team_b, "att"), "Poisson-Angriffsparameter aus historischen Spielen"),
+        ("Abwehr", get(team_a, "def"), get(team_b, "def"), "Beitrag zur gegnerischen Torerwartung; niedriger ist besser"),
+        ("Ang.-Norm", get(team_a, "att_norm"), get(team_b, "att_norm"), "Angriff auf 0 bis 1 normiert"),
+        ("Def.-Norm", get(team_a, "def_quality_norm", 0), get(team_b, "def_quality_norm", 0), "Defensive auf 0 bis 1 normiert; hoeher ist besser"),
+        ("Elo", get(team_a, "elo"), get(team_b, "elo"), "Historisches Elo-Rating"),
+        ("Elo-Norm", get(team_a, "elo_norm"), get(team_b, "elo_norm"), "Elo auf 0 bis 1 normiert"),
+        ("Marktwert-Norm", get(team_a, "mv_norm", 0.5), get(team_b, "mv_norm", 0.5), "Gesamtmarktwert auf 0 bis 1 normiert"),
+        ("MW Angriff Norm", get(team_a, "mv_att_norm", get(team_a, "mv_norm", 0.5)), get(team_b, "mv_att_norm", get(team_b, "mv_norm", 0.5)), "Positionsmarktwert Angriff, falls vorhanden"),
+        ("MW Abwehr Norm", get(team_a, "mv_def_norm", get(team_a, "mv_norm", 0.5)), get(team_b, "mv_def_norm", get(team_b, "mv_norm", 0.5)), "Positionsmarktwert Defensive, falls vorhanden"),
+        ("Gesamt-Staerke", get(team_a, "strength_combined", 0.5), get(team_b, "strength_combined", 0.5), "Gewichtete Gesamtstaerke"),
+        ("Roh-lambda", raw_lam_a, raw_lam_b, "exp(Angriff eigenes Team + Abwehr Gegner)"),
+        ("Marktwert-Log-Korrektur", market_adj_a, market_adj_b, "Eigener MW Angriff minus gegnerischer MW Abwehr, jeweils um 0,5 zentriert"),
+        ("Elo-Log-Bonus", elo_boost_a, elo_boost_b, "Maximal 8% Lambda-Bonus fuer das Elo-staerkere Team"),
+        ("Finales lambda", lam_a, lam_b, "Erwartete Tore nach Anpassung"),
+    ]
+    for label, va, vb, comment in example_rows:
+        ws.cell(row, 1, label).alignment = ALIGN_L
+        ws.cell(row, 2, round(float(va), 4)).alignment = ALIGN_C
+        ws.cell(row, 3, round(float(vb), 4)).alignment = ALIGN_C
+        ws.cell(row, 4, comment).alignment = Alignment(wrap_text=True, vertical="top")
+        row += 1
+
+    row += 2
+    ws.cell(row, 1, "Poisson-Torverteilung fuer das Beispiel").font = Font(bold=True, size=12)
+    row += 1
+    for ci, header in enumerate(["Tore", f"P({team_a})", f"P({team_b})"], 1):
+        hdr(ws, row, ci, header)
+    row += 1
+    for goals in range(0, 6):
+        ws.cell(row, 1, goals).alignment = ALIGN_C
+        ws.cell(row, 2, round(poisson.pmf(goals, lam_a), 4)).alignment = ALIGN_C
+        ws.cell(row, 3, round(poisson.pmf(goals, lam_b), 4)).alignment = ALIGN_C
+        row += 1
+
+    row += 1
+    ws.cell(row, 1, "Beispiel: Ergebniswahrscheinlichkeiten 0:0 bis 5:5").font = Font(bold=True, size=12)
+    row += 1
+    ws.cell(row, 1, f"{team_a} \\ {team_b}").fill = FILL_HEADER
+    ws.cell(row, 1).font = FONT_HEADER
+    ws.cell(row, 1).alignment = ALIGN_C
+    for g_b in range(0, 6):
+        hdr(ws, row, g_b + 2, g_b)
+    row += 1
+    for g_a in range(0, 6):
+        hdr(ws, row, 1, g_a)
+        for g_b in range(0, 6):
+            prob = poisson.pmf(g_a, lam_a) * poisson.pmf(g_b, lam_b)
+            ws.cell(row, g_b + 2, round(prob, 4)).alignment = ALIGN_C
+        row += 1
+
+    for col, width in enumerate([24, 16, 16, 70, 12, 12, 12], 1):
+        cw(ws, col, width)
+    ws.freeze_panes = "A4"
+
+
+# ---------------------------------------------------------------------------
 # Excel: Teamstaerken
 # ---------------------------------------------------------------------------
 def write_teamstaerken_sheet(wb):
@@ -521,23 +680,30 @@ def write_teamstaerken_sheet(wb):
 
     df = pd.read_csv(ts_path)
     has_mv = "squad_value_eur" in df.columns and df["squad_value_eur"].notna().any()
+    has_pos_mv = (
+        "market_value_attack_eur" in df.columns and
+        "market_value_defense_eur" in df.columns and
+        df["market_value_attack_eur"].notna().any()
+    )
 
     # Gewichtungsinfo
     if has_mv:
-        weights = "Poisson-Angriff 35%  |  Elo 45%  |  Marktwert 20%"
+        weights = "Ranking: Angriff 35% | Defensive 25% | Marktwert 30% | Elo 10%"
     else:
-        weights = "Poisson-Angriff 40%  |  Elo 60%  |  Marktwert 0% (noch nicht geladen)"
+        weights = "Ranking ohne Marktwert: Angriff 50% | Defensive 35% | Elo 15%"
 
     ws.cell(1, 1, "Teamstaerken – Berechnungsgrundlage").font = Font(bold=True, size=13)
     ws.cell(2, 1, f"Gewichtung: {weights}").font = Font(italic=True, color="595959")
-    ws.cell(3, 1, "Poisson: Angriff/Abwehr aus Laenderspielen ab 2015 (L-BFGS-B-Optimierung)").font = Font(italic=True, color="595959")
+    ws.cell(3, 1, "Poisson: Angriff/Abwehr aus Laenderspielen ab 2015, Halbwertszeit 1,5 Jahre").font = Font(italic=True, color="595959")
     ws.cell(4, 1, "Elo: Kumulative Elo-Ratings aus allen Laenderspielen seit 2000").font    = Font(italic=True, color="595959")
     ws.cell(5, 1, "Marktwert: Kader-Gesamtmarktwert von Transfermarkt.de").font             = Font(italic=True, color="595959")
 
     # Header
-    headers = ["Team", "Angriff", "Abwehr", "Ang.-Norm", "Elo", "Elo-Norm"]
+    headers = ["Team", "Angriff", "Abwehr", "Ang.-Norm", "Def.-Norm", "Elo", "Elo-Norm"]
     if has_mv:
         headers += ["Marktwert (Mio.€)", "MV-Norm"]
+    if has_pos_mv:
+        headers += ["MW Angriff (Mio.€)", "MW Abwehr (Mio.€)", "MW-Ang.-Norm", "MW-Abw.-Norm"]
     headers += ["Gesamt-Stärke", "Rang"]
 
     for ci, h in enumerate(headers, 1):
@@ -560,6 +726,7 @@ def write_teamstaerken_sheet(wb):
             round(row.get("att", 0), 4),
             round(row.get("def", 0), 4),
             round(row.get("att_norm", 0), 3),
+            round(row.get("def_quality_norm", 0), 3),
             round(row.get("elo", 1500), 1),
             round(row.get("elo_norm", 0), 3),
         ]
@@ -567,6 +734,15 @@ def write_teamstaerken_sheet(wb):
             mv = row.get("squad_value_eur", 0)
             vals += [round(mv / 1e6, 1) if pd.notna(mv) and mv else 0,
                      round(row.get("mv_norm", 0), 3)]
+        if has_pos_mv:
+            mv_att = row.get("market_value_attack_eur", 0)
+            mv_def = row.get("market_value_defense_eur", 0)
+            vals += [
+                round(mv_att / 1e6, 1) if pd.notna(mv_att) and mv_att else 0,
+                round(mv_def / 1e6, 1) if pd.notna(mv_def) and mv_def else 0,
+                round(row.get("mv_att_norm", 0), 3),
+                round(row.get("mv_def_norm", 0), 3),
+            ]
         vals += [round(row["strength_combined"], 4), rank]
 
         for ci, v in enumerate(vals, 1):
@@ -580,7 +756,7 @@ def write_teamstaerken_sheet(wb):
                 ws.cell(r, ci).fill = FILL_GROUP
 
     # Spaltenbreiten
-    widths = [22, 10, 10, 10, 10, 10, 16, 10, 14, 6]
+    widths = [22, 10, 10, 10, 10, 10, 10, 16, 10, 17, 17, 14, 14, 14, 6]
     for i, w in enumerate(widths[:len(headers)], 1): cw(ws, i, w)
 
     ws.freeze_panes = "A8"
@@ -591,8 +767,8 @@ def write_teamstaerken_sheet(wb):
 # ---------------------------------------------------------------------------
 def write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, as_pct=False):
     """
-    Spalten: WM, HF, VF, Achtel, Sechzehntel (ohne 'Finale' - redundant)
-    Scoring:  WM=5, HF=4, VF=3, Achtel=2, Sechzehntel=1 -- mehr = besser
+    Spalten: WM, Finale, HF, VF, Achtel, Sechzehntel
+    Scoring:  WM=6, Finale=5, HF=4, VF=3, Achtel=2, Sechzehntel=1 -- mehr = besser
     Gruppen:  1.=4, 2.=3, 3.qual=2, 3.nq=1, 4.=0 -- mehr = besser
     """
     sheet_name = "Teams Prozente" if as_pct else "Teams Haeufigkeiten"
@@ -604,7 +780,7 @@ def write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, 
 
     def ko_score(t):
         sc = team_stage_counts[t]
-        return (sc["p_Winner"]*5 + sc["p_SF"]*4 + sc["p_QF"]*3 +
+        return (sc["p_Winner"]*6 + sc["p_F"]*5 + sc["p_SF"]*4 + sc["p_QF"]*3 +
                 sc["p_R16"]*2 + sc["p_R32_entry"]*1)
 
     def grp_score(t):
@@ -624,7 +800,7 @@ def write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, 
 
     headers = [
         "Rang", "Team",
-        f"Weltmeister ({unit})", f"Halbfinale ({unit})", f"Viertelfinale ({unit})",
+        f"Weltmeister ({unit})", f"Finale ({unit})", f"Halbfinale ({unit})", f"Viertelfinale ({unit})",
         f"Achtelfinale ({unit})", f"Sechzehntelfinale ({unit})",
         "KO-Wertung",
         f"Gr.1. ({unit})", f"Gr.2. ({unit})",
@@ -649,7 +825,7 @@ def write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, 
 
         row_vals = [
             rank, team,
-            v(sc["p_Winner"]), v(sc["p_SF"]), v(sc["p_QF"]),
+            v(sc["p_Winner"]), v(sc["p_F"]), v(sc["p_SF"]), v(sc["p_QF"]),
             v(sc["p_R16"]), v(sc["p_R32_entry"]),
             round(ks/n, 2) if as_pct else int(ks),
             v(pos[0]), v(pos[1]), v(g3_q), v(g3_nq), v(pos[3]),
@@ -661,7 +837,7 @@ def write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, 
             if rank <= 5:    c.fill = FILL_TOP5
             elif rank <= 15: c.fill = FILL_TOP15
 
-    widths = [5, 22, 16, 14, 14, 14, 18, 12, 10, 10, 18, 20, 10, 14]
+    widths = [5, 22, 16, 14, 14, 14, 14, 18, 12, 10, 10, 18, 20, 10, 14]
     for i, w in enumerate(widths, 1): cw(ws, i, w)
     ws.freeze_panes = "C5"
 
@@ -1287,8 +1463,10 @@ def main():
     wb.remove(wb.active)
 
     # Reihenfolge der Blaetter:
-    # 1. Tipps, 2. Teamstaerken, 3. Teams Haeufigkeiten, 4. Teams Prozente,
-    # 5. Referenzvarianten, 6. Gruppen, 7. Turnierbaum, 8. Drittplatzierte
+    # 1. Erklaerung, 2. Tipps, 3. Teamstaerken, 4. Teams Haeufigkeiten,
+    # 5. Teams Prozente, 6. Referenzvarianten, 7. Gruppen, 8. Turnierbaum,
+    # 9. Drittplatzierte
+    write_explanation_sheet(wb, strengths)
     write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
                       group_match_scores, fixed_group_matches,
                       ko_results_summary, fixed_ko, n)
@@ -1305,7 +1483,7 @@ def main():
         wb, groups, representative, group_pos_counts, team_stage_counts, n
     )
 
-    out = DATA_DIR / "wm2026_simulation.xlsx"
+    out = Path(__file__).resolve().parent / "wm2026_simulation.xlsx"
     wb.save(out)
     print(f"Gespeichert: {out}")
 

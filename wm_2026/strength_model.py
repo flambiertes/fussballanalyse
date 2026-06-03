@@ -19,17 +19,17 @@ from scipy.optimize import minimize
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
 CUTOFF_YEAR = 2015          # Poisson-Modell: nur Spiele ab diesem Jahr
-DECAY_HALFLIFE_YEARS = 3.0  # Halb-Wertzeit fuer Zeitgewichtung
+DECAY_HALFLIFE_YEARS = 1.5  # Halb-Wertzeit fuer Zeitgewichtung
 
 MATCH_WEIGHTS = {
-    "FIFA World Cup": 4.0,
+    "FIFA World Cup": 8.0,
     "UEFA Euro": 3.0,
     "Copa America": 3.0,
     "Africa Cup of Nations": 2.5,
     "AFC Asian Cup": 2.5,
     "CONCACAF Gold Cup": 2.5,
     "UEFA Nations League": 2.0,
-    "FIFA World Cup qualification": 2.0,
+    "FIFA World Cup qualification": 2.5,
     "UEFA Euro qualification": 1.5,
     "Friendly": 0.5,
 }
@@ -153,24 +153,70 @@ def combine_strengths(
     df = poisson_df.set_index("team").copy()
     df["elo"] = elo
 
+    market_cols = [
+        "squad_value_eur",
+        "market_value_gk_eur",
+        "market_value_def_eur",
+        "market_value_mid_eur",
+        "market_value_att_eur",
+    ]
     if not squad_df.empty:
-        df = df.join(squad_df.set_index("team")[["squad_value_eur"]], how="left")
+        available_cols = [c for c in market_cols if c in squad_df.columns]
+        df = df.join(squad_df.set_index("team")[available_cols], how="left")
     else:
         df["squad_value_eur"] = np.nan
+    for col in market_cols:
+        if col not in df.columns:
+            df[col] = np.nan
 
     def norm(s: pd.Series) -> pd.Series:
         mn, mx = s.min(), s.max()
         return (s - mn) / (mx - mn) if mx > mn else pd.Series(0.5, index=s.index)
 
-    df["att_norm"]   = norm(df["att"])
-    df["elo_norm"]   = norm(df["elo"])
+    df["att_norm"] = norm(df["att"])
+    df["def_quality_norm"] = norm(-df["def"])
+    df["elo_norm"] = norm(df["elo"])
 
     has_market = df["squad_value_eur"].notna().any()
     if has_market:
         df["mv_norm"] = norm(df["squad_value_eur"].fillna(df["squad_value_eur"].median()))
-        df["strength_combined"] = 0.35 * df["att_norm"] + 0.45 * df["elo_norm"] + 0.20 * df["mv_norm"]
+        df["market_value_attack_eur"] = (
+            (2.0 / 3.0) * df["market_value_mid_eur"] + df["market_value_att_eur"]
+        )
+        df["market_value_defense_eur"] = (
+            df["market_value_gk_eur"] + df["market_value_def_eur"] +
+            (1.0 / 3.0) * df["market_value_mid_eur"]
+        )
+        has_position_market = (
+            df["market_value_attack_eur"].notna().any() and
+            df["market_value_defense_eur"].notna().any()
+        )
+        if has_position_market:
+            df["market_value_attack_eur"] = df["market_value_attack_eur"].fillna(df["squad_value_eur"])
+            df["market_value_defense_eur"] = df["market_value_defense_eur"].fillna(df["squad_value_eur"])
+            df["mv_att_norm"] = norm(df["market_value_attack_eur"])
+            df["mv_def_norm"] = norm(df["market_value_defense_eur"])
+        else:
+            df["market_value_attack_eur"] = np.nan
+            df["market_value_defense_eur"] = np.nan
+            df["mv_att_norm"] = df["mv_norm"]
+            df["mv_def_norm"] = df["mv_norm"]
+        df["strength_combined"] = (
+            0.35 * df["att_norm"] +
+            0.25 * df["def_quality_norm"] +
+            0.30 * df["mv_norm"] +
+            0.10 * df["elo_norm"]
+        )
     else:
-        df["strength_combined"] = 0.40 * df["att_norm"] + 0.60 * df["elo_norm"]
+        df["market_value_attack_eur"] = np.nan
+        df["market_value_defense_eur"] = np.nan
+        df["mv_att_norm"] = np.nan
+        df["mv_def_norm"] = np.nan
+        df["strength_combined"] = (
+            0.50 * df["att_norm"] +
+            0.35 * df["def_quality_norm"] +
+            0.15 * df["elo_norm"]
+        )
 
     return df.reset_index().rename(columns={"index": "team"})
 

@@ -24,6 +24,62 @@ HEADERS = {
     )
 }
 
+MONEY_RE = re.compile(
+    r"\d+(?:[,.]\d+)?\s*(?:Mrd\.?|Mio\.?|Tsd\.?|bn|m\b|k\b)",
+    re.I,
+)
+
+TM_NAME_TO_TEAM = {
+    "Frankreich": "France",
+    "England": "England",
+    "Spanien": "Spain",
+    "Portugal": "Portugal",
+    "Deutschland": "Germany",
+    "Brasilien": "Brazil",
+    "Niederlande": "Netherlands",
+    "Argentinien": "Argentina",
+    "Norwegen": "Norway",
+    "Belgien": "Belgium",
+    "Elfenbeinküste": "Ivory Coast",
+    "Marokko": "Morocco",
+    "Senegal": "Senegal",
+    "Türkei": "Turkey",
+    "Schweden": "Sweden",
+    "Uruguay": "Uruguay",
+    "Kroatien": "Croatia",
+    "Vereinigte Staaten": "United States",
+    "Ecuador": "Ecuador",
+    "Schweiz": "Switzerland",
+    "Kolumbien": "Colombia",
+    "Japan": "Japan",
+    "Algerien": "Algeria",
+    "Österreich": "Austria",
+    "Ghana": "Ghana",
+    "Kanada": "Canada",
+    "Mexiko": "Mexico",
+    "Tschechien": "Czech Republic",
+    "Schottland": "Scotland",
+    "Paraguay": "Paraguay",
+    "Bosnien-Herzegowina": "Bosnia and Herzegovina",
+    "Demokratische Republik Kongo": "DR Congo",
+    "Südkorea": "South Korea",
+    "Ägypten": "Egypt",
+    "Australien": "Australia",
+    "Tunesien": "Tunisia",
+    "Usbekistan": "Uzbekistan",
+    "Kap Verde": "Cape Verde",
+    "Haiti": "Haiti",
+    "Südafrika": "South Africa",
+    "Saudi-Arabien": "Saudi Arabia",
+    "Neuseeland": "New Zealand",
+    "Panama": "Panama",
+    "Iran": "Iran",
+    "Curaçao": "Curacao",
+    "Irak": "Iraq",
+    "Katar": "Qatar",
+    "Jordanien": "Jordan",
+}
+
 # Transfermarkt: Slug + ID fuer jede WM-2026-Nation
 # Format: "Name in results.csv": ("tm-slug", tm-id)
 WM_TEAMS = {
@@ -43,7 +99,7 @@ WM_TEAMS = {
     "Haiti":            ("haiti",                  3712),
     "Scotland":         ("schottland",             3388),
     # Gruppe D
-    "United States":    ("vereinigte-staaten",     3438),
+    "United States":    ("vereinigte-staaten",     3505),
     "Paraguay":         ("paraguay",               3447),
     "Australia":        ("australien",             3460),
     "Turkey":           ("tuerkei",                3381),
@@ -94,7 +150,13 @@ def parse_market_value(text: str) -> float:
     """Konvertiert '1,20 Mrd. €' oder '540 Mio. €' oder '12,50 Mio. €' in float (EUR)."""
     if not text:
         return float("nan")
-    text = text.replace("\xa0", " ").replace("€", "").strip()
+    text = (
+        text.replace("\xa0", " ")
+        .replace("€", "")
+        .replace("â‚¬", "")
+        .replace("EUR", "")
+        .strip()
+    )
     multiplier = 1.0
     if "Mrd" in text or "bn" in text.lower():
         multiplier = 1_000_000_000
@@ -112,12 +174,12 @@ def parse_market_value(text: str) -> float:
         return float("nan")
 
 
-def get_via_overview_page() -> dict[str, float]:
+def get_via_overview_page() -> dict[str, dict[str, object]]:
     """
     Versucht alle Marktwerte ueber die Transfermarkt-WM-2026-Seite zu holen.
     Gibt {team_name: marktwert} zurueck.
     """
-    url = "https://www.transfermarkt.de/weltmeisterschaft-2026/teilnehmer/pokalwettbewerb/WM26"
+    url = "https://www.transfermarkt.de/weltmeisterschaft/teilnehmer/pokalwettbewerb/FIWC"
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         if r.status_code != 200:
@@ -137,12 +199,16 @@ def get_via_overview_page() -> dict[str, float]:
             team_tag = row.select_one("td.hauptlink a")
             if not team_tag:
                 continue
-            team_name = team_tag.get_text(strip=True)
-            # Letzter <td> enthaelt Gesamtmarktwert
-            value_text = cells[-1].get_text(strip=True)
-            value = parse_market_value(value_text)
+            team_name = TM_NAME_TO_TEAM.get(team_tag.get_text(strip=True), team_tag.get_text(strip=True))
+            href = team_tag.get("href", "")
+            link_match = re.search(r"/([^/]+)/(?:startseite|kader)/verein/(\d+)", href)
+            slug = link_match.group(1) if link_match else ""
+            tm_id = int(link_match.group(2)) if link_match else None
+            money_values = MONEY_RE.findall(row.get_text(" ", strip=True))
+            parsed_values = [parse_market_value(v) for v in money_values]
+            value = max([v for v in parsed_values if v == v], default=float("nan"))
             if team_name and value == value:  # nicht NaN
-                result[team_name] = value
+                result[team_name] = {"value": value, "slug": slug, "tm_id": tm_id}
         return result
     except Exception as e:
         print(f"  Fehler bei Uebersichtsseite: {e}")
@@ -174,6 +240,56 @@ def get_via_team_page(slug: str, tm_id: int) -> float:
     return float("nan")
 
 
+def get_position_values(slug: str, tm_id: int) -> dict[str, float]:
+    """Liest die Kaderdetails nach Positionen von der Teamseite."""
+    url = f"https://www.transfermarkt.de/{slug}/kader/verein/{tm_id}"
+    empty = {
+        "market_value_gk_eur": float("nan"),
+        "market_value_def_eur": float("nan"),
+        "market_value_mid_eur": float("nan"),
+        "market_value_att_eur": float("nan"),
+    }
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        if r.status_code != 200:
+            return empty
+        soup = BeautifulSoup(r.text, "html.parser")
+        mapping = {
+            "Torwart": "market_value_gk_eur",
+            "Abwehr": "market_value_def_eur",
+            "Mittelfeld": "market_value_mid_eur",
+            "Sturm": "market_value_att_eur",
+        }
+        result = empty.copy()
+        position_table = None
+        for box in soup.select("div.box"):
+            headline = box.select_one(".content-box-headline")
+            if headline and "Kaderdetails nach Positionen" in headline.get_text(" ", strip=True):
+                position_table = box.select_one("table")
+                break
+        if position_table is None:
+            return result
+
+        for cell in position_table.select("td.hauptlink"):
+            pos = cell.get_text(" ", strip=True)
+            if pos not in mapping:
+                continue
+            sibling_texts = []
+            sibling = cell
+            for _ in range(4):
+                sibling = sibling.find_next_sibling("td")
+                if sibling is None:
+                    break
+                sibling_texts.append(sibling.get_text(" ", strip=True))
+            money_values = MONEY_RE.findall(" ".join(sibling_texts))
+            values = [parse_market_value(v) for v in money_values]
+            result[mapping[pos]] = max([v for v in values if v == v], default=float("nan"))
+        return result
+    except Exception as e:
+        print(f"    Positionswerte Fehler: {e}")
+        return empty
+
+
 def main():
     print("=== Transfermarkt Marktwerte WM 2026 ===\n")
 
@@ -188,35 +304,46 @@ def main():
     records = []
     for team, (slug, tm_id) in WM_TEAMS.items():
         value = float("nan")
+        page_slug, page_tm_id = slug, tm_id
 
         # Uebersichtsseite: Teamname-Matching (Transfermarkt-Name != results.csv-Name)
         if overview:
-            for tm_name, v in overview.items():
+            for tm_name, info in overview.items():
                 if slug.replace("-", " ").lower() in tm_name.lower() or \
                    team.lower() in tm_name.lower():
-                    value = v
+                    value = info["value"]
+                    page_slug = info.get("slug") or page_slug
+                    page_tm_id = info.get("tm_id") or page_tm_id
                     break
 
         # Fallback: Einzelseite
         if value != value:  # NaN
             print(f"  Einzelseite: {team} ...")
-            value = get_via_team_page(slug, tm_id)
+            value = get_via_team_page(page_slug, page_tm_id)
             time.sleep(1.5)
+
+        pos_values = get_position_values(page_slug, page_tm_id)
+        if all(v == v for v in pos_values.values()):
+            value = sum(v for v in pos_values.values() if v == v)
+        time.sleep(0.5)
 
         status = f"{value/1_000_000:>8.1f} Mio. EUR" if value == value else "     n/a"
         print(f"  {team:<35} {status}")
-        records.append({"team": team, "squad_value_eur": value})
+        records.append({"team": team, "squad_value_eur": value, **pos_values})
 
     df = pd.DataFrame(records)
     n_ok = df["squad_value_eur"].notna().sum()
     out = DATA_DIR / "squad_values.csv"
+    if n_ok == 0 and out.exists():
+        print("\nKeine Marktwerte gefunden; bestehende squad_values.csv bleibt erhalten.")
+        return
     df.to_csv(out, index=False)
 
     print(f"\nGespeichert: {out}")
     print(f"Marktwerte gefunden: {n_ok}/{len(df)} Teams")
     print("\nTop 10 nach Marktwert:")
     print(
-        df.dropna()
+        df.dropna(subset=["squad_value_eur"])
         .sort_values("squad_value_eur", ascending=False)
         .head(10)
         .assign(mio=lambda x: (x["squad_value_eur"] / 1e6).round(1))
