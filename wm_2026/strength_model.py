@@ -18,6 +18,16 @@ from scipy.optimize import minimize
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
+TEAM_NAME_MAP = {
+    "China": "China PR",
+    "Congo DR": "DR Congo",
+    "Curaçao": "Curacao",
+    "Czechia": "Czech Republic",
+    "Kyrgyz Republic": "Kyrgyzstan",
+    "Türkiye": "Turkey",
+    "Turkiye": "Turkey",
+}
+
 CUTOFF_YEAR = 2015          # Poisson-Modell: nur Spiele ab diesem Jahr
 DECAY_HALFLIFE_YEARS = 1.5  # Halb-Wertzeit fuer Zeitgewichtung
 
@@ -45,6 +55,8 @@ def load_results(cutoff_year: int = None) -> pd.DataFrame:
     df["home_score"] = pd.to_numeric(df["home_score"], errors="coerce")
     df["away_score"] = pd.to_numeric(df["away_score"], errors="coerce")
     df = df.dropna(subset=["home_score", "away_score"])
+    df["home_team"] = df["home_team"].replace(TEAM_NAME_MAP)
+    df["away_team"] = df["away_team"].replace(TEAM_NAME_MAP)
     if cutoff_year:
         df = df[df["date"].dt.year >= cutoff_year]
     return df.reset_index(drop=True)
@@ -103,14 +115,17 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
 
     print(f"  {n} Teams, {len(df)} Spiele im Poisson-Modell.")
 
-    def neg_log_likelihood(params):
+    def neg_log_likelihood_and_grad(params):
         att  = params[:n]
         def_ = params[n:2*n]
         h_adv = params[2*n]
 
-        # Geclipt gegen Overflow (exp(>10) -> inf)
-        log_lam_h = np.clip(att[home_idx] + def_[away_idx] + h_adv * (1 - neutral), -8, 8)
-        log_lam_a = np.clip(att[away_idx] + def_[home_idx], -8, 8)
+        raw_log_lam_h = att[home_idx] + def_[away_idx] + h_adv * (1 - neutral)
+        raw_log_lam_a = att[away_idx] + def_[home_idx]
+
+        # Geclipt gegen Overflow (exp(>8) -> sehr gross)
+        log_lam_h = np.clip(raw_log_lam_h, -8, 8)
+        log_lam_a = np.clip(raw_log_lam_a, -8, 8)
         lam_h = np.exp(log_lam_h)
         lam_a = np.exp(log_lam_a)
 
@@ -118,7 +133,25 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
             goals_h * log_lam_h - lam_h +
             goals_a * log_lam_a - lam_a
         )
-        return -np.nansum(ll)
+        value = -np.nansum(ll)
+
+        # Ableitung der negativen Log-Likelihood.
+        # Ausserhalb des Clip-Bereichs ist die Ableitung von np.clip null.
+        active_h = ((raw_log_lam_h > -8) & (raw_log_lam_h < 8)).astype(float)
+        active_a = ((raw_log_lam_a > -8) & (raw_log_lam_a < 8)).astype(float)
+        resid_h = weights * (goals_h - lam_h) * active_h
+        resid_a = weights * (goals_a - lam_a) * active_a
+
+        grad_att = np.zeros(n)
+        grad_def = np.zeros(n)
+        np.add.at(grad_att, home_idx, -resid_h)
+        np.add.at(grad_def, away_idx, -resid_h)
+        np.add.at(grad_att, away_idx, -resid_a)
+        np.add.at(grad_def, home_idx, -resid_a)
+        grad_h_adv = -np.sum(resid_h * (1 - neutral))
+
+        grad = np.concatenate([grad_att, grad_def, [grad_h_adv]])
+        return value, grad
 
     x0 = np.zeros(2 * n + 1)
     x0[2 * n] = 0.25
@@ -126,13 +159,17 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
 
     print("  Optimiere Parameter (L-BFGS-B) ...")
     result = minimize(
-        neg_log_likelihood,
+        neg_log_likelihood_and_grad,
         x0,
+        jac=True,
         method="L-BFGS-B",
         bounds=bounds,
-        options={"maxiter": 2000, "ftol": 1e-9},
+        options={"maxiter": 2000, "maxfun": 100000, "ftol": 1e-9},
     )
     print(f"  Konvergiert: {result.success} | Iterationen: {result.nit}")
+    if not result.success:
+        print(f"  Optimizer-Meldung: {result.message}")
+        print("  Hinweis: Es werden die besten gefundenen Parameter verwendet.")
 
     att  = result.x[:n]
     def_ = result.x[n:2*n]

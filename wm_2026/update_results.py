@@ -23,10 +23,21 @@ DATA_DIR = Path(__file__).resolve().parent / "data"
 RESULTS_CSV = DATA_DIR / "results.csv"
 WM_GROUP_CSV = DATA_DIR / "wm2026_matches_group.csv"
 
+TEAM_NAME_MAP = {
+    "China": "China PR",
+    "Congo DR": "DR Congo",
+    "Curaçao": "Curacao",
+    "Czechia": "Czech Republic",
+    "Kyrgyz Republic": "Kyrgyzstan",
+    "Türkiye": "Turkey",
+    "Turkiye": "Turkey",
+}
+
 ESPN_BASE = "http://site.api.espn.com/apis/site/v2/sports/soccer"
 
 # ESPN-Liga-Codes fuer internationale Spiele
 ESPN_LEAGUES = [
+    "fifa.friendly",        # Internationale Testspiele
     "fifa.world",           # WM 2026 (ab 11.06.2026) - bestaetigt funktionierend
     "fifa.worldq.conmebol", # CONMEBOL-Qualifikation
     "fifa.worldq.uefa",     # UEFA-Qualifikation
@@ -36,6 +47,9 @@ ESPN_LEAGUES = [
 ]
 
 WM_START = date(2026, 6, 11)  # Vor diesem Datum gibt es keine ESPN-WM-Daten
+LEAGUE_START_DATES = {
+    "fifa.world": WM_START,
+}
 
 HEADERS = {
     "User-Agent": (
@@ -56,6 +70,7 @@ TOURNAMENT_MAP = {
     "FIFA World Cup Qualifying - Intercontinental": "FIFA World Cup qualification",
     "International Friendly": "Friendly",
     "Friendly": "Friendly",
+    "fifa.friendly": "Friendly",
 }
 
 
@@ -109,6 +124,8 @@ def fetch_espn_day(league: str, day: date) -> list[dict]:
 
         # Auf Kaggle-Format normalisieren
         tournament = TOURNAMENT_MAP.get(tournament_raw, tournament_raw or "Friendly")
+        if league == "fifa.friendly":
+            tournament = "Friendly"
 
         results.append({
             "date": day.isoformat(),
@@ -131,6 +148,8 @@ def fetch_date_range(start: date, end: date) -> pd.DataFrame:
     for i in tqdm(range(days), desc="Tage abrufen"):
         day = start + timedelta(days=i)
         for league in ESPN_LEAGUES:
+            if day < LEAGUE_START_DATES.get(league, date.min):
+                continue
             rows = fetch_espn_day(league, day)
             all_rows.extend(rows)
         time.sleep(0.3)  # Rate-Limiting
@@ -139,6 +158,8 @@ def fetch_date_range(start: date, end: date) -> pd.DataFrame:
         return pd.DataFrame()
     df = pd.DataFrame(all_rows)
     df["date"] = pd.to_datetime(df["date"])
+    df["home_team"] = df["home_team"].replace(TEAM_NAME_MAP)
+    df["away_team"] = df["away_team"].replace(TEAM_NAME_MAP)
     # Duplikate entfernen (gleiches Spiel in mehreren Ligen)
     df = df.drop_duplicates(subset=["date", "home_team", "away_team"])
     return df
@@ -150,11 +171,15 @@ def update_results_csv(new_df: pd.DataFrame) -> int:
         return 0
 
     existing = pd.read_csv(RESULTS_CSV, parse_dates=["date"])
+    existing["home_team"] = existing["home_team"].replace(TEAM_NAME_MAP)
+    existing["away_team"] = existing["away_team"].replace(TEAM_NAME_MAP)
     existing_keys = set(
         zip(existing["date"].dt.date, existing["home_team"], existing["away_team"])
     )
 
     new_df["date"] = pd.to_datetime(new_df["date"])
+    new_df["home_team"] = new_df["home_team"].replace(TEAM_NAME_MAP)
+    new_df["away_team"] = new_df["away_team"].replace(TEAM_NAME_MAP)
     mask = new_df.apply(
         lambda r: (r["date"].date(), r["home_team"], r["away_team"]) not in existing_keys,
         axis=1,
@@ -241,14 +266,6 @@ def main():
 
     if start > end:
         print("Keine neuen Daten zu holen.")
-        return
-
-    # Vor WM-Start gibt es keine ESPN-Daten -> direkt zu WM-Start springen
-    if start < WM_START and end >= WM_START:
-        print(f"Keine ESPN-Daten vor {WM_START} -> springe zu WM-Start.")
-        start = WM_START
-    elif start < WM_START:
-        print(f"Anfragezeitraum liegt vor WM-Start ({WM_START}). Keine Daten verfuegbar.")
         return
 
     print(f"Hole Ergebnisse {start} bis {end} ...")

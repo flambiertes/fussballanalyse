@@ -24,7 +24,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
-N_TOURNAMENTS = 1000
+N_TOURNAMENTS = 5000
 MARKET_ATTACK_LOG_ADJ = 0.35
 MARKET_DEFENSE_LOG_ADJ = 0.35
 ELO_MAX_GOAL_BOOST = 0.08
@@ -1105,16 +1105,86 @@ def write_bracket_sheet(wb, ko_results_summary, fixed_ko, representative_ko_scor
 # ---------------------------------------------------------------------------
 # Excel: Tipps-Blatt
 # ---------------------------------------------------------------------------
+def load_previous_tipps(path):
+    """Liest die Tipps aus der bestehenden Excel, bevor sie ueberschrieben wird."""
+    previous = {"group": {}, "ko": {}}
+    if not path.exists():
+        return previous
+
+    try:
+        old_wb = openpyxl.load_workbook(path, data_only=True, read_only=True)
+        if "Tipps" not in old_wb.sheetnames:
+            old_wb.close()
+            return previous
+
+        ws = old_wb["Tipps"]
+        mode = None
+        cols = {}
+        for row in ws.iter_rows():
+            values = [cell.value for cell in row]
+            headers = {
+                str(value).strip(): idx
+                for idx, value in enumerate(values)
+                if value is not None
+            }
+
+            if "Datum" in headers and "Heim" in headers and "Tipp" in headers:
+                away_col = headers.get("Auswärts", headers.get("Auswaerts"))
+                if away_col is not None:
+                    mode = "group"
+                    cols = {
+                        "home": headers["Heim"],
+                        "tip": headers["Tipp"],
+                        "away": away_col,
+                    }
+                continue
+
+            if "Match" in headers and "Tipp" in headers:
+                away_col = headers.get("Auswärts (wahrscheinlich)", headers.get("Auswaerts (wahrscheinlich)"))
+                if away_col is not None:
+                    mode = "ko"
+                    cols = {
+                        "match": headers["Match"],
+                        "tip": headers["Tipp"],
+                    }
+                continue
+
+            if mode == "group" and cols:
+                home = values[cols["home"]] if cols["home"] < len(values) else None
+                away = values[cols["away"]] if cols["away"] < len(values) else None
+                tip = values[cols["tip"]] if cols["tip"] < len(values) else None
+                if home and away and tip:
+                    previous["group"][(str(home), str(away))] = str(tip)
+
+            elif mode == "ko" and cols:
+                match_value = values[cols["match"]] if cols["match"] < len(values) else None
+                tip = values[cols["tip"]] if cols["tip"] < len(values) else None
+                if match_value and tip:
+                    try:
+                        mnr = int(str(match_value).split()[-1])
+                    except ValueError:
+                        continue
+                    previous["ko"][mnr] = str(tip)
+
+        old_wb.close()
+    except Exception as exc:
+        print(f"Vorherige Tipps konnten nicht gelesen werden: {exc}")
+
+    return previous
+
+
 def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
                       group_match_scores, fixed_group_matches, ko_results_summary,
-                      fixed_ko, n):
+                      fixed_ko, n, previous_tipps=None):
     ws = wb.create_sheet("Tipps")
     ws.freeze_panes = "A2"
+    previous_tipps = previous_tipps or {"group": {}, "ko": {}}
 
     FILL_Q    = PatternFill("solid", fgColor="FFF2CC")   # Fragen
     FILL_GRP  = PatternFill("solid", fgColor="DDEBF7")   # Gruppenspiele
     FILL_KO   = PatternFill("solid", fgColor="E2EFDA")   # KO-Spiele
     FILL_CONF = PatternFill("solid", fgColor="C6EFCE")   # Sicherer Tipp (>60%)
+    FILL_CHANGED = PatternFill("solid", fgColor="FCE4D6") # Tipp hat sich geaendert
     FONT_BIG  = Font(bold=True, size=13)
     FONT_MED  = Font(bold=True, size=11)
 
@@ -1182,7 +1252,7 @@ def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
     # ---- Abschnitt 2: Gruppenspiele ----
     ws.cell(row, 1, "GRUPPENSPIELE – SPIELTIPPS").font = FONT_MED
     row += 1
-    for ci, h in enumerate(["Datum","Heim","Tipp","Auswärts","Heimsieg%","Unentsch.%","Auswärtssieg%","Konfidenz"], 1):
+    for ci, h in enumerate(["Datum","Heim","Tipp","Vorheriger Tipp","Auswärts","Heimsieg%","Unentsch.%","Auswärtssieg%","Konfidenz"], 1):
         c = ws.cell(row, ci, h); c.font = FONT_HEADER; c.fill = FILL_HEADER; c.alignment = ALIGN_C
     row += 1
 
@@ -1226,11 +1296,15 @@ def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
                     score_str = "—"; p_wh = p_d = p_wa = "—"; konf = "—"; fill = None
 
             date_str = m["date"].strftime("%d.%m.%y") if pd.notna(m["date"]) else "—"
-            for ci, v in enumerate([date_str, h, score_str, a, p_wh, p_d, p_wa, konf], 1):
+            previous_score = previous_tipps["group"].get((h, a), "")
+            changed = previous_score and previous_score != score_str
+            for ci, v in enumerate([date_str, h, score_str, previous_score, a, p_wh, p_d, p_wa, konf], 1):
                 c = ws.cell(row, ci, v)
-                c.alignment = ALIGN_L if ci in [2, 4] else ALIGN_C
+                c.alignment = ALIGN_L if ci in [2, 5] else ALIGN_C
                 if ci == 3: c.font = Font(bold=True)
                 if fill: c.fill = fill
+                if changed and ci in [3, 4]:
+                    c.fill = FILL_CHANGED
             row += 1
 
     row += 1
@@ -1238,7 +1312,7 @@ def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
     # ---- Abschnitt 3: KO-Spiele ----
     ws.cell(row, 1, "KO-SPIELE – SPIELTIPPS (basierend auf wahrscheinlichstem Turnierverlauf)").font = FONT_MED
     row += 1
-    for ci, h in enumerate(["Match","Runde","Heim (wahrscheinlich)","Tipp","Auswärts (wahrscheinlich)","Sieger%","Konf."], 1):
+    for ci, h in enumerate(["Match","Runde","Heim (wahrscheinlich)","Tipp","Vorheriger Tipp","Auswärts (wahrscheinlich)","Sieger%","Konf."], 1):
         c = ws.cell(row, ci, h); c.font = FONT_HEADER; c.fill = FILL_HEADER; c.alignment = ALIGN_C
     row += 1
 
@@ -1259,16 +1333,20 @@ def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
         winner = ta if p_a >= 0.5 else tb
         konf = "★★★" if max(p_a, 1-p_a) > 0.65 else ("★★" if max(p_a, 1-p_a) > 0.55 else "★")
         fill = FILL_CONF if max(p_a, 1-p_a) > 0.65 else (FILL_KO if max(p_a, 1-p_a) > 0.55 else None)
+        previous_score = previous_tipps["ko"].get(mnr, "")
+        changed = previous_score and previous_score != score_str
 
-        for ci, v in enumerate([f"Match {mnr}", round_names.get(mnr,"KO"), ta, score_str, tb, pct(max(p_a,1-p_a)), konf], 1):
+        for ci, v in enumerate([f"Match {mnr}", round_names.get(mnr,"KO"), ta, score_str, previous_score, tb, pct(max(p_a,1-p_a)), konf], 1):
             c = ws.cell(row, ci, v)
-            c.alignment = ALIGN_L if ci in [3, 5] else ALIGN_C
+            c.alignment = ALIGN_L if ci in [3, 6] else ALIGN_C
             if ci == 4: c.font = Font(bold=True)
             if fill: c.fill = fill
+            if changed and ci in [4, 5]:
+                c.fill = FILL_CHANGED
         row += 1
 
     # Spaltenbreiten
-    for i, w in enumerate([12, 20, 28, 10, 28, 10, 8], 1): cw(ws, i, w)
+    for i, w in enumerate([12, 20, 28, 10, 14, 28, 10, 8, 8], 1): cw(ws, i, w)
 
 
 # ---------------------------------------------------------------------------
@@ -1433,6 +1511,8 @@ def main():
     strengths, groups, ko_df = load_inputs()
     fixed_group_matches = load_fixed_group_matches()
     fixed_ko            = load_fixed_ko_matches()
+    out = Path(__file__).resolve().parent / "wm2026_simulation.xlsx"
+    previous_tipps = load_previous_tipps(out)
 
     print(f"Simuliere {N_TOURNAMENTS} vollstaendige Turniere ...")
     print("(jedes Team erscheint pro Simulation genau einmal)")
@@ -1469,7 +1549,7 @@ def main():
     write_explanation_sheet(wb, strengths)
     write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
                       group_match_scores, fixed_group_matches,
-                      ko_results_summary, fixed_ko, n)
+                      ko_results_summary, fixed_ko, n, previous_tipps)
     write_teamstaerken_sheet(wb)
     write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, as_pct=False)
     write_team_stats_sheets(wb, groups, group_pos_counts, team_stage_counts, n, as_pct=True)
@@ -1483,7 +1563,6 @@ def main():
         wb, groups, representative, group_pos_counts, team_stage_counts, n
     )
 
-    out = Path(__file__).resolve().parent / "wm2026_simulation.xlsx"
     wb.save(out)
     print(f"Gespeichert: {out}")
 
