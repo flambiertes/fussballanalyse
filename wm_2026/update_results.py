@@ -6,6 +6,7 @@ Holt aktuelle Laenderspiel-Ergebnisse via ESPN API und aktualisiert:
 Taeglich oder nach jedem Spieltag ausfuehren:
   python update_results.py
   python update_results.py --from 2026-04-01  (ab bestimmtem Datum)
+  python update_results.py --lookback-days 2  (letzte Tage erneut pruefen)
   python update_results.py --today            (nur heute)
 """
 
@@ -47,6 +48,7 @@ ESPN_LEAGUES = [
 ]
 
 WM_START = date(2026, 6, 11)  # Vor diesem Datum gibt es keine ESPN-WM-Daten
+DEFAULT_LOOKBACK_DAYS = 1      # Gestern erneut pruefen, falls Spiele spaet fertig wurden
 LEAGUE_START_DATES = {
     "fifa.world": WM_START,
 }
@@ -248,6 +250,12 @@ def main():
     parser.add_argument("--from", dest="start", help="Startdatum YYYY-MM-DD")
     parser.add_argument("--to", dest="end", help="Enddatum YYYY-MM-DD (Standard: heute)")
     parser.add_argument("--today", action="store_true", help="Nur heutigen Tag holen")
+    parser.add_argument(
+        "--lookback-days",
+        type=int,
+        default=DEFAULT_LOOKBACK_DAYS,
+        help="Im Automatikmodus mindestens so viele Tage rueckwirkend erneut pruefen",
+    )
     args = parser.parse_args()
 
     today = date.today()
@@ -258,11 +266,15 @@ def main():
         start = date.fromisoformat(args.start)
         end = date.fromisoformat(args.end) if args.end else today
     else:
-        # Automatisch: ab dem Tag nach dem letzten Ergebnis in der CSV
+        # Automatisch: verpasste Tage holen und die letzten Tage erneut pruefen.
         last = get_last_date_in_results()
-        start = last + timedelta(days=1)
         end = today
-        print(f"Letztes Ergebnis in CSV: {last} -> hole ab {start}")
+        lookback_start = today - timedelta(days=max(args.lookback_days, 0))
+        start = min(last + timedelta(days=1), lookback_start)
+        print(
+            f"Letztes Ergebnis in CSV: {last} -> hole ab {start} "
+            f"(Lookback: {args.lookback_days} Tag(e))"
+        )
 
     if start > end:
         print("Keine neuen Daten zu holen.")
