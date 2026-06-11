@@ -28,6 +28,8 @@ N_TOURNAMENTS = 5000
 MARKET_ATTACK_LOG_ADJ = 0.35
 MARKET_DEFENSE_LOG_ADJ = 0.35
 ELO_MAX_GOAL_BOOST = 0.08
+SCORE_TIP_MODE = "expected_points"  # "expected_points", "most_common" oder "average"
+TIP_SCORE_MAX_GOALS = 5
 
 # ---------------------------------------------------------------------------
 # Fester KO-Spielplan: Slot-Beschreibung -> Bracket-Position
@@ -313,12 +315,14 @@ def run_n_tournaments(groups, strengths, fixed_group_matches, ko_df, fixed_ko, n
         "team_a_counts": defaultdict(int), "team_b_counts": defaultdict(int),
         "winner_counts": defaultdict(int),
         "goals_a": [], "goals_b": [],
+        "score_counts": defaultdict(int),
         "score_counts_win_a": defaultdict(int),
         "score_counts_win_b": defaultdict(int),
     })
     # Durchschnittliche Gruppenspiel-Scores
     group_match_scores = defaultdict(lambda: {"goals_h": [], "goals_a": [],
-                                               "wins_h": 0, "draws": 0, "wins_a": 0})
+                                               "wins_h": 0, "draws": 0, "wins_a": 0,
+                                               "score_counts": defaultdict(int)})
     tournament_paths = []
 
     for tournament_id in tqdm(range(1, n + 1), desc=f"Simuliere {n} Turniere"):
@@ -346,6 +350,7 @@ def run_n_tournaments(groups, strengths, fixed_group_matches, ko_df, fixed_ko, n
             for (h, a), (gh, ga) in match_scores.items():
                 group_match_scores[(h, a)]["goals_h"].append(gh)
                 group_match_scores[(h, a)]["goals_a"].append(ga)
+                group_match_scores[(h, a)]["score_counts"][(gh, ga)] += 1
                 if gh > ga:    group_match_scores[(h, a)]["wins_h"] += 1
                 elif gh == ga: group_match_scores[(h, a)]["draws"]  += 1
                 else:          group_match_scores[(h, a)]["wins_a"] += 1
@@ -369,6 +374,7 @@ def run_n_tournaments(groups, strengths, fixed_group_matches, ko_df, fixed_ko, n
             winner = ko_results.get(mnr)
             if winner:
                 s["winner_counts"][winner] += 1
+                s["score_counts"][(ga, gb)] += 1
                 if winner == ta: s["score_counts_win_a"][(ga, gb)] += 1
                 else:            s["score_counts_win_b"][(ga, gb)] += 1
             s["goals_a"].append(ga)
@@ -438,6 +444,65 @@ def score_from_avg(avg_h, avg_a, p_win_h, p_win_a):
     return gh, ga
 
 
+def most_common_score(score_counts):
+    """Gibt den haeufigsten simulierten Score zurueck."""
+    if not score_counts:
+        return None
+    return max(
+        score_counts.items(),
+        key=lambda item: (item[1], -sum(item[0]), -abs(item[0][0] - item[0][1])),
+    )[0]
+
+
+def tip_points(tip, actual):
+    """Punkte fuer einen Tipp nach Ergebnis/Differenz/Tendenz."""
+    th, ta = tip
+    ah, aa = actual
+    if tip == actual:
+        return 4
+    tip_diff = th - ta
+    actual_diff = ah - aa
+    if tip_diff == actual_diff:
+        return 3
+    if (tip_diff > 0 and actual_diff > 0) or (tip_diff < 0 and actual_diff < 0) or (tip_diff == 0 and actual_diff == 0):
+        return 2
+    return 0
+
+
+def expected_points_score(score_counts, max_goals=TIP_SCORE_MAX_GOALS):
+    """Waehlt den Tipp mit maximalem Erwartungswert nach Tipp-Punktelogik."""
+    if not score_counts:
+        return None
+    candidates = [(h, a) for h in range(max_goals + 1) for a in range(max_goals + 1)]
+    return max(
+        candidates,
+        key=lambda tip: (
+            sum(tip_points(tip, actual) * count for actual, count in score_counts.items()),
+            score_counts.get(tip, 0),
+            -sum(tip),
+            -abs(tip[0] - tip[1]),
+        ),
+    )
+
+
+def select_tip_score(avg_h, avg_a, p_win_h, p_win_a, score_counts):
+    """
+    Waehlt den angezeigten Tipp-Score.
+    SCORE_TIP_MODE='expected_points': hoechster Erwartungswert nach Tipp-Punkten.
+    SCORE_TIP_MODE='most_common': haeufigster simulierter Score.
+    SCORE_TIP_MODE='average': alte Logik aus Durchschnittstoren + Rundung.
+    Zweiter Rueckgabewert: True, wenn gewaehlter Score und alte Logik gleich sind.
+    """
+    avg_score = score_from_avg(avg_h, avg_a, p_win_h, p_win_a)
+    common_score = most_common_score(score_counts)
+    expected_score = expected_points_score(score_counts)
+    if SCORE_TIP_MODE == "expected_points" and expected_score is not None:
+        return expected_score, expected_score == avg_score
+    if SCORE_TIP_MODE == "most_common" and common_score is not None:
+        return common_score, common_score == avg_score
+    return avg_score, common_score == avg_score if common_score is not None else False
+
+
 def build_expected_table(teams, avg_scores, fixed_group_matches_flat):
     """Baut konkrete Tabelle aus gerundeten Ø-Ergebnissen (W/U/N/Pts)."""
     records = {t: {"sp":0,"w":0,"d":0,"l":0,"gf":0,"ga":0,"pts":0} for t in teams}
@@ -479,11 +544,14 @@ def get_ko_result_summary(ko_match_stats, n):
         p_a    = s["winner_counts"].get(best_a, 0) / total if total else 0.5
         avg_ga = np.mean(s["goals_a"]) if s["goals_a"] else 0
         avg_gb = np.mean(s["goals_b"]) if s["goals_b"] else 0
-        ga_disp, gb_disp = score_from_avg(avg_ga, avg_gb, p_a, 1 - p_a)
+        (ga_disp, gb_disp), score_agrees = select_tip_score(
+            avg_ga, avg_gb, p_a, 1 - p_a, s["score_counts"]
+        )
         results[mnr] = {
             "team_a": best_a, "team_b": best_b,
             "p_a_wins": round(p_a, 3),
             "score_a": ga_disp, "score_b": gb_disp,
+            "score_agrees_with_avg": score_agrees,
         }
     return results
 
@@ -1283,14 +1351,24 @@ def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
                     p_wa_f = s["wins_a"] / max(tot, 1)
                     if key != (h, a):
                         p_wh_f, p_wa_f = p_wa_f, p_wh_f
-                    avg_h = np.mean(s["goals_h"] if key == (h,a) else s["goals_a"]) if s.get("goals_h") else 0
-                    avg_a = np.mean(s["goals_a"] if key == (h,a) else s["goals_h"]) if s.get("goals_a") else 0
-                    if key != (h, a): avg_h, avg_a = avg_a, avg_h
-                    gh, ga = score_from_avg(avg_h, avg_a, p_wh_f, p_wa_f)
+                    if key == (h, a):
+                        avg_h = np.mean(s["goals_h"]) if s.get("goals_h") else 0
+                        avg_a = np.mean(s["goals_a"]) if s.get("goals_a") else 0
+                        score_counts = s.get("score_counts", {})
+                    else:
+                        avg_h = np.mean(s["goals_a"]) if s.get("goals_a") else 0
+                        avg_a = np.mean(s["goals_h"]) if s.get("goals_h") else 0
+                        score_counts = {
+                            (score_a, score_h): count
+                            for (score_h, score_a), count in s.get("score_counts", {}).items()
+                        }
+                    (gh, ga), score_agrees = select_tip_score(avg_h, avg_a, p_wh_f, p_wa_f, score_counts)
                     score_str = f"{gh} : {ga}"
                     p_wh = pct(p_wh_f); p_d = pct(p_d_f); p_wa = pct(p_wa_f)
                     max_p = max(p_wh_f, p_d_f, p_wa_f)
                     konf  = "★★★" if max_p > 0.65 else ("★★" if max_p > 0.50 else "★")
+                    if score_agrees:
+                        konf += "!"
                     fill  = FILL_CONF if max_p > 0.65 else None
                 else:
                     score_str = "—"; p_wh = p_d = p_wa = "—"; konf = "—"; fill = None
@@ -1332,6 +1410,8 @@ def write_tipps_sheet(wb, groups, group_pos_counts, team_stage_counts,
         score_str = f"{ga} : {gb}"
         winner = ta if p_a >= 0.5 else tb
         konf = "★★★" if max(p_a, 1-p_a) > 0.65 else ("★★" if max(p_a, 1-p_a) > 0.55 else "★")
+        if r.get("score_agrees_with_avg"):
+            konf += "!"
         fill = FILL_CONF if max(p_a, 1-p_a) > 0.65 else (FILL_KO if max(p_a, 1-p_a) > 0.55 else None)
         previous_score = previous_tipps["ko"].get(mnr, "")
         changed = previous_score and previous_score != score_str
