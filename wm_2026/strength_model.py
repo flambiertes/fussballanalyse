@@ -11,6 +11,7 @@ Ausgabe:
   data/team_strengths.csv
 """
 
+import json
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -19,6 +20,7 @@ from scipy.optimize import minimize
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
 TEAM_NAME_MAP = {
+    "Bosnia-Herzegovina": "Bosnia and Herzegovina",
     "China": "China PR",
     "Congo DR": "DR Congo",
     "Curaçao": "Curacao",
@@ -30,6 +32,7 @@ TEAM_NAME_MAP = {
 
 CUTOFF_YEAR = 2015          # Poisson-Modell: nur Spiele ab diesem Jahr
 DECAY_HALFLIFE_YEARS = 1.5  # Halb-Wertzeit fuer Zeitgewichtung
+RIDGE_LAMBDA = 0.01         # Ridge-Penalty: skaliert mit 1/sqrt(Spielanzahl) pro Team
 
 MATCH_WEIGHTS = {
     "FIFA World Cup": 8.0,
@@ -87,12 +90,15 @@ def compute_elo(df_full: pd.DataFrame, k_base: float = 20.0) -> pd.Series:
     return pd.Series(elo, name="elo")
 
 
-def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
+def fit_poisson_model(df: pd.DataFrame) -> tuple[pd.DataFrame, float, float]:
     """
-    Vektorisiertes Poisson-Modell (Dixon-Coles-Ansatz):
-      log(lambda_home) = att[home] + def[away] + home_adv * (1 - neutral)
-      log(lambda_away) = att[away] + def[home]
-    Optimierung via L-BFGS-B mit Parameterbegrenzung gegen Overflow.
+    Vektorisiertes Poisson-Modell (Dixon-Coles-Ansatz) mit globalem Intercept mu:
+      log(lambda_home) = att[home] + def[away] + home_adv * (1 - neutral) + mu
+      log(lambda_away) = att[away] + def[home] + mu
+    mu faengt die Basis-Torrate auf (typisch ~log(1.3) fuer WM-Niveau).
+    Ridge-Regularisierung skaliert mit 1/sqrt(Spielanzahl) pro Team.
+    Optimierung via L-BFGS-B.
+    Gibt (poisson_df, mu, home_adv) zurueck.
     """
     today = pd.Timestamp.today()
 
@@ -110,20 +116,25 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
     away_idx = df["away_team"].map(team_idx).values.astype(int)
     goals_h = df["home_score"].values.astype(float)
     goals_a = df["away_score"].values.astype(float)
-    # neutral=TRUE -> kein Heimvorteil
     neutral = df["neutral"].astype(str).str.upper().eq("TRUE").values.astype(float)
+
+    # Ridge-Gewichte: 1/sqrt(Spielanzahl) pro Team (Teams mit wenig Daten werden staerker regularisiert)
+    counts_home = np.bincount(home_idx, minlength=n)
+    counts_away = np.bincount(away_idx, minlength=n)
+    match_counts = counts_home + counts_away
+    ridge_w = 1.0 / np.sqrt(np.maximum(match_counts, 1).astype(float))
 
     print(f"  {n} Teams, {len(df)} Spiele im Poisson-Modell.")
 
     def neg_log_likelihood_and_grad(params):
-        att  = params[:n]
-        def_ = params[n:2*n]
+        att   = params[:n]
+        def_  = params[n:2*n]
         h_adv = params[2*n]
+        mu    = params[2*n + 1]
 
-        raw_log_lam_h = att[home_idx] + def_[away_idx] + h_adv * (1 - neutral)
-        raw_log_lam_a = att[away_idx] + def_[home_idx]
+        raw_log_lam_h = att[home_idx] + def_[away_idx] + h_adv * (1 - neutral) + mu
+        raw_log_lam_a = att[away_idx] + def_[home_idx] + mu
 
-        # Geclipt gegen Overflow (exp(>8) -> sehr gross)
         log_lam_h = np.clip(raw_log_lam_h, -8, 8)
         log_lam_a = np.clip(raw_log_lam_a, -8, 8)
         lam_h = np.exp(log_lam_h)
@@ -133,10 +144,9 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
             goals_h * log_lam_h - lam_h +
             goals_a * log_lam_a - lam_a
         )
-        value = -np.nansum(ll)
+        ridge = RIDGE_LAMBDA * np.sum((att**2 + def_**2) * ridge_w)
+        value = -np.nansum(ll) + ridge
 
-        # Ableitung der negativen Log-Likelihood.
-        # Ausserhalb des Clip-Bereichs ist die Ableitung von np.clip null.
         active_h = ((raw_log_lam_h > -8) & (raw_log_lam_h < 8)).astype(float)
         active_a = ((raw_log_lam_a > -8) & (raw_log_lam_a < 8)).astype(float)
         resid_h = weights * (goals_h - lam_h) * active_h
@@ -148,14 +158,21 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
         np.add.at(grad_def, away_idx, -resid_h)
         np.add.at(grad_att, away_idx, -resid_a)
         np.add.at(grad_def, home_idx, -resid_a)
-        grad_h_adv = -np.sum(resid_h * (1 - neutral))
+        # Ridge-Gradienten
+        grad_att += 2 * RIDGE_LAMBDA * att * ridge_w
+        grad_def += 2 * RIDGE_LAMBDA * def_ * ridge_w
 
-        grad = np.concatenate([grad_att, grad_def, [grad_h_adv]])
+        grad_h_adv = -np.sum(resid_h * (1 - neutral))
+        grad_mu    = -np.sum(resid_h) - np.sum(resid_a)
+
+        grad = np.concatenate([grad_att, grad_def, [grad_h_adv, grad_mu]])
         return value, grad
 
-    x0 = np.zeros(2 * n + 1)
-    x0[2 * n] = 0.25
-    bounds = [(-3.0, 3.0)] * (2 * n) + [(0.0, 0.8)]
+    # Startwerte: [att=0, def=0, h_adv=0.25, mu=log(1.3)]
+    x0 = np.zeros(2 * n + 2)
+    x0[2 * n]     = 0.25
+    x0[2 * n + 1] = np.log(1.3)
+    bounds = [(-3.0, 3.0)] * (2 * n) + [(0.0, 0.8), (-1.5, 2.0)]
 
     print("  Optimiere Parameter (L-BFGS-B) ...")
     result = minimize(
@@ -171,15 +188,20 @@ def fit_poisson_model(df: pd.DataFrame) -> pd.DataFrame:
         print(f"  Optimizer-Meldung: {result.message}")
         print("  Hinweis: Es werden die besten gefundenen Parameter verwendet.")
 
-    att  = result.x[:n]
-    def_ = result.x[n:2*n]
-    att -= att.mean()   # Identifizierbarkeit: Mittelwert = 0
+    att   = result.x[:n]
+    def_  = result.x[n:2*n]
+    h_adv = float(result.x[2*n])
+    mu    = float(result.x[2*n + 1])
 
-    return pd.DataFrame({
-        "team": teams,
-        "att": att,
-        "def": def_,
-    })
+    # Beide zentrieren, Mittelwerte in mu absorbieren (Identifizierbarkeit)
+    mu += att.mean() + def_.mean()
+    att -= att.mean()
+    def_ -= def_.mean()
+
+    print(f"  Intercept mu = {mu:.4f} (implizierte Basis-Torrate: {np.exp(mu):.3f} Tore/Spiel/Team)")
+    print(f"  Heimvorteil h_adv = {h_adv:.4f}")
+
+    return pd.DataFrame({"team": teams, "att": att, "def": def_}), mu, h_adv
 
 
 def combine_strengths(
@@ -258,13 +280,16 @@ def combine_strengths(
     return df.reset_index().rename(columns={"index": "team"})
 
 
-def save_checkpoints(poisson_df: pd.DataFrame, elo: pd.Series):
-    """Speichert Poisson-Parameter und Elo-Werte als Checkpoints."""
+def save_checkpoints(poisson_df: pd.DataFrame, elo: pd.Series, mu: float = 0.0, home_adv: float = 0.25):
+    """Speichert Poisson-Parameter, Elo-Werte und Modell-Metadaten."""
     poisson_df.to_csv(DATA_DIR / "poisson_params.csv", index=False)
     elo.reset_index().rename(columns={"index": "team"}).to_csv(
         DATA_DIR / "elo_checkpoint.csv", index=False
     )
-    print(f"  Checkpoints gespeichert: poisson_params.csv, elo_checkpoint.csv")
+    metadata = {"mu": round(mu, 6), "home_adv": round(home_adv, 6)}
+    with open(DATA_DIR / "model_metadata.json", "w") as f:
+        json.dump(metadata, f, indent=2)
+    print(f"  Checkpoints gespeichert: poisson_params.csv, elo_checkpoint.csv, model_metadata.json")
 
 
 def update_elo_with_new_matches(new_matches: pd.DataFrame, k_base: float = 20.0) -> int:
@@ -333,10 +358,10 @@ def main():
     print(f"  {len(results_model)} Spiele ab {CUTOFF_YEAR}.")
 
     print("Passe Poisson-Modell an ...")
-    poisson = fit_poisson_model(results_model)
+    poisson, mu, home_adv = fit_poisson_model(results_model)
 
     print("Speichere Checkpoints ...")
-    save_checkpoints(poisson, elo)
+    save_checkpoints(poisson, elo, mu, home_adv)
 
     squad_path = DATA_DIR / "squad_values.csv"
     if squad_path.exists():

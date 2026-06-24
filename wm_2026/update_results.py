@@ -25,6 +25,7 @@ RESULTS_CSV = DATA_DIR / "results.csv"
 WM_GROUP_CSV = DATA_DIR / "wm2026_matches_group.csv"
 
 TEAM_NAME_MAP = {
+    "Bosnia-Herzegovina": "Bosnia and Herzegovina",
     "China": "China PR",
     "Congo DR": "DR Congo",
     "Curaçao": "Curacao",
@@ -126,7 +127,9 @@ def fetch_espn_day(league: str, day: date) -> list[dict]:
 
         # Auf Kaggle-Format normalisieren
         tournament = TOURNAMENT_MAP.get(tournament_raw, tournament_raw or "Friendly")
-        if league == "fifa.friendly":
+        if league == "fifa.world":
+            tournament = "FIFA World Cup"
+        elif league == "fifa.friendly":
             tournament = "Friendly"
 
         results.append({

@@ -13,6 +13,9 @@ Ausgabe: Excel mit
   - Drittplatzierte
 """
 
+import csv
+import json
+from datetime import datetime
 import numpy as np
 import pandas as pd
 from scipy.stats import poisson
@@ -28,8 +31,21 @@ N_TOURNAMENTS = 5000
 MARKET_ATTACK_LOG_ADJ = 0.35
 MARKET_DEFENSE_LOG_ADJ = 0.35
 ELO_MAX_GOAL_BOOST = 0.08
-SCORE_TIP_MODE = "expected_points"  # "expected_points", "most_common" oder "average"
+SCORE_TIP_MODE = "average"  # "expected_points", "most_common" oder "average"
 TIP_SCORE_MAX_GOALS = 5
+
+
+def _load_model_metadata() -> dict:
+    """Laedt mu und home_adv aus model_metadata.json (Fallback: 0.0 wenn nicht vorhanden)."""
+    path = DATA_DIR / "model_metadata.json"
+    if path.exists():
+        with open(path) as f:
+            return json.load(f)
+    return {"mu": 0.0, "home_adv": 0.25}
+
+
+_MODEL_META = _load_model_metadata()
+MU_INTERCEPT = _MODEL_META.get("mu", 0.0) + 0.302  # Globaler Intercept aus Poisson-Fitting
 
 # ---------------------------------------------------------------------------
 # Fester KO-Spielplan: Slot-Beschreibung -> Bracket-Position
@@ -139,14 +155,16 @@ def expected_goals(team_a, team_b, strengths, neutral=True):
             h_adv +
             MARKET_ATTACK_LOG_ADJ * (mv_att_a - 0.5) -
             MARKET_DEFENSE_LOG_ADJ * (mv_def_b - 0.5) +
-            elo_boost_a
+            elo_boost_a +
+            MU_INTERCEPT
         )
         log_lam_b = (
             get(team_b, "att", 0) +
             get(team_a, "def", 0) +
             MARKET_ATTACK_LOG_ADJ * (mv_att_b - 0.5) -
             MARKET_DEFENSE_LOG_ADJ * (mv_def_a - 0.5) +
-            elo_boost_b
+            elo_boost_b +
+            MU_INTERCEPT
         )
         lam_a = np.exp(np.clip(log_lam_a, -6, 6))
         lam_b = np.exp(np.clip(log_lam_b, -6, 6))
@@ -1584,6 +1602,96 @@ def write_reference_variants_sheet(wb, ranked_paths, team_stage_counts, n, limit
 
 
 # ---------------------------------------------------------------------------
+# Tipp-Persistenz
+# ---------------------------------------------------------------------------
+def save_tips_to_history(group_match_scores, fixed_group_matches, matches_path, ko_results_summary, fixed_ko):
+    """
+    Schreibt aktuelle Tipps in data/tips_history.csv.
+    Bereits gespielte Spiele werden NICHT ueberschrieben (Tipp gilt als abgegeben).
+    Noch nicht gespielte Spiele werden aktualisiert.
+    """
+    history_path = DATA_DIR / "tips_history.csv"
+    fieldnames = ["match_nr", "home", "away", "tip_home", "tip_away", "locked", "run_timestamp"]
+
+    # Bestehende Tipps laden (key: match_nr als String)
+    existing = {}
+    if history_path.exists():
+        with open(history_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                existing[row["match_nr"]] = row
+
+    now = datetime.now().isoformat(timespec="seconds")
+
+    # Gruppenspiele
+    if matches_path.exists():
+        matches_df = pd.read_csv(matches_path, parse_dates=["date"])
+        for _, m in matches_df.iterrows():
+            key = str(int(m["match_nr"]))
+            grp = m["group"]
+            h, a = m["team_home"], m["team_away"]
+            fixed_flat = fixed_group_matches.get(grp, {})
+            already_played = (h, a) in fixed_flat or (a, h) in fixed_flat
+
+            if already_played and key in existing:
+                # Eingefroren: nicht aendern
+                continue
+
+            if already_played:
+                # Spiel gespielt, kein vorheriger Tipp gespeichert → nichts einfrieren
+                continue
+
+            # Noch nicht gespielt: aktuellen Tipp berechnen und updaten
+            score_key = (h, a) if (h, a) in group_match_scores else (a, h)
+            s = group_match_scores.get(score_key, {})
+            if not s:
+                continue
+            tot = s["wins_h"] + s["draws"] + s["wins_a"]
+            if score_key == (h, a):
+                p_wh = s["wins_h"] / max(tot, 1)
+                p_wa = s["wins_a"] / max(tot, 1)
+                avg_h = np.mean(s["goals_h"]) if s.get("goals_h") else 0
+                avg_a = np.mean(s["goals_a"]) if s.get("goals_a") else 0
+                sc = s.get("score_counts", {})
+            else:
+                p_wh = s["wins_a"] / max(tot, 1)
+                p_wa = s["wins_h"] / max(tot, 1)
+                avg_h = np.mean(s["goals_a"]) if s.get("goals_a") else 0
+                avg_a = np.mean(s["goals_h"]) if s.get("goals_h") else 0
+                sc = {(ga, gh): c for (gh, ga), c in s.get("score_counts", {}).items()}
+            (tip_h, tip_a), _ = select_tip_score(avg_h, avg_a, p_wh, p_wa, sc)
+            existing[key] = {
+                "match_nr": key, "home": h, "away": a,
+                "tip_home": str(tip_h), "tip_away": str(tip_a),
+                "locked": "False", "run_timestamp": now,
+            }
+
+    # KO-Spiele
+    for mnr, r in ko_results_summary.items():
+        key = str(mnr)
+        already_played = mnr in fixed_ko
+        if already_played and key in existing:
+            continue
+        if already_played:
+            # KO-Spiel gespielt, kein vorheriger Tipp → nichts einfrieren
+            continue
+        ta, tb = r["team_a"], r["team_b"]
+        tip_h, tip_a = r["score_a"], r["score_b"]
+        existing[key] = {
+            "match_nr": key, "home": ta, "away": tb,
+            "tip_home": str(tip_h), "tip_away": str(tip_a),
+            "locked": "False", "run_timestamp": now,
+        }
+
+    # Sortiert nach match_nr schreiben
+    rows = sorted(existing.values(), key=lambda r: int(r["match_nr"]))
+    with open(history_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    print(f"  Tipps gespeichert: {history_path.name} ({len(rows)} Spiele)")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -1602,6 +1710,13 @@ def main():
     )
 
     ko_results_summary = get_ko_result_summary(ko_match_stats, n)
+
+    print("Speichere Tipps ...")
+    matches_path = DATA_DIR / "wm2026_matches_group.csv"
+    save_tips_to_history(
+        group_match_scores, fixed_group_matches, matches_path,
+        ko_results_summary, fixed_ko,
+    )
 
     print("Waehle repraesentativen simulierten Turnierverlauf ...")
     ranked_paths = rank_representative_tournaments(

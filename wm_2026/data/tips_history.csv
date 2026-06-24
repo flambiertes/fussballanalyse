@@ -1,0 +1,105 @@
+match_nr,home,away,tip_home,tip_away,locked,run_timestamp
+1,Mexico,South Africa,1,0,True,2026-06-17T17:03:48
+2,South Korea,Czech Republic,1,1,True,2026-06-17T17:03:48
+3,Canada,Bosnia and Herzegovina,1,0,True,2026-06-17T17:03:48
+4,United States,Paraguay,0,0,True,2026-06-17T17:03:48
+5,Haiti,Scotland,0,1,True,2026-06-17T17:03:48
+6,Australia,Turkey,0,1,True,2026-06-17T17:03:48
+7,Brazil,Morocco,0,0,True,2026-06-17T17:03:48
+8,Qatar,Switzerland,0,2,True,2026-06-17T17:03:48
+9,Ivory Coast,Ecuador,0,0,True,2026-06-17T17:03:48
+10,Germany,Curacao,3,0,True,2026-06-17T17:03:48
+11,Netherlands,Japan,1,0,True,2026-06-17T17:03:48
+12,Sweden,Tunisia,0,0,True,2026-06-17T17:03:48
+13,Saudi Arabia,Uruguay,0,1,True,2026-06-17T17:03:48
+14,Spain,Cape Verde,2,0,True,2026-06-17T17:03:48
+15,Iran,New Zealand,1,0,True,2026-06-17T17:03:48
+16,Belgium,Egypt,1,0,True,2026-06-17T17:03:48
+17,France,Senegal,1,0,True,2026-06-17T17:03:48
+18,Iraq,Norway,0,1,True,2026-06-17T17:03:48
+19,Argentina,Algeria,1,0,True,2026-06-17T17:03:48
+20,Austria,Jordan,1,0,True,2026-06-17T17:03:48
+21,Ghana,Panama,1,1,False,2026-06-17T17:31:53
+22,England,Croatia,2,1,False,2026-06-17T17:31:53
+23,Portugal,DR Congo,2,0,False,2026-06-17T17:31:53
+24,Uzbekistan,Colombia,1,2,False,2026-06-17T17:31:53
+25,Czech Republic,South Africa,1,1,False,2026-06-18T19:02:59
+26,Switzerland,Bosnia and Herzegovina,2,1,False,2026-06-18T19:02:59
+27,Canada,Qatar,2,1,False,2026-06-18T19:02:59
+28,Mexico,South Korea,1,1,False,2026-06-18T19:02:59
+29,Brazil,Haiti,5,0,False,2026-06-18T19:02:59
+30,Scotland,Morocco,1,1,False,2026-06-18T19:02:59
+31,Turkey,Paraguay,1,1,False,2026-06-18T19:02:59
+32,United States,Australia,1,1,False,2026-06-18T19:02:59
+33,Germany,Ivory Coast,2,1,False,2026-06-18T19:02:59
+34,Ecuador,Curacao,2,0,False,2026-06-18T19:02:59
+35,Netherlands,Sweden,2,1,False,2026-06-18T19:02:59
+36,Tunisia,Japan,1,1,False,2026-06-18T19:02:59
+37,Uruguay,Cape Verde,2,0,False,2026-06-18T19:02:59
+38,Spain,Saudi Arabia,3,0,False,2026-06-18T19:02:59
+39,Belgium,Iran,2,1,False,2026-06-18T19:02:59
+40,New Zealand,Egypt,0,1,False,2026-06-18T19:02:59
+41,Norway,Senegal,2,1,False,2026-06-18T19:02:59
+42,France,Iraq,3,0,False,2026-06-18T19:02:59
+43,Argentina,Austria,2,1,False,2026-06-18T19:02:59
+44,Jordan,Algeria,1,2,False,2026-06-18T19:02:59
+45,England,Ghana,3,0,False,2026-06-18T19:02:59
+46,Panama,Croatia,1,2,False,2026-06-18T19:02:59
+47,Portugal,Uzbekistan,2,0,False,2026-06-18T19:02:59
+48,Colombia,DR Congo,2,1,False,2026-06-18T19:02:59
+49,Scotland,Brazil,1,3,False,2026-06-24T10:53:43
+50,Morocco,Haiti,4,0,False,2026-06-24T10:53:43
+51,Switzerland,Canada,2,1,False,2026-06-24T10:53:43
+52,Bosnia and Herzegovina,Qatar,2,1,False,2026-06-24T10:53:43
+53,Czech Republic,Mexico,1,2,False,2026-06-24T10:53:43
+54,South Africa,South Korea,1,2,False,2026-06-24T10:53:43
+55,Curacao,Ivory Coast,0,2,False,2026-06-24T10:53:43
+56,Ecuador,Germany,1,1,False,2026-06-24T10:53:43
+57,Japan,Sweden,3,1,False,2026-06-24T10:53:43
+58,Tunisia,Netherlands,1,4,False,2026-06-24T10:53:43
+59,Turkey,United States,2,1,False,2026-06-24T10:53:43
+60,Paraguay,Australia,1,1,False,2026-06-24T10:53:43
+61,Norway,France,1,3,False,2026-06-24T10:53:43
+62,Senegal,Iraq,2,1,False,2026-06-24T10:53:43
+63,Egypt,Iran,1,1,False,2026-06-24T10:53:43
+64,New Zealand,Belgium,1,3,False,2026-06-24T10:53:43
+65,Cape Verde,Saudi Arabia,1,1,False,2026-06-24T10:53:43
+66,Uruguay,Spain,1,2,False,2026-06-24T10:53:43
+67,Panama,England,0,5,False,2026-06-24T10:53:43
+68,Croatia,Ghana,3,1,False,2026-06-24T10:53:43
+69,Algeria,Austria,1,2,False,2026-06-24T10:53:43
+70,Jordan,Argentina,1,4,False,2026-06-24T10:53:43
+71,Colombia,Portugal,1,2,False,2026-06-24T10:53:43
+72,DR Congo,Uzbekistan,1,1,False,2026-06-24T10:53:43
+73,South Korea,Canada,2,3,False,2026-06-24T10:53:43
+74,Germany,Paraguay,3,1,False,2026-06-24T10:53:43
+75,Netherlands,Morocco,2,3,False,2026-06-24T10:53:43
+76,Brazil,Japan,2,3,False,2026-06-24T10:53:43
+77,France,Sweden,4,1,False,2026-06-24T10:53:43
+78,Ivory Coast,Norway,1,2,False,2026-06-24T10:53:43
+79,Mexico,Scotland,1,2,False,2026-06-24T10:53:43
+80,England,Senegal,3,1,False,2026-06-24T10:53:43
+81,United States,Bosnia and Herzegovina,2,1,False,2026-06-24T10:53:43
+82,Egypt,Czech Republic,2,3,False,2026-06-24T10:53:43
+83,Colombia,Croatia,2,3,False,2026-06-24T10:53:43
+84,Spain,Austria,3,1,False,2026-06-24T10:53:43
+85,Switzerland,Egypt,2,1,False,2026-06-24T10:53:43
+86,Argentina,Cape Verde,4,1,False,2026-06-24T10:53:43
+87,Portugal,Ghana,3,1,False,2026-06-24T10:53:43
+88,Australia,Belgium,1,2,False,2026-06-24T10:53:43
+89,Germany,France,2,3,False,2026-06-24T10:53:43
+90,Canada,Netherlands,1,3,False,2026-06-24T10:53:43
+91,Brazil,Norway,2,3,False,2026-06-24T10:53:43
+92,Mexico,England,1,2,False,2026-06-24T10:53:43
+93,Colombia,Spain,1,3,False,2026-06-24T10:53:43
+94,United States,Belgium,1,2,False,2026-06-24T10:53:43
+95,Argentina,Belgium,2,1,False,2026-06-24T10:53:43
+96,Switzerland,Portugal,1,2,False,2026-06-24T10:53:43
+97,France,Netherlands,2,3,False,2026-06-24T10:53:43
+98,Spain,United States,3,1,False,2026-06-24T10:53:43
+99,Norway,England,1,2,False,2026-06-24T10:53:43
+100,Argentina,Portugal,2,1,False,2026-06-24T10:53:43
+101,France,Spain,2,3,False,2026-06-24T10:53:43
+102,England,Argentina,2,3,False,2026-06-24T10:53:43
+103,Spain,Argentina,2,3,False,2026-06-24T10:53:43
+104,Spain,England,2,3,False,2026-06-24T10:53:43
