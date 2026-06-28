@@ -1,23 +1,21 @@
 WM 2026 – Kalibrierungsbericht
 
 MODELL-STATUS
-  mu_current       = 0.0958  (Basis-Lambda 1.100)
-  home_adv         = 0.2351
-  Kalibriert       = Nein
-  Luecke (hist.)   = +0.302
-  Ziel mu (hist.)  = 0.397
-  Schnell-Fix      : MU_INTERCEPT += 0.302 in wm_simulation.py
+  mu_current       = 0.0980  (Basis-Lambda 1.512)
+  home_adv         = 0.2320
+  Kalibriert       = Ja
 
 GESAMT
-  Gespielte Spiele: 48
-  Punkte: 64 / 192 (33.3%)
-  Tore/Spiel: echt=2.94 getippt=1.96
+  Gespielte Spiele: 72
+  Punkte: 110 / 288 (38.2%)
+  Tore/Spiel: echt=2.99 getippt=2.39
 
 NACH GENERATION
   Batch 1 (altes Modell – manuell importiert): 19/80 (23.8%) — Tore getippt/echt: 1.05/3.10
   Batch 2 (neues Modell – average-Modus): 4/16 (25.0%) — Tore getippt/echt: 2.50/3.25
   Batch 3 (neues Modell – average-Modus): 41/96 (42.7%) — Tore getippt/echt: 2.62/2.75
+  Batch 4 (neues Modell – average-Modus): 46/96 (47.9%) — Tore getippt/echt: 3.25/3.08
 
 EMPFEHLUNGEN
-  → mu zu niedrig: aktuell 0.0958 (Basis-Lambda 1.100). Ziel hist. WM-Schnitt (2.65 Tore/Spiel): mu -> 0.397 (+0.302). Ziel aktuelle WM-Daten (2.94 Tore/Spiel): mu -> 0.501 (+0.405). ACHTUNG: 48 Spiele sind eine kleine Stichprobe — Ziel hist. Schnitt ist robuster. Empfehlung: strength_model.py neu ausfuehren (mu wird automatisch angepasst). Schnell-Fix ohne Neu-Fitting: In wm_simulation.py MU_INTERCEPT += 0.302.
-  → Zu viele falsche Tendenz-Tipps (48%). Empfehlung: strength_model.py neu ausfuehren mit aktuellen WM-Ergebnissen.
+  → mu_wm_correction wurde automatisch aktualisiert: 0.3157 (effektives MU = 0.4137, Basis-Lambda 1.512). Keine manuelle Anpassung noetig — naechste Simulation nutzt neuen Wert.
+  → Zu viele falsche Tendenz-Tipps (40%). Empfehlung: strength_model.py neu ausfuehren mit aktuellen WM-Ergebnissen.

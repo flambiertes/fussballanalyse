@@ -45,7 +45,8 @@ def _load_model_metadata() -> dict:
 
 
 _MODEL_META = _load_model_metadata()
-MU_INTERCEPT = _MODEL_META.get("mu", 0.0) + 0.302  # Globaler Intercept aus Poisson-Fitting
+# mu_wm_correction wird von calibrate.py automatisch berechnet und in model_metadata.json gespeichert
+MU_INTERCEPT = _MODEL_META.get("mu", 0.0) + _MODEL_META.get("mu_wm_correction", 0.302)
 
 # ---------------------------------------------------------------------------
 # Fester KO-Spielplan: Slot-Beschreibung -> Bracket-Position
@@ -454,20 +455,30 @@ def get_podium(path):
 # ---------------------------------------------------------------------------
 # Hilfsfunktionen fuer Excel
 # ---------------------------------------------------------------------------
-def score_from_avg(avg_h, avg_a, p_win_h, p_win_a):
-    """Rundet Ø-Tore zu ganzen Zahlen, konsistent mit wahrscheinlichstem Ausgang."""
+def score_from_avg(avg_h, avg_a, p_win_h, p_win_a, ko=False):
+    """Rundet Ø-Tore zu ganzen Zahlen, konsistent mit wahrscheinlichstem Ausgang.
+    ko=True: In KO-Spielen kein Unentschieden moeglich (Elfmeter entscheidet)."""
     gh, ga = round(avg_h), round(avg_a)
     if p_win_h > 0.55 and gh <= ga: gh = ga + 1
     elif p_win_a > 0.55 and ga <= gh: ga = gh + 1
+    if ko and gh == ga:
+        if p_win_h >= p_win_a:
+            gh += 1
+        else:
+            ga += 1
     return gh, ga
 
 
-def most_common_score(score_counts):
-    """Gibt den haeufigsten simulierten Score zurueck."""
+def most_common_score(score_counts, ko=False):
+    """Gibt den haeufigsten simulierten Score zurueck.
+    ko=True: Unentschieden-Scores werden ignoriert (kein gueltiger KO-Tipp)."""
     if not score_counts:
         return None
+    filtered = {k: v for k, v in score_counts.items() if not (ko and k[0] == k[1])}
+    if not filtered:
+        filtered = score_counts
     return max(
-        score_counts.items(),
+        filtered.items(),
         key=lambda item: (item[1], -sum(item[0]), -abs(item[0][0] - item[0][1])),
     )[0]
 
@@ -487,11 +498,14 @@ def tip_points(tip, actual):
     return 0
 
 
-def expected_points_score(score_counts, max_goals=TIP_SCORE_MAX_GOALS):
-    """Waehlt den Tipp mit maximalem Erwartungswert nach Tipp-Punktelogik."""
+def expected_points_score(score_counts, max_goals=TIP_SCORE_MAX_GOALS, ko=False):
+    """Waehlt den Tipp mit maximalem Erwartungswert nach Tipp-Punktelogik.
+    ko=True: Nur Tipps mit Sieger (kein Unentschieden) werden beruecksichtigt."""
     if not score_counts:
         return None
     candidates = [(h, a) for h in range(max_goals + 1) for a in range(max_goals + 1)]
+    if ko:
+        candidates = [(h, a) for h, a in candidates if h != a]
     return max(
         candidates,
         key=lambda tip: (
@@ -503,17 +517,18 @@ def expected_points_score(score_counts, max_goals=TIP_SCORE_MAX_GOALS):
     )
 
 
-def select_tip_score(avg_h, avg_a, p_win_h, p_win_a, score_counts):
+def select_tip_score(avg_h, avg_a, p_win_h, p_win_a, score_counts, ko=False):
     """
     Waehlt den angezeigten Tipp-Score.
     SCORE_TIP_MODE='expected_points': hoechster Erwartungswert nach Tipp-Punkten.
     SCORE_TIP_MODE='most_common': haeufigster simulierter Score.
     SCORE_TIP_MODE='average': alte Logik aus Durchschnittstoren + Rundung.
     Zweiter Rueckgabewert: True, wenn gewaehlter Score und alte Logik gleich sind.
+    ko=True: Kein Unentschieden als Tipp (KO-Runde, immer ein Sieger).
     """
-    avg_score = score_from_avg(avg_h, avg_a, p_win_h, p_win_a)
-    common_score = most_common_score(score_counts)
-    expected_score = expected_points_score(score_counts)
+    avg_score = score_from_avg(avg_h, avg_a, p_win_h, p_win_a, ko=ko)
+    common_score = most_common_score(score_counts, ko=ko)
+    expected_score = expected_points_score(score_counts, ko=ko)
     if SCORE_TIP_MODE == "expected_points" and expected_score is not None:
         return expected_score, expected_score == avg_score
     if SCORE_TIP_MODE == "most_common" and common_score is not None:
@@ -563,7 +578,7 @@ def get_ko_result_summary(ko_match_stats, n):
         avg_ga = np.mean(s["goals_a"]) if s["goals_a"] else 0
         avg_gb = np.mean(s["goals_b"]) if s["goals_b"] else 0
         (ga_disp, gb_disp), score_agrees = select_tip_score(
-            avg_ga, avg_gb, p_a, 1 - p_a, s["score_counts"]
+            avg_ga, avg_gb, p_a, 1 - p_a, s["score_counts"], ko=True
         )
         results[mnr] = {
             "team_a": best_a, "team_b": best_b,

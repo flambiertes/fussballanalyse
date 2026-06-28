@@ -134,33 +134,86 @@ def analyze_bias(scored: pd.DataFrame) -> dict:
     }
 
 
-def check_model_params(bias: dict, model_cfg: dict) -> dict:
+def compute_recent_bias(tips: pd.DataFrame, results: pd.DataFrame) -> dict | None:
+    """
+    Berechnet Tipp-Bias ausschliesslich fuer Batch 2+ (neues Modell).
+    Batch 1 (altes Modell, mu=0) wird ignoriert, da es den Gesamtbias verzerrt.
+    Gibt None zurueck wenn keine auswertbaren Daten vorhanden.
+    """
+    if "run_timestamp" not in tips.columns:
+        return None
+    timestamps = sorted(tips["run_timestamp"].dropna().unique())
+    if len(timestamps) < 2:
+        return None
+    recent_tips = tips[tips["run_timestamp"] != timestamps[0]]
+    scored = score_tips(recent_tips, results)
+    if scored.empty:
+        return None
+    return analyze_bias(scored)
+
+
+def auto_apply_mu_correction(bias_recent: dict | None, model_cfg: dict) -> float:
+    """
+    Berechnet mu_wm_correction automatisch aus den aktuellen WM-Daten (nur Batch 2+)
+    und schreibt sie in model_metadata.json.
+
+    Logik: delta_mu = ln(actual / tipped_recent)
+    Die Korrektur wird auf die bestehende mu_wm_correction aufaddiert.
+    Gibt den neuen mu_wm_correction-Wert zurueck.
+    """
+    if bias_recent is None:
+        return model_cfg.get("mu_wm_correction", 0.302)
+
+    tipped = bias_recent["tipped_goals_per_game"]
+    actual = bias_recent["actual_goals_per_game"]
+    if tipped <= 0 or actual <= 0:
+        return model_cfg.get("mu_wm_correction", 0.302)
+
+    old_correction = model_cfg.get("mu_wm_correction", 0.302)
+    delta = float(np.log(actual / tipped))
+    new_correction = round(old_correction + delta, 4)
+
+    path = DATA_DIR / "model_metadata.json"
+    updated = dict(model_cfg)
+    updated.pop("config_exists", None)
+    updated["mu_wm_correction"] = new_correction
+    with open(path, "w") as f:
+        json.dump(updated, f, indent=2)
+
+    return new_correction
+
+
+def check_model_params(bias: dict, model_cfg: dict, bias_recent: dict | None = None) -> dict:
     """
     Vergleicht aktuelle Modell-Parameter mit den Anforderungen aus echten Daten.
 
     mu wirkt additiv auf log_lam_home und log_lam_away. Eine Erhoehung um delta
     skaliert die Gesamt-Tore/Spiel um exp(delta) — kein Divisor 2.
+    mu_wm_correction ist die WM-spezifische Zusatzkorrektur (automatisch berechnet).
     """
-    mu_current = model_cfg.get("mu", 0.0)
-    home_adv   = model_cfg.get("home_adv", 0.25)
-    base_lambda = np.exp(mu_current)  # Basis-Lambda pro Team ohne alle Korrekturen
+    mu_current     = model_cfg.get("mu", 0.0)
+    mu_correction  = model_cfg.get("mu_wm_correction", 0.302)
+    mu_effective   = mu_current + mu_correction
+    home_adv       = model_cfg.get("home_adv", 0.25)
+    base_lambda    = np.exp(mu_effective)
 
-    tipped = bias["tipped_goals_per_game"]
-    actual = bias["actual_goals_per_game"]
+    # Basis fuer Gap-Berechnung: Bias aus aktuellen Batches (Batch 2+) bevorzugt
+    ref_bias = bias_recent if bias_recent is not None else bias
+    tipped = ref_bias["tipped_goals_per_game"]
+    actual = ref_bias["actual_goals_per_game"]
 
-    # Ziel 1: aktuelle WM-Daten angleichen
-    mu_target_actual = (mu_current + np.log(actual / tipped)) if tipped > 0 else None
-    # Ziel 2: historischen WM-Schnitt (robuster bei kleiner Stichprobe)
-    mu_target_hist   = (mu_current + np.log(WM_HISTORICAL_GOALS_PER_GAME / tipped)) if tipped > 0 else None
+    mu_target_actual = (mu_effective + np.log(actual / tipped)) if tipped > 0 else None
+    mu_target_hist   = (mu_effective + np.log(WM_HISTORICAL_GOALS_PER_GAME / tipped)) if tipped > 0 else None
 
-    gap_to_actual = round(mu_target_actual - mu_current, 3) if mu_target_actual else None
-    gap_to_hist   = round(mu_target_hist - mu_current, 3) if mu_target_hist else None
+    gap_to_actual = round(mu_target_actual - mu_effective, 3) if mu_target_actual else None
+    gap_to_hist   = round(mu_target_hist - mu_effective, 3) if mu_target_hist else None
 
-    # Einschaetzung: Kalibriert wenn Luecke zum hist. Schnitt < 0.1
-    is_calibrated = abs(gap_to_hist) < 0.10 if gap_to_hist is not None else False
+    is_calibrated = abs(gap_to_actual) < 0.05 if gap_to_actual is not None else False
 
     return {
         "mu_current":           round(mu_current, 4),
+        "mu_correction":        round(mu_correction, 4),
+        "mu_effective":         round(mu_effective, 4),
         "base_lambda":          round(base_lambda, 3),
         "home_adv":             round(home_adv, 4),
         "mu_target_actual_wm":  round(mu_target_actual, 3) if mu_target_actual else None,
@@ -214,35 +267,28 @@ def analyze_by_generation(tips: pd.DataFrame, results: pd.DataFrame) -> list[dic
     return batches
 
 
-def suggest_calibration(bias: dict, scored: pd.DataFrame, model_check: dict) -> list[str]:
+def suggest_calibration(bias: dict, scored: pd.DataFrame, model_check: dict, new_correction: float | None = None) -> list[str]:
     """Gibt konkrete Anpassungsempfehlungen als Strings zurueck."""
     suggestions = []
 
-    gap_to_hist = model_check.get("gap_to_hist")
-    gap_to_actual = model_check.get("gap_to_actual")
-
-    if gap_to_hist is not None and gap_to_hist > 0.1:
-        mu_new_hist   = model_check["mu_target_hist_wm"]
-        mu_new_actual = model_check["mu_target_actual_wm"]
+    if new_correction is not None:
         suggestions.append(
-            f"mu zu niedrig: aktuell {model_check['mu_current']:.4f} "
-            f"(Basis-Lambda {model_check['base_lambda']:.3f}). "
-            f"Ziel hist. WM-Schnitt ({WM_HISTORICAL_GOALS_PER_GAME:.2f} Tore/Spiel): mu -> {mu_new_hist:.3f} (+{gap_to_hist:.3f}). "
-            f"Ziel aktuelle WM-Daten ({bias['actual_goals_per_game']:.2f} Tore/Spiel): mu -> {mu_new_actual:.3f} (+{gap_to_actual:.3f}). "
-            f"ACHTUNG: {len(scored)} Spiele sind eine kleine Stichprobe — Ziel hist. Schnitt ist robuster. "
-            f"Empfehlung: strength_model.py neu ausfuehren (mu wird automatisch angepasst). "
-            f"Schnell-Fix ohne Neu-Fitting: In wm_simulation.py MU_INTERCEPT += {gap_to_hist:.3f}."
-        )
-    elif gap_to_hist is not None and gap_to_hist < -0.1:
-        suggestions.append(
-            f"mu zu hoch: Tore werden ueberschaetzt ({bias['tipped_goals_per_game']:.2f} vs. real {bias['actual_goals_per_game']:.2f}). "
-            f"Empfehlung: strength_model.py neu ausfuehren."
+            f"mu_wm_correction wurde automatisch aktualisiert: {new_correction:.4f} "
+            f"(effektives MU = {model_check['mu_effective']:.4f}, Basis-Lambda {model_check['base_lambda']:.3f}). "
+            f"Keine manuelle Anpassung noetig — naechste Simulation nutzt neuen Wert."
         )
     else:
-        suggestions.append(
-            f"mu kalibriert: aktuell {model_check['mu_current']:.4f}, "
-            f"Basis-Lambda {model_check['base_lambda']:.3f}. Keine mu-Anpassung noetig."
-        )
+        gap_to_actual = model_check.get("gap_to_actual")
+        if gap_to_actual is not None and abs(gap_to_actual) < 0.05:
+            suggestions.append(
+                f"mu_wm_correction kalibriert: effektives MU = {model_check['mu_effective']:.4f}, "
+                f"Basis-Lambda {model_check['base_lambda']:.3f}. Keine Anpassung noetig."
+            )
+        else:
+            suggestions.append(
+                f"mu_wm_correction konnte nicht automatisch berechnet werden (zu wenige Batches). "
+                f"Empfehlung: calibrate.py nach dem naechsten Spieltag erneut ausfuehren."
+            )
 
     home_gap = bias["home_real_avg"] - bias["home_tip_avg"]
     away_gap = bias["away_real_avg"] - bias["away_tip_avg"]
@@ -278,6 +324,8 @@ def print_report(
     suggestions: list[str],
     model_check: dict,
     batches: list[dict],
+    bias_recent: dict | None = None,
+    new_correction: float | None = None,
 ):
     n = len(scored)
     total_pts = scored["points"].sum()
@@ -294,23 +342,26 @@ def print_report(
     # --- Modell-Status ---
     print()
     print("  MODELL-STATUS (model_metadata.json)")
-    print(f"  {'mu (Intercept)':<30}: {model_check['mu_current']:.4f}  "
+    print(f"  {'mu (Poisson-Modell)':<30}: {model_check['mu_current']:.4f}")
+    print(f"  {'mu_wm_correction (auto)':<30}: {model_check['mu_correction']:.4f}")
+    print(f"  {'mu_effective (= mu + corr.)':<30}: {model_check['mu_effective']:.4f}  "
           f"(Basis-Lambda pro Team: {model_check['base_lambda']:.3f})")
     print(f"  {'home_adv':<30}: {model_check['home_adv']:.4f}")
     print()
     print(f"  Tore/Spiel Ziel hist. WM-Schnitt  : {WM_HISTORICAL_GOALS_PER_GAME:.2f}")
-    print(f"  Tore/Spiel aktuell getippt        : {bias['tipped_goals_per_game']:.2f}")
+    print(f"  Tore/Spiel alle Tipps (Gesamt)    : {bias['tipped_goals_per_game']:.2f}")
     print(f"  Tore/Spiel aktuell real (WM 2026) : {bias['actual_goals_per_game']:.2f}")
+    if bias_recent:
+        print(f"  Tore/Spiel Batch 2+ getippt       : {bias_recent['tipped_goals_per_game']:.2f}  (Referenz fuer Auto-Kalibrierung)")
+        print(f"  Tore/Spiel Batch 2+ real          : {bias_recent['actual_goals_per_game']:.2f}")
     print()
-    if model_check["is_calibrated"]:
-        print("  STATUS: mu ist ausreichend kalibriert (Luecke < 0.10).")
+    if new_correction is not None:
+        print(f"  AUTO-KALIBRIERUNG: mu_wm_correction -> {new_correction:.4f} (gespeichert)")
+    elif model_check["is_calibrated"]:
+        print("  STATUS: Effektives MU kalibriert (Luecke < 0.05).")
     else:
-        gap = model_check["gap_to_hist"]
-        mu_t = model_check["mu_target_hist_wm"]
-        print(f"  STATUS: mu zu niedrig — Luecke zum hist. Schnitt: +{gap:.3f}")
-        print(f"          Benoetigt mu ~{mu_t:.3f} (aktuell {model_check['mu_current']:.4f})")
-        print(f"          Schnell-Fix (ohne Neu-Fitting):  MU_INTERCEPT += {gap:.3f}  in wm_simulation.py")
-        print(f"          Bessere Loesung:  strength_model.py neu ausfuehren")
+        gap = model_check.get("gap_to_actual", 0)
+        print(f"  STATUS: Nicht kalibriert — Luecke: {gap:+.3f}")
 
     print()
     print(sep)
@@ -425,18 +476,22 @@ def main():
         print("Bitte zuerst: python3 update_results.py")
         return
 
-    model_cfg = load_model_config()
-    scored    = score_tips(tips, results)
+    model_cfg    = load_model_config()
+    scored       = score_tips(tips, results)
     if scored.empty:
         print("Keine Spiele konnten verglichen werden (Match-Nummern stimmen moeglicherweise nicht ueberein).")
         return
 
     bias         = analyze_bias(scored)
-    model_check  = check_model_params(bias, model_cfg)
+    bias_recent  = compute_recent_bias(tips, results)
+    new_correction = auto_apply_mu_correction(bias_recent, model_cfg)
+    # Metadaten neu laden (enthaelt jetzt mu_wm_correction)
+    model_cfg    = load_model_config()
+    model_check  = check_model_params(bias, model_cfg, bias_recent)
     batches      = analyze_by_generation(tips, results)
-    suggestions  = suggest_calibration(bias, scored, model_check)
+    suggestions  = suggest_calibration(bias, scored, model_check, new_correction)
 
-    print_report(scored, bias, suggestions, model_check, batches)
+    print_report(scored, bias, suggestions, model_check, batches, bias_recent, new_correction)
     save_report(scored, bias, suggestions, model_check, batches)
 
 
