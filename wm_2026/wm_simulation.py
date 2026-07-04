@@ -117,19 +117,28 @@ def load_fixed_group_matches():
 
 
 def load_fixed_ko_matches():
-    """Bereits gespielte KO-Spiele als {match_nr: (team_a, team_b, ga, gb)}."""
+    """Bereits gespielte KO-Spiele als {match_nr: {...}}."""
     path = DATA_DIR / "wm2026_matches_knockout.csv"
     result = {}
     if not path.exists(): return result
     df = pd.read_csv(path)
-    if "goals_home" not in df.columns: return result
-    played = df.dropna(subset=["goals_home","goals_away"])
+    if "goals_home" not in df.columns or "team_home" not in df.columns: return result
+    played = df.dropna(subset=["goals_home", "goals_away", "team_home", "team_away"])
     for _, row in played.iterrows():
         mnr = int(row["match_nr"])
         ga, gb = int(row["goals_home"]), int(row["goals_away"])
-        winner = row["team_home"] if ga > gb else row["team_away"]
-        result[mnr] = {"team_a": row["team_home"], "team_b": row["team_away"],
-                       "goals_a": ga, "goals_b": gb, "winner": winner, "extra": ""}
+        # Explizite winner-Spalte nutzen (Elfmeter-Sieger bei 1:1 etc.)
+        if "winner" in df.columns and pd.notna(row.get("winner")):
+            winner = row["winner"]
+        else:
+            winner = row["team_home"] if ga > gb else row["team_away"]
+        extra = row.get("extra", "") if "extra" in df.columns else ""
+        result[mnr] = {
+            "team_a": row["team_home"], "team_b": row["team_away"],
+            "goals_a": ga, "goals_b": gb,
+            "winner": winner,
+            "extra": extra if pd.notna(extra) else "",
+        }
     return result
 
 
@@ -281,10 +290,44 @@ def resolve_team(desc, qualifiers, ko_results, ko_losers=None):
     return qualifiers.get(desc, desc)
 
 
+def _all_groups_fixed(groups, fixed_group_matches) -> bool:
+    """Prueft ob alle Gruppenspiele bereits gespielt wurden."""
+    for grp, teams in groups.items():
+        n_expected = len(teams) * (len(teams) - 1) // 2
+        n_fixed = len(fixed_group_matches.get(grp, {}))
+        if n_fixed < n_expected:
+            return False
+    return True
+
+
+def _simulate_ko_phase(qualifiers, strengths, ko_df, fixed_ko):
+    """Simuliert nur die KO-Phase auf Basis bekannter Qualifikanten."""
+    ko_results = {}
+    ko_losers  = {}
+    ko_scores  = {}
+    for _, row in ko_df.iterrows():
+        mnr = int(row["match_nr"])
+        if mnr in fixed_ko:
+            fk = fixed_ko[mnr]
+            ko_results[mnr] = fk["winner"]
+            ko_losers[mnr]  = fk["team_b"] if fk["winner"] == fk["team_a"] else fk["team_a"]
+            ko_scores[mnr]  = (fk["team_a"], fk["team_b"], fk["goals_a"], fk["goals_b"], fk["extra"])
+            continue
+        ta = resolve_team(row["team_home_desc"], qualifiers, ko_results, ko_losers)
+        tb = resolve_team(row["team_away_desc"], qualifiers, ko_results, ko_losers)
+        if "Group" in str(ta) or "Match" in str(ta) or "Group" in str(tb) or "Match" in str(tb):
+            continue
+        winner, ga, gb, extra = sim_ko_match(ta, tb, strengths)
+        ko_results[mnr] = winner
+        ko_losers[mnr]  = tb if winner == ta else ta
+        ko_scores[mnr]  = (ta, tb, ga, gb, extra)
+    return ko_results, ko_scores
+
+
 def simulate_one_tournament(groups, strengths, fixed_group_matches, ko_df, fixed_ko):
     """
     Eine vollstaendige WM-Simulation. Jedes Team erscheint genau einmal.
-    Gibt (group_standings, qualifiers, ko_results, ko_scores) zurueck.
+    Gibt (group_standings, all_match_scores, qualifiers, ko_results, ko_scores) zurueck.
     """
     # Gruppenphase
     group_standings = {}
@@ -295,39 +338,32 @@ def simulate_one_tournament(groups, strengths, fixed_group_matches, ko_df, fixed
         group_standings[grp] = (ranking, records)
         all_match_scores.update(scores)
 
-    # Bracket-Zuteilung
     qualifiers = build_qualifiers(group_standings, all_match_scores)
-
-    # KO-Phase
-    ko_results = {}  # match_nr -> winner
-    ko_losers  = {}  # match_nr -> loser
-    ko_scores  = {}  # match_nr -> (team_a, team_b, ga, gb, extra)
-
-    for _, row in ko_df.iterrows():
-        mnr  = int(row["match_nr"])
-        if mnr in fixed_ko:
-            fk = fixed_ko[mnr]
-            ko_results[mnr] = fk["winner"]
-            ko_losers[mnr]   = fk["team_b"] if fk["winner"] == fk["team_a"] else fk["team_a"]
-            ko_scores[mnr]  = (fk["team_a"], fk["team_b"], fk["goals_a"], fk["goals_b"], fk["extra"])
-            continue
-        ta = resolve_team(row["team_home_desc"], qualifiers, ko_results, ko_losers)
-        tb = resolve_team(row["team_away_desc"], qualifiers, ko_results, ko_losers)
-        if "Group" in ta or "Match" in ta or "Group" in tb or "Match" in tb:
-            continue  # Abhaengigkeit noch nicht aufgeloest
-        winner, ga, gb, extra = sim_ko_match(ta, tb, strengths)
-        ko_results[mnr] = winner
-        ko_losers[mnr]  = tb if winner == ta else ta
-        ko_scores[mnr]  = (ta, tb, ga, gb, extra)
-
+    ko_results, ko_scores = _simulate_ko_phase(qualifiers, strengths, ko_df, fixed_ko)
     return group_standings, all_match_scores, qualifiers, ko_results, ko_scores
 
 
 # ---------------------------------------------------------------------------
 # N Turnier-Simulationen
 # ---------------------------------------------------------------------------
+def _accumulate_match_scores(group_match_scores, g_scores):
+    """Akkumuliert Gruppenspiel-Ergebnisse in group_match_scores."""
+    for (h, a), (gh, ga) in g_scores.items():
+        entry = group_match_scores[(h, a)]
+        entry["goals_h"].append(gh)
+        entry["goals_a"].append(ga)
+        entry["score_counts"][(gh, ga)] += 1
+        if gh > ga:    entry["wins_h"] += 1
+        elif gh == ga: entry["draws"]  += 1
+        else:          entry["wins_a"] += 1
+
+
 def run_n_tournaments(groups, strengths, fixed_group_matches, ko_df, fixed_ko, n=N_TOURNAMENTS):
-    """N vollstaendige Turnier-Simulationen. Zaehlt Haeufigkeiten."""
+    """N vollstaendige Turnier-Simulationen. Zaehlt Haeufigkeiten.
+
+    Wenn alle Gruppenspiele und R32-Spiele fix sind, wird die Gruppenphase
+    einmalig ausgewertet und nur die offene KO-Phase n-mal simuliert.
+    """
     group_pos_counts = {grp: {t: [0,0,0,0] for t in teams} for grp, teams in groups.items()}
     team_stage_counts = defaultdict(lambda: defaultdict(int))
     ko_match_stats = defaultdict(lambda: {
@@ -338,66 +374,120 @@ def run_n_tournaments(groups, strengths, fixed_group_matches, ko_df, fixed_ko, n
         "score_counts_win_a": defaultdict(int),
         "score_counts_win_b": defaultdict(int),
     })
-    # Durchschnittliche Gruppenspiel-Scores
     group_match_scores = defaultdict(lambda: {"goals_h": [], "goals_a": [],
                                                "wins_h": 0, "draws": 0, "wins_a": 0,
                                                "score_counts": defaultdict(int)})
     tournament_paths = []
 
-    for tournament_id in tqdm(range(1, n + 1), desc=f"Simuliere {n} Turniere"):
-        g_standings, g_scores, qualifiers, ko_results, ko_scores = simulate_one_tournament(
-            groups, strengths, fixed_group_matches, ko_df, fixed_ko
-        )
-        tournament_paths.append({
-            "tournament_id": tournament_id,
-            "group_standings": g_standings,
-            "group_scores": g_scores,
-            "qualifiers": qualifiers,
-            "ko_results": ko_results,
-            "ko_scores": ko_scores,
-        })
+    groups_all_fixed = _all_groups_fixed(groups, fixed_group_matches)
 
-        # Gruppenphase zaehlen
-        for grp, (ranking, _) in g_standings.items():
-            for pos, team in enumerate(ranking[:4]):
-                group_pos_counts[grp][team][pos] += 1
-
-        # Gruppenspiel-Scores
+    if groups_all_fixed:
+        # Gruppenphase deterministisch — einmalig berechnen
+        fixed_g_standings = {}
+        fixed_g_scores    = {}
         for grp, teams in groups.items():
             fixed = fixed_group_matches.get(grp, {})
-            _, match_scores, _ = simulate_group_once(teams, strengths, fixed)
-            for (h, a), (gh, ga) in match_scores.items():
-                group_match_scores[(h, a)]["goals_h"].append(gh)
-                group_match_scores[(h, a)]["goals_a"].append(ga)
-                group_match_scores[(h, a)]["score_counts"][(gh, ga)] += 1
-                if gh > ga:    group_match_scores[(h, a)]["wins_h"] += 1
-                elif gh == ga: group_match_scores[(h, a)]["draws"]  += 1
-                else:          group_match_scores[(h, a)]["wins_a"] += 1
+            ranking, scores, records = simulate_group_once(teams, strengths, fixed)
+            fixed_g_standings[grp] = (ranking, records)
+            fixed_g_scores.update(scores)
+        fixed_qualifiers = build_qualifiers(fixed_g_standings, fixed_g_scores)
 
-        # R32-Qualifikation tracken (wer ist im Bracket?)
-        for slot_desc, team in qualifiers.items():
-            team_stage_counts[team]["p_R32_entry"] += 1
+        # Gruppenstatistiken einmalig fuellen (alle Ergebnisse fix → n Kopien)
+        for grp, (ranking, _) in fixed_g_standings.items():
+            for pos, team in enumerate(ranking[:4]):
+                group_pos_counts[grp][team][pos] += n  # direkt hochzaehlen
+
+        # group_match_scores: einmalig aufbauen, n Wiederholungen simulieren
+        for (h, a), (gh, ga) in fixed_g_scores.items():
+            entry = group_match_scores[(h, a)]
+            entry["goals_h"] = [gh] * n
+            entry["goals_a"] = [ga] * n
+            entry["score_counts"][(gh, ga)] = n
+            if gh > ga:    entry["wins_h"] = n
+            elif gh == ga: entry["draws"]  = n
+            else:          entry["wins_a"] = n
+
+        # R32-Qualifikation einmalig zaehlen
+        for slot_desc, team in fixed_qualifiers.items():
+            team_stage_counts[team]["p_R32_entry"] += n
             if "3rd" in slot_desc:
-                team_stage_counts[team]["p_R32_as_third"] += 1
+                team_stage_counts[team]["p_R32_as_third"] += n
 
-        # KO-Phase zaehlen
-        for mnr, winner in ko_results.items():
-            stage = STAGE_OF_MATCH.get(mnr)
-            if stage:
-                team_stage_counts[winner][stage] += 1
+        # Nur KO-Phase n-mal simulieren
+        for tournament_id in tqdm(range(1, n + 1), desc=f"Simuliere {n} Turniere (nur KO-Phase)"):
+            ko_results, ko_scores = _simulate_ko_phase(
+                fixed_qualifiers, strengths, ko_df, fixed_ko
+            )
+            tournament_paths.append({
+                "tournament_id": tournament_id,
+                "group_standings": fixed_g_standings,
+                "group_scores":    fixed_g_scores,
+                "qualifiers":      fixed_qualifiers,
+                "ko_results":      ko_results,
+                "ko_scores":       ko_scores,
+            })
 
-        for mnr, (ta, tb, ga, gb, extra) in ko_scores.items():
-            s = ko_match_stats[mnr]
-            s["team_a_counts"][ta] += 1
-            s["team_b_counts"][tb] += 1
-            winner = ko_results.get(mnr)
-            if winner:
-                s["winner_counts"][winner] += 1
-                s["score_counts"][(ga, gb)] += 1
-                if winner == ta: s["score_counts_win_a"][(ga, gb)] += 1
-                else:            s["score_counts_win_b"][(ga, gb)] += 1
-            s["goals_a"].append(ga)
-            s["goals_b"].append(gb)
+            for mnr, winner in ko_results.items():
+                stage = STAGE_OF_MATCH.get(mnr)
+                if stage:
+                    team_stage_counts[winner][stage] += 1
+
+            for mnr, (ta, tb, ga, gb, extra) in ko_scores.items():
+                s = ko_match_stats[mnr]
+                s["team_a_counts"][ta] += 1
+                s["team_b_counts"][tb] += 1
+                winner = ko_results.get(mnr)
+                if winner:
+                    s["winner_counts"][winner] += 1
+                    s["score_counts"][(ga, gb)] += 1
+                    if winner == ta: s["score_counts_win_a"][(ga, gb)] += 1
+                    else:            s["score_counts_win_b"][(ga, gb)] += 1
+                s["goals_a"].append(ga)
+                s["goals_b"].append(gb)
+
+    else:
+        # Gruppenphase noch nicht komplett — volles Turnier simulieren
+        for tournament_id in tqdm(range(1, n + 1), desc=f"Simuliere {n} Turniere"):
+            g_standings, g_scores, qualifiers, ko_results, ko_scores = simulate_one_tournament(
+                groups, strengths, fixed_group_matches, ko_df, fixed_ko
+            )
+            tournament_paths.append({
+                "tournament_id": tournament_id,
+                "group_standings": g_standings,
+                "group_scores": g_scores,
+                "qualifiers": qualifiers,
+                "ko_results": ko_results,
+                "ko_scores": ko_scores,
+            })
+
+            for grp, (ranking, _) in g_standings.items():
+                for pos, team in enumerate(ranking[:4]):
+                    group_pos_counts[grp][team][pos] += 1
+
+            _accumulate_match_scores(group_match_scores, g_scores)
+
+            for slot_desc, team in qualifiers.items():
+                team_stage_counts[team]["p_R32_entry"] += 1
+                if "3rd" in slot_desc:
+                    team_stage_counts[team]["p_R32_as_third"] += 1
+
+            for mnr, winner in ko_results.items():
+                stage = STAGE_OF_MATCH.get(mnr)
+                if stage:
+                    team_stage_counts[winner][stage] += 1
+
+            for mnr, (ta, tb, ga, gb, extra) in ko_scores.items():
+                s = ko_match_stats[mnr]
+                s["team_a_counts"][ta] += 1
+                s["team_b_counts"][tb] += 1
+                winner = ko_results.get(mnr)
+                if winner:
+                    s["winner_counts"][winner] += 1
+                    s["score_counts"][(ga, gb)] += 1
+                    if winner == ta: s["score_counts_win_a"][(ga, gb)] += 1
+                    else:            s["score_counts_win_b"][(ga, gb)] += 1
+                s["goals_a"].append(ga)
+                s["goals_b"].append(gb)
 
     return group_pos_counts, group_match_scores, ko_match_stats, team_stage_counts, tournament_paths, n
 

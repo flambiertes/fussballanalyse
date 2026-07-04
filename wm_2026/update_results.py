@@ -22,7 +22,9 @@ from tqdm.auto import tqdm
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 RESULTS_CSV = DATA_DIR / "results.csv"
-WM_GROUP_CSV = DATA_DIR / "wm2026_matches_group.csv"
+WM_GROUP_CSV  = DATA_DIR / "wm2026_matches_group.csv"
+WM_KO_CSV     = DATA_DIR / "wm2026_matches_knockout.csv"
+THIRD_COMBOS  = DATA_DIR / "third_place_combinations.csv"
 
 TEAM_NAME_MAP = {
     "Bosnia-Herzegovina": "Bosnia and Herzegovina",
@@ -132,6 +134,25 @@ def fetch_espn_day(league: str, day: date) -> list[dict]:
         elif league == "fifa.friendly":
             tournament = "Friendly"
 
+        # Spielende-Typ aus ESPN shortDetail (z.B. 'FT', 'AET', 'FT-Pens')
+        status_detail = (status.get("shortDetail", "") or "").lower()
+        if "pen" in status_detail:
+            extra = "n.E."
+        elif "aet" in status_detail or "et" in status_detail:
+            extra = "n.V."
+        else:
+            extra = ""
+
+        # Sieger: ESPN setzt winner=True beim Sieger-Competitor (auch bei Elfmeter)
+        home_is_winner = home.get("winner", None)
+        away_is_winner = away.get("winner", None)
+        if home_is_winner is True:
+            winner_team = home["team"]["displayName"]
+        elif away_is_winner is True:
+            winner_team = away["team"]["displayName"]
+        else:
+            winner_team = None  # Gruppe (Unentschieden) oder noch laufend
+
         results.append({
             "date": day.isoformat(),
             "home_team": home["team"]["displayName"],
@@ -142,6 +163,8 @@ def fetch_espn_day(league: str, day: date) -> list[dict]:
             "city": comp.get("venue", {}).get("address", {}).get("city", ""),
             "country": comp.get("venue", {}).get("address", {}).get("country", ""),
             "neutral": str(neutral).upper(),
+            "winner_team": winner_team,
+            "extra": extra,
         })
     return results
 
@@ -194,7 +217,11 @@ def update_results_csv(new_df: pd.DataFrame) -> int:
     if truly_new.empty:
         return 0
 
-    combined = pd.concat([existing, truly_new], ignore_index=True)
+    # Nur Standardspalten in results.csv schreiben (winner_team/extra sind KO-intern)
+    results_cols = ["date", "home_team", "away_team", "home_score", "away_score",
+                    "tournament", "city", "country", "neutral"]
+    truly_new_clean = truly_new[[c for c in results_cols if c in truly_new.columns]]
+    combined = pd.concat([existing, truly_new_clean], ignore_index=True)
     combined = combined.sort_values("date").reset_index(drop=True)
     combined.to_csv(RESULTS_CSV, index=False)
     return len(truly_new)
@@ -237,6 +264,189 @@ def update_wm_group_matches(new_df: pd.DataFrame) -> int:
 
     if updated > 0:
         wm.to_csv(WM_GROUP_CSV, index=False)
+    return updated
+
+
+def build_group_standings() -> dict:
+    """
+    Berechnet tatsaechliche Gruppentabellen aus wm2026_matches_group.csv.
+    Gibt {group: [(team, pts, gd, gf), ...]} zurueck (absteigend sortiert).
+    """
+    if not WM_GROUP_CSV.exists():
+        return {}
+    df = pd.read_csv(WM_GROUP_CSV)
+    if "goals_home" not in df.columns:
+        return {}
+    played = df.dropna(subset=["goals_home", "goals_away"])
+    standings = {}
+    for group, gdf in played.groupby("group"):
+        records = {}
+        for _, row in gdf.iterrows():
+            h, a = row["team_home"], row["team_away"]
+            gh, ga = int(row["goals_home"]), int(row["goals_away"])
+            for team in [h, a]:
+                records.setdefault(team, {"pts": 0, "gf": 0, "ga": 0})
+            records[h]["gf"] += gh; records[h]["ga"] += ga
+            records[a]["gf"] += ga; records[a]["ga"] += gh
+            if gh > ga:   records[h]["pts"] += 3
+            elif gh == ga: records[h]["pts"] += 1; records[a]["pts"] += 1
+            else:          records[a]["pts"] += 3
+        sorted_teams = sorted(
+            records.items(),
+            key=lambda x: (-x[1]["pts"], -(x[1]["gf"] - x[1]["ga"]), -x[1]["gf"], x[0])
+        )
+        standings[group] = sorted_teams
+    return standings
+
+
+def build_actual_qualifiers(standings: dict) -> dict:
+    """
+    Bestimmt {slot_beschreibung: team} aus den tatsaechlichen Gruppentabellen.
+    Benoetigt third_place_combinations.csv fuer die Drittplazierten-Zuteilung.
+    Gibt None zurueck wenn Gruppenphase noch nicht komplett.
+    """
+    if not standings:
+        return {}
+    qualifiers = {}
+    thirds = []
+    for group, table in standings.items():
+        if len(table) < 3:
+            continue
+        qualifiers[f"Winner Group {group}"]    = table[0][0]
+        qualifiers[f"Runner-up Group {group}"] = table[1][0]
+        t, rec = table[2]
+        thirds.append((t, rec["pts"], rec["gf"] - rec["ga"], rec["gf"], group))
+
+    if not THIRD_COMBOS.exists() or len(thirds) < 8:
+        return qualifiers
+
+    thirds.sort(key=lambda x: (-x[1], -x[2], -x[3]))
+    best8 = thirds[:8]
+    qualified_groups = "".join(sorted(t[4] for t in best8))
+
+    combos = pd.read_csv(THIRD_COMBOS)
+    THIRD_SLOTS_BY_WINNER = {
+        "1A": "3rd Group C/E/F/H/I",
+        "1B": "3rd Group E/F/G/I/J",
+        "1D": "3rd Group B/E/F/I/J",
+        "1E": "3rd Group A/B/C/D/F",
+        "1G": "3rd Group A/E/H/I/J",
+        "1I": "3rd Group C/D/F/G/H",
+        "1K": "3rd Group D/E/I/J/L",
+        "1L": "3rd Group E/H/I/J/K",
+    }
+    teams_by_group = {t[4]: t[0] for t in best8}
+    matches = combos[combos["qualified_groups"] == qualified_groups]
+    if len(matches) == 1:
+        row = matches.iloc[0]
+        for winner_slot, desc in THIRD_SLOTS_BY_WINNER.items():
+            group_char = row[f"third_for_{winner_slot}"]
+            if group_char in teams_by_group:
+                qualifiers[desc] = teams_by_group[group_char]
+
+    return qualifiers
+
+
+def update_wm_ko_matches(new_df: pd.DataFrame) -> int:
+    """
+    Traegt tatsaechliche KO-Ergebnisse in wm2026_matches_knockout.csv ein.
+    Loest Slot-Beschreibungen (z.B. 'Winner Group A') zu echten Teamnamen auf.
+    Gibt Anzahl neu eingetragener Ergebnisse zurueck.
+    """
+    if not WM_KO_CSV.exists():
+        return 0
+
+    ko = pd.read_csv(WM_KO_CSV, parse_dates=["date"])
+
+    # Neue Spalten anlegen falls nicht vorhanden
+    for col in ["team_home", "team_away", "goals_home", "goals_away", "winner", "extra"]:
+        if col not in ko.columns:
+            ko[col] = pd.NA
+
+    # Gruppen-Qualifikanten bestimmen (nur wenn Gruppenphase vollstaendig)
+    standings = build_group_standings()
+    qualifiers = build_actual_qualifiers(standings)
+
+    # Teamnamen in KO-CSV eintragen wo moeglich
+    for idx, row in ko.iterrows():
+        if pd.isna(ko.at[idx, "team_home"]) and qualifiers:
+            resolved_h = qualifiers.get(row["team_home_desc"])
+            resolved_a = qualifiers.get(row["team_away_desc"])
+            if resolved_h:
+                ko.at[idx, "team_home"] = resolved_h
+            if resolved_a:
+                ko.at[idx, "team_away"] = resolved_a
+
+    # Ergebnisse aus new_df matchen (FIFA World Cup Spiele)
+    wc_games = new_df[new_df["tournament"] == "FIFA World Cup"].copy() if not new_df.empty else pd.DataFrame()
+    updated = 0
+
+    for idx, row in ko.iterrows():
+        if pd.notna(ko.at[idx, "goals_home"]):
+            continue  # bereits eingetragen
+        th = ko.at[idx, "team_home"]
+        ta = ko.at[idx, "team_away"]
+        if pd.isna(th) or pd.isna(ta):
+            continue  # Teamnamen noch nicht aufgeloest
+
+        match_date = ko.at[idx, "date"]
+        # Suche in new_df
+        if not wc_games.empty:
+            hit = wc_games[
+                (wc_games["date"].dt.date == match_date.date()) &
+                (
+                    ((wc_games["home_team"] == th) & (wc_games["away_team"] == ta)) |
+                    ((wc_games["home_team"] == ta) & (wc_games["away_team"] == th))
+                )
+            ]
+        else:
+            hit = pd.DataFrame()
+
+        # Fallback: suche in gesamtem results.csv
+        if hit.empty:
+            all_results = pd.read_csv(RESULTS_CSV, parse_dates=["date"])
+            all_results["home_team"] = all_results["home_team"].replace(TEAM_NAME_MAP)
+            all_results["away_team"] = all_results["away_team"].replace(TEAM_NAME_MAP)
+            hit = all_results[
+                (all_results["date"].dt.date == match_date.date()) &
+                (all_results["tournament"] == "FIFA World Cup") &
+                (
+                    ((all_results["home_team"] == th) & (all_results["away_team"] == ta)) |
+                    ((all_results["home_team"] == ta) & (all_results["away_team"] == th))
+                )
+            ]
+
+        if hit.empty:
+            continue
+
+        r = hit.iloc[0]
+        if r["home_team"] == th:
+            gh, ga = int(r["home_score"]), int(r["away_score"])
+        else:
+            gh, ga = int(r["away_score"]), int(r["home_score"])
+
+        ko.at[idx, "goals_home"] = gh
+        ko.at[idx, "goals_away"] = ga
+
+        # Sieger bestimmen
+        if gh > ga:
+            ko.at[idx, "winner"] = th
+            ko.at[idx, "extra"]  = ""
+        elif ga > gh:
+            ko.at[idx, "winner"] = ta
+            ko.at[idx, "extra"]  = ""
+        else:
+            # Unentschieden → Verlaengerung/Elfmeter
+            winner_from_api = r.get("winner_team") if "winner_team" in r.index else None
+            if pd.notna(winner_from_api) and winner_from_api:
+                ko.at[idx, "winner"] = winner_from_api
+                went_pen = r.get("went_to_penalties", False) if "went_to_penalties" in r.index else False
+                ko.at[idx, "extra"] = "n.E." if went_pen else "n.V."
+            else:
+                ko.at[idx, "extra"] = "n.E."  # Elfmeter angenommen, Sieger unbekannt
+        updated += 1
+
+    ko.to_csv(WM_KO_CSV, index=False)
     return updated
 
 
@@ -297,6 +507,9 @@ def main():
 
     n_wm = update_wm_group_matches(new_data)
     print(f"wm2026_matches_group.csv: {n_wm} WM-Ergebnisse eingetragen")
+
+    n_ko = update_wm_ko_matches(new_data)
+    print(f"wm2026_matches_knockout.csv: {n_ko} KO-Ergebnisse eingetragen")
 
     if n_results > 0:
         # Inkrementeller Elo-Update (nur neue Spiele, < 1 Sek)
