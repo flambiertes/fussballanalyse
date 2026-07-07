@@ -1,24 +1,23 @@
 WM 2026 – Kalibrierungsbericht
 
 MODELL-STATUS
-  mu_current       = 0.0950  (Basis-Lambda 1.409)
-  home_adv         = 0.2383
-  Kalibriert       = Nein
-  Luecke (hist.)   = +-0.134
-  Ziel mu (hist.)  = 0.209
-  Schnell-Fix      : MU_INTERCEPT += -0.134 in wm_simulation.py
+  mu_wm_correction = 0.1477 -> 0.1153
+  mu_effective     = 0.2103  (Basis-Lambda 1.234)
+  Tore/Spiel (120 Min): real=2.95 Ziel=2.84 Modell=2.94 (95 Spiele)
+  Delta -0.0324 | Schritt (gekappt) -0.0324
 
-GESAMT
-  Gespielte Spiele: 88
-  Punkte: 143 / 352 (40.6%)
-  Tore/Spiel: echt=2.92 getippt=2.58
+GESAMT (Tipp-Wertung inkl. Elfmetertoren)
+  Gespielte Spiele: 95
+  Punkte: 159 / 380 (41.8%)
+  Tore/Spiel: echt=3.14 getippt=2.63
 
 NACH GENERATION
-  Batch 1 (altes Modell – manuell importiert): 19/80 (23.8%) — Tore getippt/echt: 1.05/3.10
-  Batch 2 (neues Modell – average-Modus): 4/16 (25.0%) — Tore getippt/echt: 2.50/3.25
-  Batch 3 (neues Modell – average-Modus): 41/96 (42.7%) — Tore getippt/echt: 2.62/2.75
-  Batch 4 (neues Modell – average-Modus): 46/96 (47.9%) — Tore getippt/echt: 3.25/3.08
-  Batch 5 (neues Modell – average-Modus): 33/64 (51.6%) — Tore getippt/echt: 3.44/2.62
+  Batch 1 (2026-06-17T17:03:48): 19/80 (23.8%) — Tore getippt/echt: 1.05/3.10
+  Batch 2 (2026-06-17T17:31:53): 4/16 (25.0%) — Tore getippt/echt: 2.50/3.25
+  Batch 3 (2026-06-18T19:02:59): 41/96 (42.7%) — Tore getippt/echt: 2.62/2.75
+  Batch 4 (2026-06-24T10:53:43): 46/96 (47.9%) — Tore getippt/echt: 3.25/3.08
+  Batch 5 (2026-07-04T15:03:08): 33/64 (51.6%) — Tore getippt/echt: 3.44/3.75
+  Batch 6 (2026-07-04T17:23:50): 16/28 (57.1%) — Tore getippt/echt: 3.29/3.29
 
 EMPFEHLUNGEN
-  → mu_wm_correction wurde automatisch aktualisiert: 0.2477 (effektives MU = 0.3427, Basis-Lambda 1.409). Keine manuelle Anpassung noetig — naechste Simulation nutzt neuen Wert.
+  → mu_wm_correction automatisch kalibriert: 0.1153 (effektives MU = 0.2103, Basis-Lambda 1.234). Naechste Simulation nutzt den neuen Wert.

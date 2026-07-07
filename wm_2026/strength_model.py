@@ -9,6 +9,11 @@ Eingabe:
 
 Ausgabe:
   data/team_strengths.csv
+
+Am Ende laeuft automatisch die WM-Kalibrierung (calibrate.run_calibration):
+sie passt mu_wm_correction in model_metadata.json an die gespielten
+WM-Spiele an. Ein separater calibrate.py-Lauf ist nur noch fuer den
+ausfuehrlichen Tipp-Report noetig.
 """
 
 import json
@@ -281,13 +286,19 @@ def combine_strengths(
 
 
 def save_checkpoints(poisson_df: pd.DataFrame, elo: pd.Series, mu: float = 0.0, home_adv: float = 0.25):
-    """Speichert Poisson-Parameter, Elo-Werte und Modell-Metadaten."""
+    """Speichert Poisson-Parameter, Elo-Werte und Modell-Metadaten.
+    Bestehende Metadaten-Keys (z.B. mu_wm_correction aus calibrate.py) bleiben erhalten."""
     poisson_df.to_csv(DATA_DIR / "poisson_params.csv", index=False)
     elo.reset_index().rename(columns={"index": "team"}).to_csv(
         DATA_DIR / "elo_checkpoint.csv", index=False
     )
-    metadata = {"mu": round(mu, 6), "home_adv": round(home_adv, 6)}
-    with open(DATA_DIR / "model_metadata.json", "w") as f:
+    meta_path = DATA_DIR / "model_metadata.json"
+    metadata = {}
+    if meta_path.exists():
+        with open(meta_path) as f:
+            metadata = json.load(f)
+    metadata.update({"mu": round(mu, 6), "home_adv": round(home_adv, 6)})
+    with open(meta_path, "w") as f:
         json.dump(metadata, f, indent=2)
     print(f"  Checkpoints gespeichert: poisson_params.csv, elo_checkpoint.csv, model_metadata.json")
 
@@ -344,6 +355,20 @@ def rebuild_team_strengths():
     strengths.to_csv(DATA_DIR / "team_strengths.csv", index=False)
 
 
+def run_wm_calibration():
+    """
+    Kalibriert mu_wm_correction gegen die gespielten WM-Spiele (calibrate.py).
+    Laeuft automatisch mit, damit die Simulation immer mit aktuellem
+    Kalibrierungsstand rechnet. Ohne WM-Daten passiert nichts.
+    """
+    try:
+        from calibrate import run_calibration
+        print("Kalibriere WM-Korrektur (mu_wm_correction) ...")
+        run_calibration(verbose=False)
+    except Exception as exc:
+        print(f"  Kalibrierung uebersprungen: {exc}")
+
+
 def main():
     print("Lade Ergebnisse (vollstaendig fuer Elo) ...")
     results_full = load_results()
@@ -375,6 +400,8 @@ def main():
     strengths = combine_strengths(poisson, elo, squad)
     strengths.to_csv(DATA_DIR / "team_strengths.csv", index=False)
     print(f"Gespeichert: team_strengths.csv")
+
+    run_wm_calibration()
 
     top = strengths.sort_values("strength_combined", ascending=False).head(20)
     print("\nTop 20 Teams:")

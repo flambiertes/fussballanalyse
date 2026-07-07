@@ -1,10 +1,23 @@
 """
-WM-2026-Simulation v3
+WM-2026-Simulation v4
 Architektur: N vollstaendige Turnier-Simulationen
   1. Gruppenphase → eine feste Tabelle pro Gruppe
   2. Beste 8 Dritte bestimmen → feste KO-Bracket-Zuteilung
   3. KO-Runden → jedes Team genau einmal pro Simulation
-  4. 1000x wiederholen → Haeufigkeiten zaehlen
+  4. N-mal wiederholen → Haeufigkeiten zaehlen
+
+Modell-Erkenntnisse aus der WM 2026 (fuer kuenftige EMs/WMs beibehalten):
+  - Dixon-Coles-Korrektur (DC_RHO): unabhaengige Poisson-Ziehungen
+    unterschaetzen niedrige Remis deutlich (real 28% vs. Modell 18%).
+  - Elfmetertore zaehlen zum offiziellen Ergebnis und damit zur Tipp-Wertung
+    (1:1 n.E. mit 4:3 i.E. = 5:4) → Simulation addiert sie aufs Ergebnis,
+    dadurch bewertet der Tipp-Optimierer 1-Tor-Differenz-Tipps korrekt.
+  - Gastgeber bekommen Heimvorteil (HOST_TEAMS / VENUE_HOST_COUNTRY pro
+    Turnier pflegen) - Neutralitaetsannahme fuer Gastgeber kostet Punkte.
+  - SCORE_TIP_MODE="expected_points" nur zusammen mit DC_RHO verwenden.
+  - mu_wm_correction wird von calibrate.py als Fixpunkt-Verfahren gegen die
+    Modell-Lambdas kalibriert (laeuft automatisch bei strength_model.py und
+    update_results.py mit).
 
 Ausgabe: Excel mit
   - Uebersicht (alle 48 Teams)
@@ -31,8 +44,46 @@ N_TOURNAMENTS = 5000
 MARKET_ATTACK_LOG_ADJ = 0.35
 MARKET_DEFENSE_LOG_ADJ = 0.35
 ELO_MAX_GOAL_BOOST = 0.08
-SCORE_TIP_MODE = "average"  # "expected_points", "most_common" oder "average"
+# "expected_points" maximiert den Punkte-Erwartungswert nach Tipp-Punktelogik.
+# Nur sinnvoll in Kombination mit DC_RHO < 0: ohne Remis-Korrektur tippt der
+# EV-Modus fast nie Unentschieden (WM 2026: 28% reale Remis vs. 18% im
+# unkorrigierten Poisson-Modell) und faellt hinter "average" zurueck.
+SCORE_TIP_MODE = "expected_points"  # "expected_points", "most_common" oder "average"
 TIP_SCORE_MAX_GOALS = 5
+
+# Dixon-Coles-Korrektur: unabhaengige Poisson-Ziehungen unterschaetzen niedrige
+# Remis (0:0, 1:1). rho < 0 verschiebt Masse dorthin. Literaturwerte liegen bei
+# -0.05 bis -0.13; der MLE-Fit auf den 88 WM-2026-Spielen wollte -0.30.
+# -0.15 ist der konservative Kompromiss (Backtest: +6% Tipp-Punkte).
+DC_RHO = -0.15
+
+# Empirische Verteilung der Elfmeterschiessen-Ergebnisse (alle WM-Shootouts
+# 1982-2022). Die Elfmetertore zaehlen im Tippspiel ZUM Endergebnis
+# (1:1 n.E. mit 4:3 i.E. => offiziell 5:4). 1-Tor-Abstand ist am haeufigsten,
+# 2 Tore fast gleichauf.
+SHOOTOUT_SCORES = [
+    ((4, 3), 0.20), ((3, 2), 0.18), ((5, 4), 0.16),   # Abstand 1: ~54%
+    ((4, 2), 0.20), ((5, 3), 0.11), ((3, 1), 0.06),   # Abstand 2: ~37%
+    ((3, 0), 0.05), ((4, 1), 0.04),                    # Abstand 3: ~9%
+]
+
+# Gastgeber spielen ihre Spiele im eigenen Land (Gruppenphase immer, KO-Phase
+# solange das Venue im eigenen Land liegt) und bekommen dort den Heimvorteil
+# aus dem Modell (home_adv aus model_metadata.json).
+# Pro Turnier anpassen: WM 2026 = USA/Mexiko/Kanada.
+HOST_TEAMS = {"United States", "Mexico", "Canada"}
+VENUE_HOST_COUNTRY = {
+    # Venue-Stichwort -> Gastgeberland (WM 2026)
+    "Mexico City": "Mexico", "Guadalajara": "Mexico",
+    "Guadalupe": "Mexico", "Monterrey": "Mexico",
+    "Toronto": "Canada", "Vancouver": "Canada",
+    "Inglewood": "United States", "Santa Clara": "United States",
+    "Seattle": "United States", "Arlington": "United States",
+    "Houston": "United States", "Kansas City": "United States",
+    "Atlanta": "United States", "Miami Gardens": "United States",
+    "East Rutherford": "United States", "Philadelphia": "United States",
+    "Foxborough": "United States",
+}
 
 
 def _load_model_metadata() -> dict:
@@ -127,6 +178,10 @@ def load_fixed_ko_matches():
     for _, row in played.iterrows():
         mnr = int(row["match_nr"])
         ga, gb = int(row["goals_home"]), int(row["goals_away"])
+        # Elfmetertore zaehlen zum offiziellen Ergebnis (1:1 + 4:3 i.E. = 5:4)
+        pens_a, pens_b = row.get("pens_home"), row.get("pens_away")
+        if pd.notna(pens_a) and pd.notna(pens_b):
+            ga += int(pens_a); gb += int(pens_b)
         # Explizite winner-Spalte nutzen (Elfmeter-Sieger bei 1:1 etc.)
         if "winner" in df.columns and pd.notna(row.get("winner")):
             winner = row["winner"]
@@ -149,7 +204,7 @@ def expected_goals(team_a, team_b, strengths, neutral=True):
     def get(t, col, d):
         return strengths.at[t, col] if (t in strengths.index and col in strengths.columns) else d
     if "att" in strengths.columns:
-        h_adv = 0.0 if neutral else get(team_a, "home_adv", 0.25)
+        h_adv = 0.0 if neutral else _MODEL_META.get("home_adv", 0.25)
         mv_att_a = get(team_a, "mv_att_norm", get(team_a, "mv_norm", 0.5))
         mv_att_b = get(team_b, "mv_att_norm", get(team_b, "mv_norm", 0.5))
         mv_def_a = get(team_a, "mv_def_norm", get(team_a, "mv_norm", 0.5))
@@ -185,25 +240,96 @@ def expected_goals(team_a, team_b, strengths, neutral=True):
     return max(lam_a, 0.05), max(lam_b, 0.05)
 
 
+def host_home_team(team_a, team_b, venue=None):
+    """
+    Gibt das Team zurueck, das Heimvorteil bekommt (oder None bei neutralem Spiel).
+    Mit venue: nur wenn das Venue im Land des Teams liegt (KO-Phase).
+    Ohne venue: Gastgeber gelten als Heimteam (Gruppenphase - Gastgeber spielen
+    ihre Gruppenspiele immer im eigenen Land).
+    """
+    if venue is not None:
+        country = next((c for kw, c in VENUE_HOST_COUNTRY.items() if kw in str(venue)), None)
+        if country == team_a: return team_a
+        if country == team_b: return team_b
+        return None
+    if team_a in HOST_TEAMS: return team_a
+    if team_b in HOST_TEAMS: return team_b
+    return None
+
+
+def match_lambdas(team_a, team_b, strengths, home_team=None):
+    """Erwartete Tore inkl. Heimvorteil, falls eines der Teams Heimrecht hat."""
+    if home_team == team_a:
+        return expected_goals(team_a, team_b, strengths, neutral=False)
+    if home_team == team_b:
+        lam_b, lam_a = expected_goals(team_b, team_a, strengths, neutral=False)
+        return lam_a, lam_b
+    return expected_goals(team_a, team_b, strengths)
+
+
+# Cache: (lam_a, lam_b) -> kumulierte Wahrscheinlichkeiten der DC-Score-Matrix.
+# Lambdas sind pro Teampaar deterministisch, daher lohnt sich das Cachen.
+_DC_MAX_GOALS = 12
+_dc_cum_cache = {}
+
+
+def _dc_cumulative(lam_a, lam_b):
+    key = (lam_a, lam_b)
+    cum = _dc_cum_cache.get(key)
+    if cum is None:
+        goals = np.arange(_DC_MAX_GOALS + 1)
+        m = np.outer(poisson.pmf(goals, lam_a), poisson.pmf(goals, lam_b))
+        # Dixon-Coles-Tau auf die vier Low-Score-Zellen
+        m[0, 0] *= max(1 - lam_a * lam_b * DC_RHO, 0)
+        m[0, 1] *= max(1 + lam_a * DC_RHO, 0)
+        m[1, 0] *= max(1 + lam_b * DC_RHO, 0)
+        m[1, 1] *= max(1 - DC_RHO, 0)
+        cum = np.cumsum(m.ravel())
+        cum /= cum[-1]
+        _dc_cum_cache[key] = cum
+    return cum
+
+
 def sim_match(lam_a, lam_b):
-    return int(poisson.rvs(lam_a)), int(poisson.rvs(lam_b))
+    """Zieht ein Ergebnis aus der Dixon-Coles-korrigierten Score-Matrix."""
+    cum = _dc_cumulative(lam_a, lam_b)
+    idx = int(np.searchsorted(cum, np.random.random()))
+    return idx // (_DC_MAX_GOALS + 1), idx % (_DC_MAX_GOALS + 1)
 
 
-def sim_ko_match(team_a, team_b, strengths):
-    """90 Min + Verlaengerung + Elfmeter. Gibt (winner, ga, gb, extra) zurueck."""
-    lam_a, lam_b = expected_goals(team_a, team_b, strengths)
+_SHOOTOUT_CUM = np.cumsum([p for _, p in SHOOTOUT_SCORES])
+_SHOOTOUT_CUM = _SHOOTOUT_CUM / _SHOOTOUT_CUM[-1]
+
+
+def draw_shootout_score():
+    """Zieht ein Elfmeterschiessen-Ergebnis (Sieger-Tore, Verlierer-Tore)."""
+    idx = int(np.searchsorted(_SHOOTOUT_CUM, np.random.random()))
+    return SHOOTOUT_SCORES[idx][0]
+
+
+def sim_ko_match(team_a, team_b, strengths, home_team=None):
+    """
+    90 Min + Verlaengerung + Elfmeter. Gibt (winner, ga, gb, extra) zurueck.
+    Bei Elfmeterschiessen werden die Elfmetertore aufs Ergebnis addiert
+    (offizielles Ergebnis, so wertet auch das Tippspiel: 1:1 + 4:3 i.E. = 5:4).
+    """
+    lam_a, lam_b = match_lambdas(team_a, team_b, strengths, home_team=home_team)
     g_a, g_b = sim_match(lam_a, lam_b)
     if g_a != g_b:
         return (team_a if g_a > g_b else team_b), g_a, g_b, ""
-    et_a, et_b = sim_match(lam_a / 3, lam_b / 3)
-    g_a += et_a; g_b += et_b
+    # Verlaengerung: 30 Min = 1/3 der Torerwartung, unabhaengig Poisson
+    g_a += int(np.random.poisson(lam_a / 3))
+    g_b += int(np.random.poisson(lam_b / 3))
     if g_a != g_b:
         return (team_a if g_a > g_b else team_b), g_a, g_b, "n.V."
     def get(t, col, d):
         return strengths.at[t, col] if t in strengths.index and col in strengths.columns else d
     s_a = get(team_a,"strength_combined",0.5); s_b = get(team_b,"strength_combined",0.5)
     p_a = np.clip(s_a / (s_a + s_b + 1e-9), 0.40, 0.60)
-    return (team_a if np.random.random() < p_a else team_b), g_a, g_b, "n.E."
+    pen_w, pen_l = draw_shootout_score()
+    if np.random.random() < p_a:
+        return team_a, g_a + pen_w, g_b + pen_l, "n.E."
+    return team_b, g_a + pen_l, g_b + pen_w, "n.E."
 
 
 # ---------------------------------------------------------------------------
@@ -220,7 +346,7 @@ def simulate_group_once(teams, strengths, fixed):
             elif (a, h) in fixed:
                 ga, gh = fixed[(a, h)]
             else:
-                lam_h, lam_a = expected_goals(h, a, strengths)
+                lam_h, lam_a = match_lambdas(h, a, strengths, home_team=host_home_team(h, a))
                 gh, ga = sim_match(lam_h, lam_a)
             match_scores[(h, a)] = (gh, ga)
             records[h]["gf"] += gh; records[h]["ga"] += ga
@@ -317,7 +443,8 @@ def _simulate_ko_phase(qualifiers, strengths, ko_df, fixed_ko):
         tb = resolve_team(row["team_away_desc"], qualifiers, ko_results, ko_losers)
         if "Group" in str(ta) or "Match" in str(ta) or "Group" in str(tb) or "Match" in str(tb):
             continue
-        winner, ga, gb, extra = sim_ko_match(ta, tb, strengths)
+        home = host_home_team(ta, tb, venue=row.get("venue"))
+        winner, ga, gb, extra = sim_ko_match(ta, tb, strengths, home_team=home)
         ko_results[mnr] = winner
         ko_losers[mnr]  = tb if winner == ta else ta
         ko_scores[mnr]  = (ta, tb, ga, gb, extra)
@@ -720,7 +847,8 @@ def get_most_likely_bracket(groups, group_pos_counts, strengths, ko_df, n):
         tb  = resolve_team(row["team_away_desc"], qualifiers, ko_results, ko_losers)
         if "Group" in ta or "Match" in ta or "Group" in tb or "Match" in tb:
             continue
-        lam_a, lam_b = expected_goals(ta, tb, strengths)
+        home = host_home_team(ta, tb, venue=row.get("venue"))
+        lam_a, lam_b = match_lambdas(ta, tb, strengths, home_team=home)
         ga, gb = round(lam_a), round(lam_b)
         if ga == gb:
             sa = strengths.at[ta,"strength_combined"] if ta in strengths.index else 0.5
@@ -770,7 +898,7 @@ def write_explanation_sheet(wb, strengths):
         ("1. Datenbasis",
          "Das Poisson-Modell wird aus Laenderspielen ab 2015 geschaetzt. Elo wird kumulativ aus historischen Laenderspielen berechnet. Transfermarkt liefert Kaderwerte; wenn Positionswerte vorhanden sind, werden Angriff und Defensive getrennt bewertet."),
         ("2. Poisson-Grundidee",
-         "Fuer jedes Team wird eine erwartete Torzahl lambda berechnet. Danach wird die echte Torzahl zufaellig aus einer Poisson-Verteilung gezogen: P(Tore=k) = exp(-lambda) * lambda^k / k!."),
+         f"Fuer jedes Team wird eine erwartete Torzahl lambda berechnet. Danach wird das Ergebnis aus einer gemeinsamen Score-Matrix gezogen: P(Tore=k) = exp(-lambda) * lambda^k / k!, korrigiert nach Dixon-Coles (rho = {DC_RHO}). Die Korrektur erhoeht die Wahrscheinlichkeit niedriger Remis (0:0, 1:1), die unabhaengige Poisson-Ziehungen systematisch unterschaetzen."),
         ("3. Roh-Lambda",
          "Rohwert Team A = exp(Angriff A + Abwehr B). Rohwert Team B = exp(Angriff B + Abwehr A). Der Abwehrparameter ist dabei der Beitrag zur gegnerischen Torerwartung: niedriger ist besser."),
         ("4. Kombinierte Staerke",
@@ -778,9 +906,9 @@ def write_explanation_sheet(wb, strengths):
         ("5. Positions-Marktwerte",
          "MW Angriff = 2/3 Mittelfeld + Sturm. MW Abwehr = Torwart + Abwehr + 1/3 Mittelfeld. Damit zaehlt das Mittelfeld anteilig in beide Richtungen."),
         ("6. Anpassung im Match",
-         f"Der Marktwert wird direkt im Lambda verrechnet: eigener MW Angriff erhoeht die Torerwartung, gegnerischer MW Abwehr senkt sie. Elo gibt dem Elo-staerkeren Team maximal {int(ELO_MAX_GOAL_BOOST * 100)}% Bonus auf die Torerwartung."),
+         f"Der Marktwert wird direkt im Lambda verrechnet: eigener MW Angriff erhoeht die Torerwartung, gegnerischer MW Abwehr senkt sie. Elo gibt dem Elo-staerkeren Team maximal {int(ELO_MAX_GOAL_BOOST * 100)}% Bonus auf die Torerwartung. Gastgeber erhalten bei Spielen im eigenen Land den Heimvorteil aus dem Modell (home_adv, ca. +27% Torerwartung)."),
         ("7. KO-Spiele",
-         "In KO-Spielen wird erst das 90-Minuten-Ergebnis gezogen. Bei Gleichstand folgt eine simulierte Verlaengerung mit lambda/3. Ist es danach noch gleich, entscheidet ein Elfmeterspiel mit leichtem Vorteil fuer das staerkere Team."),
+         "In KO-Spielen wird erst das 90-Minuten-Ergebnis gezogen. Bei Gleichstand folgt eine simulierte Verlaengerung mit lambda/3. Ist es danach noch gleich, entscheidet ein Elfmeterschiessen mit leichtem Vorteil fuer das staerkere Team. Die Elfmetertore werden aufs Endergebnis addiert (offizielle Wertung: 1:1 + 4:3 i.E. = 5:4) - so bewertet der Tipp-Optimierer knappe Siege korrekt."),
         ("8. Turnierauswahl",
          "Alle Turniere werden komplett simuliert. Danach wird ein Referenzturnier gewaehlt: Der Matching-Score bewertet, wie gut ein konkreter Verlauf zu den Gesamtwahrscheinlichkeiten aller Simulationen passt."),
     ]

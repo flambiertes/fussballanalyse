@@ -94,12 +94,12 @@ match_nr,home,away,tip_home,tip_away,locked,run_timestamp
 93,Portugal,Spain,1,2,False,2026-07-04T17:23:50
 94,United States,Belgium,1,2,False,2026-07-04T17:23:50
 95,Argentina,Egypt,2,1,False,2026-07-04T17:23:50
-96,Switzerland,Colombia,1,2,False,2026-07-04T17:23:50
-97,France,Morocco,2,1,False,2026-07-04T17:23:50
-98,Spain,Belgium,3,1,False,2026-07-04T17:23:50
-99,Brazil,England,1,2,False,2026-07-04T17:23:50
-100,Argentina,Colombia,2,1,False,2026-07-04T17:23:50
-101,France,Spain,1,2,False,2026-07-04T17:23:50
-102,England,Argentina,2,3,False,2026-07-04T17:23:50
-103,France,Argentina,2,3,False,2026-07-04T17:23:50
-104,Spain,England,2,3,False,2026-07-04T17:23:50
+96,Switzerland,Colombia,1,2,False,2026-07-07T22:54:12
+97,France,Morocco,1,0,False,2026-07-07T22:54:12
+98,Spain,Belgium,2,1,False,2026-07-07T22:54:12
+99,Norway,England,1,2,False,2026-07-07T22:54:12
+100,Argentina,Colombia,2,1,False,2026-07-07T22:54:12
+101,France,Spain,0,1,False,2026-07-07T22:54:12
+102,England,Argentina,2,1,False,2026-07-07T22:54:12
+103,France,Argentina,2,1,False,2026-07-07T22:54:12
+104,Spain,England,1,0,False,2026-07-07T22:54:12

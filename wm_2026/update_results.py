@@ -1,7 +1,12 @@
 """
 Holt aktuelle Laenderspiel-Ergebnisse via ESPN API und aktualisiert:
-  - data/results.csv          (fuer strength_model.py)
-  - data/wm2026_matches_group.csv  (aktuelle WM-Ergebnisse fuer Simulation)
+  - data/results.csv          (fuer strength_model.py, 120-Minuten-Ergebnisse)
+  - data/wm2026_matches_group.csv     (aktuelle WM-Ergebnisse fuer Simulation)
+  - data/wm2026_matches_knockout.csv  (KO-Ergebnisse inkl. Elfmeterschiessen:
+    pens_home/pens_away, da Elfmetertore im Tippspiel zum Endergebnis zaehlen)
+
+Danach laufen automatisch: inkrementeller Elo-Update und die
+WM-Kalibrierung (mu_wm_correction, siehe calibrate.py).
 
 Taeglich oder nach jedem Spieltag ausfuehren:
   python update_results.py
@@ -153,6 +158,15 @@ def fetch_espn_day(league: str, day: date) -> list[dict]:
         else:
             winner_team = None  # Gruppe (Unentschieden) oder noch laufend
 
+        # Elfmeterschiessen-Ergebnis (zaehlt im Tippspiel zum Endergebnis)
+        def _shootout_score(c):
+            try:
+                return int(float(c.get("shootoutScore")))
+            except (TypeError, ValueError):
+                return None
+        pens_home = _shootout_score(home)
+        pens_away = _shootout_score(away)
+
         results.append({
             "date": day.isoformat(),
             "home_team": home["team"]["displayName"],
@@ -165,6 +179,8 @@ def fetch_espn_day(league: str, day: date) -> list[dict]:
             "neutral": str(neutral).upper(),
             "winner_team": winner_team,
             "extra": extra,
+            "pens_home": pens_home,
+            "pens_away": pens_away,
         })
     return results
 
@@ -359,7 +375,9 @@ def update_wm_ko_matches(new_df: pd.DataFrame) -> int:
     ko = pd.read_csv(WM_KO_CSV, parse_dates=["date"])
 
     # Neue Spalten anlegen falls nicht vorhanden
-    for col in ["team_home", "team_away", "goals_home", "goals_away", "winner", "extra"]:
+    # pens_home/pens_away: Elfmeterschiessen-Tore (zaehlen im Tippspiel zum Endergebnis)
+    for col in ["team_home", "team_away", "goals_home", "goals_away", "winner", "extra",
+                "pens_home", "pens_away"]:
         if col not in ko.columns:
             ko[col] = pd.NA
 
@@ -367,23 +385,53 @@ def update_wm_ko_matches(new_df: pd.DataFrame) -> int:
     standings = build_group_standings()
     qualifiers = build_actual_qualifiers(standings)
 
-    # Teamnamen in KO-CSV eintragen wo moeglich
-    for idx, row in ko.iterrows():
-        if pd.isna(ko.at[idx, "team_home"]) and qualifiers:
-            resolved_h = qualifiers.get(row["team_home_desc"])
-            resolved_a = qualifiers.get(row["team_away_desc"])
-            if resolved_h:
-                ko.at[idx, "team_home"] = resolved_h
-            if resolved_a:
-                ko.at[idx, "team_away"] = resolved_a
+    def resolve_slot(desc, winners, losers):
+        """Loest 'Winner Group A', 'Winner Match 74' oder 'Loser Match 101' auf."""
+        desc = str(desc)
+        if desc.startswith("Winner Match "):
+            return winners.get(int(desc.split()[-1]))
+        if desc.startswith("Loser Match "):
+            return losers.get(int(desc.split()[-1]))
+        return qualifiers.get(desc)
 
     # Ergebnisse aus new_df matchen (FIFA World Cup Spiele)
     wc_games = new_df[new_df["tournament"] == "FIFA World Cup"].copy() if not new_df.empty else pd.DataFrame()
     updated = 0
+    ko_winners = {}  # match_nr -> Sieger (fuer KO-Progression "Winner Match N")
+    ko_losers  = {}  # match_nr -> Verlierer (fuer Spiel um Platz 3)
 
-    for idx, row in ko.iterrows():
-        if pd.notna(ko.at[idx, "goals_home"]):
-            continue  # bereits eingetragen
+    # In match_nr-Reihenfolge, damit Sieger frueher Runden die spaeteren Slots fuellen
+    for idx in ko.sort_values("match_nr").index:
+        row = ko.loc[idx]
+        mnr = int(row["match_nr"])
+
+        # Teamnamen aufloesen (Gruppen-Qualifikanten oder KO-Progression)
+        if pd.isna(ko.at[idx, "team_home"]):
+            resolved = resolve_slot(row["team_home_desc"], ko_winners, ko_losers)
+            if resolved:
+                ko.at[idx, "team_home"] = resolved
+        if pd.isna(ko.at[idx, "team_away"]):
+            resolved = resolve_slot(row["team_away_desc"], ko_winners, ko_losers)
+            if resolved:
+                ko.at[idx, "team_away"] = resolved
+
+        def register_progression():
+            w = ko.at[idx, "winner"]
+            if pd.notna(w):
+                ko_winners[mnr] = w
+                th_, ta_ = ko.at[idx, "team_home"], ko.at[idx, "team_away"]
+                ko_losers[mnr] = ta_ if w == th_ else th_
+        already_filled = pd.notna(ko.at[idx, "goals_home"])
+        # Reparatur-Pass: n.E.-Spiele ohne gespeichertes Elfmeter-Ergebnis
+        # erneut nachschlagen (aeltere Eintraege vor Einfuehrung von pens_*)
+        needs_pens = (
+            already_filled
+            and str(ko.at[idx, "extra"]) == "n.E."
+            and pd.isna(ko.at[idx, "pens_home"])
+        )
+        if already_filled and not needs_pens:
+            register_progression()
+            continue  # bereits vollstaendig eingetragen
         th = ko.at[idx, "team_home"]
         ta = ko.at[idx, "team_away"]
         if pd.isna(th) or pd.isna(ta):
@@ -417,13 +465,32 @@ def update_wm_ko_matches(new_df: pd.DataFrame) -> int:
             ]
 
         if hit.empty:
+            register_progression()
             continue
 
         r = hit.iloc[0]
-        if r["home_team"] == th:
+        same_orientation = r["home_team"] == th
+        if same_orientation:
             gh, ga = int(r["home_score"]), int(r["away_score"])
         else:
             gh, ga = int(r["away_score"]), int(r["home_score"])
+
+        # Elfmeter-Ergebnis (nur im ESPN-Abruf vorhanden, nicht in results.csv)
+        pens_h = r.get("pens_home") if "pens_home" in r.index else None
+        pens_a = r.get("pens_away") if "pens_away" in r.index else None
+        if not same_orientation:
+            pens_h, pens_a = pens_a, pens_h
+        has_pens = pd.notna(pens_h) and pd.notna(pens_a)
+
+        if needs_pens:
+            # Nur Elfmeter-Ergebnis nachtragen, Spieltore nicht anfassen
+            if has_pens:
+                ko.at[idx, "pens_home"] = int(pens_h)
+                ko.at[idx, "pens_away"] = int(pens_a)
+                ko.at[idx, "winner"] = th if int(pens_h) > int(pens_a) else ta
+                updated += 1
+            register_progression()
+            continue
 
         ko.at[idx, "goals_home"] = gh
         ko.at[idx, "goals_away"] = ga
@@ -436,14 +503,21 @@ def update_wm_ko_matches(new_df: pd.DataFrame) -> int:
             ko.at[idx, "winner"] = ta
             ko.at[idx, "extra"]  = ""
         else:
-            # Unentschieden → Verlaengerung/Elfmeter
-            winner_from_api = r.get("winner_team") if "winner_team" in r.index else None
-            if pd.notna(winner_from_api) and winner_from_api:
-                ko.at[idx, "winner"] = winner_from_api
-                went_pen = r.get("went_to_penalties", False) if "went_to_penalties" in r.index else False
-                ko.at[idx, "extra"] = "n.E." if went_pen else "n.V."
+            # Unentschieden nach 120 Min → Verlaengerung/Elfmeter
+            extra_from_api = r.get("extra") if "extra" in r.index else None
+            if has_pens:
+                ko.at[idx, "pens_home"] = int(pens_h)
+                ko.at[idx, "pens_away"] = int(pens_a)
+                ko.at[idx, "winner"] = th if int(pens_h) > int(pens_a) else ta
+                ko.at[idx, "extra"]  = "n.E."
             else:
-                ko.at[idx, "extra"] = "n.E."  # Elfmeter angenommen, Sieger unbekannt
+                winner_from_api = r.get("winner_team") if "winner_team" in r.index else None
+                if pd.notna(winner_from_api) and winner_from_api:
+                    ko.at[idx, "winner"] = winner_from_api
+                    ko.at[idx, "extra"] = extra_from_api if extra_from_api in ("n.V.", "n.E.") else "n.E."
+                else:
+                    ko.at[idx, "extra"] = "n.E."  # Elfmeter angenommen, Sieger unbekannt
+        register_progression()
         updated += 1
 
     ko.to_csv(WM_KO_CSV, index=False)
@@ -520,6 +594,15 @@ def main():
             print("team_strengths.csv wurde neu aufgebaut.")
         else:
             print("Kein Elo-Checkpoint vorhanden -> strength_model.py ausfuehren.")
+
+    if n_results > 0 or n_wm > 0 or n_ko > 0:
+        # mu_wm_correction an die gespielten WM-Spiele anpassen (Fixpunkt, idempotent)
+        try:
+            from calibrate import run_calibration
+            print("Kalibriere WM-Korrektur (mu_wm_correction) ...")
+            run_calibration(verbose=False)
+        except Exception as exc:
+            print(f"Kalibrierung uebersprungen: {exc}")
 
 
 if __name__ == "__main__":
