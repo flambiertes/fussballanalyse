@@ -1,7 +1,7 @@
 round,match_nr,team_home_desc,team_away_desc,date,venue,team_home,team_away,goals_home,goals_away,winner,extra,pens_home,pens_away
 R32,73,Runner-up Group A,Runner-up Group B,2026-06-28,SoFi Stadium - Inglewood,South Africa,Canada,0.0,1.0,Canada,,,
-R32,74,Winner Group E,3rd Group A/B/C/D/F,2026-06-29,Gillette Stadium - Foxborough,Germany,Paraguay,1.0,1.0,Paraguay,n.E.,3,4
-R32,75,Winner Group F,Runner-up Group C,2026-06-29,Estadio BBVA - Guadalupe,Netherlands,Morocco,1.0,1.0,Morocco,n.E.,2,3
+R32,74,Winner Group E,3rd Group A/B/C/D/F,2026-06-29,Gillette Stadium - Foxborough,Germany,Paraguay,1.0,1.0,Paraguay,n.E.,3.0,4.0
+R32,75,Winner Group F,Runner-up Group C,2026-06-29,Estadio BBVA - Guadalupe,Netherlands,Morocco,1.0,1.0,Morocco,n.E.,2.0,3.0
 R32,76,Winner Group C,Runner-up Group F,2026-06-29,NRG Stadium - Houston,Brazil,Japan,2.0,1.0,Brazil,,,
 R32,77,Winner Group I,3rd Group C/D/F/G/H,2026-06-30,MetLife Stadium - East Rutherford,France,Sweden,3.0,0.0,France,,,
 R32,78,Runner-up Group E,Runner-up Group I,2026-06-30,AT&T Stadium - Arlington,Ivory Coast,Norway,1.0,2.0,Norway,,,
@@ -14,7 +14,7 @@ R32,84,Winner Group H,Runner-up Group J,2026-07-02,SoFi Stadium - Inglewood,Spai
 R32,85,Winner Group B,3rd Group E/F/G/I/J,2026-07-02,BC Place - Vancouver,Switzerland,Algeria,2.0,0.0,Switzerland,,,
 R32,86,Winner Group J,Runner-up Group H,2026-07-03,Hard Rock Stadium - Miami Gardens,Argentina,Cape Verde,3.0,2.0,Argentina,n.V.,,
 R32,87,Winner Group K,3rd Group D/E/I/J/L,2026-07-03,Arrowhead Stadium - Kansas City,Colombia,Ghana,1.0,0.0,Colombia,,,
-R32,88,Runner-up Group D,Runner-up Group G,2026-07-03,AT&T Stadium - Arlington,Australia,Egypt,1.0,1.0,Egypt,n.E.,2,4
+R32,88,Runner-up Group D,Runner-up Group G,2026-07-03,AT&T Stadium - Arlington,Australia,Egypt,1.0,1.0,Egypt,n.E.,2.0,4.0
 R16,89,Winner Match 74,Winner Match 77,2026-07-04,Lincoln Financial Field - Philadelphia,Paraguay,France,0.0,1.0,France,,,
 R16,90,Winner Match 73,Winner Match 75,2026-07-04,NRG Stadium - Houston,Canada,Morocco,0.0,3.0,Morocco,,,
 R16,91,Winner Match 76,Winner Match 78,2026-07-05,MetLife Stadium - East Rutherford,Brazil,Norway,1.0,2.0,Norway,,,
@@ -22,11 +22,11 @@ R16,92,Winner Match 79,Winner Match 80,2026-07-05,Estadio Azteca - Mexico City,M
 R16,93,Winner Match 83,Winner Match 84,2026-07-06,AT&T Stadium - Arlington,Portugal,Spain,0.0,1.0,Spain,,,
 R16,94,Winner Match 81,Winner Match 82,2026-07-06,Lumen Field - Seattle,United States,Belgium,1.0,4.0,Belgium,,,
 R16,95,Winner Match 86,Winner Match 88,2026-07-07,Mercedes-Benz Stadium - Atlanta,Argentina,Egypt,3.0,2.0,Argentina,,,
-R16,96,Winner Match 85,Winner Match 87,2026-07-07,BC Place - Vancouver,Switzerland,Colombia,,,,,,
+R16,96,Winner Match 85,Winner Match 87,2026-07-07,BC Place - Vancouver,Switzerland,Colombia,0.0,0.0,Switzerland,n.E.,4.0,3.0
 QF,97,Winner Match 89,Winner Match 90,2026-07-09,Gillette Stadium - Foxborough,France,Morocco,,,,,,
 QF,98,Winner Match 93,Winner Match 94,2026-07-10,SoFi Stadium - Inglewood,Spain,Belgium,,,,,,
 QF,99,Winner Match 91,Winner Match 92,2026-07-11,Hard Rock Stadium - Miami Gardens,Norway,England,,,,,,
-QF,100,Winner Match 95,Winner Match 96,2026-07-11,Arrowhead Stadium - Kansas City,Argentina,,,,,,,
+QF,100,Winner Match 95,Winner Match 96,2026-07-11,Arrowhead Stadium - Kansas City,Argentina,Switzerland,,,,,,
 SF,101,Winner Match 97,Winner Match 98,2026-07-14,AT&T Stadium - Arlington,,,,,,,,
 SF,102,Winner Match 99,Winner Match 100,2026-07-15,Mercedes-Benz Stadium - Atlanta,,,,,,,,
 3rd,103,Loser Match 101,Loser Match 102,2026-07-18,Hard Rock Stadium - Miami Gardens,,,,,,,,
