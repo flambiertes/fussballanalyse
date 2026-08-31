@@ -18,7 +18,7 @@ from .database import (
 )
 from .model import MODEL_VERSION, DynamicDixonColes
 from .priors import lower_league_priors
-from .scoring import evaluate_prediction
+from .scoring import evaluate_prediction, target_points_tips
 
 
 def match_round(date: pd.Timestamp) -> pd.Timestamp:
@@ -35,8 +35,12 @@ def run_backtest(
     persist: bool = True,
     run_id: str | None = None,
     verbose: bool = True,
+    tip_strategy: str = "expected-points",
+    target_points: int = 24,
 ) -> tuple[pd.DataFrame, dict[str, object]]:
     config = config or ModelConfig()
+    if tip_strategy not in {"expected-points", "target-score"}:
+        raise ValueError("tip_strategy muss expected-points oder target-score sein")
     all_matches = load_matches(competition=competition, finished_only=True, path=db_path)
     lower_matches = (
         load_matches(competition="D2", finished_only=True, path=db_path)
@@ -79,6 +83,8 @@ def run_backtest(
                 f"rho {model.rho:+.3f} | Heim {model.home_advantage:+.3f} | "
                 f"Aufsteiger-Priors {len(promoted_priors)}"
             )
+        round_records = []
+        round_matrices = []
         for match in round_matches.itertuples(index=False):
             bookmaker = round_odds.loc[match.match_id] if match.match_id in round_odds.index else None
             prediction = model.predict(
@@ -88,11 +94,13 @@ def run_backtest(
             actual = (int(match.home_goals), int(match.away_goals))
             tip = (int(prediction["tip_home"]), int(prediction["tip_away"]))
             metrics = evaluate_prediction(prediction["score_matrix"], tip, actual)
-            records.append(
+            round_matrices.append(prediction["score_matrix"])
+            round_records.append(
                 {
                     "match_id": match.match_id,
                     "competition": match.competition,
                     "season": int(match.season),
+                    "matchday": match.matchday,
                     "match_date": match.match_date,
                     "as_of": round_start,
                     "home_team": match.home_team,
@@ -116,18 +124,49 @@ def run_backtest(
                 }
             )
 
+        # CHECK24 locks one portfolio of nine tips. Calendar windows containing
+        # postponements or two midweek rounds are kept leakage-free, but are not
+        # suitable for the contest objective and retain the expected-points tips.
+        if tip_strategy == "target-score" and len(round_records) == 9:
+            tips, target_probability = target_points_tips(
+                round_matrices, target_points=target_points
+            )
+            for record, matrix, tip in zip(round_records, round_matrices, tips):
+                actual = (int(record["actual_home"]), int(record["actual_away"]))
+                record["tip_home"], record["tip_away"] = tip
+                record.update(evaluate_prediction(matrix, tip, actual))
+                record["target_probability"] = target_probability
+        else:
+            for record in round_records:
+                record["target_probability"] = np.nan
+        records.extend(round_records)
+
     predictions = pd.DataFrame(records).sort_values(["match_date", "match_id"]).reset_index(drop=True)
     run_id = run_id or f"{competition.lower()}-{uuid.uuid4().hex[:12]}"
     if persist:
-        save_predictions(predictions, run_id, MODEL_VERSION, asdict(config), path=db_path)
+        persisted_config = {
+            **asdict(config),
+            "tip_strategy": tip_strategy,
+            "target_points": target_points,
+        }
+        save_predictions(predictions, run_id, MODEL_VERSION, persisted_config, path=db_path)
     summary = summarize(predictions, run_id, config)
+    summary["tip_strategy"] = tip_strategy
+    summary["target_points"] = target_points
     return predictions, summary
 
 
 def summarize(predictions: pd.DataFrame, run_id: str, config: ModelConfig) -> dict[str, object]:
     actual_diff = predictions["actual_home"] - predictions["actual_away"]
     tip_diff = predictions["tip_home"] - predictions["tip_away"]
-    return {
+    round_sizes = predictions.groupby("as_of").size()
+    complete_rounds = round_sizes[round_sizes == 9].index
+    matchday_points = (
+        predictions[predictions["as_of"].isin(complete_rounds)]
+        .groupby("as_of")["tip_points"]
+        .sum()
+    )
+    summary = {
         "run_id": run_id,
         "matches": len(predictions),
         "points": int(predictions["tip_points"].sum()),
@@ -139,8 +178,25 @@ def summarize(predictions: pd.DataFrame, run_id: str, config: ModelConfig) -> di
         "mean_brier_score": round(float(predictions["brier_score"].mean()), 4),
         "actual_goals_per_match": round(float((predictions["actual_home"] + predictions["actual_away"]).mean()), 4),
         "expected_goals_per_match": round(float((predictions["lambda_home"] + predictions["lambda_away"]).mean()), 4),
+        "complete_matchdays": int(len(matchday_points)),
+        "mean_matchday_points": (
+            round(float(matchday_points.mean()), 4) if len(matchday_points) else None
+        ),
+        "matchday_points_std": (
+            round(float(matchday_points.std(ddof=0)), 4) if len(matchday_points) else None
+        ),
+        "best_matchday_points": (
+            int(matchday_points.max()) if len(matchday_points) else None
+        ),
         "config": asdict(config),
     }
+    for threshold in (18, 20, 22, 24):
+        hits = int((matchday_points >= threshold).sum())
+        summary[f"matchdays_ge_{threshold}"] = hits
+        summary[f"matchday_rate_ge_{threshold}"] = round(
+            hits / max(len(matchday_points), 1), 4
+        )
+    return summary
 
 
 def main() -> None:
@@ -161,6 +217,11 @@ def main() -> None:
     )
     parser.add_argument("--lower-league-priors", action="store_true")
     parser.add_argument("--promotion-penalty", type=float, default=0.20)
+    parser.add_argument(
+        "--tip-strategy", choices=["expected-points", "target-score"],
+        default="expected-points",
+    )
+    parser.add_argument("--target-points", type=int, default=24)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--quiet", action="store_true")
     args = parser.parse_args()
@@ -180,7 +241,8 @@ def main() -> None:
         promotion_defense_penalty=abs(args.promotion_penalty),
     )
     predictions, summary = run_backtest(
-        args.league, args.seasons, config=config, verbose=not args.quiet
+        args.league, args.seasons, config=config, verbose=not args.quiet,
+        tip_strategy=args.tip_strategy, target_points=args.target_points,
     )
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

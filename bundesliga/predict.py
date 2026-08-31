@@ -17,6 +17,7 @@ from .database import (
 )
 from .model import MODEL_VERSION, DynamicDixonColes
 from .priors import lower_league_priors
+from .scoring import target_points_tips
 
 
 LIVE_CONFIG = replace(
@@ -57,8 +58,12 @@ def predict_upcoming(
     matchdays: int | None = None,
     db_path: Path | str = DB_PATH,
     persist: bool = True,
+    tip_strategy: str = "expected-points",
+    target_points: int = 24,
 ) -> tuple[pd.DataFrame, dict[str, object]]:
     config = config or LIVE_CONFIG
+    if tip_strategy not in {"expected-points", "target-score"}:
+        raise ValueError("tip_strategy muss expected-points oder target-score sein")
     as_of = pd.Timestamp(as_of or pd.Timestamp.now())
     all_matches = load_matches(competition=competition, path=db_path)
     training = all_matches[
@@ -94,6 +99,7 @@ def predict_upcoming(
         path=db_path,
     ).set_index("match_id")
     rows = []
+    matrices = []
     for match in upcoming.sort_values("match_date").itertuples(index=False):
         bookmaker = (
             upcoming_odds.loc[match.match_id]
@@ -103,6 +109,7 @@ def predict_upcoming(
             match.home_team, match.away_team, markets,
             bookmaker_probabilities=bookmaker,
         )
+        matrices.append(prediction["score_matrix"])
         rows.append(
             {
                 "match_id": match.match_id,
@@ -126,12 +133,44 @@ def predict_upcoming(
             }
         )
     result = pd.DataFrame(rows)
+    result["tip_strategy"] = tip_strategy
+    result["target_points"] = target_points if tip_strategy == "target-score" else pd.NA
+    result["target_probability"] = pd.NA
+    if tip_strategy == "target-score":
+        matrix_by_match = dict(zip(result["match_id"], matrices))
+        if result["matchday"].notna().any():
+            groups = result.groupby(["season", "matchday"], sort=False, dropna=False)
+        else:
+            round_start = (
+                result["match_date"].dt.normalize()
+                - pd.to_timedelta((result["match_date"].dt.weekday - 1) % 7, unit="D")
+            )
+            groups = result.groupby(round_start, sort=False)
+        for _, group in groups:
+            if len(group) != 9:
+                raise ValueError(
+                    "target-score benoetigt einen vollstaendigen Spieltag mit 9 Spielen"
+                )
+            group_matrices = [matrix_by_match[match_id] for match_id in group["match_id"]]
+            tips, target_probability = target_points_tips(
+                group_matrices, target_points=target_points
+            )
+            result.loc[group.index, "tip_home"] = [tip[0] for tip in tips]
+            result.loc[group.index, "tip_away"] = [tip[1] for tip in tips]
+            result.loc[group.index, "target_probability"] = target_probability
     run_id = f"live-{competition.lower()}-{uuid.uuid4().hex[:12]}"
     if persist:
-        save_predictions(result, run_id, MODEL_VERSION, asdict(config), db_path)
+        persisted_config = {
+            **asdict(config),
+            "tip_strategy": tip_strategy,
+            "target_points": target_points,
+        }
+        save_predictions(result, run_id, MODEL_VERSION, persisted_config, db_path)
     return result, {
         "run_id": run_id,
         "promoted_team_priors": sorted(promoted_priors),
+        "tip_strategy": tip_strategy,
+        "target_points": target_points if tip_strategy == "target-score" else None,
         **model.metadata(),
     }
 
@@ -145,11 +184,18 @@ def main() -> None:
     scope.add_argument("--all", action="store_true", help="Alle statt nur des naechsten Spieltags")
     scope.add_argument("--matchdays", type=int, help="Die naechsten N Spieltage")
     parser.add_argument("--output", type=Path)
+    parser.add_argument(
+        "--tip-strategy", choices=["expected-points", "target-score"],
+        default="expected-points",
+    )
+    parser.add_argument("--target-points", type=int, default=24)
     args = parser.parse_args()
     predictions, metadata = predict_upcoming(
         args.league, args.season, as_of=args.as_of,
         next_matchday_only=not args.all and args.matchdays is None,
         matchdays=args.matchdays,
+        tip_strategy=args.tip_strategy,
+        target_points=args.target_points,
     )
     display = predictions.copy()
     display["tipp"] = display["tip_home"].astype(str) + ":" + display["tip_away"].astype(str)

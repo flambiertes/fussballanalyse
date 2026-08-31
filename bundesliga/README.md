@@ -18,6 +18,8 @@ Turniersimulation und Ligaprognose konsequent.
 - Walk-forward-Backtest ohne Zukunftsdaten
 - Tippauswahl nach maximalen erwarteten Punkten: 4 exakt, 3 Tordifferenz,
   2 Tendenz, 0 falsch
+- optionale CHECK24-Turnierstrategie, die einen kompletten Neun-Spiele-Tippzettel
+  auf die Chance eines Zielwerts statt auf den Saisonmittelwert optimiert
 
 Die generierten Daten unter `data/` werden nicht versioniert. Sie lassen sich
 mit den folgenden Befehlen reproduzieren.
@@ -76,6 +78,21 @@ Mehrere Spieltage koennen vorlaeufig gemeinsam ausgegeben werden:
 Spaetere Spieltage verwenden den aktuellen Informationsstand und werden vor
 ihrem jeweiligen Tipptermin mit neuen Ergebnissen und Quoten ueberschrieben.
 
+Fuer den CHECK24-Spieltagspreis wird der Tippzettel gemeinsam auf die Chance von
+mindestens 24 Punkten optimiert. Der Zielwert folgt aus dem beobachteten ersten
+Spieltag (26 Punkte fuer Platz 1, 24 Punkte fuer die naechste sichtbare Gruppe):
+
+```bash
+.venv/bin/python -m bundesliga.predict \
+  --league D1 --season 2026 \
+  --tip-strategy target-score --target-points 24 \
+  --output bundesliga/data/tipps_spieltag_2_2026_risk.xlsx
+```
+
+Das ist keine zufaellige Upset-Auswahl. Die Software maximiert unter den
+Modellwahrscheinlichkeiten direkt `P(Spieltagspunkte >= 24)`. Schlechte
+Spieltage duerfen als Nebenwirkung auftreten, sind aber nicht selbst das Ziel.
+
 ## Buchmacherquoten
 
 Historische Football-Data-Dateien enthalten je nach Saison Quoten mehrerer
@@ -132,6 +149,26 @@ Die aktuell ausgewaehlte erweiterte Variante:
 Ein Prognose-Spieltag reicht im Backtest von Dienstag bis Montag. Das Modell
 wird am Dienstag nur mit davor beendeten Spielen neu trainiert. Damit kann kein
 spaeteres Wochenendergebnis in eine fruehere Prognose gelangen.
+
+Die Turnierstrategie laesst sich mit demselben Walk-forward-Lauf testen:
+
+```bash
+.venv/bin/python -m bundesliga.backtest \
+  --league D1 --seasons 2022 2023 2024 2025 \
+  --form-weight 0.10 --h2h-weight 0.05 \
+  --market-weight 0.05 --bookmaker-weight 1.0 \
+  --lower-league-priors --promotion-penalty 0.20 \
+  --tip-strategy target-score --target-points 24 \
+  --output bundesliga/data/backtest_contest_2022_2025.csv
+```
+
+Die Zusammenfassung enthaelt nun Mittelwert, Standardabweichung und Bestwert
+pro vollstaendigem Neun-Spiele-Fenster sowie Trefferzahlen fuer mindestens 18,
+20, 22 und 24 Punkte. Kalenderfenster mit Nachholspielen oder zwei Spieltagen
+werden nicht in diese Matchday-Kennzahlen aufgenommen. Fuer eine ehrliche
+Auswahl sollte die Strategie auf 2018/19 bis 2021/22 entwickelt und nur einmal
+auf 2022/23 bis 2025/26 getestet werden. Ein bereits bekannter Spieltag darf
+danach als Realitaetscheck dienen, aber nicht mehr zum Tuning desselben Laufs.
 
 ## Feature-Experimente
 
