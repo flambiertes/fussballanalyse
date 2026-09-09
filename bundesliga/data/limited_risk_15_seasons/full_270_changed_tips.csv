@@ -1,0 +1,606 @@
+strategy,season,matchday,match_id,as_of,home_team,away_team,actual_home,actual_away,tip_home_base,tip_away_base,baseline_home,baseline_away,points,baseline_points,changed,expected_cost,probability_edge,base_probability,signal_probability,added_draw,tip_home_270,tip_away_270,tip_points,tendency_changed
+baseline,2016,1,a17771f8248c07944503,2016-08-23,Eintracht Frankfurt,FC Schalke 04,1,0,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2016,1,f6272e06e4b3917eccca,2016-08-23,FC Augsburg,VfL Wolfsburg,0,2,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2016,2,144d8bdfa7659a583dff,2016-09-06,SV Darmstadt 98,Eintracht Frankfurt,1,0,0,1,0,1,0,0,True,0.0,,,,False,1,0,4,True
+baseline,2016,2,221f0bf2703c7e8d8994,2016-09-06,FC Ingolstadt 04,Hertha BSC,0,2,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2016,2,e4711ee5a3ba1854499b,2016-09-06,FC Schalke 04,Bayern München,0,2,0,1,0,1,2,2,True,0.0,,,,False,0,2,4,False
+baseline,2016,3,1b824bd2442ea9fb60f5,2016-09-13,Hamburger SV,RB Leipzig,0,4,1,0,1,0,0,0,True,0.0,,,,False,0,1,2,True
+baseline,2016,3,2bc49a8eb9dfafbb5d86,2016-09-13,Borussia Mönchengladbach,SV Werder Bremen,4,1,2,1,2,1,2,2,True,0.0,,,,False,3,1,2,False
+baseline,2016,4,8da6e8cc723dd5176f21,2016-09-20,RB Leipzig,Borussia Mönchengladbach,1,1,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2016,5,5ae09b55ab36f67eb88e,2016-09-20,1. FC Köln,RB Leipzig,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,0,3,True
+baseline,2016,5,8ad12a192c70572ec736,2016-09-20,Eintracht Frankfurt,Hertha BSC,3,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2016,5,8e2d1d86c04ad2c81560,2016-09-20,TSG 1899 Hoffenheim,FC Schalke 04,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2016,6,2fea04595d33dcfb3a82,2016-09-27,FC Ingolstadt 04,TSG 1899 Hoffenheim,1,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2016,6,597cbed33c6d8546f3aa,2016-09-27,SV Darmstadt 98,SV Werder Bremen,2,2,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2016,6,e48c5eb57686ede814fc,2016-09-27,FC Schalke 04,Borussia Mönchengladbach,4,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2016,7,4d9db449d8e6fb67264c,2016-10-11,FC Augsburg,FC Schalke 04,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,7,a24dd9b148508145e3c6,2016-10-11,VfL Wolfsburg,RB Leipzig,0,1,1,0,1,0,0,0,True,0.0,,,,False,0,1,4,True
+baseline,2016,8,38843c376993cf9767de,2016-10-18,Hertha BSC,1. FC Köln,2,1,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2016,8,64935860ac2f2d82f2ea,2016-10-18,Hamburger SV,Eintracht Frankfurt,0,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2016,10,02d47fb52831068727e9,2016-11-01,SC Freiburg,VfL Wolfsburg,0,3,1,1,1,1,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2016,10,8ad20c9d01d0b252bb35,2016-11-01,FC Ingolstadt 04,FC Augsburg,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2016,10,eaa7a51858fbfde3d75a,2016-11-01,Hertha BSC,Borussia Mönchengladbach,3,0,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2016,11,0de2f06517030aeb65b1,2016-11-15,SV Darmstadt 98,FC Ingolstadt 04,0,1,0,1,0,1,4,4,True,0.0,,,,False,1,0,0,True
+baseline,2016,11,6427e335a1afd985b892,2016-11-15,TSG 1899 Hoffenheim,Hamburger SV,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2016,11,9e14f26d7fccba293053,2016-11-15,Bayer 04 Leverkusen,RB Leipzig,2,3,1,0,1,0,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2016,12,e4435f3afa0b60ea9c4d,2016-11-22,SC Freiburg,RB Leipzig,1,4,0,1,0,1,2,2,True,0.0,,,,False,0,2,2,False
+baseline,2016,13,33488ec89b51eec0a5f4,2016-11-29,SV Darmstadt 98,Hamburger SV,0,2,1,1,1,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,13,6a6bbc3cd469dc1d1579,2016-11-29,VfL Wolfsburg,Hertha BSC,2,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2016,13,cb9e26dcd8aada5a829c,2016-11-29,TSG 1899 Hoffenheim,1. FC Köln,4,0,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2016,14,4ca3e5d07179174ad7fc,2016-12-06,Hamburger SV,FC Augsburg,1,0,1,0,1,0,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2016,14,9b5de9ec0b53bf2bf65c,2016-12-06,SC Freiburg,SV Darmstadt 98,1,0,1,0,1,0,4,4,True,0.0,,,,False,2,1,3,False
+baseline,2016,15,0696217ca234c6520ed3,2016-12-13,SV Werder Bremen,1. FC Köln,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2016,15,2a00a451b36b15d27680,2016-12-13,VfL Wolfsburg,Eintracht Frankfurt,1,0,1,1,1,1,0,0,True,0.0,,,,False,1,0,4,True
+baseline,2016,16,8e07a2508ea91756f398,2016-12-20,1. FC Köln,Bayer 04 Leverkusen,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,17,6d3b5e87f9d04e8581c4,2017-01-17,RB Leipzig,Eintracht Frankfurt,3,0,2,0,2,0,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2016,17,adebab26734e8e2d6e49,2017-01-17,VfL Wolfsburg,Hamburger SV,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,0,4,False
+baseline,2016,17,d506a7af1b6e9ff323bb,2017-01-17,FC Augsburg,TSG 1899 Hoffenheim,0,2,0,1,0,1,2,2,True,0.0,,,,False,1,0,0,True
+baseline,2016,20,bbb11b3c8df865089d26,2017-02-07,SC Freiburg,1. FC Köln,2,1,1,1,1,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,21,365e43c728b69fb4f9e8,2017-02-14,TSG 1899 Hoffenheim,SV Darmstadt 98,2,0,1,0,1,0,2,2,True,0.0,,,,False,2,0,4,False
+baseline,2016,21,e1ccf10f59c1355dd4ef,2017-02-14,Borussia Mönchengladbach,RB Leipzig,1,2,1,1,1,1,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2016,22,074d7a982065a76441e3,2017-02-21,FC Ingolstadt 04,Borussia Mönchengladbach,0,2,1,1,1,1,0,0,True,0.0,,,,False,0,1,2,True
+baseline,2016,22,69743a21f751d5515d53,2017-02-21,SV Darmstadt 98,FC Augsburg,1,2,1,1,1,1,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2016,22,dc613f0ded86fc6a88c7,2017-02-21,FC Schalke 04,TSG 1899 Hoffenheim,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2016,23,41323d58e3490107c32e,2017-02-28,Hamburger SV,Hertha BSC,1,0,1,0,1,0,4,4,True,0.0,,,,False,0,1,0,True
+baseline,2016,24,42a94edacbce2e73214e,2017-03-07,RB Leipzig,VfL Wolfsburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2016,24,9fe3f77c46a60a34adb5,2017-03-07,FC Ingolstadt 04,1. FC Köln,2,2,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,24,c6d5dce6ece30b71ad33,2017-03-07,Hamburger SV,Borussia Mönchengladbach,2,1,1,1,1,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,25,b20e20a637cd2670155d,2017-03-14,1. FSV Mainz 05,FC Schalke 04,0,1,1,1,1,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,26,22989538d20b8d96374e,2017-03-28,Hertha BSC,TSG 1899 Hoffenheim,1,3,1,1,1,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,26,4d4854e60a47ede4ba0d,2017-03-28,Hamburger SV,1. FC Köln,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2016,26,64f5a0d4b3c7ff441d85,2017-03-28,Eintracht Frankfurt,Borussia Mönchengladbach,0,0,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,27,8ae77ad8255bb35f5023,2017-04-04,FC Augsburg,FC Ingolstadt 04,2,3,1,1,1,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,27,af2416a0df1e186659b2,2017-04-04,TSG 1899 Hoffenheim,Bayern München,1,0,0,2,0,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2016,27,ee2a271bc6819b8c9e8b,2017-04-04,SV Werder Bremen,FC Schalke 04,3,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2016,28,11d9d25fca4e11f6e8fd,2017-04-04,Eintracht Frankfurt,SV Werder Bremen,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2016,28,c4a6cd66d5f79f246bf4,2017-04-04,1. FC Köln,Borussia Mönchengladbach,2,3,1,1,1,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,30,57ec78313f7c7734007c,2017-04-18,1. FC Köln,TSG 1899 Hoffenheim,1,1,1,2,1,2,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2016,32,074781b71972653ce5c5,2017-05-02,Hamburger SV,1. FSV Mainz 05,0,0,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,32,19a8a7923cf6015de094,2017-05-02,Borussia Mönchengladbach,FC Augsburg,1,1,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2016,32,cb4d5c0952091ad4b1cd,2017-05-02,FC Ingolstadt 04,Bayer 04 Leverkusen,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,33,72793b04c8802d02b56c,2017-05-09,SV Werder Bremen,TSG 1899 Hoffenheim,3,5,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2016,33,f69e772bb00f2a22812f,2017-05-09,VfL Wolfsburg,Borussia Mönchengladbach,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2016,34,2028ae4bb5c94730fc72,2017-05-16,FC Ingolstadt 04,FC Schalke 04,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2016,34,53309f4b406ea00d1321,2017-05-16,Hamburger SV,VfL Wolfsburg,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2017,1,2af22309afb5725e5310,2017-08-15,Hertha BSC,Stuttgart,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2017,2,c2fd3152c7afee233c15,2017-08-22,Hannover 96,FC Schalke 04,1,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2017,3,e72ee93f14bf0fd1d0c0,2017-09-05,FC Schalke 04,Stuttgart,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2017,4,b348f3b57c1dff5a18ef,2017-09-12,SV Werder Bremen,FC Schalke 04,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2017,5,25fcafd3e9a0af78c035,2017-09-19,Hamburger SV,Borussia Dortmund,0,3,1,2,1,2,2,2,True,0.0,,,,False,0,1,2,False
+baseline,2017,5,305e909198caf2cb44ee,2017-09-19,1. FC Köln,Eintracht Frankfurt,0,1,0,1,0,1,4,4,True,0.0,,,,False,1,0,0,True
+baseline,2017,5,9c40b55e05d85fd4ed50,2017-09-19,Hertha BSC,Bayer 04 Leverkusen,2,1,0,1,0,1,0,0,True,0.0,,,,False,1,2,0,False
+baseline,2017,5,9eb827399a1751b42d9f,2017-09-19,1. FSV Mainz 05,TSG 1899 Hoffenheim,2,3,1,2,1,2,3,3,True,0.0,,,,False,0,1,3,False
+baseline,2017,6,9dab2eecd87352413346,2017-09-19,TSG 1899 Hoffenheim,FC Schalke 04,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2017,6,a0d9dd6b80d407b469dc,2017-09-19,Borussia Dortmund,Borussia Mönchengladbach,6,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2017,7,3b3eb4099871a2ab6596,2017-09-26,SC Freiburg,TSG 1899 Hoffenheim,3,2,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2017,7,884d4c0162eb2005b763,2017-09-26,1. FC Köln,RB Leipzig,1,2,0,1,0,1,3,3,True,0.0,,,,False,1,2,4,False
+baseline,2017,7,a856699390dc66ca008a,2017-09-26,Hamburger SV,SV Werder Bremen,0,0,1,1,1,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2017,8,9cc5865a891c8b22fb4c,2017-10-10,SV Werder Bremen,Borussia Mönchengladbach,0,2,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2017,8,f556a7c45d409fea047b,2017-10-10,TSG 1899 Hoffenheim,FC Augsburg,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2017,9,5b191f4ada4302348c2f,2017-10-17,Eintracht Frankfurt,Borussia Dortmund,2,2,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2017,9,aa06ac3397ba55b1eb4e,2017-10-17,VfL Wolfsburg,TSG 1899 Hoffenheim,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2017,10,23865ce6e9b9431e6756,2017-10-24,Stuttgart,SC Freiburg,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2017,10,8d1e25b5eed7f6f0c1a7,2017-10-24,1. FSV Mainz 05,Eintracht Frankfurt,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2017,11,a6b3603701c23790f850,2017-10-31,Eintracht Frankfurt,SV Werder Bremen,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,0,3,False
+baseline,2017,11,e0b4db5c05386a37f23f,2017-10-31,Hamburger SV,Stuttgart,3,1,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2017,11,ef895c97842410623272,2017-10-31,RB Leipzig,Hannover 96,2,1,2,0,2,0,2,2,True,0.0,,,,False,2,1,4,False
+baseline,2017,12,1b969f2c975aa7d5bc50,2017-11-14,Hertha BSC,Borussia Mönchengladbach,2,4,0,1,0,1,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2017,13,8ee96aafddb289359db0,2017-11-21,SC Freiburg,1. FSV Mainz 05,2,1,1,1,1,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2017,13,a6fe176d07c296d5b049,2017-11-21,Hannover 96,Stuttgart,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2017,13,b93c0983944d0b17248b,2017-11-21,Borussia Mönchengladbach,Bayern München,2,1,0,1,0,1,0,0,True,0.0,,,,False,0,2,0,False
+baseline,2017,13,c83a464cf4859f48cd7f,2017-11-21,Hamburger SV,TSG 1899 Hoffenheim,3,0,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2017,13,cec1a8adff6741c0f2bc,2017-11-21,1. FC Köln,Hertha BSC,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2017,14,1c461aa849a7ffda5921,2017-11-28,VfL Wolfsburg,Borussia Mönchengladbach,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2017,14,b0dd86c4ac8d420b6f37,2017-11-28,Bayern München,Hannover 96,3,1,3,0,3,0,2,2,True,0.0,,,,False,2,0,3,False
+baseline,2017,14,f32c4818c958b16fbc3f,2017-11-28,Hertha BSC,Eintracht Frankfurt,1,2,0,1,0,1,3,3,True,0.0,,,,False,1,0,0,True
+baseline,2017,15,7b3580fc644fa10383f8,2017-12-05,Hamburger SV,VfL Wolfsburg,0,0,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2017,16,5c2f43047dee27f82156,2017-12-12,Bayern München,1. FC Köln,1,0,2,0,2,0,2,2,True,0.0,,,,False,3,0,2,False
+baseline,2017,16,cc6dd13b77c2e573c0e3,2017-12-12,Hamburger SV,Eintracht Frankfurt,1,2,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2017,17,3cf0b0c0c053dd569a01,2017-12-12,Eintracht Frankfurt,FC Schalke 04,2,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2017,17,fc20cf10abcf81a9f281,2017-12-12,1. FC Köln,VfL Wolfsburg,1,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2017,18,2f9309f5a782e3c91d9e,2018-01-09,Bayer 04 Leverkusen,Bayern München,1,3,0,1,0,1,2,2,True,0.0,,,,False,1,2,2,False
+baseline,2017,18,52763cac3debf8a417ee,2018-01-09,SV Werder Bremen,TSG 1899 Hoffenheim,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2017,18,8f9cc1813b342018f0fd,2018-01-09,Stuttgart,Hertha BSC,1,0,1,0,1,0,4,4,True,0.0,,,,False,0,1,0,True
+baseline,2017,19,74ea0c981d8e78c77c33,2018-01-16,1. FSV Mainz 05,Stuttgart,3,2,1,1,1,1,0,0,True,0.0,,,,False,1,0,3,True
+baseline,2017,19,7e102fb2fa0bb126fd6e,2018-01-16,Hamburger SV,1. FC Köln,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2017,19,9e965a3a6aaa496beae4,2018-01-16,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,1,4,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2017,20,3978bfbce3291a729d1e,2018-01-23,1. FC Köln,FC Augsburg,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,0,0,True
+baseline,2017,21,aee2a4cff032c1e717c6,2018-01-30,Hertha BSC,TSG 1899 Hoffenheim,1,1,1,1,1,1,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2017,21,e9324db71e6b5aed0057,2018-01-30,Hamburger SV,Hannover 96,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2017,22,25b4c5f14b6f3d2bb7de,2018-02-06,Stuttgart,Borussia Mönchengladbach,1,0,2,1,2,1,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2017,23,261cdac12363c68ec114,2018-02-13,Eintracht Frankfurt,RB Leipzig,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2017,23,6937f5b03c6f14a0cf65,2018-02-13,1. FC Köln,Hannover 96,1,1,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2017,23,7706523e0b55d3374d1f,2018-02-13,SC Freiburg,SV Werder Bremen,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2017,24,a26e0ef484137b1483ab,2018-02-20,Stuttgart,Eintracht Frankfurt,1,0,1,0,1,0,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2017,25,54ee9473279376a0acff,2018-02-27,FC Augsburg,TSG 1899 Hoffenheim,0,2,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2017,25,712f5f9c60ef0def2c4d,2018-02-27,RB Leipzig,Borussia Dortmund,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2017,25,a1c86184e287f09843ed,2018-02-27,Hamburger SV,1. FSV Mainz 05,0,0,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2017,26,3c4ae66ffd2e9b27b08b,2018-03-06,Stuttgart,RB Leipzig,0,0,1,1,1,1,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2017,27,80ff49a9fd3c0b2a19a0,2018-03-13,RB Leipzig,Bayern München,2,1,0,1,0,1,0,0,True,0.0,,,,False,1,2,0,False
+baseline,2017,27,ede141ee968828dcd43d,2018-03-13,Hamburger SV,Hertha BSC,1,2,1,0,1,0,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2017,28,35e2f32342459a89713f,2018-03-27,1. FSV Mainz 05,Borussia Mönchengladbach,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2017,29,021394406e332ab74bcf,2018-04-03,Eintracht Frankfurt,TSG 1899 Hoffenheim,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2017,29,7dafb08491c90f7c41d3,2018-04-03,Borussia Dortmund,Stuttgart,3,0,2,0,2,0,2,2,True,0.0,,,,False,2,1,2,False
+baseline,2017,29,9b7482b5e33d9ecadd14,2018-04-03,1. FC Köln,1. FSV Mainz 05,1,1,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2017,29,fb194c7a31898fd122ef,2018-04-03,SC Freiburg,VfL Wolfsburg,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2017,30,c000e40b81ba83dd5c0f,2018-04-10,SV Werder Bremen,RB Leipzig,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2017,31,644f8f398afff91005ee,2018-04-17,Hamburger SV,SC Freiburg,1,0,1,0,1,0,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2017,31,6db39f3191a8c0c935dc,2018-04-17,1. FC Köln,FC Schalke 04,2,2,0,1,0,1,0,0,True,0.0,,,,False,1,2,0,False
+baseline,2017,31,f48650b5da40c581d999,2018-04-17,Stuttgart,SV Werder Bremen,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2017,32,39e04f518270f903ad08,2018-04-24,Bayer 04 Leverkusen,Stuttgart,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2017,32,b1318748bc6deda1b48c,2018-04-24,SC Freiburg,1. FC Köln,3,2,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2017,33,3f9cadaa7ba838dd21ef,2018-05-01,RB Leipzig,VfL Wolfsburg,4,1,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2017,33,45e604e3c3bc21c02f19,2018-05-01,Hannover 96,Hertha BSC,3,1,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2017,33,a743b84d3684f68e48c5,2018-05-01,FC Augsburg,FC Schalke 04,1,2,0,1,0,1,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2017,33,fd4c94d378849d5ac64b,2018-05-01,SV Werder Bremen,Bayer 04 Leverkusen,0,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2017,34,9f1057e165fe3bf9fb79,2018-05-08,SC Freiburg,FC Augsburg,2,0,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2017,34,9f38f6d43420d6e96257,2018-05-08,Hamburger SV,Borussia Mönchengladbach,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2017,34,eea236cbeade39eed94d,2018-05-08,Hertha BSC,RB Leipzig,2,6,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2018,1,038ac7fd41b836403dee,2018-08-21,Borussia Mönchengladbach,Bayer 04 Leverkusen,2,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2018,1,0cce9e444a8f12743abd,2018-08-21,Fortuna Düsseldorf,FC Augsburg,1,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,1,d1bb9ddf240825f00c65,2018-08-21,SC Freiburg,Eintracht Frankfurt,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,2,092480c387f8d34a3a94,2018-08-28,1. FC Nürnberg,1. FSV Mainz 05,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2018,2,1e60604264661163f97b,2018-08-28,Eintracht Frankfurt,SV Werder Bremen,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2018,2,aba9a55845f11158e6ab,2018-08-28,FC Augsburg,Borussia Mönchengladbach,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2018,2,d035022a7663f381e09a,2018-08-28,Stuttgart,Bayern München,0,3,0,2,0,2,2,2,True,0.0,,,,False,0,1,2,False
+baseline,2018,3,03fd2a490811170cd122,2018-09-11,Bayern München,Bayer 04 Leverkusen,3,1,2,0,2,0,3,3,True,0.0,,,,False,3,0,2,False
+baseline,2018,3,2eed56c07a8cba8ca163,2018-09-11,1. FSV Mainz 05,FC Augsburg,2,1,1,1,1,1,0,0,True,0.0,,,,False,1,0,3,True
+baseline,2018,4,145679ece2241d28c1bf,2018-09-18,FC Schalke 04,Bayern München,0,2,0,1,0,1,2,2,True,0.0,,,,False,1,2,2,False
+baseline,2018,4,524cbd0fd1f76d1b0bf6,2018-09-18,1. FC Nürnberg,Hannover 96,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,4,f7de94dab43533f62cbe,2018-09-18,TSG 1899 Hoffenheim,Borussia Dortmund,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2018,5,0fb877ffb9159aeed9cd,2018-09-25,1. FSV Mainz 05,VfL Wolfsburg,0,0,1,1,1,1,3,3,True,0.0,,,,False,1,0,0,True
+baseline,2018,5,2f9b99e09013e011e232,2018-09-25,Borussia Dortmund,1. FC Nürnberg,7,0,2,0,2,0,2,2,True,0.0,,,,False,2,1,2,False
+baseline,2018,5,762000b98ecad4d090e2,2018-09-25,Fortuna Düsseldorf,Bayer 04 Leverkusen,1,2,1,2,1,2,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2018,6,549a5c0c3d26cf631022,2018-09-25,Stuttgart,SV Werder Bremen,2,1,1,2,1,2,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,6,762db9661b3884762514,2018-09-25,VfL Wolfsburg,Borussia Mönchengladbach,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2018,6,a45cbb822ef485d61f38,2018-09-25,FC Augsburg,SC Freiburg,4,1,1,0,1,0,2,2,True,0.0,,,,False,2,1,2,False
+baseline,2018,7,11f8111417710d5f5a62,2018-10-02,Hannover 96,Stuttgart,3,1,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,7,32667b0cf11f3201fcd8,2018-10-02,1. FSV Mainz 05,Hertha BSC,0,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2018,8,f35593ad64b77482c827,2018-10-16,FC Schalke 04,SV Werder Bremen,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2018,9,33c2ca60b1876d60cbe9,2018-10-23,Borussia Dortmund,Hertha BSC,2,2,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2018,9,93e38aefb0bab2a6ada5,2018-10-23,Hannover 96,FC Augsburg,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,10,04c86fb9bc27df9ce60a,2018-10-30,1. FSV Mainz 05,SV Werder Bremen,2,1,1,2,1,2,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,10,9407b624ddd885392e9d,2018-10-30,Hertha BSC,RB Leipzig,0,3,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,10,d58cb5cc3e14d2a8e479,2018-10-30,Stuttgart,Eintracht Frankfurt,0,3,0,1,0,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,10,e1e64af43ef8abf98bcd,2018-10-30,Borussia Mönchengladbach,Fortuna Düsseldorf,3,0,2,0,2,0,2,2,True,0.0,,,,False,3,0,4,False
+baseline,2018,11,50a777ce26adcb186223,2018-11-06,Hannover 96,VfL Wolfsburg,2,1,1,2,1,2,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,11,c613189534e351dbe553,2018-11-06,1. FC Nürnberg,Stuttgart,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,11,ca7c279d5a205d70d8b8,2018-11-06,Eintracht Frankfurt,FC Schalke 04,3,0,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,11,e2b71c922b0d3f2fd170,2018-11-06,SV Werder Bremen,Borussia Mönchengladbach,1,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2018,12,427786aa12ccc51a0104,2018-11-20,FC Augsburg,Eintracht Frankfurt,1,3,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,12,81a8009d6c6b444a6c2b,2018-11-20,SC Freiburg,SV Werder Bremen,1,1,1,2,1,2,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2018,13,06b53084b0812809f440,2018-11-27,Stuttgart,FC Augsburg,1,0,1,0,1,0,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2018,13,477c9565e20d16c37a50,2018-11-27,Hannover 96,Hertha BSC,0,2,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,13,b2d25fd20323acbf94d6,2018-11-27,Fortuna Düsseldorf,1. FSV Mainz 05,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2018,14,279abd0853ae432eafea,2018-12-04,Hertha BSC,Eintracht Frankfurt,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2018,14,a9d5c2d99eea9a7084bb,2018-12-04,SV Werder Bremen,Fortuna Düsseldorf,3,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,3,False
+baseline,2018,15,aebfb5dfe80f47142d80,2018-12-11,Fortuna Düsseldorf,SC Freiburg,2,0,1,1,1,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2018,15,af64bd752142ef1ce2f7,2018-12-11,FC Augsburg,FC Schalke 04,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2018,15,eda9307e4e0a2148072b,2018-12-11,Stuttgart,Hertha BSC,2,1,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,16,9df0e4ae2e00a14cc10c,2018-12-18,1. FSV Mainz 05,Eintracht Frankfurt,2,2,0,1,0,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2018,16,e00c115ab493b3e2a70f,2018-12-18,Fortuna Düsseldorf,Borussia Dortmund,2,1,0,2,0,2,0,0,True,0.0,,,,False,1,3,0,False
+baseline,2018,17,4e2f9cfc5c393e21ee7f,2018-12-18,1. FC Nürnberg,SC Freiburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2018,17,67ddb995b8648f7bab81,2018-12-18,FC Augsburg,VfL Wolfsburg,2,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,17,e8b0a00f110436c04252,2018-12-18,Stuttgart,FC Schalke 04,1,3,0,1,0,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,18,350c267786fbf79940cd,2019-01-15,Stuttgart,1. FSV Mainz 05,2,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,19,de71404115c4a93cd6bc,2019-01-22,VfL Wolfsburg,Bayer 04 Leverkusen,0,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2018,20,1e0cb02fc858f7b51012,2019-01-29,Stuttgart,SC Freiburg,2,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2018,20,594addd0cb7ae5581574,2019-01-29,FC Augsburg,1. FSV Mainz 05,3,0,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,20,9ef5e7b4d5b46483bed0,2019-01-29,FC Schalke 04,Borussia Mönchengladbach,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,21,ca3fc4134dddb3156331,2019-02-05,Fortuna Düsseldorf,Stuttgart,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2018,22,ab101e7190c1ee5005c2,2019-02-12,Eintracht Frankfurt,Borussia Mönchengladbach,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2018,23,d2a4eba0e0288046d3e6,2019-02-19,1. FSV Mainz 05,FC Schalke 04,3,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2018,25,6d40a090a0539e07b4a8,2019-03-05,RB Leipzig,FC Augsburg,0,0,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2018,27,00fae813a40a388cbc5f,2019-03-26,Eintracht Frankfurt,Stuttgart,3,0,1,0,1,0,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2018,27,03f8ff9cb47d21e82560,2019-03-26,Hannover 96,FC Schalke 04,0,1,0,1,0,1,4,4,True,0.0,,,,False,1,2,3,False
+baseline,2018,28,2c9173fc314b9b3b3127,2019-04-02,1. FSV Mainz 05,SC Freiburg,5,0,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2018,28,66659425027717640a3a,2019-04-02,Bayer 04 Leverkusen,RB Leipzig,2,4,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2018,28,c65d182a753b51ce33ae,2019-04-02,VfL Wolfsburg,Hannover 96,3,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,3,False
+baseline,2018,29,845d91f0c88acbe69671,2019-04-09,Eintracht Frankfurt,FC Augsburg,1,3,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2018,30,1082623b0ca32ee59db4,2019-04-16,VfL Wolfsburg,Eintracht Frankfurt,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2018,31,1cead9a880b6914f28b2,2019-04-23,Eintracht Frankfurt,Hertha BSC,0,0,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2018,32,a91f1d644095114d9a86,2019-04-30,1. FSV Mainz 05,RB Leipzig,3,3,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2018,33,f853d31aaa78326cffa3,2019-05-07,Hannover 96,SC Freiburg,3,0,1,2,1,2,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2019,1,2911255cda453e8b3249,2019-08-13,Borussia Dortmund,FC Augsburg,5,1,2,0,2,0,2,2,True,0.0,,,,False,3,1,2,False
+baseline,2019,1,460be51beccc87e4e53f,2019-08-13,SC Freiburg,1. FSV Mainz 05,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2019,1,d9559104a3731c7b1931,2019-08-13,Eintracht Frankfurt,TSG 1899 Hoffenheim,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2019,2,3a384d22d929e40e5ad3,2019-08-20,SC Paderborn 07,SC Freiburg,1,3,2,1,2,1,0,0,True,0.0,,,,False,0,1,2,True
+baseline,2019,2,dc691189c1d99d3c7441,2019-08-20,1. FSV Mainz 05,Borussia Mönchengladbach,1,3,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2019,4,3ad886609ad08dd0cdac,2019-09-10,1. FC Union Berlin,SV Werder Bremen,1,2,1,2,1,2,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2019,4,c70c67067ff8236f8b53,2019-09-10,SC Paderborn 07,FC Schalke 04,1,5,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2019,6,f656736bb52bf112e956,2019-09-24,1. FC Union Berlin,Eintracht Frankfurt,1,2,1,2,1,2,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2019,7,e776f43b698d1abfb24d,2019-10-01,Bayer 04 Leverkusen,RB Leipzig,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2019,8,0fa453a3436b4e592961,2019-10-15,1. FC Union Berlin,SC Freiburg,2,0,1,0,1,0,2,2,True,0.0,,,,False,0,1,0,True
+baseline,2019,8,5ff0390550cb4d22a1e1,2019-10-15,TSG 1899 Hoffenheim,FC Schalke 04,2,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2019,8,b7066a973018c0424e3a,2019-10-15,Fortuna Düsseldorf,1. FSV Mainz 05,1,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,3,True
+baseline,2019,9,06e930cdbabd32b6f590,2019-10-22,Hertha BSC,TSG 1899 Hoffenheim,2,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2019,9,070166f42f4d70c709de,2019-10-22,SC Paderborn 07,Fortuna Düsseldorf,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2019,10,571b7d102f3540bd028b,2019-10-29,Fortuna Düsseldorf,1. FC Köln,2,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2019,10,fc0852d0564fdc1bedb1,2019-10-29,1. FC Union Berlin,Hertha BSC,1,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2019,11,0535d602d5bac2b4b6e6,2019-11-05,SC Paderborn 07,FC Augsburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2019,11,1b09dcbf86b2f351894b,2019-11-05,VfL Wolfsburg,Bayer 04 Leverkusen,0,2,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2019,11,54f1c49a9545029b02ea,2019-11-05,1. FC Köln,TSG 1899 Hoffenheim,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2019,11,b2736080ee97b136c61e,2019-11-05,1. FSV Mainz 05,1. FC Union Berlin,2,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2019,12,a172b47bdad2aa4ebfbf,2019-11-19,FC Augsburg,Hertha BSC,4,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2019,12,cf98d0383bcb7f25a01f,2019-11-19,Fortuna Düsseldorf,Bayern München,0,4,0,2,0,2,2,2,True,0.0,,,,False,1,3,2,False
+baseline,2019,12,f1886156b9a8db7a5ea9,2019-11-19,TSG 1899 Hoffenheim,1. FSV Mainz 05,1,5,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2019,13,b90e105d149f56e487c0,2019-11-26,1. FC Köln,FC Augsburg,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2019,13,bdbfc07cec9235c29751,2019-11-26,FC Schalke 04,1. FC Union Berlin,2,1,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2019,14,20c116133fcf9ddbf5f3,2019-12-03,SC Freiburg,VfL Wolfsburg,1,0,1,2,1,2,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2019,15,4cca95df039d39a0994f,2019-12-10,VfL Wolfsburg,Borussia Mönchengladbach,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2019,15,acb0f47a540f1799fdf0,2019-12-10,SC Paderborn 07,1. FC Union Berlin,1,1,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2019,17,4513615166fc70c4da66,2019-12-17,1. FC Köln,SV Werder Bremen,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2019,17,53f8e0bb39778f653727,2019-12-17,Fortuna Düsseldorf,1. FC Union Berlin,2,1,1,1,1,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2019,18,889c90e14c971bd95883,2020-01-14,FC Schalke 04,Borussia Mönchengladbach,2,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2019,18,ae735a917c1da6ea50a0,2020-01-14,Fortuna Düsseldorf,SV Werder Bremen,0,1,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2019,19,023892b3f44edd53f59f,2020-01-21,SV Werder Bremen,TSG 1899 Hoffenheim,0,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2019,19,8e3160cd63b7e607919f,2020-01-21,Borussia Dortmund,1. FC Köln,5,1,2,0,2,0,2,2,True,0.0,,,,False,3,1,2,False
+baseline,2019,20,b9750fcfeab758ad8c2a,2020-01-28,Hertha BSC,FC Schalke 04,0,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2019,20,c8f03921d73482b3112e,2020-01-28,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2019,20,f511e726c4ba34b19323,2020-01-28,1. FSV Mainz 05,Bayern München,1,3,0,2,0,2,3,3,True,0.0,,,,False,1,3,4,False
+baseline,2019,21,86a31512ab4aa552989b,2020-02-04,SC Freiburg,TSG 1899 Hoffenheim,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2019,22,d2a3e07c077951abd0ea,2020-02-11,1. FC Union Berlin,Bayer 04 Leverkusen,2,3,1,2,1,2,3,3,True,0.0,,,,False,0,1,3,False
+baseline,2019,23,f572188a78185d100028,2020-02-18,Eintracht Frankfurt,1. FC Union Berlin,1,2,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2019,25,084e9bd3081627c37d8e,2020-03-03,SC Freiburg,1. FC Union Berlin,3,1,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2019,25,480df6f6424dca803dd8,2020-03-03,FC Schalke 04,TSG 1899 Hoffenheim,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2019,30,386b883cd1576174e709,2020-06-02,1. FC Union Berlin,FC Schalke 04,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2019,30,bccfb74af7aed44e2f04,2020-06-02,FC Augsburg,1. FC Köln,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2019,31,c316384f937d910c4d0d,2020-06-09,SC Paderborn 07,SV Werder Bremen,1,5,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2019,32,1aed697acc1c69fdd89b,2020-06-16,SC Freiburg,Hertha BSC,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2019,33,4744ea16d8bd0139f5f5,2020-06-16,Fortuna Düsseldorf,FC Augsburg,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2019,34,11c52c8201c012da7ecd,2020-06-23,1. FC Union Berlin,Fortuna Düsseldorf,3,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2020,1,65ce0ba12fabe4003aad,2020-09-15,1. FC Köln,TSG 1899 Hoffenheim,2,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2020,1,a2625d748b1d8692a879,2020-09-15,SV Werder Bremen,Hertha BSC,1,4,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2020,2,1f0ea5bc3ced2afce613,2020-09-22,1. FSV Mainz 05,Stuttgart,1,4,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2020,2,207992bc9dec2b3a8d1e,2020-09-22,Arminia Bielefeld,1. FC Köln,1,0,1,2,1,2,0,0,True,0.0,,,,False,1,0,4,True
+baseline,2020,2,2de96bd0a87ca8a2bd86,2020-09-22,FC Schalke 04,SV Werder Bremen,1,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2020,2,53deb31f7a7e82437422,2020-09-22,TSG 1899 Hoffenheim,Bayern München,4,1,0,2,0,2,0,0,True,0.0,,,,False,1,3,0,False
+baseline,2020,2,e3804d13ebcf6cc77528,2020-09-22,SC Freiburg,VfL Wolfsburg,1,1,1,2,1,2,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2020,3,258587c7bb9a81d44cc4,2020-09-29,SV Werder Bremen,Arminia Bielefeld,1,0,1,0,1,0,4,4,True,0.0,,,,False,0,1,0,True
+baseline,2020,3,6bb5f8c311cff3c0b98f,2020-09-29,Eintracht Frankfurt,TSG 1899 Hoffenheim,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2020,3,a633111e5ecd90deea5a,2020-09-29,Borussia Dortmund,SC Freiburg,4,0,2,0,2,0,2,2,True,0.0,,,,False,2,1,2,False
+baseline,2020,3,df8ea8da2933c2f291f0,2020-09-29,Bayern München,Hertha BSC,4,3,2,0,2,0,2,2,True,0.0,,,,False,3,0,2,False
+baseline,2020,3,eb5ee0d32d31a6eabd07,2020-09-29,Stuttgart,Bayer 04 Leverkusen,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,2,0,False
+baseline,2020,4,db04b320821d27c83803,2020-10-13,FC Schalke 04,1. FC Union Berlin,1,1,1,1,1,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2020,5,8dbdb7d4f8047dcfef29,2020-10-20,1. FC Union Berlin,SC Freiburg,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2020,6,76e55e9fcebbd6fb99c8,2020-10-27,Hertha BSC,VfL Wolfsburg,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2020,7,b5e2d80dd563b95d38e4,2020-11-03,FC Augsburg,Hertha BSC,0,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2020,7,f28d46122ba0b6cf334d,2020-11-03,Stuttgart,Eintracht Frankfurt,2,2,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2020,8,f654182d466b6495e555,2020-11-17,1. FC Köln,1. FC Union Berlin,1,2,1,1,1,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2020,9,123ea825e61e18ea1863,2020-11-24,Stuttgart,Bayern München,1,3,0,2,0,2,3,3,True,0.0,,,,False,1,3,4,False
+baseline,2020,9,65dffe3f58e63f8161a3,2020-11-24,Borussia Mönchengladbach,FC Schalke 04,4,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2020,9,a58fc5572698c4db9e8f,2020-11-24,VfL Wolfsburg,SV Werder Bremen,5,3,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2020,10,164bb971070e7059751f,2020-12-01,SV Werder Bremen,Stuttgart,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2020,10,8f6e1ab14d259d766af2,2020-12-01,FC Schalke 04,Bayer 04 Leverkusen,0,3,1,2,1,2,2,2,True,0.0,,,,False,0,2,2,False
+baseline,2020,11,a3292961e491d178daf3,2020-12-08,1. FSV Mainz 05,1. FC Köln,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2020,12,49eb0d1b495a24ef1794,2020-12-15,Arminia Bielefeld,FC Augsburg,0,1,1,1,1,1,0,0,True,0.0,,,,False,0,1,4,True
+baseline,2020,13,07eb902a968ebfb02912,2020-12-15,FC Schalke 04,Arminia Bielefeld,0,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2020,13,288547bb32c9831e27d8,2020-12-15,1. FSV Mainz 05,SV Werder Bremen,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2020,13,f53821386ba47d142ffb,2020-12-15,SC Freiburg,Hertha BSC,4,1,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2020,15,de61f1567a27f2c17641,2021-01-05,1. FC Union Berlin,VfL Wolfsburg,2,2,1,2,1,2,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2020,16,c969c9e7dbe3f916038d,2021-01-12,VfL Wolfsburg,RB Leipzig,2,2,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2020,17,0a54f80aed0bd18286a3,2021-01-19,SC Freiburg,Eintracht Frankfurt,2,2,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2020,17,5e804894947bbfeca95c,2021-01-19,FC Schalke 04,1. FC Köln,1,2,1,1,1,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2020,18,bba47f57ab3e458bfe8e,2021-01-19,FC Schalke 04,Bayern München,0,4,0,2,0,2,2,2,True,0.0,,,,False,0,3,2,False
+baseline,2020,18,d0ad537fa7ecaa902b85,2021-01-19,SC Freiburg,Stuttgart,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2020,19,1eb16aab7543dc04ac79,2021-01-26,Borussia Dortmund,FC Augsburg,3,1,2,0,2,0,3,3,True,0.0,,,,False,2,1,2,False
+baseline,2020,19,53ce89b9a57a105c42e9,2021-01-26,SV Werder Bremen,FC Schalke 04,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2020,20,f09f87f4f02a1056153c,2021-02-02,Hertha BSC,Bayern München,0,1,0,2,0,2,2,2,True,0.0,,,,False,1,3,2,False
+baseline,2020,20,ffaaf3b8479a7ccc1eb4,2021-02-02,FC Augsburg,VfL Wolfsburg,0,2,1,2,1,2,2,2,True,0.0,,,,False,0,1,2,False
+baseline,2020,21,2a7706907f591a1ccf17,2021-02-09,Bayer 04 Leverkusen,1. FSV Mainz 05,2,2,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2020,22,689d7894f0800e484ea4,2021-02-16,SC Freiburg,1. FC Union Berlin,0,1,1,1,1,1,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2020,22,e5caf1a8b47ace1f3c99,2021-02-16,FC Schalke 04,Borussia Dortmund,0,4,1,2,1,2,2,2,True,0.0,,,,False,0,2,2,False
+baseline,2020,24,3a3868dc1f07d9f0ee1a,2021-03-02,Borussia Mönchengladbach,Bayer 04 Leverkusen,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2020,24,60087b89e51c536dba16,2021-03-02,1. FC Köln,SV Werder Bremen,1,1,1,1,1,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2020,25,455dffb93d26ee6dd224,2021-03-09,1. FSV Mainz 05,SC Freiburg,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2020,26,7176ff0bcfd18e192239,2021-03-16,Arminia Bielefeld,RB Leipzig,0,1,0,1,0,1,4,4,True,0.0,,,,False,0,2,2,False
+baseline,2020,26,f016950ad52cbd735c23,2021-03-16,SV Werder Bremen,VfL Wolfsburg,1,2,1,2,1,2,4,4,True,0.0,,,,False,0,1,3,False
+baseline,2020,27,365c36cb63bdd07cd782,2021-03-30,1. FC Union Berlin,Hertha BSC,1,1,1,1,1,1,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2020,27,e4e94d125473bc942726,2021-03-30,VfL Wolfsburg,1. FC Köln,1,0,2,1,2,1,3,3,True,0.0,,,,False,2,0,2,False
+baseline,2020,28,c530ba3a18f97da3d716,2021-04-06,1. FC Köln,1. FSV Mainz 05,2,3,1,2,1,2,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2020,29,5019991df0460521f862,2021-04-13,Borussia Mönchengladbach,Eintracht Frankfurt,4,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2020,30,2ee2108716d98e8ea914,2021-04-20,Hertha BSC,SC Freiburg,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2020,30,f7377c64fac23c13dfa3,2021-04-20,SV Werder Bremen,1. FSV Mainz 05,0,1,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2020,31,b84ed0db83ab8dcb0bed,2021-04-20,RB Leipzig,Stuttgart,2,0,2,0,2,0,4,4,True,0.0,,,,False,2,1,2,False
+baseline,2020,31,cbb33204102968cd5fab,2021-04-20,SC Freiburg,TSG 1899 Hoffenheim,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2020,31,dc5333cbfd6b0c82bad9,2021-04-20,FC Augsburg,1. FC Köln,2,3,1,2,1,2,3,3,True,0.0,,,,False,1,0,0,True
+baseline,2020,32,b58a30a4c82bc4a7070d,2021-05-04,1. FC Köln,SC Freiburg,1,4,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2020,33,23753a46f97ca5d888f4,2021-05-11,FC Schalke 04,Eintracht Frankfurt,4,3,1,2,1,2,0,0,True,0.0,,,,False,0,2,0,False
+baseline,2020,33,32a63b6abbada974f8c2,2021-05-11,Bayer 04 Leverkusen,1. FC Union Berlin,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2020,33,38f4a55f4afe97521831,2021-05-11,Arminia Bielefeld,TSG 1899 Hoffenheim,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2020,33,b0d838fc7e25cfa96f6f,2021-05-11,Hertha BSC,1. FC Köln,0,0,1,1,1,1,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2020,34,a0942ecb36c208532a75,2021-05-18,Stuttgart,Arminia Bielefeld,0,2,0,1,0,1,2,2,True,0.0,,,,False,1,0,0,True
+baseline,2021,1,26007fc153fa2525c60d,2021-08-10,1. FC Köln,Hertha BSC,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2021,1,671024c8fe45b8c9e960,2021-08-10,1. FC Union Berlin,Bayer 04 Leverkusen,1,1,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2021,2,69a6302f2ec9c7dd8fda,2021-08-17,VfL Bochum,1. FSV Mainz 05,2,0,1,0,1,0,2,2,True,0.0,,,,False,0,1,0,True
+baseline,2021,2,9b42bfbe70ce62296c03,2021-08-17,SpVgg Greuther Fürth,Arminia Bielefeld,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,0,3,True
+baseline,2021,3,1c0485bed39ec9c507f8,2021-08-24,Bayern München,Hertha BSC,5,0,2,0,2,0,2,2,True,0.0,,,,False,3,0,2,False
+baseline,2021,3,63032ce8662db86e7d90,2021-08-24,VfL Wolfsburg,RB Leipzig,1,0,1,2,1,2,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,3,69f946f039d26c380fc7,2021-08-24,1. FC Köln,VfL Bochum,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2021,3,ca0ecb3b695fad83c7c5,2021-08-24,FC Augsburg,Bayer 04 Leverkusen,1,4,1,2,1,2,2,2,True,0.0,,,,False,0,1,2,False
+baseline,2021,4,920771d15e27be036419,2021-09-07,VfL Bochum,Hertha BSC,1,3,0,1,0,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2021,5,34dc08842d66d86a67a6,2021-09-14,1. FSV Mainz 05,SC Freiburg,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2021,7,3097db0e414e9794bc93,2021-09-28,1. FSV Mainz 05,1. FC Union Berlin,1,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,8,d8bc55739694b9205cfa,2021-10-12,SpVgg Greuther Fürth,VfL Bochum,0,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,9,c8fa0cbfbfee8d39b33b,2021-10-19,Stuttgart,1. FC Union Berlin,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2021,10,9fc9ed37d9209e3979d6,2021-10-26,Arminia Bielefeld,1. FSV Mainz 05,1,2,0,1,0,1,3,3,True,0.0,,,,False,0,0,0,True
+baseline,2021,11,577835e2480f56659051,2021-11-02,1. FSV Mainz 05,Borussia Mönchengladbach,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2021,11,c693a99a886f097792ad,2021-11-02,Bayern München,SC Freiburg,2,1,2,0,2,0,2,2,True,0.0,,,,False,3,1,2,False
+baseline,2021,11,e20e4c12a438af0be2d8,2021-11-02,1. FC Köln,1. FC Union Berlin,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2021,13,8dbb7fd7bce38765e03c,2021-11-23,Hertha BSC,FC Augsburg,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2021,13,d1cf91179b13ae99a2d6,2021-11-23,Stuttgart,1. FSV Mainz 05,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2021,14,3cb38404294cbc5c1def,2021-11-30,1. FSV Mainz 05,VfL Wolfsburg,3,0,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2021,14,6a3e0d91d63c5e8f605e,2021-11-30,FC Augsburg,VfL Bochum,2,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,14,a5ebfee633be5e6c27e7,2021-11-30,Arminia Bielefeld,1. FC Köln,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2021,16,2e32d158188bf1288f0f,2021-12-14,1. FC Union Berlin,SC Freiburg,0,0,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2021,16,728390f184c0448ef15a,2021-12-14,FC Augsburg,RB Leipzig,1,1,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2021,16,9b6437b506316763300b,2021-12-14,Arminia Bielefeld,VfL Bochum,2,0,1,0,1,0,2,2,True,0.0,,,,False,0,0,0,True
+baseline,2021,17,8f919b70453a908e879f,2021-12-14,VfL Bochum,1. FC Union Berlin,0,1,0,1,0,1,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2021,17,e51f89c57348c781741e,2021-12-14,SC Freiburg,Bayer 04 Leverkusen,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2021,18,538f127ad99d239f7590,2022-01-04,Hertha BSC,1. FC Köln,1,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2021,18,87a926fd685cb356ed01,2022-01-04,Bayern München,Borussia Mönchengladbach,1,2,3,1,3,1,0,0,True,0.0,,,,False,3,0,0,False
+baseline,2021,18,eca487bef37fbcb4519f,2022-01-04,VfL Bochum,VfL Wolfsburg,1,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,19,af738aafc306a0ab22e6,2022-01-11,1. FC Union Berlin,TSG 1899 Hoffenheim,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2021,20,03040742ec2a367585f7,2022-01-18,Bayer 04 Leverkusen,FC Augsburg,5,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2021,20,22fa97476478a990f80d,2022-01-18,VfL Bochum,1. FC Köln,2,2,0,1,0,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2021,20,eb0d2f13ac72cd25ad1e,2022-01-18,SpVgg Greuther Fürth,1. FSV Mainz 05,2,1,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2021,21,1b1b92b69781a2e1982a,2022-02-01,Arminia Bielefeld,Borussia Mönchengladbach,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2021,21,396c92f4e27c3066d10a,2022-02-01,Stuttgart,Eintracht Frankfurt,2,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2021,21,627d0dee2c6a9dd0b0f2,2022-02-01,1. FC Köln,SC Freiburg,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2021,21,b03e98cbd8dcea18da8b,2022-02-01,1. FSV Mainz 05,TSG 1899 Hoffenheim,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2021,21,e243bac7c48888fa1424,2022-02-01,FC Augsburg,1. FC Union Berlin,2,0,1,1,1,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2021,23,08d13e265316249beeb3,2022-02-15,Stuttgart,VfL Bochum,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2021,23,272f88af6ad671f210f7,2022-02-15,FC Augsburg,SC Freiburg,1,2,1,2,1,2,4,4,True,0.0,,,,False,0,1,3,False
+baseline,2021,23,2a2850c0c7da379c8b46,2022-02-15,1. FC Köln,Eintracht Frankfurt,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2021,23,5eeef8339d59143d25aa,2022-02-15,VfL Wolfsburg,TSG 1899 Hoffenheim,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2021,23,67e7679e9f5fcf002642,2022-02-15,Arminia Bielefeld,1. FC Union Berlin,1,0,0,1,0,1,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2021,23,6a1c39d45e659099e7d8,2022-02-15,Borussia Dortmund,Borussia Mönchengladbach,6,0,2,1,2,1,2,2,True,0.0,,,,False,3,1,2,False
+baseline,2021,25,dc1e7d77eb1983a8eb85,2022-03-01,Arminia Bielefeld,FC Augsburg,0,1,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2021,26,f92738dadf29184c2187,2022-03-08,Bayer 04 Leverkusen,1. FC Köln,0,1,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2021,27,066a8ee2c9dc494ad11c,2022-03-15,SpVgg Greuther Fürth,SC Freiburg,0,0,1,2,1,2,0,0,True,0.0,,,,False,0,2,0,False
+baseline,2021,27,b91a49a9872bc216230d,2022-03-15,VfL Bochum,Borussia Mönchengladbach,0,2,0,1,0,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2021,28,c0ab183b9cb7516b23d7,2022-03-29,Arminia Bielefeld,Stuttgart,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2021,28,ca588b3f7332f8ff1642,2022-03-29,FC Augsburg,VfL Wolfsburg,3,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,29,7a50f417228ea22855b0,2022-04-05,Hertha BSC,1. FC Union Berlin,1,4,1,1,1,1,0,0,True,0.0,,,,False,0,1,2,True
+baseline,2021,29,ba61fed784d2c94897bd,2022-04-05,1. FC Köln,1. FSV Mainz 05,3,2,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2021,29,de2c6f10dd94f4c7b036,2022-04-05,VfL Bochum,Bayer 04 Leverkusen,0,0,0,1,0,1,0,0,True,0.0,,,,False,1,2,0,False
+baseline,2021,31,2d2a6fa2ad061adfe380,2022-04-19,Hertha BSC,Stuttgart,2,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2021,31,392dc6a3d3fd9110d1ef,2022-04-19,VfL Bochum,FC Augsburg,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2021,32,279be235ae7a83307c82,2022-04-26,Stuttgart,VfL Wolfsburg,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2021,32,37a16ef0357a7ad3b871,2022-04-26,FC Augsburg,1. FC Köln,1,4,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2021,32,ed510e9259145f68cd10,2022-04-26,Arminia Bielefeld,Hertha BSC,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2021,33,11df66df3a7ba7223f3e,2022-05-03,Hertha BSC,1. FSV Mainz 05,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2021,34,01e2e2d587a16c84156a,2022-05-10,Bayer 04 Leverkusen,SC Freiburg,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2021,34,98078280c99ec93b8713,2022-05-10,Stuttgart,1. FC Köln,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2022,1,0c409cfdc7cd9f7da0d9,2022-08-02,VfL Bochum,1. FSV Mainz 05,1,2,0,1,0,1,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2022,2,1b5f0c4cd7bdc323f77d,2022-08-09,1. FSV Mainz 05,1. FC Union Berlin,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2022,2,965c8f29012a233ac708,2022-08-09,SV Werder Bremen,Stuttgart,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2022,2,cd3821e7e103c9d86519,2022-08-09,Bayern München,VfL Wolfsburg,2,0,2,0,2,0,4,4,True,0.0,,,,False,3,1,3,False
+baseline,2022,3,2c8d7de812aa805b9b73,2022-08-16,Borussia Dortmund,SV Werder Bremen,2,3,2,0,2,0,0,0,True,0.0,,,,False,3,1,0,False
+baseline,2022,3,6ba5683c0863cad79911,2022-08-16,FC Augsburg,1. FSV Mainz 05,1,2,1,2,1,2,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2022,3,e8be99a1f9775d2f7805,2022-08-16,Stuttgart,SC Freiburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2022,4,bbdacded365387ba4b40,2022-08-23,SV Werder Bremen,Eintracht Frankfurt,3,4,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2022,5,6bac80f3b445c2a5cde5,2022-08-30,VfL Bochum,SV Werder Bremen,0,2,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2022,6,baf5fae338184a688725,2022-09-06,1. FC Köln,1. FC Union Berlin,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2022,7,b76d334b137bf8b40c61,2022-09-13,Stuttgart,Eintracht Frankfurt,1,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2022,8,8788e9a7c6f5f0d5ebb9,2022-09-27,FC Schalke 04,FC Augsburg,2,3,2,1,2,1,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2022,8,be0d0aeb3b7d93a82d28,2022-09-27,SV Werder Bremen,Borussia Mönchengladbach,5,1,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2022,8,c5980dc9be7abb8a84c5,2022-09-27,Eintracht Frankfurt,1. FC Union Berlin,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2022,9,cce721b079180a528402,2022-10-04,Stuttgart,1. FC Union Berlin,0,1,2,1,2,1,0,0,True,0.0,,,,False,0,1,4,True
+baseline,2022,9,ef1c3ced02353d1497dd,2022-10-04,FC Augsburg,VfL Wolfsburg,1,1,0,1,0,1,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2022,10,186381dd2b326677103b,2022-10-11,VfL Wolfsburg,Borussia Mönchengladbach,2,2,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2022,10,910e93b3858f999ae6b5,2022-10-11,1. FC Union Berlin,Borussia Dortmund,2,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2022,12,ea116a7751c14c7b55d9,2022-10-25,1. FC Köln,TSG 1899 Hoffenheim,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2022,12,fff54c83634e9eb52ceb,2022-10-25,VfL Wolfsburg,VfL Bochum,4,0,1,0,1,0,2,2,True,0.0,,,,False,2,1,2,False
+baseline,2022,13,20455566875eca43e844,2022-11-01,SV Werder Bremen,FC Schalke 04,2,1,2,1,2,1,4,4,True,0.0,,,,False,2,0,2,False
+baseline,2022,16,3a84d90c3904ad2bc510,2023-01-17,Stuttgart,1. FSV Mainz 05,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2022,17,d98de1ec8a2df44c50e1,2023-01-24,SV Werder Bremen,1. FC Union Berlin,1,2,1,1,1,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2022,18,34078ba0b80e5a415d9b,2023-01-24,FC Schalke 04,1. FC Köln,0,0,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2022,19,d254ea35068b8d490350,2023-01-31,Eintracht Frankfurt,Hertha BSC,3,0,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2022,21,5724a1d9b2c430ff966c,2023-02-14,Stuttgart,1. FC Köln,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2022,21,c2392620de945c53a932,2023-02-14,FC Augsburg,TSG 1899 Hoffenheim,1,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,3,True
+baseline,2022,23,0cf9a1fb57b4d3257c93,2023-02-28,Bayer 04 Leverkusen,Hertha BSC,4,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2022,24,5d1fdc10ef382eb84701,2023-03-07,RB Leipzig,Borussia Mönchengladbach,3,0,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2022,25,1cd69e26d689f4f0d55c,2023-03-14,VfL Bochum,RB Leipzig,1,0,1,2,1,2,0,0,True,0.0,,,,False,0,2,0,False
+baseline,2022,25,31c8090de85f69903a22,2023-03-14,Stuttgart,VfL Wolfsburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2022,27,58515029e631d5bfc06d,2023-04-04,FC Augsburg,1. FC Köln,1,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2022,27,62a7ab1eb2ed699dc4dc,2023-04-04,VfL Bochum,Stuttgart,2,3,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2022,27,a4410029258cf16cf71c,2023-04-04,TSG 1899 Hoffenheim,FC Schalke 04,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2022,27,b67fe6cd9299fcebc3ec,2023-04-04,Borussia Mönchengladbach,VfL Wolfsburg,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2022,28,24cb6d84d07f114913dd,2023-04-11,1. FC Köln,1. FSV Mainz 05,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2022,28,393afb5527a09caaf10f,2023-04-11,VfL Wolfsburg,Bayer 04 Leverkusen,0,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2022,28,84618d4b79ff02fb438b,2023-04-11,FC Schalke 04,Hertha BSC,5,2,1,0,1,0,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2022,29,8c12a7353af82b7aca50,2023-04-18,Borussia Mönchengladbach,1. FC Union Berlin,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2022,29,d8c184d2ec278b086659,2023-04-18,FC Augsburg,Stuttgart,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2022,30,1cd85e5029983773d6bc,2023-04-25,FC Schalke 04,SV Werder Bremen,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2022,30,7d410a2cd51864e3c635,2023-04-25,1. FC Köln,SC Freiburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2022,30,95fa2f33d25f43f58092,2023-04-25,RB Leipzig,TSG 1899 Hoffenheim,1,0,2,1,2,1,3,3,True,0.0,,,,False,2,0,2,False
+baseline,2022,30,cb1327d17aa30ef24ce7,2023-04-25,1. FC Union Berlin,Bayer 04 Leverkusen,0,0,1,2,1,2,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2022,31,12a71940ae530517f701,2023-05-02,SC Freiburg,RB Leipzig,0,1,1,2,1,2,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2022,31,ad7e5eb0e3ee1c859dcb,2023-05-02,1. FSV Mainz 05,FC Schalke 04,2,3,1,0,1,0,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2022,32,891b90ba6bc7088e18de,2023-05-09,Stuttgart,Bayer 04 Leverkusen,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2022,32,e06dc46e9c78d54149f0,2023-05-09,VfL Bochum,FC Augsburg,3,2,2,1,2,1,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2022,33,25a1711a11f3584d3b99,2023-05-16,1. FSV Mainz 05,Stuttgart,1,4,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2022,33,386117d9bfceb8bcd224,2023-05-16,SV Werder Bremen,1. FC Köln,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2022,33,b8e064b054d297a19460,2023-05-16,TSG 1899 Hoffenheim,1. FC Union Berlin,4,2,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2022,34,0e86d10f976766c50e8e,2023-05-23,VfL Wolfsburg,Hertha BSC,1,2,2,1,2,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2023,1,182015e0c4cb0f2169a4,2023-08-15,Eintracht Frankfurt,SV Darmstadt 98,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2023,1,26ffc50f68b235a50986,2023-08-15,VfL Wolfsburg,1. FC Heidenheim 1846,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2023,1,86de5931cacf69e23889,2023-08-15,Bayer 04 Leverkusen,RB Leipzig,3,2,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2023,3,0f701e3be7b6ce31ed01,2023-08-29,SV Werder Bremen,1. FSV Mainz 05,4,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2023,3,474f903d3b6d39c7113f,2023-08-29,Stuttgart,SC Freiburg,5,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2023,3,97a6fed9be8c8065808a,2023-08-29,1. FC Union Berlin,RB Leipzig,0,3,1,2,1,2,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2023,4,3034bda9ac3742270f16,2023-09-12,Bayern München,Bayer 04 Leverkusen,2,2,3,1,3,1,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2023,5,251bf434aa16ea3408fe,2023-09-19,FC Augsburg,1. FSV Mainz 05,2,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,4,True
+baseline,2023,5,b9a37b88b4888eb3d460,2023-09-19,Stuttgart,SV Darmstadt 98,3,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,3,False
+baseline,2023,5,e0c55b7b1f3c9cb7e767,2023-09-19,Bayer 04 Leverkusen,1. FC Heidenheim 1846,4,1,2,1,2,1,2,2,True,0.0,,,,False,3,1,2,False
+baseline,2023,6,2abdce8dc615e9bc3635,2023-09-26,RB Leipzig,Bayern München,2,2,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2023,6,3b290673405373012f16,2023-09-26,VfL Bochum,Borussia Mönchengladbach,1,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2023,6,5fcb70928f7f1fccd455,2023-09-26,1. FC Köln,Stuttgart,0,2,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2023,8,1d2f834605b9361b85f5,2023-10-17,SC Freiburg,VfL Bochum,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,0,3,False
+baseline,2023,8,e5ecba54a4486a6fac48,2023-10-17,1. FSV Mainz 05,Bayern München,1,3,0,2,0,2,3,3,True,0.0,,,,False,1,3,4,False
+baseline,2023,8,f3ddd80e8e0cf1f6b081,2023-10-17,Borussia Dortmund,SV Werder Bremen,1,0,3,1,3,1,2,2,True,0.0,,,,False,3,0,2,False
+baseline,2023,9,c33d35a3c2bc23306d19,2023-10-24,Bayern München,SV Darmstadt 98,8,0,5,1,5,1,2,2,True,0.0,,,,False,4,0,2,False
+baseline,2023,11,2a58afbfcb652790bc93,2023-11-07,FC Augsburg,TSG 1899 Hoffenheim,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2023,11,ab33833bf77bd3a69258,2023-11-07,Bayer 04 Leverkusen,1. FC Union Berlin,4,0,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2023,11,dccd4d11f656c4f8e11b,2023-11-07,Stuttgart,Borussia Dortmund,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2023,11,f35f56ea44107bea7732,2023-11-07,RB Leipzig,SC Freiburg,3,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,3,False
+baseline,2023,12,17392b9d187d6be24bbd,2023-11-21,SC Freiburg,SV Darmstadt 98,1,1,3,1,3,1,0,0,True,0.0,,,,False,2,0,0,False
+baseline,2023,12,4a0579228b08388dd20f,2023-11-21,Borussia Dortmund,Borussia Mönchengladbach,4,2,2,1,2,1,2,2,True,0.0,,,,False,3,1,3,False
+baseline,2023,12,859241dbd4e0f785db90,2023-11-21,1. FC Union Berlin,FC Augsburg,1,1,1,0,1,0,0,0,True,0.0,,,,False,2,1,0,False
+baseline,2023,12,a31ca4a7dd39af708719,2023-11-21,Eintracht Frankfurt,Stuttgart,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2023,13,1289b6f16e9a18c22917,2023-11-28,VfL Bochum,VfL Wolfsburg,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2023,13,996d3ad6f9d20a19ab6c,2023-11-28,SV Darmstadt 98,1. FC Köln,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2023,13,b8a62fa3f957f2a431ad,2023-11-28,Bayern München,1. FC Union Berlin,1,0,2,0,2,0,2,2,True,0.0,,,,False,3,0,2,False
+baseline,2023,14,9dd0b2d9be2001782492,2023-12-05,Borussia Dortmund,RB Leipzig,2,3,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2023,14,c1f5ff7de62395cbf9e4,2023-12-05,1. FC Köln,1. FSV Mainz 05,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2023,15,107f7fadddb6f308a160,2023-12-12,VfL Bochum,1. FC Union Berlin,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2023,16,9e0ec6e25af844a0f777,2023-12-19,1. FC Heidenheim 1846,SC Freiburg,3,2,1,2,1,2,0,0,True,0.0,,,,False,2,1,3,True
+baseline,2023,17,a4851d5f2d9cd37b0cd7,2024-01-09,Borussia Mönchengladbach,Stuttgart,3,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2023,18,b01b929869d41db95b54,2024-01-16,1. FSV Mainz 05,1. FC Union Berlin,1,1,1,1,1,1,4,4,True,0.0,,,,False,1,0,0,True
+baseline,2023,18,ddcb683c2252ff6d543d,2024-01-16,1. FC Heidenheim 1846,VfL Wolfsburg,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2023,19,13dbab583f0afe5b6292,2024-01-23,FC Augsburg,Bayern München,2,3,0,2,0,2,2,2,True,0.0,,,,False,1,2,3,False
+baseline,2023,19,1f019a5788fa1929c0b3,2024-01-23,1. FC Union Berlin,SV Darmstadt 98,1,0,2,0,2,0,2,2,True,0.0,,,,False,2,1,3,False
+baseline,2023,19,46d443990d35c0bbb5f4,2024-01-23,Eintracht Frankfurt,1. FSV Mainz 05,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,0,4,False
+baseline,2023,20,1d1ea46ae1a4f729a115,2024-01-30,SC Freiburg,Stuttgart,1,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2023,20,fdb5d501b1f1e551c698,2024-01-30,1. FC Köln,Eintracht Frankfurt,2,0,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2023,21,65fcd7f3879660367c0d,2024-02-06,Borussia Mönchengladbach,SV Darmstadt 98,0,0,2,0,2,0,0,0,True,0.0,,,,False,3,1,0,False
+baseline,2023,21,7eb78884c10b61fd15d1,2024-02-06,Bayer 04 Leverkusen,Bayern München,3,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,2,True
+baseline,2023,22,11a9c87d7e3683f50034,2024-02-13,1. FC Köln,SV Werder Bremen,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2023,22,22bd89f417e0fea74ea2,2024-02-13,1. FSV Mainz 05,FC Augsburg,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,0,4,False
+baseline,2023,24,92c0ec5e14c9b50e8ccf,2024-02-27,VfL Wolfsburg,Stuttgart,2,3,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2023,24,e8184a2af80990431e9e,2024-02-27,1. FC Heidenheim 1846,Eintracht Frankfurt,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2023,25,7f7b12e9edbb3dcd4e6f,2024-03-05,VfL Bochum,SC Freiburg,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2023,25,bc3f210200378408addf,2024-03-05,Stuttgart,1. FC Union Berlin,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2023,27,6b54cebfa8cb8bfb45e1,2024-03-26,SV Werder Bremen,VfL Wolfsburg,0,2,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2023,27,7658629014105f5bc354,2024-03-26,FC Augsburg,1. FC Köln,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2023,28,ffdcf2164a9b57ef3656,2024-04-02,1. FC Köln,VfL Bochum,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,0,3,False
+baseline,2023,29,dd06b4e86f025d21778a,2024-04-09,VfL Bochum,1. FC Heidenheim 1846,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2023,30,728061fe1a4dd2821a81,2024-04-16,Borussia Dortmund,Bayer 04 Leverkusen,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2023,30,dc20c295904035194d1f,2024-04-16,SC Freiburg,1. FSV Mainz 05,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2023,31,0ea33d16080f43b14199,2024-04-23,VfL Bochum,TSG 1899 Hoffenheim,3,2,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2023,32,100f55d7227d17734347,2024-04-30,1. FC Köln,SC Freiburg,0,0,2,1,2,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2023,32,8cf35f2f742a2d9ac941,2024-04-30,1. FC Heidenheim 1846,1. FSV Mainz 05,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2023,32,af8a5b8d462883cedfd2,2024-04-30,Stuttgart,Bayern München,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2023,33,3fb4afb0adf81296700d,2024-05-07,VfL Bochum,Bayer 04 Leverkusen,0,5,1,2,1,2,2,2,True,0.0,,,,False,0,2,2,False
+baseline,2023,33,8a146be41b6abd45122b,2024-05-07,1. FSV Mainz 05,Borussia Dortmund,3,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2023,33,c5ac66f675c3718f3da6,2024-05-07,1. FC Köln,1. FC Union Berlin,3,2,0,1,0,1,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2023,33,e62da66986b72dfbfab5,2024-05-07,Bayern München,VfL Wolfsburg,2,0,2,0,2,0,4,4,True,0.0,,,,False,3,1,3,False
+baseline,2023,34,5068a5a9ed255c0a4b43,2024-05-14,1. FC Union Berlin,SC Freiburg,2,1,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2023,34,cf23d271eabff8cbcdd5,2024-05-14,VfL Wolfsburg,1. FSV Mainz 05,1,3,1,2,1,2,2,2,True,0.0,,,,False,1,0,0,True
+baseline,2024,2,83228678325f7cc0a0e7,2024-08-27,Holstein Kiel,VfL Wolfsburg,0,2,1,2,1,2,2,2,True,0.0,,,,False,0,1,2,False
+baseline,2024,2,d51cb5bc10037113cb8d,2024-08-27,VfL Bochum,Borussia Mönchengladbach,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2024,3,04ce6935b3348583585e,2024-09-10,Holstein Kiel,Bayern München,1,6,0,3,0,3,2,2,True,0.0,,,,False,0,2,2,False
+baseline,2024,3,8600483b840eecc19bee,2024-09-10,VfL Wolfsburg,Eintracht Frankfurt,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2024,4,0e2c684aad7df0071e31,2024-09-17,1. FC Heidenheim 1846,SC Freiburg,0,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2024,4,527543030e23070594ed,2024-09-17,Stuttgart,Borussia Dortmund,5,1,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2024,4,e5d4ae4d9f544822425f,2024-09-17,FC Augsburg,1. FSV Mainz 05,2,3,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,6,23901655fe5782228da9,2024-10-01,SV Werder Bremen,SC Freiburg,0,1,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2024,6,23954d5f8c0876174e3e,2024-10-01,FC Augsburg,Borussia Mönchengladbach,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2024,6,b0f803d3b282c823edfb,2024-10-01,FC St. Pauli,1. FSV Mainz 05,0,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,6,b17d01461464a4752846,2024-10-01,Bayer 04 Leverkusen,Holstein Kiel,2,2,3,0,3,0,0,0,True,0.0,,,,False,4,0,0,False
+baseline,2024,6,f8181a0a3add6aa40c25,2024-10-01,Stuttgart,TSG 1899 Hoffenheim,1,1,2,1,2,1,0,0,True,0.0,,,,False,3,1,0,False
+baseline,2024,7,d071174cff6b4673962c,2024-10-15,Bayern München,Stuttgart,4,0,3,1,3,1,2,2,True,0.0,,,,False,2,1,2,False
+baseline,2024,8,23ee7368aa807d1f832e,2024-10-22,1. FC Union Berlin,Eintracht Frankfurt,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2024,8,c2f0f32d1b2b5b4b2ee4,2024-10-22,FC St. Pauli,VfL Wolfsburg,0,0,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2024,8,fb0ffbc7db8e50d2b2c4,2024-10-22,RB Leipzig,SC Freiburg,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2024,9,abe41a0d538ce94d70ca,2024-10-29,Borussia Dortmund,RB Leipzig,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2024,10,6c45f0ad2320e74290b3,2024-11-05,1. FC Union Berlin,SC Freiburg,0,0,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2024,10,f31d6707f767c6690eb6,2024-11-05,1. FC Heidenheim 1846,VfL Wolfsburg,1,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2024,12,a483a844a2643e52d0f0,2024-11-26,FC St. Pauli,Holstein Kiel,3,1,1,0,1,0,2,2,True,0.0,,,,False,0,0,0,True
+baseline,2024,13,db7b5e39569cbc5b002d,2024-12-03,TSG 1899 Hoffenheim,SC Freiburg,1,1,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2024,14,9a6f6b0424d3d8b2e658,2024-12-10,FC St. Pauli,SV Werder Bremen,0,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,15,71a29392ca213ad5b707,2024-12-17,Bayer 04 Leverkusen,SC Freiburg,5,1,2,1,2,1,2,2,True,0.0,,,,False,2,0,2,False
+baseline,2024,15,b933d4ca5d20ed4891ee,2024-12-17,VfL Bochum,1. FC Heidenheim 1846,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2024,16,903f78e0cd7dc8e14ef4,2025-01-07,1. FSV Mainz 05,VfL Bochum,2,0,2,1,2,1,2,2,True,0.0,,,,False,2,0,4,False
+baseline,2024,16,c1b0f158ae60fbc72793,2025-01-07,1. FC Heidenheim 1846,1. FC Union Berlin,2,0,0,1,0,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,16,e4f5d668adca2c87af4f,2025-01-07,FC St. Pauli,Eintracht Frankfurt,0,1,0,1,0,1,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2024,17,5f118983c3eca6e73591,2025-01-14,VfL Bochum,FC St. Pauli,1,0,1,0,1,0,4,4,True,0.0,,,,False,0,0,0,True
+baseline,2024,18,0232df8fff8993194d93,2025-01-14,1. FC Union Berlin,1. FSV Mainz 05,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2024,18,d40fb3532842c0ecba8e,2025-01-14,1. FC Heidenheim 1846,FC St. Pauli,0,2,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2024,19,3389f70ba2a6fed5858c,2025-01-21,SC Freiburg,Bayern München,1,2,1,2,1,2,4,4,True,0.0,,,,False,1,3,2,False
+baseline,2024,19,ce82682951665af392b6,2025-01-21,FC St. Pauli,1. FC Union Berlin,3,0,1,0,1,0,2,2,True,0.0,,,,False,0,0,0,True
+baseline,2024,20,86fe54c6a75b5aa9c07a,2025-01-28,FC St. Pauli,FC Augsburg,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,0,3,True
+baseline,2024,21,0546aecc9fdb0496fe40,2025-02-04,Borussia Mönchengladbach,Eintracht Frankfurt,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2024,21,886ec7e9bc1b9cbd12dd,2025-02-04,1. FSV Mainz 05,FC Augsburg,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2024,22,0b79f104745e40f626e6,2025-02-11,1. FC Union Berlin,Borussia Mönchengladbach,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,22,29c0a4377df445e007f2,2025-02-11,FC St. Pauli,SC Freiburg,0,1,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2024,22,fd3e6ec56fddc57ee9e1,2025-02-11,Bayer 04 Leverkusen,Bayern München,0,0,1,2,1,2,0,0,True,0.0,,,,False,2,1,0,True
+baseline,2024,24,f6bac5c42230dbd1e80e,2025-02-25,VfL Bochum,TSG 1899 Hoffenheim,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2024,25,378833303e5467cf7aa0,2025-03-04,Borussia Mönchengladbach,1. FSV Mainz 05,1,3,2,1,2,1,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,25,a86e4fb95255a77fc76b,2025-03-04,SC Freiburg,RB Leipzig,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2024,26,03d9b51304e8a50926bf,2025-03-11,FC Augsburg,VfL Wolfsburg,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2024,26,25f0d770b5d239727bbc,2025-03-11,1. FSV Mainz 05,SC Freiburg,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2024,26,b303209b1a0c5d09f417,2025-03-11,FC St. Pauli,TSG 1899 Hoffenheim,1,0,1,0,1,0,4,4,True,0.0,,,,False,0,0,0,True
+baseline,2024,28,2bb1d0d147739a5b3d13,2025-04-01,1. FC Union Berlin,VfL Wolfsburg,1,0,1,0,1,0,4,4,True,0.0,,,,False,0,1,0,True
+baseline,2024,28,eb090e1e0f1b8952ba41,2025-04-01,FC St. Pauli,Borussia Mönchengladbach,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2024,29,dc6dca75e6b5c8094f5b,2025-04-08,VfL Bochum,FC Augsburg,1,2,2,1,2,1,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2024,29,f87eade42074b185c9a8,2025-04-08,Holstein Kiel,FC St. Pauli,1,2,0,1,0,1,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2024,30,e7b2f0ffc83306831523,2025-04-15,FC Augsburg,Eintracht Frankfurt,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2024,31,299634930dc0f554b010,2025-04-22,Eintracht Frankfurt,RB Leipzig,4,0,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2024,31,f0a321d5ee766df9c63a,2025-04-22,VfL Bochum,1. FC Union Berlin,1,1,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2024,32,3a1a60fc5c17b2b673e6,2025-04-29,FC St. Pauli,Stuttgart,0,1,0,1,0,1,4,4,True,0.0,,,,False,1,1,0,True
+baseline,2024,32,6aee2d7c294f11679e41,2025-04-29,1. FC Heidenheim 1846,VfL Bochum,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2024,32,d4dca23bdf80e6670774,2025-04-29,1. FC Union Berlin,SV Werder Bremen,2,2,0,1,0,1,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2024,32,d6f283b7df316d3b8faa,2025-04-29,1. FSV Mainz 05,Eintracht Frankfurt,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2024,33,b5221eff159e5e1bc151,2025-05-06,Bayer 04 Leverkusen,Borussia Dortmund,2,4,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2024,33,f677fb5ac0c7c5f081a7,2025-05-06,SV Werder Bremen,RB Leipzig,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2024,34,8f15020199c4e037a98b,2025-05-13,1. FC Heidenheim 1846,SV Werder Bremen,1,4,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2024,34,defca05820466ce4ba0f,2025-05-13,FC Augsburg,1. FC Union Berlin,1,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2024,34,e32a8af45b6edd83bbe1,2025-05-13,SC Freiburg,Eintracht Frankfurt,1,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2024,34,f8a9163288f98a33985a,2025-05-13,1. FSV Mainz 05,Bayer 04 Leverkusen,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,1,d105bcaf83217758f01a,2025-08-19,Bayer 04 Leverkusen,TSG 1899 Hoffenheim,1,2,2,0,2,0,0,0,True,0.0,,,,False,3,1,0,False
+baseline,2025,2,23b0742cf5aa3cd40616,2025-08-26,1. FC Köln,SC Freiburg,4,1,1,0,1,0,2,2,True,0.0,,,,False,0,0,0,True
+baseline,2025,2,6a7173ff95e5c72e058e,2025-08-26,Hamburger SV,FC St. Pauli,0,2,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2025,3,ad9c7bc8a79ea28fc253,2025-09-09,1. FSV Mainz 05,RB Leipzig,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2025,3,d1c91f37dfe0843d32f6,2025-09-09,FC St. Pauli,FC Augsburg,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,0,0,True
+baseline,2025,4,8dac8e5e37c61c792b58,2025-09-16,Hamburger SV,1. FC Heidenheim 1846,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2025,5,6fa069eb68d530a4e458,2025-09-23,VfL Wolfsburg,RB Leipzig,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,3,True
+baseline,2025,6,3080fa573707c9ac60e2,2025-09-30,FC Augsburg,VfL Wolfsburg,3,1,1,2,1,2,0,0,True,0.0,,,,False,0,1,0,False
+baseline,2025,6,7dcef631f0cd2f4a529b,2025-09-30,Borussia Mönchengladbach,SC Freiburg,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,6,ae36f70b09b22a6ae98a,2025-09-30,Eintracht Frankfurt,Bayern München,0,3,1,2,1,2,2,2,True,0.0,,,,False,1,3,2,False
+baseline,2025,7,60803696bc55ab6b8e8f,2025-10-14,SC Freiburg,Eintracht Frankfurt,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,7,aade4df6fece3b5c6264,2025-10-14,FC St. Pauli,TSG 1899 Hoffenheim,0,3,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2025,8,f7c4e86564d6b41dd450,2025-10-21,Borussia Mönchengladbach,Bayern München,0,3,1,3,1,3,2,2,True,0.0,,,,False,0,3,4,False
+baseline,2025,9,3141165d565faa85e621,2025-10-28,VfL Wolfsburg,TSG 1899 Hoffenheim,2,3,1,2,1,2,3,3,True,0.0,,,,False,2,1,0,True
+baseline,2025,9,6c8a545193b2c6d3dfb2,2025-10-28,1. FC Union Berlin,SC Freiburg,0,0,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2025,9,82bd37fe8b3ea7860e00,2025-10-28,FC St. Pauli,Borussia Mönchengladbach,0,4,1,0,1,0,0,0,True,0.0,,,,False,1,1,0,True
+baseline,2025,10,20926cc55dabcfa355fd,2025-11-04,Hamburger SV,Borussia Dortmund,1,1,1,2,1,2,0,0,True,0.0,,,,False,0,2,0,False
+baseline,2025,11,e6330691d43c53cd47d6,2025-11-18,FC St. Pauli,1. FC Union Berlin,0,1,1,0,1,0,0,0,True,0.0,,,,False,0,0,0,True
+baseline,2025,12,081ba1306c386dc761b9,2025-11-25,Bayern München,FC St. Pauli,3,1,2,0,2,0,3,3,True,0.0,,,,False,3,0,2,False
+baseline,2025,12,70d229cd09454141aa7c,2025-11-25,Bayer 04 Leverkusen,Borussia Dortmund,1,2,1,2,1,2,4,4,True,0.0,,,,False,2,1,0,True
+baseline,2025,13,7f10591953888a61b75b,2025-12-02,Hamburger SV,SV Werder Bremen,3,2,1,0,1,0,3,3,True,0.0,,,,False,0,1,0,True
+baseline,2025,14,0686bff98f48a0a0e1f1,2025-12-09,FC St. Pauli,1. FC Heidenheim 1846,2,1,1,0,1,0,3,3,True,0.0,,,,False,0,0,0,True
+baseline,2025,14,6df841d633fe14da29d0,2025-12-09,Bayern München,1. FSV Mainz 05,2,2,2,0,2,0,0,0,True,0.0,,,,False,3,0,0,False
+baseline,2025,14,799323810ac9a1de43ea,2025-12-09,Bayer 04 Leverkusen,1. FC Köln,2,0,2,0,2,0,4,4,True,0.0,,,,False,2,1,2,False
+baseline,2025,15,6fdc1c1727c1ecc669e9,2025-12-16,Hamburger SV,Eintracht Frankfurt,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,15,a3025f07f05e1e3fb91a,2025-12-16,1. FC Heidenheim 1846,Bayern München,0,4,0,2,0,2,2,2,True,0.0,,,,False,0,3,2,False
+baseline,2025,16,dbe3eab91b704f2ed4ac,2026-01-06,1. FC Union Berlin,1. FSV Mainz 05,2,2,1,0,1,0,0,0,True,0.0,,,,False,1,1,3,True
+baseline,2025,17,43eaa53fe50f2effe4e8,2026-01-13,FC Augsburg,1. FC Union Berlin,1,1,1,0,1,0,0,0,True,0.0,,,,False,1,1,4,True
+baseline,2025,18,499213ec84240ff3ba7a,2026-01-13,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,1,0,2,1,2,1,3,3,True,0.0,,,,False,1,2,0,True
+baseline,2025,18,bc3e9cedbd8ad07b4533,2026-01-13,Hamburger SV,Borussia Mönchengladbach,0,0,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,18,c8cd71442b25bc3ad477,2026-01-13,1. FC Köln,1. FSV Mainz 05,2,1,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2025,19,9c95b73d00ec61bfd5c5,2026-01-20,Eintracht Frankfurt,TSG 1899 Hoffenheim,1,3,1,2,1,2,2,2,True,0.0,,,,False,2,1,0,True
+baseline,2025,21,d511597e51f3baefa60e,2026-02-03,1. FC Heidenheim 1846,Hamburger SV,0,2,0,1,0,1,2,2,True,0.0,,,,False,1,1,0,True
+baseline,2025,21,ef8e5715370cceb5dce4,2026-02-03,1. FC Union Berlin,Eintracht Frankfurt,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,22,37b410cfc0878402b6d0,2026-02-10,Hamburger SV,1. FC Union Berlin,3,2,1,0,1,0,3,3,True,0.0,,,,False,1,1,0,True
+baseline,2025,22,93c197b53b2714be31e6,2026-02-10,SV Werder Bremen,Bayern München,0,3,1,3,1,3,2,2,True,0.0,,,,False,0,2,2,False
+baseline,2025,23,68dc0ecc63e87ddba6c6,2026-02-17,RB Leipzig,Borussia Dortmund,2,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,23,d4f911a09824eb5ef3de,2026-02-17,Bayern München,Eintracht Frankfurt,3,2,3,1,3,1,2,2,True,0.0,,,,False,4,1,2,False
+baseline,2025,24,3e6d8af06705f8b7946c,2026-02-24,SV Werder Bremen,1. FC Heidenheim 1846,2,0,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2025,25,a6db9aea2bc281b94481,2026-03-03,FC St. Pauli,Eintracht Frankfurt,0,0,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2025,26,e5f14c19bf4ce20657bb,2026-03-10,SV Werder Bremen,1. FSV Mainz 05,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2025,27,26dacd976ded675f8bd6,2026-03-17,Borussia Dortmund,Hamburger SV,3,2,2,0,2,0,2,2,True,0.0,,,,False,1,0,3,False
+baseline,2025,27,701a5f5b9c7098915f83,2026-03-17,FC St. Pauli,SC Freiburg,1,2,1,1,1,1,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2025,28,afa45fb9c5d158d7822e,2026-03-31,Stuttgart,Borussia Dortmund,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True
+baseline,2025,29,986de687310acd58a11e,2026-04-07,VfL Wolfsburg,Eintracht Frankfurt,1,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,4,True
+baseline,2025,29,b20f560b05332f5fe461,2026-04-07,1. FSV Mainz 05,SC Freiburg,0,1,2,1,2,1,0,0,True,0.0,,,,False,1,0,0,False
+baseline,2025,30,077e3a54160d87f9f5a4,2026-04-14,Borussia Mönchengladbach,1. FSV Mainz 05,1,1,2,1,2,1,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2025,30,1476bf32cde118a5dd5b,2026-04-14,TSG 1899 Hoffenheim,Borussia Dortmund,2,1,2,1,2,1,4,4,True,0.0,,,,False,1,2,0,True
+baseline,2025,31,2637bd055cc8d73c3b3c,2026-04-21,FC Augsburg,Eintracht Frankfurt,1,1,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,32,97b5d013d44e3b508e47,2026-04-28,TSG 1899 Hoffenheim,Stuttgart,3,3,2,1,2,1,0,0,True,0.0,,,,False,1,2,0,True
+baseline,2025,32,bb0ae83351ce454859f5,2026-04-28,1. FC Union Berlin,1. FC Köln,2,2,1,0,1,0,0,0,True,0.0,,,,False,0,1,0,True
+baseline,2025,32,e331991ac12652819692,2026-04-28,FC St. Pauli,1. FSV Mainz 05,1,2,1,0,1,0,0,0,True,0.0,,,,False,0,1,3,True
+baseline,2025,33,5ce1f4821c364633a230,2026-05-05,FC Augsburg,Borussia Mönchengladbach,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,0,2,False
+baseline,2025,33,f709afafc78abebd722b,2026-05-05,Stuttgart,Bayer 04 Leverkusen,3,1,2,1,2,1,2,2,True,0.0,,,,False,1,2,0,True
+baseline,2025,34,8672361331e1d0f825e1,2026-05-12,1. FC Heidenheim 1846,1. FSV Mainz 05,0,2,2,1,2,1,0,0,True,0.0,,,,False,1,2,2,True

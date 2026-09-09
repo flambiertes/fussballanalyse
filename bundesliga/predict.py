@@ -9,6 +9,7 @@ from pathlib import Path
 import pandas as pd
 
 from .config import DB_PATH, ModelConfig
+from .contest import ContestConfig, contest_tips
 from .database import (
     consensus_bookmaker_probabilities,
     latest_market_values,
@@ -60,10 +61,12 @@ def predict_upcoming(
     persist: bool = True,
     tip_strategy: str = "expected-points",
     target_points: int = 24,
+    contest_config: ContestConfig | None = None,
 ) -> tuple[pd.DataFrame, dict[str, object]]:
     config = config or LIVE_CONFIG
-    if tip_strategy not in {"expected-points", "target-score"}:
-        raise ValueError("tip_strategy muss expected-points oder target-score sein")
+    if tip_strategy not in {"expected-points", "target-score", "contest"}:
+        raise ValueError("tip_strategy muss expected-points, target-score oder contest sein")
+    contest_config = contest_config or ContestConfig()
     as_of = pd.Timestamp(as_of or pd.Timestamp.now())
     all_matches = load_matches(competition=competition, path=db_path)
     training = all_matches[
@@ -122,6 +125,7 @@ def predict_upcoming(
                 "away_team": match.away_team,
                 "lambda_home": prediction["lambda_home"],
                 "lambda_away": prediction["lambda_away"],
+                "rho": model.rho,
                 "prob_home": prediction["prob_home"],
                 "prob_draw": prediction["prob_draw"],
                 "prob_away": prediction["prob_away"],
@@ -136,7 +140,8 @@ def predict_upcoming(
     result["tip_strategy"] = tip_strategy
     result["target_points"] = target_points if tip_strategy == "target-score" else pd.NA
     result["target_probability"] = pd.NA
-    if tip_strategy == "target-score":
+    contest_reports = []
+    if tip_strategy in {"target-score", "contest"}:
         matrix_by_match = dict(zip(result["match_id"], matrices))
         if result["matchday"].notna().any():
             groups = result.groupby(["season", "matchday"], sort=False, dropna=False)
@@ -149,21 +154,29 @@ def predict_upcoming(
         for _, group in groups:
             if len(group) != 9:
                 raise ValueError(
-                    "target-score benoetigt einen vollstaendigen Spieltag mit 9 Spielen"
+                    f"{tip_strategy} benoetigt einen vollstaendigen Spieltag mit 9 Spielen"
                 )
             group_matrices = [matrix_by_match[match_id] for match_id in group["match_id"]]
-            tips, target_probability = target_points_tips(
-                group_matrices, target_points=target_points
-            )
+            if tip_strategy == "contest":
+                tips, report = contest_tips(group_matrices, contest_config)
+                contest_reports.append({"match_ids": group["match_id"].tolist(), **report})
+                result.loc[group.index, "contest_changed_tendencies"] = report["changed_tendencies"]
+                result.loc[group.index, "contest_expected_points"] = report["expected_points"]
+                result.loc[group.index, "contest_assumptions"] = "synthetic crowd; equal prize share"
+            else:
+                tips, target_probability = target_points_tips(
+                    group_matrices, target_points=target_points
+                )
+                result.loc[group.index, "target_probability"] = target_probability
             result.loc[group.index, "tip_home"] = [tip[0] for tip in tips]
             result.loc[group.index, "tip_away"] = [tip[1] for tip in tips]
-            result.loc[group.index, "target_probability"] = target_probability
     run_id = f"live-{competition.lower()}-{uuid.uuid4().hex[:12]}"
     if persist:
         persisted_config = {
             **asdict(config),
             "tip_strategy": tip_strategy,
             "target_points": target_points,
+            "contest_reports": contest_reports,
         }
         save_predictions(result, run_id, MODEL_VERSION, persisted_config, db_path)
     return result, {
@@ -171,6 +184,7 @@ def predict_upcoming(
         "promoted_team_priors": sorted(promoted_priors),
         "tip_strategy": tip_strategy,
         "target_points": target_points if tip_strategy == "target-score" else None,
+        "contest_reports": contest_reports,
         **model.metadata(),
     }
 
@@ -185,7 +199,7 @@ def main() -> None:
     scope.add_argument("--matchdays", type=int, help="Die naechsten N Spieltage")
     parser.add_argument("--output", type=Path)
     parser.add_argument(
-        "--tip-strategy", choices=["expected-points", "target-score"],
+        "--tip-strategy", choices=["expected-points", "target-score", "contest"],
         default="expected-points",
     )
     parser.add_argument("--target-points", type=int, default=24)
@@ -210,6 +224,9 @@ def main() -> None:
             predictions.to_excel(args.output, index=False)
         else:
             predictions.to_csv(args.output, index=False)
+        args.output.with_suffix(".metadata.json").write_text(
+            json.dumps(metadata, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
 
 
 if __name__ == "__main__":

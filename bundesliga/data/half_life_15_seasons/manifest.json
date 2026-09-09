@@ -1,0 +1,55 @@
+{
+  "fingerprint": "650ff1ff7ac5dfeb412cfb08abd909e97f36fddf032dca1f9c6deb3c0850e2ba",
+  "config": {
+    "lookback_years": 6.0,
+    "half_life_days": 420.0,
+    "ridge": 0.08,
+    "min_training_matches": 250,
+    "max_goals": 10,
+    "form_matches": 8,
+    "form_half_life_matches": 3.5,
+    "form_weight": 0.0,
+    "venue_form_weight": 0.0,
+    "h2h_matches": 6,
+    "h2h_half_life_days": 730.0,
+    "h2h_weight": 0.05,
+    "market_value_weight": 0.05,
+    "market_decay_matches": 10,
+    "bookmaker_weight": 0.0,
+    "bookmaker_snapshot_type": "opening",
+    "use_lower_league_priors": true,
+    "lower_league_scale": 0.85,
+    "promotion_attack_penalty": -0.2,
+    "promotion_defense_penalty": 0.2,
+    "promotion_prior_matches": 10
+  },
+  "policies": [
+    "fixed_90",
+    "fixed_120",
+    "fixed_180",
+    "fixed_270",
+    "fixed_420",
+    "fixed_630",
+    "fixed_840",
+    "season_630_180",
+    "season_180_630"
+  ],
+  "forms": {
+    "none": 0.0,
+    "legacy": 0.1,
+    "residual_005": 0.05,
+    "residual_010": 0.1,
+    "residual_020": 0.2
+  },
+  "evaluation_seasons": [
+    2011,
+    2025
+  ],
+  "warmup_season": 2010,
+  "rolling_selection_years": 5,
+  "primary_selection_metric": "log_loss",
+  "rounds": 510,
+  "games": 4590,
+  "pre_form_fix_fingerprint": "25effd6df7b96214e731abd926337a397ddb46ef0a44bfa2287ffa53c377120a",
+  "implementation_correction": "Before first scoring: apply the unchanged six-year lookback to residual history too; base fits and prepared inputs are unaffected."
+}

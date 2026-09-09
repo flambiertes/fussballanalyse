@@ -1,0 +1,43 @@
+{
+  "source": "data/contest_input_2018_2019.csv",
+  "config": {
+    "opponents": [
+      100,
+      1000,
+      10000
+    ],
+    "crowd_concentrations": [
+      1.0,
+      2.5,
+      5.0
+    ],
+    "training_samples": 8192,
+    "evaluation_samples": 32768,
+    "seed": 20260908,
+    "max_passes": 4,
+    "max_tip_goals": 5
+  },
+  "complete_rounds": 55,
+  "skipped_calendar_windows": 9,
+  "interpretation": "Historical points and assumed crowd scenarios; no real winning rates",
+  "mean_changed_tendencies": 6.8,
+  "fraction_evaluation_objective_above_baseline": 1.0,
+  "baseline": {
+    "mean_points": 11.672727272727272,
+    "std_points": 4.081241101138211,
+    "best_points": 20,
+    "rounds_ge_18": 6,
+    "rounds_ge_20": 1,
+    "rounds_ge_22": 0,
+    "rounds_ge_24": 0
+  },
+  "contest": {
+    "mean_points": 9.690909090909091,
+    "std_points": 4.271992199825733,
+    "best_points": 19,
+    "rounds_ge_18": 1,
+    "rounds_ge_20": 0,
+    "rounds_ge_22": 0,
+    "rounds_ge_24": 0
+  }
+}

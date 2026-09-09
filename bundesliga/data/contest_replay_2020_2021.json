@@ -1,0 +1,43 @@
+{
+  "source": "data/contest_input_2020_2021.csv",
+  "config": {
+    "opponents": [
+      100,
+      1000,
+      10000
+    ],
+    "crowd_concentrations": [
+      1.0,
+      2.5,
+      5.0
+    ],
+    "training_samples": 8192,
+    "evaluation_samples": 32768,
+    "seed": 20260908,
+    "max_passes": 4,
+    "max_tip_goals": 5
+  },
+  "complete_rounds": 51,
+  "skipped_calendar_windows": 14,
+  "interpretation": "Historical points and assumed crowd scenarios; no real winning rates",
+  "mean_changed_tendencies": 7.03921568627451,
+  "fraction_evaluation_objective_above_baseline": 1.0,
+  "baseline": {
+    "mean_points": 11.27450980392157,
+    "std_points": 3.960978446028694,
+    "best_points": 19,
+    "rounds_ge_18": 3,
+    "rounds_ge_20": 0,
+    "rounds_ge_22": 0,
+    "rounds_ge_24": 0
+  },
+  "contest": {
+    "mean_points": 10.647058823529411,
+    "std_points": 3.714431471087135,
+    "best_points": 20,
+    "rounds_ge_18": 3,
+    "rounds_ge_20": 1,
+    "rounds_ge_22": 0,
+    "rounds_ge_24": 0
+  }
+}

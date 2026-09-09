@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 
 from .config import DB_PATH, ModelConfig
+from .contest import ContestConfig, contest_tips
 from .database import (
     consensus_bookmaker_probabilities,
     latest_market_values,
@@ -18,6 +19,7 @@ from .database import (
 )
 from .model import MODEL_VERSION, DynamicDixonColes
 from .priors import lower_league_priors
+from .rounds import round_groups
 from .scoring import evaluate_prediction, target_points_tips
 
 
@@ -25,6 +27,15 @@ def match_round(date: pd.Timestamp) -> pd.Timestamp:
     """Dienstag bis Montag bilden einen konservativen Bundesliga-Spieltag."""
     days_since_tuesday = (date.weekday() - 1) % 7
     return date.normalize() - pd.Timedelta(days=days_since_tuesday)
+
+
+def prediction_groups(test: pd.DataFrame, tip_strategy: str):
+    """Freeze each official round at its earliest fixture's Tuesday cutoff."""
+    scope, groups = round_groups(test)
+    if scope != "official_matchdays" and tip_strategy != "expected-points":
+        raise ValueError("Turnierstrategien benoetigen offizielle Spieltagsnummern")
+    batches = [(match_round(group.match_date.min()), group) for _, group in groups]
+    return scope, sorted(batches, key=lambda pair: (pair[0], pair[1].match_date.min()))
 
 
 def run_backtest(
@@ -37,10 +48,13 @@ def run_backtest(
     verbose: bool = True,
     tip_strategy: str = "expected-points",
     target_points: int = 24,
+    contest_config: ContestConfig | None = None,
+    matchdays: list[int] | None = None,
 ) -> tuple[pd.DataFrame, dict[str, object]]:
     config = config or ModelConfig()
-    if tip_strategy not in {"expected-points", "target-score"}:
-        raise ValueError("tip_strategy muss expected-points oder target-score sein")
+    if tip_strategy not in {"expected-points", "target-score", "contest"}:
+        raise ValueError("tip_strategy muss expected-points, target-score oder contest sein")
+    contest_config = contest_config or ContestConfig()
     all_matches = load_matches(competition=competition, finished_only=True, path=db_path)
     lower_matches = (
         load_matches(competition="D2", finished_only=True, path=db_path)
@@ -50,12 +64,14 @@ def run_backtest(
     if all_matches.empty:
         raise ValueError(f"Keine abgeschlossenen Spiele fuer {competition} in {db_path}")
     test = all_matches[all_matches["season"].isin(test_seasons)].copy()
+    if matchdays is not None:
+        test = test[test["matchday"].isin(matchdays)].copy()
     if test.empty:
         raise ValueError(f"Keine Testspiele fuer Saisons {test_seasons}")
-    test["prediction_round"] = test["match_date"].map(match_round)
+    test["as_of"] = test["match_date"].map(match_round)
     records = []
 
-    grouped = list(test.groupby("prediction_round", sort=True))
+    grouping_scope, grouped = prediction_groups(test, tip_strategy)
     for number, (round_start, round_matches) in enumerate(grouped, start=1):
         training = all_matches[all_matches["match_date"] < round_start].copy()
         model = DynamicDixonColes(config).fit(training, as_of=round_start)
@@ -70,8 +86,12 @@ def run_backtest(
         # Marktwertsignal und mehrere Gewichte koennen ohne erneuten Fit
         # verglichen werden.
         markets = latest_market_values(round_start, path=db_path)
+        # Untimestamped opening/closing quotes for a postponed fixture cannot be
+        # assumed known at the original round cutoff. Captures are filtered by as_of.
+        eligible = round_matches["match_date"].map(match_round).eq(round_start)
+        odds_ids = round_matches["match_id"] if config.bookmaker_snapshot_type == "captured" else round_matches.loc[eligible, "match_id"]
         round_odds = consensus_bookmaker_probabilities(
-            round_matches["match_id"],
+            odds_ids,
             snapshot_type=config.bookmaker_snapshot_type,
             as_of=round_start,
             path=db_path,
@@ -103,6 +123,11 @@ def run_backtest(
                     "matchday": match.matchday,
                     "match_date": match.match_date,
                     "as_of": round_start,
+                    "round_grouping": grouping_scope,
+                    "odds_withheld_for_late_fixture": (
+                        config.bookmaker_snapshot_type != "captured"
+                        and match_round(pd.Timestamp(match.match_date)) != round_start
+                    ),
                     "home_team": match.home_team,
                     "away_team": match.away_team,
                     "actual_home": actual[0],
@@ -124,18 +149,27 @@ def run_backtest(
                 }
             )
 
-        # CHECK24 locks one portfolio of nine tips. Calendar windows containing
-        # postponements or two midweek rounds are kept leakage-free, but are not
-        # suitable for the contest objective and retain the expected-points tips.
-        if tip_strategy == "target-score" and len(round_records) == 9:
-            tips, target_probability = target_points_tips(
-                round_matrices, target_points=target_points
-            )
+        # Every official round uses one common cutoff, including postponed games.
+        for record in round_records:
+            record["tip_strategy"] = "expected-points"
+        if tip_strategy in {"target-score", "contest"} and len(round_records) == 9:
+            if tip_strategy == "contest":
+                tips, report = contest_tips(round_matrices, contest_config)
+                target_probability = np.nan
+            else:
+                tips, target_probability = target_points_tips(
+                    round_matrices, target_points=target_points
+                )
             for record, matrix, tip in zip(round_records, round_matrices, tips):
                 actual = (int(record["actual_home"]), int(record["actual_away"]))
                 record["tip_home"], record["tip_away"] = tip
                 record.update(evaluate_prediction(matrix, tip, actual))
                 record["target_probability"] = target_probability
+                record["tip_strategy"] = tip_strategy
+                if tip_strategy == "contest":
+                    record["contest_changed_tendencies"] = report["changed_tendencies"]
+                    record["contest_evaluation_log_objective"] = report["evaluation_log_objective"]
+                    record["contest_baseline_log_objective"] = report["baseline_evaluation_log_objective"]
         else:
             for record in round_records:
                 record["target_probability"] = np.nan
@@ -148,24 +182,25 @@ def run_backtest(
             **asdict(config),
             "tip_strategy": tip_strategy,
             "target_points": target_points,
+            "contest_config": asdict(contest_config) if tip_strategy == "contest" else None,
         }
         save_predictions(predictions, run_id, MODEL_VERSION, persisted_config, path=db_path)
     summary = summarize(predictions, run_id, config)
     summary["tip_strategy"] = tip_strategy
     summary["target_points"] = target_points
+    if tip_strategy == "contest":
+        summary["contest_config"] = asdict(contest_config)
+        summary["contest_crowd_source"] = "assumed; no observed participant data"
+        summary["contest_tie_convention"] = "equal prize share / uniform lottery"
     return predictions, summary
 
 
 def summarize(predictions: pd.DataFrame, run_id: str, config: ModelConfig) -> dict[str, object]:
     actual_diff = predictions["actual_home"] - predictions["actual_away"]
     tip_diff = predictions["tip_home"] - predictions["tip_away"]
-    round_sizes = predictions.groupby("as_of").size()
-    complete_rounds = round_sizes[round_sizes == 9].index
-    matchday_points = (
-        predictions[predictions["as_of"].isin(complete_rounds)]
-        .groupby("as_of")["tip_points"]
-        .sum()
-    )
+    grouping_scope, groups = round_groups(predictions)
+    complete_groups = [group for _, group in groups if len(group) == 9]
+    matchday_points = pd.Series([group["tip_points"].sum() for group in complete_groups], dtype=float)
     summary = {
         "run_id": run_id,
         "matches": len(predictions),
@@ -179,6 +214,9 @@ def summarize(predictions: pd.DataFrame, run_id: str, config: ModelConfig) -> di
         "actual_goals_per_match": round(float((predictions["actual_home"] + predictions["actual_away"]).mean()), 4),
         "expected_goals_per_match": round(float((predictions["lambda_home"] + predictions["lambda_away"]).mean()), 4),
         "complete_matchdays": int(len(matchday_points)),
+        "matchday_grouping": grouping_scope,
+        "incomplete_groups": len(groups) - len(complete_groups),
+        "rounds_with_multiple_forecast_times": sum(group["as_of"].nunique() > 1 for group in complete_groups),
         "mean_matchday_points": (
             round(float(matchday_points.mean()), 4) if len(matchday_points) else None
         ),
@@ -203,6 +241,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Leakage-freier Bundesliga-Walk-forward-Backtest")
     parser.add_argument("--league", choices=["D1", "D2"], default="D1")
     parser.add_argument("--seasons", nargs="+", type=int, required=True)
+    parser.add_argument("--matchdays", nargs="+", type=int)
     parser.add_argument("--half-life-days", type=float, default=ModelConfig.half_life_days)
     parser.add_argument("--lookback-years", type=float, default=ModelConfig.lookback_years)
     parser.add_argument("--ridge", type=float, default=ModelConfig.ridge)
@@ -218,7 +257,7 @@ def main() -> None:
     parser.add_argument("--lower-league-priors", action="store_true")
     parser.add_argument("--promotion-penalty", type=float, default=0.20)
     parser.add_argument(
-        "--tip-strategy", choices=["expected-points", "target-score"],
+        "--tip-strategy", choices=["expected-points", "target-score", "contest"],
         default="expected-points",
     )
     parser.add_argument("--target-points", type=int, default=24)
@@ -243,6 +282,7 @@ def main() -> None:
     predictions, summary = run_backtest(
         args.league, args.seasons, config=config, verbose=not args.quiet,
         tip_strategy=args.tip_strategy, target_points=args.target_points,
+        matchdays=args.matchdays,
     )
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

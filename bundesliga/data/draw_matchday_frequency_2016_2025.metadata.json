@@ -1,0 +1,24 @@
+{
+  "retrieved_at": "2026-09-08T14:25:19.135212+00:00",
+  "sources": [
+    "https://api.openligadb.de/getmatchdata/bl1/2016",
+    "https://api.openligadb.de/getmatchdata/bl1/2017",
+    "https://api.openligadb.de/getmatchdata/bl1/2018",
+    "https://api.openligadb.de/getmatchdata/bl1/2019",
+    "https://api.openligadb.de/getmatchdata/bl1/2020",
+    "https://api.openligadb.de/getmatchdata/bl1/2021",
+    "https://api.openligadb.de/getmatchdata/bl1/2022",
+    "https://api.openligadb.de/getmatchdata/bl1/2023",
+    "https://api.openligadb.de/getmatchdata/bl1/2024",
+    "https://api.openligadb.de/getmatchdata/bl1/2025"
+  ],
+  "definition": "Official Bundesliga matchdays; 9 completed matches each; postponed matches retained in their official matchday",
+  "seasons": "2016/17–2025/26",
+  "matchdays": 340,
+  "matches": 3060,
+  "draws": 760,
+  "matchdays_ge4": 58,
+  "matchdays_ge5": 13,
+  "matchdays_ge6": 3,
+  "crosscheck": "Seasonal draw totals agree with existing football-data.co.uk records for all 10 seasons"
+}

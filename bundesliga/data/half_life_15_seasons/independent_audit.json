@@ -1,0 +1,27 @@
+{
+  "2018_2021": {
+    "verified_model_predictions": 1224,
+    "max_absolute_errors_same_quotes": {
+      "log_loss": 1.7763568394002505e-15,
+      "brier_score": 6.661338147750939e-16
+    },
+    "changed_quote_aggregation_games": 306,
+    "changed_tips_due_to_quotes": 5
+  },
+  "2022_2025": {
+    "verified_model_predictions": 1224,
+    "max_absolute_errors_same_quotes": {
+      "log_loss": 1.3322676295501878e-15,
+      "brier_score": 8.881784197001252e-16
+    },
+    "changed_quote_aggregation_games": 0,
+    "changed_tips_due_to_quotes": 0
+  },
+  "fits": {
+    "completed": 4896,
+    "match_forecasts_including_warmup": 44064,
+    "max_iterations": 541,
+    "min_iterations": 9
+  },
+  "tests": "pytest tests, plus chronological selection and residual leakage tests"
+}

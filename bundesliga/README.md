@@ -6,6 +6,12 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
+**Beschlossen am 09.09.2026:** Für Spieltag 3 verwenden wir den
+[dokumentierten 270-Tage-Tippzettel](Review/Spieltag%203/EMPFEHLUNG.md).
+Die einzige Abweichung zur bisherigen Methode ist Hoffenheim–Stuttgart **1:2**.
+Die [Entscheidungsübersicht](Review/ENTSCHEIDUNGEN.md) hält Ziel, geprüfte
+Varianten, Grenzen und den nächsten Auswertungsschritt zusammen.
+
 - SQLite-Datenbank fuer Spiele, Marktwert-Stichtage, Buchmacherquoten und jede Prognose
 - historische Ergebnisse fuer D1 und D2 ab 1993/94 via Football-Data.co.uk
 - aktueller Spielplan und laufende Ergebnisse via OpenLigaDB
@@ -20,9 +26,14 @@ Turniersimulation und Ligaprognose konsequent.
   2 Tendenz, 0 falsch
 - optionale CHECK24-Turnierstrategie, die einen kompletten Neun-Spiele-Tippzettel
   auf die Chance eines Zielwerts statt auf den Saisonmittelwert optimiert
+- experimenteller optionaler Modus `contest`: Auswahl fuer den Spieltagspreis gegen
+  automatisch erzeugte Konkurrenzszenarien, ohne manuelle Tippanteile
 
-Die generierten Daten unter `data/` werden nicht versioniert. Sie lassen sich
-mit den folgenden Befehlen reproduzieren.
+Die SQLite-Datenbank, Rohdaten und umfangreichen Modell-Caches unter `data/`
+werden nicht versioniert. Ausgewählte Ergebnisdateien, Prüfscripte und die
+eingefrorenen Tippzettel sind gezielt versioniert; siehe
+[Ergebnisarchiv](Review/ARCHIV.md). Neue Modellläufe lassen sich mit den folgenden
+Befehlen erstellen. Historische Archive bleiben als damaliger Stand erhalten.
 
 ## Installation
 
@@ -41,6 +52,16 @@ Historie beider Ligen herunterladen. Dabei werden Ergebnisse und alle vorhandene
 ```bash
 .venv/bin/python -m bundesliga.data_sources historical \
   --leagues D1 D2 --start 1993 --end 2025
+```
+
+Football-Data enthaelt keine offiziellen Spieltagsnummern. Fuer vollstaendige
+D1-Spieltagstests diese Metadaten separat zuordnen (eine Anfrage pro Saison,
+danach Cache; Ergebnisse und Match-IDs bleiben erhalten):
+
+```bash
+.venv/bin/python -m bundesliga.rounds \
+  --seasons 2018 2019 2020 2021 2022 2023 2024 2025 \
+  --cache-dir bundesliga/data/raw/draw_matchday_review
 ```
 
 Aktuellen Spielplan und Ergebnisse aktualisieren:
@@ -78,8 +99,52 @@ Mehrere Spieltage koennen vorlaeufig gemeinsam ausgegeben werden:
 Spaetere Spieltage verwenden den aktuellen Informationsstand und werden vor
 ihrem jeweiligen Tipptermin mit neuen Ergebnissen und Quoten ueberschrieben.
 
-Fuer den CHECK24-Spieltagspreis wird der Tippzettel gemeinsam auf die Chance von
-mindestens 24 Punkten optimiert. Der Zielwert folgt aus dem beobachteten ersten
+Der Live-Standard ist wieder `expected-points`: Fuer den Konkurrenzmodus ist
+bisher kein realer Vorteil belegt. Der abgeschlossene Vergleich mit hoechstens
+zwei modellbegruendeten Abweichungen steht im
+[7+2-Ergebnisbericht](Review/SIEBEN_PLUS_ZWEI_ERGEBNIS.md).
+Der allgemeine `LIVE_CONFIG`-Standard bleibt 420 Tage mit Quoten; der ausdrücklich
+angenommene Tippzettel für Spieltag 3 verwendet separat 270 Tage ohne Quoten.
+
+Der optionale experimentelle Modus `contest` bewertet den gesamten Neun-Spiele-Zettel gegen
+neun feste, hypothetische Konkurrenzszenarien. Es werden keine Teilnehmerdaten
+oder woechentlich abgetippten Prozente benoetigt:
+
+```bash
+.venv/bin/python -m bundesliga.predict \
+  --league D1 --season 2026 --tip-strategy contest \
+  --output bundesliga/data/tipps_contest.xlsx
+```
+
+Die Szenarien kombinieren 100, 1.000 und 10.000 angenommene Gegner mit drei
+Staerken der Konzentration auf Tipps mit hohen erwarteten Punkten. Die genauen
+Tippanteile werden aus den vorhandenen Ergebniswahrscheinlichkeiten abgeleitet;
+sie sind **Annahmen, keine gemessenen CHECK24-Anteile**. Die Parameter stehen
+in `ContestConfig` in `contest.py` und wurden nicht an den Top-3-Screenshots
+angepasst.
+
+Optimiert wird das geometrische Mittel der simulierten Gewinnanteile ueber die
+Szenarien. Schlechte Durchschnittspunkte werden dabei bewusst akzeptiert.
+Gleichstaende werden als gleichmaessige Preisteilung beziehungsweise Auslosung
+modelliert; das ist keine verifizierte CHECK24-Regel. Alle Teilnehmer werden
+gegen dieselben simulierten Ergebnisse gewertet. Die angenommene Konkurrenz
+waehlt ihre Tipps pro Spiel unabhaengig; Fanmuster und weitere Zusammenhaenge
+innerhalb eines fremden Tippzettels sind nicht abgebildet.
+
+Die Auswahl verwendet 8.192 simulierte Spieltage; weitere 32.768 unabhaengige
+Simulationen dienen nur zur Bewertung. Es gibt keine feste Anzahl erzwungener
+Aussenseitertipps. Die Suche ist naeherungsweise, kein garantiertes globales
+Optimum. Auch die unabhaengige Bewertung prueft nur die angenommenen Szenarien,
+nicht die reale Konkurrenz. Seltene Ereignisse bleiben simulationsunsicher.
+
+Der Excel-/CSV-Export erhaelt eine `.metadata.json` mit allen Annahmen,
+Szenariovergleichen, Simulationsfehlern der Differenzen und erwarteten Punkten.
+Die Angaben sind keine echten Gewinnwahrscheinlichkeiten. Der Modus ist
+experimentell. `--tip-strategy expected-points` liefert als Standard die Auswahl
+fuer maximale Durchschnittspunkte.
+
+Die fruehere Variante `target-score` optimiert auf mindestens 24 Punkte.
+Der Zielwert folgt aus dem beobachteten ersten
 Spieltag (26 Punkte fuer Platz 1, 24 Punkte fuer die naechste sichtbare Gruppe):
 
 ```bash
@@ -89,9 +154,20 @@ Spieltag (26 Punkte fuer Platz 1, 24 Punkte fuer die naechste sichtbare Gruppe):
   --output bundesliga/data/tipps_spieltag_2_2026_risk.xlsx
 ```
 
-Das ist keine zufaellige Upset-Auswahl. Die Software maximiert unter den
-Modellwahrscheinlichkeiten direkt `P(Spieltagspunkte >= 24)`. Schlechte
+Das ist keine zufaellige Upset-Auswahl. Die Software sucht per lokaler Optimierung
+mit mehreren Startloesungen einen Tippzettel mit hoher
+`P(Spieltagspunkte >= 24)`; ein globales Optimum ist nicht garantiert. Schlechte
 Spieltage duerfen als Nebenwirkung auftreten, sind aber nicht selbst das Ziel.
+
+**Review nach Spieltag 2:** Der gespeicherte Zielwert-Zettel erzielte 13 Punkte,
+die drei vorgelegten Top-Zettel 24/22/22. Gegenueber der Auswahl nach erwarteten
+Punkten hatte die Strategie keine Tendenz geaendert. Eine feste Punkteschwelle
+optimiert nicht die Chance auf Platz 1 gegen die Konkurrenz. Fuer das nun
+priorisierte Ziel Spieltagspreis muss die Auswahl auch Teilnehmerzahl,
+Tippverteilung und Gleichstandsregeln beruecksichtigen. Weil diese Daten nicht
+verfuegbar sind, verwendet `contest` die oben beschriebenen Szenarien.
+Details, Ergebnisvergleich und die konkrete Richtung
+stehen in [der Auswertung zu Spieltag 2](Review/Spieltag%202/AUSWERTUNG.md).
 
 ## Buchmacherquoten
 
@@ -127,7 +203,8 @@ entweder `match_id` oder `competition,season,home_team,away_team`. Fuer
 
 ## Walk-forward-Backtest
 
-Ein Basismodell fuer vier Saisons blind testen:
+Ein Basismodell fuer vier Saisons testen (die unten verwendeten Perioden sind
+in diesem Projekt inzwischen bekannt und deshalb kein neuer Blindtest):
 
 ```bash
 .venv/bin/python -m bundesliga.backtest \
@@ -146,9 +223,18 @@ Die aktuell ausgewaehlte erweiterte Variante:
   --output bundesliga/data/backtest_final.csv
 ```
 
-Ein Prognose-Spieltag reicht im Backtest von Dienstag bis Montag. Das Modell
-wird am Dienstag nur mit davor beendeten Spielen neu trainiert. Damit kann kein
-spaeteres Wochenendergebnis in eine fruehere Prognose gelangen.
+Bei vorhandenen Spieltagsnummern wird jeder offizielle Spieltag getrennt
+berechnet. Alle neun Spiele erhalten denselben Informationsstand: Dienstag
+der Kalenderwoche der ersten Partie, ausschliesslich mit vorherigen Ergebnissen.
+Nachholspiele bleiben beim urspruenglichen Spieltag. Nicht zeitgestempelte
+Quoten fuer Spiele in spaeteren Kalenderwochen werden dabei nicht verwendet;
+das interne Modell uebernimmt. Die Verfuegbarkeit historischer Opening-Quoten
+innerhalb der ersten Kalenderwoche bleibt mangels Zeitstempel eine Annahme.
+
+Ohne offizielle Nummern nutzt nur `expected-points` weiterhin Kalenderfenster;
+die Zusammenfassung kennzeichnet das als `calendar_windows`. Die Turniermodi
+verlangen offizielle Spieltagsnummern. Mit `--matchdays 17` laesst sich ein
+bestimmter Spieltag der ausgewaehlten Saisons pruefen.
 
 Die Turnierstrategie laesst sich mit demselben Walk-forward-Lauf testen:
 
@@ -163,14 +249,49 @@ Die Turnierstrategie laesst sich mit demselben Walk-forward-Lauf testen:
 ```
 
 Die Zusammenfassung enthaelt nun Mittelwert, Standardabweichung und Bestwert
-pro vollstaendigem Neun-Spiele-Fenster sowie Trefferzahlen fuer mindestens 18,
-20, 22 und 24 Punkte. Kalenderfenster mit Nachholspielen oder zwei Spieltagen
-werden nicht in diese Matchday-Kennzahlen aufgenommen. Fuer eine ehrliche
+pro vollstaendigem offiziellen Spieltag sowie Trefferzahlen fuer mindestens 18,
+20, 22 und 24 Punkte. Zwei Spieltage in derselben Woche werden getrennt gezaehlt.
+Unvollstaendige Gruppen werden separat ausgewiesen. Fuer eine ehrliche
 Auswahl sollte die Strategie auf 2018/19 bis 2021/22 entwickelt und nur einmal
 auf 2022/23 bis 2025/26 getestet werden. Ein bereits bekannter Spieltag darf
 danach als Realitaetscheck dienen, aber nicht mehr zum Tuning desselben Laufs.
 
 ## Feature-Experimente
+
+Die neue Turnierauswahl kann ohne erneute Modellfits auf bereits gespeicherten
+Walk-forward-Wahrscheinlichkeiten nachgerechnet werden:
+
+```bash
+.venv/bin/python -m bundesliga.contest_backtest \
+  --input bundesliga/data/backtest_d1_2018_2021_official_frozen.csv \
+  --output bundesliga/data/contest_replay_2018_2021.csv
+```
+
+Der Replay benoetigt insbesondere Lambdas, `rho`, 1X2-Wahrscheinlichkeiten,
+`as_of` und die tatsaechlichen Ergebnisse. Ergebnisse werden erst nach der
+Tippauswahl zur Bewertung verwendet. Die Zeitreinheit der Eingabe wird vom
+urspruenglichen Walk-forward-Lauf uebernommen. Nur vollstaendige offizielle
+Spieltage mit gemeinsamem Prognosezeitpunkt werden verglichen. Alte Dateien mit
+mehreren Prognosezeitpunkten innerhalb eines Spieltags werden abgewiesen.
+Reale Platzierungen lassen sich ohne Konkurrenzdaten
+nicht rueckwirkend messen. Auch der regulaere Backtest unterstuetzt
+`--tip-strategy contest`; unvollstaendige Fenster behalten die normale Auswahl
+und werden in der Ausgabe entsprechend gekennzeichnet.
+
+Der erste, inzwischen als eingeschraenkt erkannte Replay auf 2018/19 bis 2021/22
+umfasste nur 106 Neun-Spiele-Kalenderfenster und liess 23 andere Fenster aus.
+Das waren **nicht alle 136 offiziellen Spieltage** dieser vier Saisons:
+
+| Auswahl | Punkte/Spieltag | Standardabweichung | Bestwert | Spieltage ab 18 Punkten |
+|---|---:|---:|---:|---:|
+| Erwartete Punkte | 11,48 | 4,03 | 20 | 9 |
+| `contest` | 10,15 | 4,04 | 20 | 4 |
+
+Damit sind bessere Spitzenergebnisse bisher **nicht belegt**. Die neue Auswahl
+aendert im Mittel 6,92 Tendenzen pro Zettel. Ihr Vorteil in den simulierten
+Konkurrenzszenarien ist ein modellabhaengiges Ergebnis, kein Nachweis hoeherer
+realer Gewinnchancen. Ergebnisse und Grenzen stehen auch im
+[Strategiereview](Review/STRATEGIE_OHNE_KONKURRENZDATEN.md).
 
 Form- und H2H-Gewichte werden auf einer Entwicklungsperiode verglichen, ohne
 den teuren Basisfit mehrfach auszufuehren:
@@ -229,8 +350,11 @@ bekannt gewordene Marktwerte duerfen nicht rueckwirkend in einen Backtest.
 
 ## Bisherige Ergebnisse
 
-Der erste unangetastete D1-Test umfasst 1.224 Spiele der Saisons 2022/23 bis
-2025/26:
+Der urspruengliche, damals noch unangetastete D1-Test umfasst 1.224 Spiele der
+Saisons 2022/23 bis 2025/26. Inzwischen wurde dieser Zeitraum mehrfach untersucht
+und ist kein neuer Blindtest. Die folgende Tabelle dokumentiert den urspruenglichen Wochenfit;
+die korrigierten Ergebnisse nach einheitlichen offiziellen Spieltags-Stichtagen
+stehen im [Modellaudit](Review/MODELL_UND_SPIELTAGSAUDIT.md):
 
 | Variante | Punkte | Punkte/Spiel | Brier | Scoreline-Log-Loss |
 |---|---:|---:|---:|---:|
@@ -249,6 +373,72 @@ aus dem margenbereinigten Marktmittel; das Poisson-Modell bestimmt weiterhin die
 Verteilung der exakten Ergebnisse innerhalb von Heimsieg, Remis und Auswaertssieg.
 Diese Ergebnisse bleiben eine Startlinie und keine Garantie fuer kommende Saisons.
 
+Der neue Vergleich mit einer einfachen Quotenheuristik zeigt einen sehr kleinen
+Zusatznutzen: 2022/23 bis 2025/26 erzielt die aktuelle Kombination nach Korrektur
+1.677 Punkte, Quotenfavorit mit festem 2:1/1:2/1:1 und gleichem Modellfallback
+1.674. Der hoehere Aufwand ist damit fuer das Ziel Spieltagspreis bislang nicht
+durch einen belastbaren Mehrwert gerechtfertigt. Das interne Modell und 50 %
+Quotengewicht erreichen jeweils einmal 25 Spieltagspunkte bei weniger Gesamtpunkten;
+ein einzelner Spitzenwert belegt keine bessere Gewinnstrategie.
+
+## Halbwertszeit und gegnerbereinigte Form über 15 Saisons
+
+Die bisher verwendeten **420 Tage waren ein gesetzter Standardwert**, keine
+dokumentierte Optimierung. Der Wert stammt bereits aus dem ersten Pipeline-
+Commit; alle 24 bis zum 08.09.2026 gespeicherten Prognoseläufe verwenden ihn.
+
+Der reproduzierbare Vergleich in `half_life_study.py` untersucht 2011/12 bis
+2025/26: 4.590 Spiele auf 510 offiziellen Spieltagen, plus 2010/11 als Formvorlauf.
+Sieben feste und zwei saisonabhängige Halbwertszeiten werden mit bisheriger,
+gegnerbereinigter und ausgeschalteter Form verglichen. Die neue Form verwendet
+Abweichungen von damals vor dem Spiel berechneten Torerwartungen. Für jede
+Testsaison erfolgt die Parameterauswahl nur anhand der fünf vorigen Saisons.
+
+Das [vorab gespeicherte Protokoll](Review/HALBWERTSZEIT_PROTOKOLL.md) beschreibt
+Kandidaten, Auswahlregel und Grenzen. Der abgeschlossene
+[Ergebnisbericht](Review/HALBWERTSZEIT_UND_FORM.md) zeigt einen kleinen Vorteil
+bei der Prognosegüte für längere Halbwertszeiten, aber keinen zusätzlichen
+24-Punkte-Spieltag durch die zeitlich getrennte Parameterauswahl. Kürzere
+Halbwertszeiten liefern einzelne zusätzliche Spitzen bei schlechterer
+Prognosegüte; ein Tagespreis-Vorteil ist damit nicht gesichert.
+Aufruf aus dem Repository-Hauptordner:
+
+```bash
+.venv/bin/python -m bundesliga.rounds \
+  --seasons 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 \
+  --cache-dir bundesliga/data/raw/draw_matchday_review
+OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 \
+  .venv/bin/python -m bundesliga.half_life_study --workers 3
+```
+
+Zwischenergebnisse werden pro Halbwertszeit und Saison gespeichert; ein erneuter
+vollständiger Aufruf prüft den Fingerabdruck von Code und Eingangsdaten und setzt
+einen unveränderten Lauf fort. Für geänderte Varianten ein neues `--output`
+verwenden. CSVs und Excel-Auswertung liegen in `data/half_life_15_seasons/`.
+Live-Parameter und Live-Tippregel werden durch den Versuch nicht verändert.
+
+## Höchstens zwei begründete Risiken
+
+`limited_risk.py` und `limited_risk_study.py` implementieren und prüfen die
+7+2-Idee mit einem gemeinsamen Budget von höchstens einem erwarteten Punkt
+Verzicht und höchstens einem zusätzlichen Remistipp. Die jährliche Auswahl
+zielt ausdrücklich auf Spitzenspieltage ab 22/24 Punkten und verwendet nur
+die fünf vorherigen Saisons. Konkurrenzdaten werden nicht benötigt.
+
+Der [abgeschlossene Vergleich](Review/SIEBEN_PLUS_ZWEI_ERGEBNIS.md) rechtfertigt
+keine Live-Umstellung: Auf 340 Testspieltagen ergibt die zeitlich getrennte
+Auswahl drei statt zwei Spieltage ab 22 Punkten, weiterhin keinen ab 24 und
+niedrigere Durchschnittspunkte. Das komplette interne 270-Tage-Modell bleibt
+im bereits bekannten historischen Vergleich auffälliger für das Spitzenziel.
+
+```bash
+OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 \
+  .venv/bin/python -m bundesliga.limited_risk_study
+```
+
+Ausgaben: `data/limited_risk_15_seasons/`, einschließlich `sieben_plus_zwei.xlsx`.
+Regeln und Grenzen stehen im [Versuchsprotokoll](Review/SIEBEN_PLUS_ZWEI_PROTOKOLL.md).
+
 ## Tests
 
 ```bash
@@ -260,8 +450,10 @@ ein global installiertes Rerun-Plugin einen lokalen Socket oeffnen moechte.
 
 ## Naechste Ausbaustufen
 
-1. Form auf gegnerbereinigte Torresiduen statt Punkte/Tordifferenz umstellen.
-2. Halbwertszeit, Ridge und Aufsteiger-Abbildung per Rolling Validation tunen.
+1. Die im 15-Saison-Vergleich untersuchte Residuenform vor einer Live-Übernahme
+   mit dem Ziel Tagespreis bewerten; bislang kein nachgewiesener Vorteil dafür.
+2. Ridge und Aufsteiger-Abbildung separat per Rolling Validation untersuchen;
+   der Halbwertszeit-Vergleich ist abgeschlossen.
 3. Den Live-Quotenabruf vor jeder Tippabgabe automatisieren und dessen Abdeckung ueberwachen.
 4. Verletzungen, Startaufstellungen und Trainerwechsel als spaetere, ebenfalls
    einzeln messbare Features aufnehmen.

@@ -74,6 +74,7 @@ TEAM_ALIASES = {
     "1.FC Nürnberg": "1. FC Nürnberg",
     "1.FC Heidenheim 1846": "1. FC Heidenheim 1846",
     "Bielefeld": "Arminia Bielefeld",
+    "DSC Arminia Bielefeld": "Arminia Bielefeld",
     "Munich 1860": "TSV 1860 München",
     "Uerdingen": "KFC Uerdingen 05",
     "Unterhaching": "SpVgg Unterhaching",

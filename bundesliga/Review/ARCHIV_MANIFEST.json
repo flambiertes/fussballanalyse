@@ -1,0 +1,365 @@
+{
+  "description": "Frozen evidence for decisions on 8–9 September 2026; raw inputs and the local SQLite database are excluded.",
+  "files": [
+    {
+      "path": "data/audit_frozen_models.py",
+      "bytes": 4170,
+      "sha256": "5322f96de77878be612d0c6b543f75ac935f212b55c5ad460a1c892c30067513"
+    },
+    {
+      "path": "data/audit_half_life_outputs.py",
+      "bytes": 4820,
+      "sha256": "7b33e78f98e724ad49c4be26f17770fbafd29ef8bc1fbb5cc640ff8b7129dc85"
+    },
+    {
+      "path": "data/audit_official_rounds.py",
+      "bytes": 4030,
+      "sha256": "6ef19d72dcdfae4a105c234d54a2cff724e1791e0d62d482b57b19422d71ff9a"
+    },
+    {
+      "path": "data/backtest_d1_2018_2021_live_config_with_odds.csv",
+      "bytes": 631519,
+      "sha256": "b649d7eab7a421df483882896b7e7f857d510d74e895a9831942a92dd37066fb"
+    },
+    {
+      "path": "data/backtest_d1_2018_2021_official_frozen.csv",
+      "bytes": 662043,
+      "sha256": "801c53e6e26b039cdd1f0843a16cc36ce8db09fa4f6bc4f36103f2f8ffcab985"
+    },
+    {
+      "path": "data/backtest_d1_2018_2021_official_frozen.json",
+      "bytes": 1984,
+      "sha256": "aefd15c46b0349f0e9f422059d20679a030478deef0bbe244c5d79fcbbd6590e"
+    },
+    {
+      "path": "data/backtest_d1_2022_2025_live_config_with_odds.csv",
+      "bytes": 632167,
+      "sha256": "b70e4c07ba3127f00d785ec8453d31ac0d6dd7646821686c6e97dd1a0da56631"
+    },
+    {
+      "path": "data/backtest_d1_2022_2025_official_frozen.csv",
+      "bytes": 661536,
+      "sha256": "bf4019508b78f863df27804bda969dfdb4846462abe3e8e0231c88883468256c"
+    },
+    {
+      "path": "data/backtest_d1_2022_2025_official_frozen.json",
+      "bytes": 1849,
+      "sha256": "4596c7c25446825a3bf016fd22d82f0ca91e47cb1bb821fef96d5eaf79458a60"
+    },
+    {
+      "path": "data/check_seven_plus_two.py",
+      "bytes": 4572,
+      "sha256": "89fd468fe619f493010acb8bfc2c92297719e6a31ced31ae96207e8261a150fd"
+    },
+    {
+      "path": "data/contest_input_2018_2019.csv",
+      "bytes": 308219,
+      "sha256": "d72794f69e0409e75866df06206d20260b31c98814f22cca6684fcd844b3ba1b"
+    },
+    {
+      "path": "data/contest_input_2020_2021.csv",
+      "bytes": 307649,
+      "sha256": "69f31cc5eaae4c33f64022b63c49dca7758b68025a32238ce68149e9a97ede68"
+    },
+    {
+      "path": "data/contest_replay_2018_2019.csv",
+      "bytes": 158809,
+      "sha256": "53160858292547a5e0629a0fcafb526c0e84914f2e04161da2b331c07184abc5"
+    },
+    {
+      "path": "data/contest_replay_2018_2019.json",
+      "bytes": 987,
+      "sha256": "6a8dbce8206c2c2a21539a6d8c9981458c058ef527e172d8cee189cc4117efc1"
+    },
+    {
+      "path": "data/contest_replay_2018_2021.csv",
+      "bytes": 306000,
+      "sha256": "2f81f5d3dbd1f9abede155128d193e83be4fee146e242436bf686e1c17164d13"
+    },
+    {
+      "path": "data/contest_replay_2018_2021.json",
+      "bytes": 1024,
+      "sha256": "a89b337e761c6c54709d7b05c532644ed79ad52c0a16da2a45ab11b6f7e6e29e"
+    },
+    {
+      "path": "data/contest_replay_2018_2021_assumed_prizes.csv",
+      "bytes": 46977,
+      "sha256": "b6b7c3db190ca38b55ed50acdbff0646bffc2b3ce500f5c4d034fa0721d8fe2a"
+    },
+    {
+      "path": "data/contest_replay_2020_2021.csv",
+      "bytes": 147324,
+      "sha256": "59ed6975836b0f3a42cc81448af53f1ae9c264dc127a20b73c9f9f3e3ffab11b"
+    },
+    {
+      "path": "data/contest_replay_2020_2021.json",
+      "bytes": 1001,
+      "sha256": "9ca2a4294086530823dcef195e9841c69bef91590686ed76f220c98824378690"
+    },
+    {
+      "path": "data/contest_rueckblick_spieltage_1_2_2026.csv",
+      "bytes": 4135,
+      "sha256": "a8ea05e0dcc2f8386cc42c83a789ff0c27cb044116b6bf49e663d3552ee2a5c7"
+    },
+    {
+      "path": "data/contest_rueckblick_spieltage_1_2_2026.metadata.json",
+      "bytes": 7521,
+      "sha256": "8123df98fe86a998177c1a8223188cdb8a6018621369476a61a98f99a6778c7b"
+    },
+    {
+      "path": "data/contest_rueckblick_spieltage_1_2_2026.xlsx",
+      "bytes": 8540,
+      "sha256": "d665417b67ce3d64df6884450ccad3a39f397bb487c02ee5475990ea9709183b"
+    },
+    {
+      "path": "data/draw_matchday_frequency_2016_2025.csv",
+      "bytes": 4709,
+      "sha256": "a8c390f56a738e1ed0039b549bef1d0bf7cbd2d4cf60836f73dba947750f0e32"
+    },
+    {
+      "path": "data/draw_matchday_frequency_2016_2025.metadata.json",
+      "bytes": 1019,
+      "sha256": "bed036da9afc246101228246c01267b021968842546ae5466354f00bfc17bbed"
+    },
+    {
+      "path": "data/frozen_predictions_2018_2021.csv",
+      "bytes": 695600,
+      "sha256": "db167f2c01672a8624f3e417fa2de35c7a8a01f6b408903cf994b959264bc8c3"
+    },
+    {
+      "path": "data/frozen_predictions_2022_2025.csv",
+      "bytes": 695522,
+      "sha256": "7b2eb85ccdc5f2858b0951f6cc9636ab30c6455cbf2d5c118997d2e3a9ae6640"
+    },
+    {
+      "path": "data/frozen_round_audit_2018_2021.csv",
+      "bytes": 5010,
+      "sha256": "b067e5d6b7e7dcfa7acb64c6faf8761625469407f38eb5685335d34eae06be47"
+    },
+    {
+      "path": "data/frozen_round_audit_2022_2025.csv",
+      "bytes": 5014,
+      "sha256": "8614962a4e25be9efd135cb3ed30dc4ac33bbe86905d6c6e1084a5a922763318"
+    },
+    {
+      "path": "data/frozen_round_model_audit.json",
+      "bytes": 3268,
+      "sha256": "bca46e9dbdc46d5de2668809ffa79c827483d7f2b5dce78b3eb1e64fdfb3332f"
+    },
+    {
+      "path": "data/half_life_15_seasons/all_candidates.csv",
+      "bytes": 17289,
+      "sha256": "29b9be8c37771b72c7244cd8fc3cb91d44f88fa247d4967c35f1f05ef158078d"
+    },
+    {
+      "path": "data/half_life_15_seasons/halbwertszeit_15_saisons.xlsx",
+      "bytes": 231833,
+      "sha256": "c041f84f9c1a7ae4c927ea06a0ff7eda91a00882d8e6e1be2f2885c66d80d126"
+    },
+    {
+      "path": "data/half_life_15_seasons/independent_audit.json",
+      "bytes": 772,
+      "sha256": "a326697e3871055d74df695da5d3aeca2a4116969213488e6de57ad1978ff6ac"
+    },
+    {
+      "path": "data/half_life_15_seasons/input_coverage.csv",
+      "bytes": 306,
+      "sha256": "ffa26166116364624a367ad9f102373a454e51b2a2b9b4575927389eea7367fe"
+    },
+    {
+      "path": "data/half_life_15_seasons/manifest.json",
+      "bytes": 1498,
+      "sha256": "5857b18b02fe02619d55b934442f6b7f6ea8bef24a986bedc77877edc0ec2d0c"
+    },
+    {
+      "path": "data/half_life_15_seasons/paired_uncertainty.csv",
+      "bytes": 4056,
+      "sha256": "a12c8ae4cf1081f9f261e0ea1b08e491ffaeb60b2dbcd342ea7fde770e631d53"
+    },
+    {
+      "path": "data/half_life_15_seasons/per_season.csv",
+      "bytes": 256510,
+      "sha256": "99d591b68835158e6d1616245f21160b76877c07f37b8acc68f1052567ca8cbd"
+    },
+    {
+      "path": "data/half_life_15_seasons/phases.csv",
+      "bytes": 10382,
+      "sha256": "52689f1bca4b63c77cb5fcff57153fa831f33daee2eb0909e236c4a7db8cd963"
+    },
+    {
+      "path": "data/half_life_15_seasons/rolling_choices.csv",
+      "bytes": 6792,
+      "sha256": "68de9d5532b8dd68671a3f8eae81a2fdb2c75347e2b0b94f8f335ca01e620fcf"
+    },
+    {
+      "path": "data/half_life_15_seasons/rolling_per_season.csv",
+      "bytes": 14935,
+      "sha256": "47a63fce4d2643f689ca6c4b58993b78222a3692b85eb9e919a69c8f6f280269"
+    },
+    {
+      "path": "data/half_life_15_seasons/rolling_predictions.csv",
+      "bytes": 4956953,
+      "sha256": "010947d9355966f0612d2c01854a3cf9b0851ac06c5917313497ed43461d331e"
+    },
+    {
+      "path": "data/half_life_15_seasons/rolling_summary.csv",
+      "bytes": 1613,
+      "sha256": "834d6172917db4946e5340db8a8b765b23c0078a915c0a37943f5b2d6d503523"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/all_rounds.csv",
+      "bytes": 227807,
+      "sha256": "8f4bd84de3fc3e3578cb3b8924b8c70f8926139c6ec3ffc3b1c4088816c52e73"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/all_summary.csv",
+      "bytes": 838,
+      "sha256": "a7d412cf2a8fd36d38a7f5dd60d4b80aec508e2f57c667ad3d8abe114cda1f49"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/full_270_changed_tips.csv",
+      "bytes": 75963,
+      "sha256": "af996fc4df01fda06e4436be23502c38493f5d8d4adf948fcc8b29c94a802987"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/manifest.json",
+      "bytes": 6821,
+      "sha256": "74041496a0169ed4b07f96d630a0c70bda2e870c2b9f5140887d6dfa74b62615"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/per_season.csv",
+      "bytes": 10428,
+      "sha256": "1a23dea445cfdc2540a0618290fd62355622a5f1fe2c27e2922b9a808694a542"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/predictions.csv",
+      "bytes": 2856568,
+      "sha256": "25e9606a7a22957a3ac9e3e4978019244a1fc951d6f77d6b4ce81ffebfb60f82"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/rolling_choices.csv",
+      "bytes": 503,
+      "sha256": "17635f5ab39f1934ce56427d6692984d9c13cf3420f48a18bf760a879b6308ea"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/sieben_plus_zwei.xlsx",
+      "bytes": 462146,
+      "sha256": "55b512074d74e35a83701d3e5c481ac2ad99f806be45f04b25b5ed78a248e793"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/test_per_season.csv",
+      "bytes": 7998,
+      "sha256": "6fe43d5d5fb89bf8c5d9e2bbc03427f9341351989ef09f1312a3e5022ab762f9"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/test_rounds.csv",
+      "bytes": 181217,
+      "sha256": "800107493f8be210b044fc5dc853c7dbba8d57212a5ec860fb5ddbc43b3c6af5"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/test_summary.csv",
+      "bytes": 940,
+      "sha256": "d7ccd1c3aca5d7e25388cf7ea310cdda21e7db742a8fc3c20b571e475dfca845"
+    },
+    {
+      "path": "data/limited_risk_15_seasons/uncertainty.csv",
+      "bytes": 1219,
+      "sha256": "57bdf3fcf2069fd8f22cf74de45a2dd1fb268fce45ed67c3b243459308c53ed2"
+    },
+    {
+      "path": "data/modellaudit_offizielle_spieltage.xlsx",
+      "bytes": 16598,
+      "sha256": "a3c34aa57dcdcd436ceaaa1ebb234499ecdc2f0127227a14c272cb30c27e298a"
+    },
+    {
+      "path": "data/official_round_audit_2018_2021.csv",
+      "bytes": 5010,
+      "sha256": "b88fc344d52daefb6376c4bd2afcc860c59ae336900aeee354081b18fdcd85fd"
+    },
+    {
+      "path": "data/official_round_audit_2022_2025.csv",
+      "bytes": 5014,
+      "sha256": "09fc43d945bee4a03b03a5498e346bd97b15b703510cc6090563a6d326883ec3"
+    },
+    {
+      "path": "data/official_round_model_audit.json",
+      "bytes": 3421,
+      "sha256": "fb6028263127b0407eb70426314b7004382e8a53fbcbef12bbb38cda9503463d"
+    },
+    {
+      "path": "data/repair_official_backtests.py",
+      "bytes": 2478,
+      "sha256": "4b0cb19b1599e35789b15f0f65516041b6dbc5871221b4334ae2cc636b7ea6f6"
+    },
+    {
+      "path": "data/seven_plus_two_development.csv",
+      "bytes": 492367,
+      "sha256": "da5ae2c9caff69223848d88a5fa904d604d334253d77539790a92df3d85a831c"
+    },
+    {
+      "path": "data/seven_plus_two_development.json",
+      "bytes": 337,
+      "sha256": "9de85b7a0b7dd981d039e9d01be16f655e8e68a3db74ae50489e0d0250f2d933"
+    },
+    {
+      "path": "data/seven_plus_two_matchdays_1_2.csv",
+      "bytes": 9458,
+      "sha256": "4d31c9c79274fa7b0ee337bb80393680416ecc13c73fb94c2bec0be361994296"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/basis_420.csv",
+      "bytes": 4882,
+      "sha256": "4bd91e3ee0f0309f382b0e9711052682aea5d867886ff7d1a1b83397336a712b"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/basis_420.metadata.json",
+      "bytes": 1102,
+      "sha256": "3faf1b08096d00697dc64565c27062a84838fb4b1f4aa6be1df47aea306841d0"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/empfehlung_270.csv",
+      "bytes": 4886,
+      "sha256": "917ad143145be49c44f55e66454b1ab072ff33c965337fa3b93a17e2ec0e3d88"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/empfehlung_270.metadata.json",
+      "bytes": 1100,
+      "sha256": "a61508011af498bde68db6afa4e5a7780aabe98b13ba26d081bf426e15c99598"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/quoten_alter.csv",
+      "bytes": 12446,
+      "sha256": "810514e9f1d050ed0bd911011a6fc21c586d2b40391f075cc325041b43d298e8"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/tipps_spieltag_3.xlsx",
+      "bytes": 14101,
+      "sha256": "6580ec0eecb96ce2bb926f6c4da7751d01f870a7d5dd4e148538469d1ea5acdc"
+    },
+    {
+      "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/vergleich.csv",
+      "bytes": 5206,
+      "sha256": "4a8c018b6336b490a43423cac918ebb5d972f06f545835cd9db04c537a771dbb"
+    },
+    {
+      "path": "data/tipps_spieltag_1_2026.xlsx",
+      "bytes": 7951,
+      "sha256": "bcb44e41b9115339832c1f65842ac6868b769804df1d8452c523299d5a9c1325"
+    },
+    {
+      "path": "data/tipps_spieltag_2_2026_risk.xlsx",
+      "bytes": 8157,
+      "sha256": "b5d3c24bc377767a6700ea5659149e7286ceab7d9dcf096b50296edda50259ce"
+    },
+    {
+      "path": "data/tipps_spieltag_3_2026_contest_vorschau.metadata.json",
+      "bytes": 4989,
+      "sha256": "686e5b5bbcaa3f28461f88499f4d91790480bed9695bb76a13a826c8c59ad0f8"
+    },
+    {
+      "path": "data/tipps_spieltag_3_2026_contest_vorschau.xlsx",
+      "bytes": 8435,
+      "sha256": "91461a1bd4a855acc585afebd6b888764e0a37768a7b3d10e35c49dbeac8cc64"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "run_id": "live-d1-36e29357426d",
+  "promoted_team_priors": [
+    "FC Schalke 04",
+    "SC Paderborn 07",
+    "SV 07 Elversberg"
+  ],
+  "tip_strategy": "contest",
+  "target_points": null,
+  "contest_reports": [
+    {
+      "match_ids": [
+        "69d7b03c8c472bdcd27a",
+        "201cf42decc8e184531c",
+        "335e8e46aaf42895d127",
+        "521a931cdce8f121d76b",
+        "d6e255b0a50a6c5e3769",
+        "ee4d3192a3a6c14e4435",
+        "5ab3063973f4e1a04e3e",
+        "9545ef5af328292a97c3",
+        "845ec28063ce46534ca5"
+      ],
+      "experimental": true,
+      "crowd_source": "assumed; no observed participant data",
+      "tie_convention": "equal prize share / uniform lottery",
+      "search": "multi-start coordinate ascent; no global optimum guarantee",
+      "config": {
+        "opponents": [
+          100,
+          1000,
+          10000
+        ],
+        "crowd_concentrations": [
+          1.0,
+          2.5,
+          5.0
+        ],
+        "training_samples": 8192,
+        "evaluation_samples": 32768,
+        "seed": 20260908,
+        "max_passes": 4,
+        "max_tip_goals": 5
+      },
+      "expected_points": 9.881168143751662,
+      "baseline_expected_points": 13.147268857113886,
+      "changed_tendencies": 6,
+      "training_log_objective": -4.427431909108623,
+      "evaluation_log_objective": -4.690565253990737,
+      "baseline_evaluation_log_objective": -7.570568095536818,
+      "scenarios": [
+        {
+          "assumed_opponents": 100,
+          "assumed_crowd_concentration": 1.0,
+          "simulated_prize_share": 0.023206991660110567,
+          "baseline_simulated_prize_share": 0.024113772999994468,
+          "paired_difference_standard_error": 0.0008880095223927294
+        },
+        {
+          "assumed_opponents": 1000,
+          "assumed_crowd_concentration": 1.0,
+          "simulated_prize_share": 0.0045790830022385,
+          "baseline_simulated_prize_share": 0.002476654182787012,
+          "paired_difference_standard_error": 0.0003511035257237909
+        },
+        {
+          "assumed_opponents": 10000,
+          "assumed_crowd_concentration": 1.0,
+          "simulated_prize_share": 0.0008974548292598685,
+          "baseline_simulated_prize_share": 0.00025107331876607835,
+          "paired_difference_standard_error": 0.0001350710854029962
+        },
+        {
+          "assumed_opponents": 100,
+          "assumed_crowd_concentration": 2.5,
+          "simulated_prize_share": 0.0327041394330411,
+          "baseline_simulated_prize_share": 0.01132541603913741,
+          "paired_difference_standard_error": 0.0008928002719772462
+        },
+        {
+          "assumed_opponents": 1000,
+          "assumed_crowd_concentration": 2.5,
+          "simulated_prize_share": 0.008610473363305393,
+          "baseline_simulated_prize_share": 0.0007530203436694248,
+          "paired_difference_standard_error": 0.0004284573049953553
+        },
+        {
+          "assumed_opponents": 10000,
+          "assumed_crowd_concentration": 2.5,
+          "simulated_prize_share": 0.002406871309762467,
+          "baseline_simulated_prize_share": 2.7197193130926105e-05,
+          "paired_difference_standard_error": 0.00021979311780367318
+        },
+        {
+          "assumed_opponents": 100,
+          "assumed_crowd_concentration": 5.0,
+          "simulated_prize_share": 0.052568130889965946,
+          "baseline_simulated_prize_share": 0.005019948113752079,
+          "paired_difference_standard_error": 0.001082709956801119
+        },
+        {
+          "assumed_opponents": 1000,
+          "assumed_crowd_concentration": 5.0,
+          "simulated_prize_share": 0.01918334767988116,
+          "baseline_simulated_prize_share": 0.00018241845766371663,
+          "paired_difference_standard_error": 0.0006447731244454231
+        },
+        {
+          "assumed_opponents": 10000,
+          "assumed_crowd_concentration": 5.0,
+          "simulated_prize_share": 0.007113462081590298,
+          "baseline_simulated_prize_share": 8.057724093851699e-07,
+          "paired_difference_standard_error": 0.0003965782548392974
+        }
+      ]
+    }
+  ],
+  "model_version": "dynamic-dixon-coles-0.2",
+  "as_of": "2026-09-08T16:05:35.630213",
+  "intercept": -0.5317952807186664,
+  "home_advantage": 0.20076200623029902,
+  "rho": -0.08676973039811837,
+  "training_matches": 1854,
+  "config": {
+    "lookback_years": 6.0,
+    "half_life_days": 420.0,
+    "ridge": 0.08,
+    "min_training_matches": 250,
+    "max_goals": 10,
+    "form_matches": 8,
+    "form_half_life_matches": 3.5,
+    "form_weight": 0.1,
+    "venue_form_weight": 0.0,
+    "h2h_matches": 6,
+    "h2h_half_life_days": 730.0,
+    "h2h_weight": 0.05,
+    "market_value_weight": 0.05,
+    "market_decay_matches": 10,
+    "bookmaker_weight": 1.0,
+    "bookmaker_snapshot_type": "captured",
+    "use_lower_league_priors": true,
+    "lower_league_scale": 0.85,
+    "promotion_attack_penalty": -0.2,
+    "promotion_defense_penalty": 0.2,
+    "promotion_prior_matches": 10
+  }
+}

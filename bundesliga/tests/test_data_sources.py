@@ -52,6 +52,7 @@ def test_season_code_and_aliases():
     assert canonical_team("FC Cologne") == "1. FC Köln"
     assert canonical_team("Borussia Monchengladbach") == "Borussia Mönchengladbach"
     assert canonical_team("FSV Mainz 05") == "1. FSV Mainz 05"
+    assert canonical_team("DSC Arminia Bielefeld") == "Arminia Bielefeld"
 
 
 def test_openligadb_finished_result():

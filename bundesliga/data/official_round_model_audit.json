@@ -1,0 +1,147 @@
+[
+  {
+    "period": "2018/2019 to 2021/2022",
+    "full_official_rounds": 136,
+    "calendar_window_sizes": {
+      "1": 2,
+      "8": 6,
+      "9": 106,
+      "10": 6,
+      "16": 1,
+      "18": 8
+    },
+    "mixed_nine_windows": [],
+    "official_rounds_multiple_forecast_times": 8,
+    "official_rounds_all_forecasts_before_first_game": 120,
+    "variants": {
+      "current": {
+        "points": 1572,
+        "points_per_game": 1.2843137254901962,
+        "mean_round": 11.558823529411764,
+        "best_round": 20,
+        "ge18": 10,
+        "ge20": 1,
+        "ge22": 0,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "odds_fixed_2_1": {
+        "points": 1605,
+        "points_per_game": 1.3112745098039216,
+        "mean_round": 11.801470588235293,
+        "best_round": 22,
+        "ge18": 7,
+        "ge20": 4,
+        "ge22": 1,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "odds_fixed_1_0": {
+        "points": 1590,
+        "points_per_game": 1.2990196078431373,
+        "mean_round": 11.691176470588236,
+        "best_round": 21,
+        "ge18": 8,
+        "ge20": 2,
+        "ge22": 0,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "internal_only": {
+        "points": 1579,
+        "points_per_game": 1.2900326797385622,
+        "mean_round": 11.610294117647058,
+        "best_round": 22,
+        "ge18": 8,
+        "ge20": 2,
+        "ge22": 1,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "half_market": {
+        "points": 1573,
+        "points_per_game": 1.2851307189542485,
+        "mean_round": 11.566176470588236,
+        "best_round": 20,
+        "ge18": 8,
+        "ge20": 1,
+        "ge22": 0,
+        "ge24": 0,
+        "ge26": 0
+      }
+    }
+  },
+  {
+    "period": "2022/2023 to 2025/2026",
+    "full_official_rounds": 136,
+    "calendar_window_sizes": {
+      "7": 1,
+      "8": 2,
+      "9": 121,
+      "10": 3,
+      "11": 1,
+      "17": 1,
+      "18": 3
+    },
+    "mixed_nine_windows": [],
+    "official_rounds_multiple_forecast_times": 4,
+    "official_rounds_all_forecasts_before_first_game": 128,
+    "variants": {
+      "current": {
+        "points": 1674,
+        "points_per_game": 1.3676470588235294,
+        "mean_round": 12.308823529411764,
+        "best_round": 23,
+        "ge18": 17,
+        "ge20": 9,
+        "ge22": 3,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "odds_fixed_2_1": {
+        "points": 1671,
+        "points_per_game": 1.3651960784313726,
+        "mean_round": 12.286764705882353,
+        "best_round": 23,
+        "ge18": 17,
+        "ge20": 8,
+        "ge22": 2,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "odds_fixed_1_0": {
+        "points": 1648,
+        "points_per_game": 1.34640522875817,
+        "mean_round": 12.117647058823529,
+        "best_round": 22,
+        "ge18": 17,
+        "ge20": 7,
+        "ge22": 2,
+        "ge24": 0,
+        "ge26": 0
+      },
+      "internal_only": {
+        "points": 1607,
+        "points_per_game": 1.3129084967320261,
+        "mean_round": 11.816176470588236,
+        "best_round": 26,
+        "ge18": 15,
+        "ge20": 8,
+        "ge22": 4,
+        "ge24": 1,
+        "ge26": 1
+      },
+      "half_market": {
+        "points": 1650,
+        "points_per_game": 1.3480392156862746,
+        "mean_round": 12.132352941176471,
+        "best_round": 26,
+        "ge18": 17,
+        "ge20": 8,
+        "ge22": 3,
+        "ge24": 1,
+        "ge26": 1
+      }
+    }
+  }
+]

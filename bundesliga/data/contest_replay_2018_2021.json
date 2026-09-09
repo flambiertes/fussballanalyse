@@ -1,0 +1,43 @@
+{
+  "source": "data/backtest_d1_2018_2021_live_config_with_odds.csv",
+  "config": {
+    "opponents": [
+      100,
+      1000,
+      10000
+    ],
+    "crowd_concentrations": [
+      1.0,
+      2.5,
+      5.0
+    ],
+    "training_samples": 8192,
+    "evaluation_samples": 32768,
+    "seed": 20260908,
+    "max_passes": 4,
+    "max_tip_goals": 5
+  },
+  "complete_rounds": 106,
+  "skipped_calendar_windows": 23,
+  "interpretation": "Historical points and assumed crowd scenarios; no real winning rates",
+  "mean_changed_tendencies": 6.915094339622642,
+  "fraction_evaluation_objective_above_baseline": 1.0,
+  "baseline": {
+    "mean_points": 11.481132075471699,
+    "std_points": 4.028743734329065,
+    "best_points": 20,
+    "rounds_ge_18": 9,
+    "rounds_ge_20": 1,
+    "rounds_ge_22": 0,
+    "rounds_ge_24": 0
+  },
+  "contest": {
+    "mean_points": 10.150943396226415,
+    "std_points": 4.041745496338602,
+    "best_points": 20,
+    "rounds_ge_18": 4,
+    "rounds_ge_20": 1,
+    "rounds_ge_22": 0,
+    "rounds_ge_24": 0
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "run_id": "official-audit-2018",
+  "matches": 1224,
+  "points": 1572,
+  "points_per_match": 1.2843,
+  "points_percent": 32.11,
+  "exact_rate": 0.0711,
+  "correct_tendency_rate": 0.5188,
+  "mean_log_loss": 3.0578,
+  "mean_brier_score": 0.5808,
+  "actual_goals_per_match": 3.1348,
+  "expected_goals_per_match": 3.0886,
+  "complete_matchdays": 136,
+  "matchday_grouping": "official_matchdays",
+  "incomplete_groups": 0,
+  "rounds_with_multiple_forecast_times": 0,
+  "mean_matchday_points": 11.5588,
+  "matchday_points_std": 3.9291,
+  "best_matchday_points": 20,
+  "config": {
+    "lookback_years": 6.0,
+    "half_life_days": 420.0,
+    "ridge": 0.08,
+    "min_training_matches": 250,
+    "max_goals": 10,
+    "form_matches": 8,
+    "form_half_life_matches": 3.5,
+    "form_weight": 0.1,
+    "venue_form_weight": 0.0,
+    "h2h_matches": 6,
+    "h2h_half_life_days": 730.0,
+    "h2h_weight": 0.05,
+    "market_value_weight": 0.05,
+    "market_decay_matches": 10,
+    "bookmaker_weight": 1.0,
+    "bookmaker_snapshot_type": "opening",
+    "use_lower_league_priors": true,
+    "lower_league_scale": 0.85,
+    "promotion_attack_penalty": -0.2,
+    "promotion_defense_penalty": 0.2,
+    "promotion_prior_matches": 10
+  },
+  "matchdays_ge_18": 10,
+  "matchday_rate_ge_18": 0.0735,
+  "matchdays_ge_20": 1,
+  "matchday_rate_ge_20": 0.0074,
+  "matchdays_ge_22": 0,
+  "matchday_rate_ge_22": 0.0,
+  "matchdays_ge_24": 0,
+  "matchday_rate_ge_24": 0.0,
+  "source_csv": "data/backtest_d1_2018_2021_live_config_with_odds.csv",
+  "recomputed_rounds": [
+    [
+      2019,
+      21
+    ],
+    [
+      2019,
+      24
+    ],
+    [
+      2020,
+      20
+    ],
+    [
+      2020,
+      29
+    ],
+    [
+      2020,
+      30
+    ],
+    [
+      2020,
+      31
+    ],
+    [
+      2021,
+      25
+    ],
+    [
+      2021,
+      26
+    ]
+  ],
+  "validation_note": "Already examined historical periods; no new blind test. Untimestamped opening odds timing within the original calendar week remains an assumption."
+}

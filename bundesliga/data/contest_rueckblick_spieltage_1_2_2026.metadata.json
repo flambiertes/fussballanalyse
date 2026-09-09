@@ -1,0 +1,206 @@
+[
+  {
+    "matchday": 1,
+    "source_file": "data/tipps_spieltag_1_2026.xlsx",
+    "source_run_id": "live-d1-b16202d6d482",
+    "as_of": "2026-08-27 23:02:21.189108",
+    "reconstructed_rho": -0.08337247742277573,
+    "original_points": 12,
+    "contest_points": 10,
+    "interpretation": "Retrospective application of newly developed strategy; not a blind validation",
+    "experimental": true,
+    "crowd_source": "assumed; no observed participant data",
+    "tie_convention": "equal prize share / uniform lottery",
+    "search": "multi-start coordinate ascent; no global optimum guarantee",
+    "config": {
+      "opponents": [
+        100,
+        1000,
+        10000
+      ],
+      "crowd_concentrations": [
+        1.0,
+        2.5,
+        5.0
+      ],
+      "training_samples": 8192,
+      "evaluation_samples": 32768,
+      "seed": 20260908,
+      "max_passes": 4,
+      "max_tip_goals": 5
+    },
+    "expected_points": 9.271836321201791,
+    "baseline_expected_points": 12.649881384054495,
+    "changed_tendencies": 6,
+    "training_log_objective": -4.406250808097345,
+    "evaluation_log_objective": -4.632570132236208,
+    "baseline_evaluation_log_objective": -6.976761676109148,
+    "scenarios": [
+      {
+        "assumed_opponents": 100,
+        "assumed_crowd_concentration": 1.0,
+        "simulated_prize_share": 0.024166607141217832,
+        "baseline_simulated_prize_share": 0.023320400484753874,
+        "paired_difference_standard_error": 0.0008978281663976667
+      },
+      {
+        "assumed_opponents": 1000,
+        "assumed_crowd_concentration": 1.0,
+        "simulated_prize_share": 0.004861318994135741,
+        "baseline_simulated_prize_share": 0.0022432202118683933,
+        "paired_difference_standard_error": 0.00034376340056503163
+      },
+      {
+        "assumed_opponents": 10000,
+        "assumed_crowd_concentration": 1.0,
+        "simulated_prize_share": 0.0008798550455275084,
+        "baseline_simulated_prize_share": 0.00019766927016103204,
+        "paired_difference_standard_error": 0.00013699484647061255
+      },
+      {
+        "assumed_opponents": 100,
+        "assumed_crowd_concentration": 2.5,
+        "simulated_prize_share": 0.033818589738915175,
+        "baseline_simulated_prize_share": 0.01247377448669049,
+        "paired_difference_standard_error": 0.0009301433322881453
+      },
+      {
+        "assumed_opponents": 1000,
+        "assumed_crowd_concentration": 2.5,
+        "simulated_prize_share": 0.010030767746263332,
+        "baseline_simulated_prize_share": 0.0007973072712785664,
+        "paired_difference_standard_error": 0.0004598194843504033
+      },
+      {
+        "assumed_opponents": 10000,
+        "assumed_crowd_concentration": 2.5,
+        "simulated_prize_share": 0.0026381936429168084,
+        "baseline_simulated_prize_share": 6.036481357683825e-05,
+        "paired_difference_standard_error": 0.00022994905583894744
+      },
+      {
+        "assumed_opponents": 100,
+        "assumed_crowd_concentration": 5.0,
+        "simulated_prize_share": 0.049858154261224294,
+        "baseline_simulated_prize_share": 0.0076279562950282605,
+        "paired_difference_standard_error": 0.0010876727669631096
+      },
+      {
+        "assumed_opponents": 1000,
+        "assumed_crowd_concentration": 5.0,
+        "simulated_prize_share": 0.020493936061859896,
+        "baseline_simulated_prize_share": 0.0003636557678526293,
+        "paired_difference_standard_error": 0.0006829731632361943
+      },
+      {
+        "assumed_opponents": 10000,
+        "assumed_crowd_concentration": 5.0,
+        "simulated_prize_share": 0.008267312394866912,
+        "baseline_simulated_prize_share": 3.120505103083094e-05,
+        "paired_difference_standard_error": 0.0004313111272489305
+      }
+    ]
+  },
+  {
+    "matchday": 2,
+    "source_file": "data/tipps_spieltag_2_2026_risk.xlsx",
+    "source_run_id": "live-d1-99625d5682df",
+    "as_of": "2026-08-31 12:40:47.129338",
+    "reconstructed_rho": -0.08241218168070989,
+    "original_points": 13,
+    "contest_points": 2,
+    "interpretation": "Retrospective application of newly developed strategy; not a blind validation",
+    "experimental": true,
+    "crowd_source": "assumed; no observed participant data",
+    "tie_convention": "equal prize share / uniform lottery",
+    "search": "multi-start coordinate ascent; no global optimum guarantee",
+    "config": {
+      "opponents": [
+        100,
+        1000,
+        10000
+      ],
+      "crowd_concentrations": [
+        1.0,
+        2.5,
+        5.0
+      ],
+      "training_samples": 8192,
+      "evaluation_samples": 32768,
+      "seed": 20260908,
+      "max_passes": 4,
+      "max_tip_goals": 5
+    },
+    "expected_points": 8.659012899453264,
+    "baseline_expected_points": 12.92563684148619,
+    "changed_tendencies": 8,
+    "training_log_objective": -4.376426239697809,
+    "evaluation_log_objective": -4.60774119124322,
+    "baseline_evaluation_log_objective": -8.05452964301177,
+    "scenarios": [
+      {
+        "assumed_opponents": 100,
+        "assumed_crowd_concentration": 1.0,
+        "simulated_prize_share": 0.019465075325368196,
+        "baseline_simulated_prize_share": 0.025353947201472382,
+        "paired_difference_standard_error": 0.0008640428753595374
+      },
+      {
+        "assumed_opponents": 1000,
+        "assumed_crowd_concentration": 1.0,
+        "simulated_prize_share": 0.004340361093099486,
+        "baseline_simulated_prize_share": 0.0023442211911330318,
+        "paired_difference_standard_error": 0.0003405328911079299
+      },
+      {
+        "assumed_opponents": 10000,
+        "assumed_crowd_concentration": 1.0,
+        "simulated_prize_share": 0.000923428039997408,
+        "baseline_simulated_prize_share": 0.00018738810988930892,
+        "paired_difference_standard_error": 0.00014264559921639037
+      },
+      {
+        "assumed_opponents": 100,
+        "assumed_crowd_concentration": 2.5,
+        "simulated_prize_share": 0.03165260820037584,
+        "baseline_simulated_prize_share": 0.010665106682989384,
+        "paired_difference_standard_error": 0.000888593223261066
+      },
+      {
+        "assumed_opponents": 1000,
+        "assumed_crowd_concentration": 2.5,
+        "simulated_prize_share": 0.009620005009847839,
+        "baseline_simulated_prize_share": 0.0005372037609022815,
+        "paired_difference_standard_error": 0.00045837148778580253
+      },
+      {
+        "assumed_opponents": 10000,
+        "assumed_crowd_concentration": 2.5,
+        "simulated_prize_share": 0.0031075788476033796,
+        "baseline_simulated_prize_share": 1.1328399385139141e-05,
+        "paired_difference_standard_error": 0.0002551859642617037
+      },
+      {
+        "assumed_opponents": 100,
+        "assumed_crowd_concentration": 5.0,
+        "simulated_prize_share": 0.054312384354378046,
+        "baseline_simulated_prize_share": 0.004814506699427106,
+        "paired_difference_standard_error": 0.0011200897759306575
+      },
+      {
+        "assumed_opponents": 1000,
+        "assumed_crowd_concentration": 5.0,
+        "simulated_prize_share": 0.023661981602744898,
+        "baseline_simulated_prize_share": 0.00010077724610882592,
+        "paired_difference_standard_error": 0.0007352992426318914
+      },
+      {
+        "assumed_opponents": 10000,
+        "assumed_crowd_concentration": 5.0,
+        "simulated_prize_share": 0.010299328084401623,
+        "baseline_simulated_prize_share": 9.390456680732422e-08,
+        "paired_difference_standard_error": 0.0004911654605868241
+      }
+    ]
+  }
+]
