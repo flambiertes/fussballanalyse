@@ -1,0 +1,42 @@
+{
+  "status": "vorlaeufig",
+  "generated_at_utc": "2026-09-18T13:59:54.350398Z",
+  "information_cutoff_utc": "2026-09-18T13:59:54.350398Z",
+  "model_version": "dynamic-dixon-coles-0.2",
+  "strategy": "expected-points",
+  "config": {
+    "lookback_years": 6.0,
+    "half_life_days": 270.0,
+    "ridge": 0.08,
+    "min_training_matches": 250,
+    "max_goals": 10,
+    "form_matches": 8,
+    "form_half_life_matches": 3.5,
+    "form_weight": 0.1,
+    "venue_form_weight": 0.0,
+    "h2h_matches": 6,
+    "h2h_half_life_days": 730.0,
+    "h2h_weight": 0.05,
+    "market_value_weight": 0.05,
+    "market_decay_matches": 10,
+    "bookmaker_weight": 0.0,
+    "bookmaker_snapshot_type": "captured",
+    "use_lower_league_priors": true,
+    "lower_league_scale": 0.85,
+    "promotion_attack_penalty": -0.2,
+    "promotion_defense_penalty": 0.2,
+    "promotion_prior_matches": 10
+  },
+  "matchdays": [
+    5,
+    6
+  ],
+  "rows": 18,
+  "persisted_to_database": false,
+  "notes": [
+    "Berechnet vor Spieltag 4; Ergebnisse der Spieltage 4 und 5 sind noch unbekannt.",
+    "270-Tage-Modell ohne Quotenuebernahme, identisch zur Strategie des angenommenen Spieltag-4-Zettels.",
+    "Fruehe Quoten-Snapshots sind fuer Spieltag 5 vorhanden, fuer Spieltag 6 noch nicht; sie beeinflussen diese No-Odds-Tipps nicht.",
+    "Vor Abgabe Ergebnisse, Quoten, Ausfaelle und Aufstellungen aktualisieren und neu rechnen."
+  ]
+}

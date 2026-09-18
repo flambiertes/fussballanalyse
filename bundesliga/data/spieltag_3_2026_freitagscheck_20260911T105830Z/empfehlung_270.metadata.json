@@ -1,0 +1,40 @@
+{
+  "run_id": "live-d1-bd64cdfe23d7",
+  "promoted_team_priors": [
+    "FC Schalke 04",
+    "SC Paderborn 07",
+    "SV 07 Elversberg"
+  ],
+  "tip_strategy": "expected-points",
+  "target_points": null,
+  "contest_reports": [],
+  "model_version": "dynamic-dixon-coles-0.2",
+  "as_of": "2026-09-11T10:58:30",
+  "intercept": -0.7706087588923226,
+  "home_advantage": 0.20002350132782812,
+  "rho": -0.06661673265776123,
+  "training_matches": 1854,
+  "config": {
+    "lookback_years": 6.0,
+    "half_life_days": 270,
+    "ridge": 0.08,
+    "min_training_matches": 250,
+    "max_goals": 10,
+    "form_matches": 8,
+    "form_half_life_matches": 3.5,
+    "form_weight": 0.1,
+    "venue_form_weight": 0.0,
+    "h2h_matches": 6,
+    "h2h_half_life_days": 730.0,
+    "h2h_weight": 0.05,
+    "market_value_weight": 0.05,
+    "market_decay_matches": 10,
+    "bookmaker_weight": 0.0,
+    "bookmaker_snapshot_type": "captured",
+    "use_lower_league_priors": true,
+    "lower_league_scale": 0.85,
+    "promotion_attack_penalty": -0.2,
+    "promotion_defense_penalty": 0.2,
+    "promotion_prior_matches": 10
+  }
+}

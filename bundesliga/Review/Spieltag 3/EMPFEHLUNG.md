@@ -7,6 +7,53 @@ abgeglichen. Der Nutzer hat diesen Zettel am 09.09.2026 angenommen
 für den Spieltag. Eine Abgabe in der Tipp-App wurde durch den Assistenten
 nicht vorgenommen oder überprüft.
 
+## Freitagscheck nach der Champions League
+
+**Stand 11.09.2026, 13:00 Uhr MESZ: Der Zettel bleibt unverändert.** Der
+Bundesliga-Datenstand und die Quoten wurden neu abgerufen. Ein neuer Lauf des
+gewählten 270-Tage-Modells liefert dieselben neun exakten Tipps. Auch der
+aktuelle 420-Tage-Quotenvergleich ändert gegenüber Mittwoch nur weiterhin
+Hoffenheim–Stuttgart auf **2:1**; das ist eine Vergleichsvariante, nicht die
+gewählte Empfehlung.
+
+Die Champions-League-Ergebnisse liefern keinen ausreichenden Grund für einen
+manuellen Eingriff:
+
+- Stuttgart gewann 3:1 gegen Viking Stavanger. Demirović erzielte alle drei
+  Tore, der VfB kontrollierte die zweite Hälfte und meldete keinen neuen
+  Ausfall. Die Marktchance für einen Stuttgarter Auswärtssieg stieg seit
+  Mittwoch von 34,81 auf 35,65 Prozent. Daher bleibt die bewusste Gegenposition
+  **1:2**. [VfB-Spielbericht](https://www.vfb.de/de/vfb/profis/saison/champions-league/2627/1-vfb-stuttgart----viking-/)
+- Dortmund gewann 3:2 gegen Villarreal. Karetsas fällt nach Kreislaufproblemen
+  aus, dafür sind Schlotterbeck und Bensebaini wieder einsatzbereit. Gegen
+  Paderborn bleibt **2:0**. [BVB-Spielbericht](https://www.bvb.de/de/de/aktuelles/news/news.html/2026/9/8/BVB-dreht-spaet-auf-und-bejubelt-ersten-Sieg-in-der-Champions-League.html),
+  [BVB-Personalupdate](https://www.bvb.de/de/de/aktuelles/news/news.html/2026/9/10/Abwehr-Duo-wieder-fit-fuer-das-Bundesliga-Spiel-gegen-Paderborn.html)
+- Bayern gewann 5:0 gegen Bodø/Glimt. Trotz der kurzen Pause bis Sonntag fiel
+  kein neuer Ausfall auf; die Marktchance für den Auswärtssieg stieg von 80,38
+  auf 81,69 Prozent. Gegen Elversberg bleibt **0:2**.
+  [FCB-Spielbericht](https://fcbayern.com/de/news/spielberichte/2026/09/spielbericht-champions-league-fc-bayern-fk-bodo-glimt)
+- Leipzig verlor 1:4 in Como und hat damit in den letzten beiden Pflichtspielen
+  sieben Gegentore kassiert. Das macht **2:0** zum knappsten exakten Tipp des
+  Zettels: **2:1** liegt im Modell bei den erwarteten Tipppunkten praktisch
+  gleichauf. Weil der HSV nach zwei Ligaspielen bei 0:7 Toren steht und der
+  Markt Leipzig trotz des Como-Spiels weiter mit rund 70 Prozent vorne sieht,
+  wird nicht nach einem einzelnen Ergebnis manuell auf 2:1 gewechselt.
+  [Spielbericht Como–Leipzig](https://www.bundesliga.com/de/bundesliga/news/como-1907-rb-leipzig-spieltag-1-spielbericht-highlights-39125)
+
+Der aktuelle Quotenvergleich sieht nur beim Freitagsspiel eine nennenswerte
+Bewegung gegen unseren Tipp: Union sank von 42,68 auf 39,95 Prozent
+margenbereinigte Heimsiegchance, Schalke stieg von 31,29 auf 33,22 Prozent.
+Union bleibt im Markt dennoch leichter Favorit; das interne Modell liegt mit
+58,29 Prozent deutlicher auf der Heimseite. Deshalb bleibt auch hier **1:0**.
+Aktuelle Ausfälle und voraussichtliche Aufstellungen wurden mit der
+[Bundesliga-Übersicht vom 11. September](https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707)
+abgeglichen.
+
+Die beiden neuen Prognoseläufe mit vollständiger Konfiguration und der direkte
+Vergleich sind unter
+`data/spieltag_3_2026_freitagscheck_20260911T105830Z/` archiviert. Der
+ursprüngliche Stand vom 9. September bleibt daneben unverändert erhalten.
+
 ## Der vorgeschlagene Zettel
 
 | Anpfiff MESZ | Partie | Empfehlung | Bisherige Methode |

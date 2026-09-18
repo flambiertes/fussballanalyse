@@ -6,7 +6,7 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
-**Beschlossen am 09.09.2026:** Für Spieltag 3 verwenden wir den
+**Beschlossen am 09.09.2026 und am 11.09. nach der Champions League bestätigt:** Für Spieltag 3 verwenden wir den
 [dokumentierten 270-Tage-Tippzettel](Review/Spieltag%203/EMPFEHLUNG.md).
 Die einzige Abweichung zur bisherigen Methode ist Hoffenheim–Stuttgart **1:2**.
 Die [Entscheidungsübersicht](Review/ENTSCHEIDUNGEN.md) hält Ziel, geprüfte
