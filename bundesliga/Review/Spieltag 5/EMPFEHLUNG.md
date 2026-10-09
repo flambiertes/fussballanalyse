@@ -2,7 +2,9 @@
 
 Stand: **09.10.2026, 08:57 Uhr MESZ** (Stichtag 2026-10-09T06:57:33 UTC).
 Erstes Spiel: heute, Fr. 20:30. Status: **vom Nutzer am 09.10.2026 angenommen**, einschließlich
-Union–Elversberg 1:2 („ok I go for elversberg“). Eine Abgabe in der Tipp-App erfolgt nicht durch den Assistenten.
+Union–Elversberg 1:2 („ok I go for elversberg“). Der Nutzer hat den Zettel unverändert in der Tipp-App
+abgegeben (Bestätigung 09.10.2026); die Abgabe selbst wurde vom Assistenten
+nicht geprüft.
 
 Regel wie an den Spieltagen 3 und 4: vollständiges internes Modell mit
 270 Tagen Halbwertszeit, Form 0,10, H2H 0,05, Marktwert 0,05, Aufsteiger-Prior,
