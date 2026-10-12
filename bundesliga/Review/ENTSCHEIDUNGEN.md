@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 09.09.2026
+# Entscheidungen und Stand am 12.10.2026
 
 ## Ziel
 
@@ -46,11 +46,29 @@ und Quotengewicht 1,0. Die für diesen Spieltag gewählte Variante sowie beide
 Prognoseläufe sind mit Zeitstempel und vollständiger Konfiguration archiviert.
 Es wurde keine Tippabgabe in einer externen App vorgenommen.
 
-## Nach Spieltag 3
+## Auswertung nach Spieltag 5
+
+Die [Auswertung zu Spieltag 5](Spieltag%205/AUSWERTUNG.md) ist abgeschlossen:
+**14 Punkte** für den angenommenen 270-Tage-Zettel, **17 Punkte** für die
+parallel archivierte 420-Tage-Quotenvariante. Union–Elversberg endete 1:0;
+unser 1:2-Tipp verlor gegenüber dem Vergleichstipp 2:1 drei Punkte.
+Die ursprünglichen Tipps und Konfigurationen bleiben unverändert.
+
+Spieltag 3 brachte 8 statt 12 Punkte. Beide dokumentierten Vergleiche ergeben
+damit 22 statt 29; der nicht archivierte Spieltag 4 bleibt unbewertet.
+Das ist bisher kein Vorteil für die gewählte Variante, aber auch keine
+ausreichende Grundlage für gezieltes Nachjustieren. Reale Platzierungen
+und Tagespreis-Chancen sind ohne Konkurrenzdaten weiterhin nicht messbar.
+
+Die 270-Tage-Regel und der allgemeine Code-Standard bleiben unverändert.
+Der Zettel für Spieltag 6 vom 18.09. ist vorläufig und muss vor der Abgabe
+mit aktuellen Ergebnissen und Quoten neu gerechnet werden.
+
+## Ablauf nach jedem abgeschlossenen Spieltag
 
 1. Tatsächliche Endergebnisse abrufen und die neun Begegnungen abgleichen.
 2. Den angenommenen 270-Tage-Zettel und die parallel eingefrorene bisherige
-   Methode mit denselben 4/3/2-Regeln auswerten. Den Stuttgart-Unterschied
+   Methode mit denselben 4/3/2-Regeln auswerten. Abweichende Tipps
    ausdrücklich zeigen.
 3. Falls der Nutzer seine tatsächlich abgegebenen Tipps verändert hat, diese
    getrennt vom ursprünglichen Vorschlag festhalten.

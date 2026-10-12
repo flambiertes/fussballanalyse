@@ -6,9 +6,15 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
-**Beschlossen am 09.09.2026 und am 11.09. nach der Champions League bestätigt:** Für Spieltag 3 verwenden wir den
-[dokumentierten 270-Tage-Tippzettel](Review/Spieltag%203/EMPFEHLUNG.md).
-Die einzige Abweichung zur bisherigen Methode ist Hoffenheim–Stuttgart **1:2**.
+**Stand 12.10.2026, nach Spieltag 5:** Der am 09.10. angenommene
+[270-Tage-Tippzettel](Review/Spieltag%205/EMPFEHLUNG.md) erzielte **14 Punkte**,
+die parallel eingefrorene 420-Tage-Quotenvariante **17**. Der Unterschied liegt
+vollständig bei Union–Elversberg: **1:0**, unser Tipp 1:2 (0 Punkte),
+Vergleichstipp 2:1 (3 Punkte). Einzelpunkte und Prüfung stehen in der
+[Auswertung](Review/Spieltag%205/AUSWERTUNG.md).
+Die gewählte Regel bleibt unverändert; der
+[Vorabzettel für Spieltag 6](Review/Spieltage%205%20und%206/VORLAEUFIG.md)
+muss vor der Abgabe mit frischen Daten neu gerechnet werden.
 Die [Entscheidungsübersicht](Review/ENTSCHEIDUNGEN.md) hält Ziel, geprüfte
 Varianten, Grenzen und den nächsten Auswertungsschritt zusammen.
 
@@ -103,8 +109,10 @@ Der Live-Standard ist wieder `expected-points`: Fuer den Konkurrenzmodus ist
 bisher kein realer Vorteil belegt. Der abgeschlossene Vergleich mit hoechstens
 zwei modellbegruendeten Abweichungen steht im
 [7+2-Ergebnisbericht](Review/SIEBEN_PLUS_ZWEI_ERGEBNIS.md).
-Der allgemeine `LIVE_CONFIG`-Standard bleibt 420 Tage mit Quoten; der ausdrücklich
-angenommene Tippzettel für Spieltag 3 verwendet separat 270 Tage ohne Quoten.
+Der allgemeine `LIVE_CONFIG`-Standard bleibt 420 Tage mit Quoten; die ausdrücklich
+angenommenen und archivierten Tippzettel für Spieltag 3 und 5 verwenden separat
+270 Tage ohne Quoten. Spieltag 4 wurde ebenfalls nach dieser Regel getippt,
+sein Zettel ist jedoch nicht archiviert.
 
 Der optionale experimentelle Modus `contest` bewertet den gesamten Neun-Spiele-Zettel gegen
 neun feste, hypothetische Konkurrenzszenarien. Es werden keine Teilnehmerdaten

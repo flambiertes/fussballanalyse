@@ -1,5 +1,5 @@
 {
-  "description": "Frozen evidence for decisions on 8–9 September 2026; raw inputs and the local SQLite database are excluded.",
+  "description": "Frozen evidence for the September 2026 decisions, the accepted matchday 5 sheets and their 12 October 2026 evaluation; raw inputs and the local SQLite database are excluded.",
   "files": [
     {
       "path": "data/audit_frozen_models.py",
@@ -340,6 +340,51 @@
       "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/vergleich.csv",
       "bytes": 5206,
       "sha256": "4a8c018b6336b490a43423cac918ebb5d972f06f545835cd9db04c537a771dbb"
+    },
+    {
+      "path": "data/spieltag_5_2026_auswertung_20261012/auswertung.metadata.json",
+      "bytes": 2260,
+      "sha256": "4ca277c66c4a077434705950252adfa23091b419ad5ab598fa20ae07d43b9a17"
+    },
+    {
+      "path": "data/spieltag_5_2026_auswertung_20261012/auswertung.xlsx",
+      "bytes": 6594,
+      "sha256": "a7295990619830ac5a9f1d5b7bde1c93b03662067a0238403003855678c10ec0"
+    },
+    {
+      "path": "data/spieltag_5_2026_auswertung_20261012/vergleich.csv",
+      "bytes": 1156,
+      "sha256": "a63ebb69a803f5de459abef0128af0a4437e0ba4b3db4f7ca1a7de85bf76b741"
+    },
+    {
+      "path": "data/spieltag_5_2026_empfehlung_20261009T065733Z/basis_420.csv",
+      "bytes": 4904,
+      "sha256": "1de43cc666e11f62482a646b309f452259803151e2c8e251baaa9d12fba4729a"
+    },
+    {
+      "path": "data/spieltag_5_2026_empfehlung_20261009T065733Z/basis_420.metadata.json",
+      "bytes": 1142,
+      "sha256": "d74a0218734d22b423819ff66e93547ef9fe518712b1d62a179840c91e3edce6"
+    },
+    {
+      "path": "data/spieltag_5_2026_empfehlung_20261009T065733Z/empfehlung_270.csv",
+      "bytes": 4905,
+      "sha256": "d259fa8132da0b11907972361f59400ed41a426546e0f90ece39be122dcb824a"
+    },
+    {
+      "path": "data/spieltag_5_2026_empfehlung_20261009T065733Z/empfehlung_270.metadata.json",
+      "bytes": 1141,
+      "sha256": "ab273491d63c00f765620c6fadd1bc4e3b24bd7d434ef6af75c051c5a5a984d6"
+    },
+    {
+      "path": "data/spieltag_5_2026_empfehlung_20261009T065733Z/tipps_spieltag_5.xlsx",
+      "bytes": 14634,
+      "sha256": "00d06b890e360d8a6d6b4029391a0f7dc3a2b259cdd6809b30725fc524045b18"
+    },
+    {
+      "path": "data/spieltag_5_2026_empfehlung_20261009T065733Z/vergleich.csv",
+      "bytes": 2130,
+      "sha256": "8484cce5c201b7ea2e78c9d4e75e4fa05660236a87e74d1249e4ca13ec9fafed"
     },
     {
       "path": "data/tipps_spieltag_1_2026.xlsx",

@@ -1,0 +1,56 @@
+{
+  "review_date": "2026-10-12",
+  "competition": "D1",
+  "season": 2026,
+  "matchday": 5,
+  "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026/5",
+  "source_response_sha256": "7d76d710b1367b1e8ce797b44aba9f40e42ef102ff221703ae67a26dd219373e",
+  "finished_matches": 9,
+  "scoring": "4 exact, 3 goal difference, 2 direction, 0 wrong",
+  "accepted_run_id": "live-d1-4a988d3c3987",
+  "comparison_run_id": "live-d1-d6298c07c597",
+  "prediction_as_of_utc": "2026-10-09T06:57:33Z",
+  "prior_as_of_utc": "2026-09-18T13:59:54Z",
+  "summary": {
+    "270": {
+      "points": 14,
+      "exact_hits": 1,
+      "goal_difference_hits": 2,
+      "direction_hits": 2,
+      "misses": 4
+    },
+    "420": {
+      "points": 17,
+      "exact_hits": 1,
+      "goal_difference_hits": 3,
+      "direction_hits": 2,
+      "misses": 3
+    },
+    "prior": {
+      "points": 18,
+      "exact_hits": 2,
+      "goal_difference_hits": 2,
+      "direction_hits": 2,
+      "misses": 3
+    }
+  },
+  "input_sha256": {
+    "data/spieltag_5_2026_empfehlung_20261009T065733Z/empfehlung_270.csv": "d259fa8132da0b11907972361f59400ed41a426546e0f90ece39be122dcb824a",
+    "data/spieltag_5_2026_empfehlung_20261009T065733Z/empfehlung_270.metadata.json": "ab273491d63c00f765620c6fadd1bc4e3b24bd7d434ef6af75c051c5a5a984d6",
+    "data/spieltag_5_2026_empfehlung_20261009T065733Z/basis_420.csv": "1de43cc666e11f62482a646b309f452259803151e2c8e251baaa9d12fba4729a",
+    "data/spieltag_5_2026_empfehlung_20261009T065733Z/basis_420.metadata.json": "d74a0218734d22b423819ff66e93547ef9fe518712b1d62a179840c91e3edce6",
+    "data/spieltage_5_6_2026_vorlaeufig_20260918T135954Z/tipps_spieltage_5_6_vorlaeufig.csv": "f6da7d8ee72a313b2a00d3c580c703382302ea709bdf98560cc5cd4f0349af99"
+  },
+  "checks": [
+    "Nine finished matches with final resultTypeID=2",
+    "API results agree with imported database",
+    "Match IDs and teams match both frozen sheets one-to-one",
+    "Tips agree with original database prediction runs",
+    "All points verified with independent implementation"
+  ],
+  "limitations": [
+    "No real competitor sheets or verified ranking available",
+    "Two evaluated rounds do not establish strategy superiority",
+    "Original predictions and model configuration unchanged"
+  ]
+}

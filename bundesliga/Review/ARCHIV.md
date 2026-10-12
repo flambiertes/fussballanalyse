@@ -17,6 +17,8 @@ eine ausdrückliche Dateiliste für dieses Archiv. Die
 | Halbwertszeit und Form | `half_life_15_seasons/` | Alle Kandidaten- und Saisontabellen, jährliche Auswahl, deren Einzelspielprognosen, Intervalle, Prüfbericht, Manifest und Excel. |
 | Begrenztes Risiko | `limited_risk_15_seasons/` | Einzelspieltipps, Rundentabellen, Auswahl, Unsicherheit und Excel des vollständigen 7+2-Versuchs. |
 | Angenommener Spieltag 3 | `spieltag_3_2026_empfehlung_20260909T051715Z/` | 270-Tage-Empfehlung, parallel eingefrorene bisherige Methode, Konfigurationen, Run-IDs, Quotenalter und Excel. |
+| Angenommener Spieltag 5 | `spieltag_5_2026_empfehlung_20261009T065733Z/` | Unverändert abgegebene 270-Tage-Empfehlung und eingefrorene 420-Tage-Quotenvariante. |
+| Auswertung Spieltag 5 | `spieltag_5_2026_auswertung_20261012/` | Endergebnisse, Einzelpunkte aller drei archivierten Varianten, CSV, Excel und Prüfmetadaten; [Bericht](Spieltag%205/AUSWERTUNG.md). |
 | Audit-Helfer | Die fünf ausgewählten `data/*.py` | Prüf- und Rekonstruktionsscripte der vorherigen Reviews. |
 
 Die [vollständige Dateiliste mit SHA-256-Prüfsummen](ARCHIV_MANIFEST.json)
