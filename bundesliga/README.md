@@ -6,7 +6,14 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
-**Stand 12.10.2026, nach Spieltag 5:** Der am 09.10. angenommene
+**Stand 16.10.2026, vor Spieltag 6:** Die
+[frische Empfehlung](Review/Spieltag%206/EMPFEHLUNG.md) verwendet weiterhin
+270 Tage ohne Quotenübernahme. Ergebnisse beider Ligen und Vergleichsquoten
+sind aktualisiert. Einzige Änderung gegenüber dem Vorabzettel:
+**Elversberg–Augsburg 2:1 statt 0:1**; die neue 420-Tage-Quotenvariante tippt
+hier 1:2. Der Nutzer hat den Zettel am 16.10. unverändert angenommen.
+
+Der am 09.10. angenommene
 [270-Tage-Tippzettel](Review/Spieltag%205/EMPFEHLUNG.md) erzielte **14 Punkte**,
 die parallel eingefrorene 420-Tage-Quotenvariante **17**. Der Unterschied liegt
 vollständig bei Union–Elversberg: **1:0**, unser Tipp 1:2 (0 Punkte),
@@ -14,7 +21,7 @@ Vergleichstipp 2:1 (3 Punkte). Einzelpunkte und Prüfung stehen in der
 [Auswertung](Review/Spieltag%205/AUSWERTUNG.md).
 Die gewählte Regel bleibt unverändert; der
 [Vorabzettel für Spieltag 6](Review/Spieltage%205%20und%206/VORLAEUFIG.md)
-muss vor der Abgabe mit frischen Daten neu gerechnet werden.
+bleibt als historischer Vergleich erhalten.
 Die [Entscheidungsübersicht](Review/ENTSCHEIDUNGEN.md) hält Ziel, geprüfte
 Varianten, Grenzen und den nächsten Auswertungsschritt zusammen.
 

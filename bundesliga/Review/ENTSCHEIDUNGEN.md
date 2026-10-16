@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 12.10.2026
+# Entscheidungen und Stand am 16.10.2026
 
 ## Ziel
 
@@ -61,8 +61,21 @@ ausreichende Grundlage für gezieltes Nachjustieren. Reale Platzierungen
 und Tagespreis-Chancen sind ohne Konkurrenzdaten weiterhin nicht messbar.
 
 Die 270-Tage-Regel und der allgemeine Code-Standard bleiben unverändert.
-Der Zettel für Spieltag 6 vom 18.09. ist vorläufig und muss vor der Abgabe
-mit aktuellen Ergebnissen und Quoten neu gerechnet werden.
+
+## Empfehlung vor Spieltag 6
+
+Der [neu berechnete Zettel vom 16.10., 11:06 MESZ](Spieltag%206/EMPFEHLUNG.md)
+enthält aktuelle Ergebnisse beider Ligen und frische Vergleichsquoten.
+Die einzige Änderung zum Vorabzettel vom 18.09. ist
+**Elversberg–Augsburg 2:1 statt 0:1**. Die parallel eingefrorene
+420-Tage-Quotenvariante tippt dort 1:2; die übrigen acht Tipps sind gleich.
+Der Markt sieht diese Partie fast ausgeglichen, während das interne Modell
+Elversberg stärker bevorzugt. Der Nutzer hat den neuen Zettel am 16.10.
+unverändert angenommen und das Archivieren, Committen und Pushen beauftragt.
+Eine Abgabe in der externen Tipp-App wurde vom Assistenten nicht vorgenommen
+oder geprüft. Beide Läufe und ihre vollständigen Konfigurationen sind separat
+archiviert. Nach dem Spieltag werden diese eingefrorenen Zettel nach der
+gleichen 4/3/2-Regel ausgewertet.
 
 ## Ablauf nach jedem abgeschlossenen Spieltag
 

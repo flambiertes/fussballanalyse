@@ -1,0 +1,70 @@
+{
+  "as_of_utc": "2026-10-16T09:06:11Z",
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 45
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 63
+    }
+  },
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_6_2026_20261016T090602Z/D1.json",
+      "sha256": "f9562fc22aa25532f428986fa007fa9a1816ce484eacf553834f97da95d6f8eb"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_6_2026_20261016T090602Z/D2.json",
+      "sha256": "52abd02394e9b80c793a5557b1f94b90a9adc553e2ad0ff5c9c35bf48912b466"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_6_2026_20261016T090602Z/odds_D1.json",
+      "sha256": "3d3b1863d2fe8d9f1f91e438d38fb9e9e800619caebc496c54e07ff12b75217f"
+    }
+  ],
+  "odds_import_status": "Imported 350 bookmaker snapshots",
+  "provisional_input": {
+    "path": "data/spieltage_5_6_2026_vorlaeufig_20260918T135954Z/tipps_spieltage_5_6_vorlaeufig.csv",
+    "sha256": "f6da7d8ee72a313b2a00d3c580c703382302ea709bdf98560cc5cd4f0349af99"
+  },
+  "run_ids": {
+    "empfehlung_270": "live-d1-fe12e4c015d2",
+    "basis_420": "live-d1-80a69e3dbea4"
+  },
+  "status": "recommendation; not confirmed submitted by user",
+  "files": [
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/basis_420.csv",
+      "sha256": "04e1bd5e7e62f05f79d9ca21e355a6f007b2d4dac4585c94bad3f62022c1764b"
+    },
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/basis_420.metadata.json",
+      "sha256": "fa5e0ca89c55bc3a134ffd381c92838c2a22844ac0cbec93211411dd4f3a5570"
+    },
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/empfehlung_270.csv",
+      "sha256": "788486495474b7353322370b88e757fa014bc4b714a29f9667ab595be6d2bc01"
+    },
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/empfehlung_270.metadata.json",
+      "sha256": "2fa630b5675ea971958c3929e306fb10e00e8f710b07036ce6b550e3ca2f134b"
+    },
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/quoten_alter.csv",
+      "sha256": "22c516ff9d0e70a1b9286fac20b8e443cbd8af1dc43adcc35ebc98bb65e9effc"
+    },
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/tipps_spieltag_6.xlsx",
+      "sha256": "832818a799fef30664abc37fef47598ca23b3eba2efa13a4849667d3e6f5c9a6"
+    },
+    {
+      "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/vergleich.csv",
+      "sha256": "619e8216f37d49f43c90f79a2f3c44a904e8aa0e58535578abd857252a11322e"
+    }
+  ]
+}

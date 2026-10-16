@@ -19,6 +19,7 @@ eine ausdrückliche Dateiliste für dieses Archiv. Die
 | Angenommener Spieltag 3 | `spieltag_3_2026_empfehlung_20260909T051715Z/` | 270-Tage-Empfehlung, parallel eingefrorene bisherige Methode, Konfigurationen, Run-IDs, Quotenalter und Excel. |
 | Angenommener Spieltag 5 | `spieltag_5_2026_empfehlung_20261009T065733Z/` | Unverändert abgegebene 270-Tage-Empfehlung und eingefrorene 420-Tage-Quotenvariante. |
 | Auswertung Spieltag 5 | `spieltag_5_2026_auswertung_20261012/` | Endergebnisse, Einzelpunkte aller drei archivierten Varianten, CSV, Excel und Prüfmetadaten; [Bericht](Spieltag%205/AUSWERTUNG.md). |
+| Angenommener Spieltag 6 | `spieltag_6_2026_empfehlung_20261016T090611Z/` | Am 16.10. unverändert angenommene 270-Tage-Empfehlung, 420-Tage-Vergleich, Änderungen zum Vorabzettel, Quotenalter und Herkunftsmetadaten. |
 | Audit-Helfer | Die fünf ausgewählten `data/*.py` | Prüf- und Rekonstruktionsscripte der vorherigen Reviews. |
 
 Die [vollständige Dateiliste mit SHA-256-Prüfsummen](ARCHIV_MANIFEST.json)
