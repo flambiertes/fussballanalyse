@@ -1,5 +1,5 @@
 {
-  "description": "Frozen evidence for the September 2026 decisions, the accepted matchday 5 sheets and their 12 October evaluation, and the accepted 16 October matchday 6 recommendation; raw inputs and the local SQLite database are excluded.",
+  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 and 6 and their evaluations, the 23 October matchday 7 recommendation, and provisional fallback sheets for matchdays 8 and 9; raw inputs and the local SQLite database are excluded.",
   "files": [
     {
       "path": "data/audit_frozen_models.py",
@@ -387,6 +387,21 @@
       "sha256": "8484cce5c201b7ea2e78c9d4e75e4fa05660236a87e74d1249e4ca13ec9fafed"
     },
     {
+      "path": "data/spieltag_6_2026_auswertung_20261023/auswertung.metadata.json",
+      "bytes": 1722,
+      "sha256": "40a69c29c12a969e8c4c55174ef0637b64f3ec07aad3e1c5816a10bb33922291"
+    },
+    {
+      "path": "data/spieltag_6_2026_auswertung_20261023/auswertung.xlsx",
+      "bytes": 5809,
+      "sha256": "101a8ab4becefc2b1f36cde4a1540060b9e6e7167c8e9257c448ab25ee89c09b"
+    },
+    {
+      "path": "data/spieltag_6_2026_auswertung_20261023/vergleich.csv",
+      "bytes": 974,
+      "sha256": "7fe9e04650ed6f937fffbbe1171d7b9b54e3deddee158003799c868b7f497bea"
+    },
+    {
       "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/basis_420.csv",
       "bytes": 4871,
       "sha256": "04e1bd5e7e62f05f79d9ca21e355a6f007b2d4dac4585c94bad3f62022c1764b"
@@ -425,6 +440,61 @@
       "path": "data/spieltag_6_2026_empfehlung_20261016T090611Z/vergleich.csv",
       "bytes": 2135,
       "sha256": "619e8216f37d49f43c90f79a2f3c44a904e8aa0e58535578abd857252a11322e"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/basis_420.csv",
+      "bytes": 4865,
+      "sha256": "f22d455ad335927d3293e29e5f6167232de786f688ba99d2f4de34bbeea9e52f"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/basis_420.metadata.json",
+      "bytes": 1146,
+      "sha256": "df4a38c2bc18b949e0e7df3861dc27d18ec27a1ffa9f8ba5877b79b4e31197d9"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/empfehlung_270.csv",
+      "bytes": 4866,
+      "sha256": "e9eb696f7810c96377772886619815182edef97ebd61f8e8c47417057cbeb5b7"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/empfehlung_270.metadata.json",
+      "bytes": 1146,
+      "sha256": "f78ee1b0478871079e23b84f91aefa41fe53f1821b0c69740a2e0f8ae6ff1d3b"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/provenance.json",
+      "bytes": 3092,
+      "sha256": "f496cee754f5708af068832e97ed7c232d51419083501c46625009c1dcd2e051"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/quoten_alter.csv",
+      "bytes": 14195,
+      "sha256": "8e8088ae63cca3bffd4086732dbe94d1c03114c9dfee8691acc2f58e45bb87f2"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/tipps_spieltag_7.xlsx",
+      "bytes": 19325,
+      "sha256": "637a382d6d117d57d0f0d50ce91b0e3f219bc98d9ccd44300889773d30ff7ecb"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/vergleich.csv",
+      "bytes": 2073,
+      "sha256": "97f00179f3c27faae956effb46abb5dab60aa3086e9a7317ce1ceb83f3a3090d"
+    },
+    {
+      "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.csv",
+      "bytes": 9166,
+      "sha256": "f396cc7f011d55a20e0abdff96c4ee37d4fde3cdcf87da522148d571cb46d637"
+    },
+    {
+      "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.metadata.json",
+      "bytes": 3763,
+      "sha256": "48177a7fbd0eaf2772b3b8f0de87dff9fbc823cae60a45c49fef3df1bff1a96e"
+    },
+    {
+      "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.xlsx",
+      "bytes": 14876,
+      "sha256": "b00b9c1ba2c9de693b082d0cdb682866f6d0cd7b5ca372cc7cb07dd31fc86d4c"
     },
     {
       "path": "data/tipps_spieltag_1_2026.xlsx",

@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 16.10.2026
+# Entscheidungen und Stand am 23.10.2026
 
 ## Ziel
 
@@ -76,6 +76,42 @@ Eine Abgabe in der externen Tipp-App wurde vom Assistenten nicht vorgenommen
 oder geprüft. Beide Läufe und ihre vollständigen Konfigurationen sind separat
 archiviert. Nach dem Spieltag werden diese eingefrorenen Zettel nach der
 gleichen 4/3/2-Regel ausgewertet.
+
+## Auswertung Spieltag 6 und Empfehlung für Spieltag 7
+
+Der angenommene Zettel erzielt [20 Punkte](Spieltag%206/AUSWERTUNG.md),
+die eingefrorene Vergleichsmethode 17. Elversberg–Augsburg endet 4:3 und
+bringt unserem 2:1-Tipp drei zusätzliche Punkte. Drei exakte Treffer,
+zwei weitere Differenztreffer, ein weiterer Tendenztreffer. Der Nutzer
+berichtet von einem knapp verpassten Tagespreis; der Abstand ist ohne
+Gewinnerpunktzahl oder Platzierung nicht bezifferbar.
+
+Die dokumentierten Spieltage 3, 5 und 6 ergeben zusammen **42 statt 46 Punkte**.
+Spieltag 4 bleibt unbewertet. Die Regel und der allgemeine Code-Standard
+bleiben unverändert.
+
+Die [neue Empfehlung vom 23.10., 15:55 MESZ](Spieltag%207/EMPFEHLUNG.md)
+enthält frische Ergebnisse beider Ligen und aktuelle Vergleichsquoten.
+Beide Methoden wählen dieselben Tendenzen; abweichende genaue Tipps:
+Augsburg–Union 2:1 statt 1:0 und Freiburg–Bayern 1:3 statt 1:2.
+Erste Partie heute Stuttgart–Mönchengladbach, 20:30 Uhr Berliner Zeit, 2:1.
+Der Nutzer hat den neuen Zettel am 23.10. angenommen und in der App eingetragen.
+
+Auf Wunsch des Nutzers wurden zusätzlich die [Spieltage 8 und 9 vorläufig
+berechnet](Spieltage%208%20und%209/VORLAEUFIG.md), damit bereits Tipps in der
+App hinterlegt werden können, falls eine Aktualisierung ausbleibt. Gleiche
+270-Tage-Regel und gleicher Informationsstand wie Spieltag 7; noch unbekannte
+Ergebnisse der dazwischenliegenden Runden werden nicht vorweggenommen.
+Die Vorabzettel bleiben eingefroren; vor den jeweiligen Spieltagen neu rechnen
+und Änderungen ausweisen. Die externe App wurde vom Assistenten nicht bedient.
+
+Der Nutzer hat am 23.10. bestätigt, dass **alle Tipps für die Spieltage 7, 8
+und 9 in der App eingetragen sind**, und das Committen und Pushen beauftragt.
+Spieltag 8 und 9 bleiben vorläufige Rückfallzettel. Beim nächsten Treffen nach
+Spieltag 7 zuerst dessen Ergebnisse auswerten und anschließend Spieltag 8 mit
+neuen Ergebnissen und Vergleichsquoten rechnen; Änderungen gegenüber dem
+eingetragenen Vorabzettel ausdrücklich zeigen. Vor Spieltag 9 entsprechend
+vorgehen. Die ursprünglichen Prognosen und Erstellungsmetadaten bleiben erhalten.
 
 ## Ablauf nach jedem abgeschlossenen Spieltag
 

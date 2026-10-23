@@ -1,0 +1,44 @@
+{
+  "review_date": "2026-10-23",
+  "competition": "D1",
+  "season": 2026,
+  "matchday": 6,
+  "source_url": "https://api.openligadb.de/getmatchdata/bl1/2026/6",
+  "source_response_sha256": "b3e388e570278f5b84fd0e74e3cc22b2f9dd4725e78818495a86e55bff9cf47a",
+  "scoring": "4 exact, 3 goal difference, 2 direction, 0 wrong",
+  "summary": {
+    "270": {
+      "points": 20,
+      "exact_hits": 3,
+      "goal_difference_hits": 2,
+      "direction_hits": 1,
+      "misses": 3,
+      "run_id": "live-d1-fe12e4c015d2"
+    },
+    "420": {
+      "points": 17,
+      "exact_hits": 3,
+      "goal_difference_hits": 1,
+      "direction_hits": 1,
+      "misses": 4,
+      "run_id": "live-d1-80a69e3dbea4"
+    }
+  },
+  "input_sha256": {
+    "data/spieltag_6_2026_empfehlung_20261016T090611Z/empfehlung_270.csv": "788486495474b7353322370b88e757fa014bc4b714a29f9667ab595be6d2bc01",
+    "data/spieltag_6_2026_empfehlung_20261016T090611Z/empfehlung_270.metadata.json": "2fa630b5675ea971958c3929e306fb10e00e8f710b07036ce6b550e3ca2f134b",
+    "data/spieltag_6_2026_empfehlung_20261016T090611Z/basis_420.csv": "04e1bd5e7e62f05f79d9ca21e355a6f007b2d4dac4585c94bad3f62022c1764b",
+    "data/spieltag_6_2026_empfehlung_20261016T090611Z/basis_420.metadata.json": "fa5e0ca89c55bc3a134ffd381c92838c2a22844ac0cbec93211411dd4f3a5570"
+  },
+  "checks": [
+    "Nine finished matches with explicit final resultTypeID=2",
+    "API results equal imported database",
+    "One-to-one match IDs and teams",
+    "Frozen tips equal original persisted runs",
+    "Every score checked independently"
+  ],
+  "limitations": [
+    "No verified competitor ranking or winning sheet supplied; winning margin cannot be measured",
+    "Original predictions unchanged"
+  ]
+}

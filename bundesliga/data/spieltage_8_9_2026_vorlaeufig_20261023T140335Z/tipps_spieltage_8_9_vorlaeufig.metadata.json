@@ -1,0 +1,106 @@
+{
+  "run_id": "live-d1-c81524edcf86",
+  "promoted_team_priors": [
+    "FC Schalke 04",
+    "SC Paderborn 07",
+    "SV 07 Elversberg"
+  ],
+  "tip_strategy": "expected-points",
+  "target_points": null,
+  "contest_reports": [],
+  "model_version": "dynamic-dixon-coles-0.2",
+  "as_of": "2026-10-23T13:55:16",
+  "intercept": 0.2618702412607943,
+  "home_advantage": 0.2412001804001373,
+  "rho": -0.04391088603643929,
+  "training_matches": 1853,
+  "config": {
+    "lookback_years": 6.0,
+    "half_life_days": 270.0,
+    "ridge": 0.08,
+    "min_training_matches": 250,
+    "max_goals": 10,
+    "form_matches": 8,
+    "form_half_life_matches": 3.5,
+    "form_weight": 0.1,
+    "venue_form_weight": 0.0,
+    "h2h_matches": 6,
+    "h2h_half_life_days": 730.0,
+    "h2h_weight": 0.05,
+    "market_value_weight": 0.05,
+    "market_decay_matches": 10,
+    "bookmaker_weight": 0.0,
+    "bookmaker_snapshot_type": "captured",
+    "use_lower_league_priors": true,
+    "lower_league_scale": 0.85,
+    "promotion_attack_penalty": -0.2,
+    "promotion_defense_penalty": 0.2,
+    "promotion_prior_matches": 10
+  },
+  "status": "provisional_fallback",
+  "generated_at_utc": "2026-10-23T14:03:35.688146+00:00",
+  "information_cutoff_utc": "2026-10-23T13:55:16Z",
+  "matchdays": [
+    8,
+    9
+  ],
+  "rows": 18,
+  "persisted_to_database": false,
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 54
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 72
+    }
+  },
+  "reference_matchday_7": {
+    "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/empfehlung_270.csv",
+    "sha256": "e9eb696f7810c96377772886619815182edef97ebd61f8e8c47417057cbeb5b7"
+  },
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/D1.json",
+      "sha256": "280f2e8d7383fda61167224bfe2a9098f71f6f01a9984313cc0611560b7a01c3"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/D2.json",
+      "sha256": "c6d2e6d636d9db71976b9ca6d7d7d14518e58b7dc5cb9d33d998582b9bf52597"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/6",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/spieltag_6.json",
+      "sha256": "b3e388e570278f5b84fd0e74e3cc22b2f9dd4725e78818495a86e55bff9cf47a"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/odds_D1.json",
+      "sha256": "4382763df7e0a7ca6d5924e2de826f1085500b4b982a693cacc06df130cbeb4d"
+    }
+  ],
+  "checks": [
+    "Nine scheduled fixtures per matchday, unique match IDs, shared cutoff before all games",
+    "Same configuration and information cutoff as matchday 7; its nine tips and probabilities reproduce",
+    "All 18 score distributions and maximum expected 4/3/2 point tips independently verified",
+    "No bookmaker probabilities used"
+  ],
+  "notes": [
+    "Computed before matchday 7; matchdays 7 and 8 results are unknown and not simulated into training.",
+    "Fallback sheets ready for user entry; no submission to the external app performed.",
+    "Refresh before each round with new results, current team news and comparison odds; explicitly compare changes against these frozen sheets."
+  ],
+  "files": [
+    {
+      "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.csv",
+      "sha256": "f396cc7f011d55a20e0abdff96c4ee37d4fde3cdcf87da522148d571cb46d637"
+    },
+    {
+      "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.xlsx",
+      "sha256": "b00b9c1ba2c9de693b082d0cdb682866f6d0cd7b5ca372cc7cb07dd31fc86d4c"
+    }
+  ]
+}

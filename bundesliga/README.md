@@ -6,7 +6,27 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
-**Stand 16.10.2026, vor Spieltag 6:** Die
+**Stand 23.10.2026, vor Spieltag 7:** Der angenommene Zettel für
+[Spieltag 6](Review/Spieltag%206/AUSWERTUNG.md) erzielte **20 Punkte**, die
+eingefrorene 420-Tage-Quotenvariante **17**. Elversbergs 4:3 brachte dem
+2:1-Tipp drei zusätzliche Punkte. Drei exakte Treffer; eine verifizierte
+Platzierung oder Gewinnerpunktzahl liegt nicht vor.
+
+Die [neue Empfehlung für Spieltag 7](Review/Spieltag%207/EMPFEHLUNG.md)
+verwendet die unveränderte 270-Tage-Regel nach frischem Ergebnisimport beider
+Ligen und Quotenabruf. Auftakt heute: Stuttgart–Mönchengladbach, 20:30 Uhr
+Berliner Zeit, Tipp 2:1. Gegenüber der Vergleichsmethode unterscheiden sich
+nur Augsburg–Union (2:1 statt 1:0) und Freiburg–Bayern (1:3 statt 1:2).
+Der Nutzer hat den Zettel am 23.10. angenommen und in der App eingetragen.
+
+Die [vorläufigen Zettel für Spieltag 8 und 9](Review/Spieltage%208%20und%209/VORLAEUFIG.md)
+sind als Rückfalloption gespeichert und laut Nutzer bereits in der Tipp-App
+eingetragen. Sie
+verwenden denselben Informationsstand und dieselbe 270-Tage-Regel wie
+Spieltag 7. Vor dem jeweiligen Spieltag neu rechnen und Änderungen gegenüber
+diesen eingefrorenen Vorabzetteln ausweisen.
+
+**Vorheriger Stand 16.10.2026, vor Spieltag 6:** Die
 [frische Empfehlung](Review/Spieltag%206/EMPFEHLUNG.md) verwendet weiterhin
 270 Tage ohne Quotenübernahme. Ergebnisse beider Ligen und Vergleichsquoten
 sind aktualisiert. Einzige Änderung gegenüber dem Vorabzettel:

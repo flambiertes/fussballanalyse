@@ -1,0 +1,80 @@
+{
+  "as_of_utc": "2026-10-23T13:55:16+00:00",
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 54
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 72
+    }
+  },
+  "fetched_at_utc": "2026-10-23T13:53:51.640783+00:00",
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/D1.json",
+      "sha256": "280f2e8d7383fda61167224bfe2a9098f71f6f01a9984313cc0611560b7a01c3"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/D2.json",
+      "sha256": "c6d2e6d636d9db71976b9ca6d7d7d14518e58b7dc5cb9d33d998582b9bf52597"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/6",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/spieltag_6.json",
+      "sha256": "b3e388e570278f5b84fd0e74e3cc22b2f9dd4725e78818495a86e55bff9cf47a"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_7_2026_20261023T135349Z/odds_D1.json",
+      "sha256": "4382763df7e0a7ca6d5924e2de826f1085500b4b982a693cacc06df130cbeb4d"
+    }
+  ],
+  "odds_status": "HTTP 200",
+  "odds_import_status": "Imported 349 bookmaker snapshots",
+  "run_ids": {
+    "empfehlung_270": "live-d1-9be49a85fbaa",
+    "basis_420": "live-d1-ff1609d48f47"
+  },
+  "status": "recommendation; not confirmed accepted or submitted",
+  "checks": [
+    "Both leagues freshly imported",
+    "Nine unplayed matchday 7 games after shared cutoff",
+    "All 18 score distributions reconstructed",
+    "All tips independently checked for maximum expected 4/3/2 points",
+    "All nine matches have market coverage; latest bookmaker captures under 24 hours old"
+  ],
+  "files": [
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/basis_420.csv",
+      "sha256": "f22d455ad335927d3293e29e5f6167232de786f688ba99d2f4de34bbeea9e52f"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/basis_420.metadata.json",
+      "sha256": "df4a38c2bc18b949e0e7df3861dc27d18ec27a1ffa9f8ba5877b79b4e31197d9"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/empfehlung_270.csv",
+      "sha256": "e9eb696f7810c96377772886619815182edef97ebd61f8e8c47417057cbeb5b7"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/empfehlung_270.metadata.json",
+      "sha256": "f78ee1b0478871079e23b84f91aefa41fe53f1821b0c69740a2e0f8ae6ff1d3b"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/quoten_alter.csv",
+      "sha256": "8e8088ae63cca3bffd4086732dbe94d1c03114c9dfee8691acc2f58e45bb87f2"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/tipps_spieltag_7.xlsx",
+      "sha256": "637a382d6d117d57d0f0d50ce91b0e3f219bc98d9ccd44300889773d30ff7ecb"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/vergleich.csv",
+      "sha256": "97f00179f3c27faae956effb46abb5dab60aa3086e9a7317ce1ceb83f3a3090d"
+    }
+  ]
+}
