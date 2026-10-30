@@ -1,5 +1,5 @@
 {
-  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 and 6 and their evaluations, the 23 October matchday 7 recommendation, and provisional fallback sheets for matchdays 8 and 9; raw inputs and the local SQLite database are excluded.",
+  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 to 7 and their evaluations, the 30 October matchday 8 check, and original provisional sheets for matchdays 8 and 9; raw inputs and the local SQLite database are excluded.",
   "files": [
     {
       "path": "data/audit_frozen_models.py",
@@ -442,6 +442,21 @@
       "sha256": "619e8216f37d49f43c90f79a2f3c44a904e8aa0e58535578abd857252a11322e"
     },
     {
+      "path": "data/spieltag_7_2026_auswertung_20261030/auswertung.metadata.json",
+      "bytes": 1631,
+      "sha256": "e4150d46b4ed16a07993412c6c3f3626b0b5eae1c74f7a0bae645471be5f070e"
+    },
+    {
+      "path": "data/spieltag_7_2026_auswertung_20261030/auswertung.xlsx",
+      "bytes": 5811,
+      "sha256": "ca695bfd21d16d3e9294e7f7d76ffceb15392974cb494627bf38e6008fcc730d"
+    },
+    {
+      "path": "data/spieltag_7_2026_auswertung_20261030/vergleich.csv",
+      "bytes": 1009,
+      "sha256": "9bfdb6a65142c8010420ff60218dcb0b70d93c42d9fceb0695ac9ffbae3a916a"
+    },
+    {
       "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/basis_420.csv",
       "bytes": 4865,
       "sha256": "f22d455ad335927d3293e29e5f6167232de786f688ba99d2f4de34bbeea9e52f"
@@ -480,6 +495,51 @@
       "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/vergleich.csv",
       "bytes": 2073,
       "sha256": "97f00179f3c27faae956effb46abb5dab60aa3086e9a7317ce1ceb83f3a3090d"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/basis_420.csv",
+      "bytes": 5012,
+      "sha256": "fbae91e8fa532a37e7562fe988466b552fe147b0b98ff4c84bf3519476b33ae3"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/basis_420.metadata.json",
+      "bytes": 1219,
+      "sha256": "42244f850b3729e1cb87024438083d8ffa50730ce6417f52a1aabfd2935a9c3a"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/empfehlung_270.csv",
+      "bytes": 5023,
+      "sha256": "438c39f0e6878fba118a30ab6f5a2b583142f96f1a86ec648cbbe12ed552746d"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/empfehlung_270.metadata.json",
+      "bytes": 1219,
+      "sha256": "fbf9062141bba55b3c086be458de0620ada0c4b75643c57c0c0ed8aadd0333a7"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/erwartung_pruefung.csv",
+      "bytes": 1333,
+      "sha256": "13db0a45e0ee3bc759871f972948a3f989a9d34f5ecc4453829a6e7c266fdc0a"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/provenance.json",
+      "bytes": 4965,
+      "sha256": "66531d7c4d3a606982c64d298d0361f63504fefde4506ad07256a44ac3189532"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/quoten_alter.csv",
+      "bytes": 803,
+      "sha256": "2a51726ba3d192008695f400014580934f2572e36b1745403b7ebe90e2a32cca"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/tipps_spieltag_8.xlsx",
+      "bytes": 16655,
+      "sha256": "274035b05ebbaf335d61f52a04b99635a926ae411466f584d7e248fcb5f67ffa"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/vergleich.csv",
+      "bytes": 5223,
+      "sha256": "baf0ded4bbc8eef341db626f35f8fa0e10db2b34997688c81e95108ac6ca045e"
     },
     {
       "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.csv",

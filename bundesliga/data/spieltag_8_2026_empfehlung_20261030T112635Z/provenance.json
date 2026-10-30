@@ -1,0 +1,121 @@
+{
+  "as_of_utc": "2026-10-30T11:26:37+00:00",
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 63
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 81
+    }
+  },
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/D1.json",
+      "sha256": "b725c2f3e30a3320f75da9891a2cfd2b5b93aed231da16aab253cf81a6bd6b46",
+      "fetched_at_utc": "2026-10-30T11:26:36.266125+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/D2.json",
+      "sha256": "6ddbc39261be3a39d877007a6c1a2e17f69cb30cb5235e54e7c07d8d403f3698",
+      "fetched_at_utc": "2026-10-30T11:26:36.681973+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/7",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/spieltag_7.json",
+      "sha256": "8f4e60f2614a485418d2801abc0cc179ee5d4702b0eff1cf420f3969ec40517e",
+      "fetched_at_utc": "2026-10-30T11:26:36.949295+00:00"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/odds_D1.json",
+      "sha256": "1d2531f19d90c736846dfe61db9d4da5eb363c5ab4b780219cf02b18023f2fa8",
+      "fetched_at_utc": "2026-10-30T11:26:37.760564+00:00"
+    }
+  ],
+  "odds_status": "HTTP 200; imported 350 bookmaker snapshots; skipped 0 unmatched rows",
+  "run_ids": {
+    "empfehlung_270": "live-d1-062c239429c4",
+    "basis_420": "live-d1-4d58fb94d00b"
+  },
+  "provisional_input": {
+    "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.csv",
+    "sha256": "f396cc7f011d55a20e0abdff96c4ee37d4fde3cdcf87da522148d571cb46d637"
+  },
+  "changed_tips": 0,
+  "matchday_7_totals": {
+    "empfehlung_270": 13,
+    "basis_420": 11
+  },
+  "checks": [
+    "Both leagues freshly imported",
+    "Nine future unplayed matchday 8 fixtures at shared cutoff",
+    "All 18 distributions and expected 4/3/2 points independently checked",
+    "All nine games have bookmaker snapshots younger than 24h",
+    "Frozen preliminary predictions unchanged",
+    "Configuration exactly equals frozen preliminary configuration",
+    "Both persisted database runs match archived CSV predictions",
+    "Excel predictions match CSV",
+    "DFB fixture times and previous round finals independently cross-checked"
+  ],
+  "status": "recommendation; not confirmed accepted or submitted",
+  "files": [
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/basis_420.csv",
+      "sha256": "fbae91e8fa532a37e7562fe988466b552fe147b0b98ff4c84bf3519476b33ae3"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/basis_420.metadata.json",
+      "sha256": "42244f850b3729e1cb87024438083d8ffa50730ce6417f52a1aabfd2935a9c3a"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/empfehlung_270.csv",
+      "sha256": "438c39f0e6878fba118a30ab6f5a2b583142f96f1a86ec648cbbe12ed552746d"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/empfehlung_270.metadata.json",
+      "sha256": "fbf9062141bba55b3c086be458de0620ada0c4b75643c57c0c0ed8aadd0333a7"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/erwartung_pruefung.csv",
+      "sha256": "13db0a45e0ee3bc759871f972948a3f989a9d34f5ecc4453829a6e7c266fdc0a"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/quoten_alter.csv",
+      "sha256": "2a51726ba3d192008695f400014580934f2572e36b1745403b7ebe90e2a32cca"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/tipps_spieltag_8.xlsx",
+      "sha256": "274035b05ebbaf335d61f52a04b99635a926ae411466f584d7e248fcb5f67ffa"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/vergleich.csv",
+      "sha256": "baf0ded4bbc8eef341db626f35f8fa0e10db2b34997688c81e95108ac6ca045e"
+    }
+  ],
+  "review_sources": [
+    {
+      "url": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/7",
+      "purpose": "Independent final-result cross-check"
+    },
+    {
+      "url": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/8",
+      "purpose": "Fixture and Europe/Berlin kickoff verification"
+    },
+    {
+      "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707",
+      "purpose": "30 October probable teams and absences; no manual model adjustment"
+    },
+    {
+      "url": "https://www.dfb.de/news/zwei-spiele-sperre-fuer-augsburgs-bah",
+      "purpose": "Bah and Uduokhai two league match suspensions"
+    },
+    {
+      "url": "https://sv07elversberg.de/duell-der-tabellennachbarn-sve-will-mit-heimsieg-gegen-mainz-zurueck-in-die-erfolgsspur/",
+      "purpose": "Elversberg personnel and cup workload before Mainz"
+    }
+  ]
+}

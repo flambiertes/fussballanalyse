@@ -6,6 +6,19 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
+**Stand 30.10.2026, vor Spieltag 8:** Der [frische Check](Review/Spieltag%208/EMPFEHLUNG.md)
+bestätigt **alle neun bereits eingetragenen Vorabtipps unverändert**.
+Ergebnisse beider Ligen, Vergleichsquoten und aktuelle Personalnachrichten
+wurden geprüft; weiterhin dieselbe 270-Tage-Regel ohne Quotenübernahme.
+Auftakt heute Elversberg–Mainz, 20:30 Uhr MEZ, Tipp 2:1. Der Markt bevorzugt
+hier Mainz; auch Augsburg–Freiburg und Bremen–Hoffenheim bleiben knappe
+Heimsiegtipps gegen den Markt. Spieltag 9 bleibt vorläufig.
+
+Die [Auswertung von Spieltag 7](Review/Spieltag%207/AUSWERTUNG.md) ergibt
+**13 statt 11 Punkte** für den angenommenen Zettel gegenüber der eingefrorenen
+420-Tage-Quotenvariante. Dokumentierte Spieltage 3, 5, 6 und 7 zusammen:
+55 statt 57 Punkte. Die Regel bleibt unverändert.
+
 **Stand 23.10.2026, vor Spieltag 7:** Der angenommene Zettel für
 [Spieltag 6](Review/Spieltag%206/AUSWERTUNG.md) erzielte **20 Punkte**, die
 eingefrorene 420-Tage-Quotenvariante **17**. Elversbergs 4:3 brachte dem

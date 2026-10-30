@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 23.10.2026
+# Entscheidungen und Stand am 30.10.2026
 
 ## Ziel
 
@@ -112,6 +112,24 @@ Spieltag 7 zuerst dessen Ergebnisse auswerten und anschließend Spieltag 8 mit
 neuen Ergebnissen und Vergleichsquoten rechnen; Änderungen gegenüber dem
 eingetragenen Vorabzettel ausdrücklich zeigen. Vor Spieltag 9 entsprechend
 vorgehen. Die ursprünglichen Prognosen und Erstellungsmetadaten bleiben erhalten.
+
+## Auswertung Spieltag 7 und Check vor Spieltag 8
+
+Spieltag 7 erzielt [13 statt 11 Punkte](Spieltag%207/AUSWERTUNG.md), dank
+des exakten Freiburg–Bayern-Tipps 1:3. Die dokumentierten Spieltage 3, 5, 6
+und 7 ergeben zusammen 55 statt 57 Punkte; Spieltag 4 bleibt unbewertet.
+
+Der [Check vom 30.10., 12:26 MEZ](Spieltag%208/EMPFEHLUNG.md) bestätigt
+nach frischem Ergebnisimport beider Ligen und Quotenabruf **alle neun
+Vorabtipps von Spieltag 8 unverändert**. Kein Änderungsbedarf in der App.
+Elversberg–Mainz, Augsburg–Freiburg und Bremen–Hoffenheim bleiben unsichere
+Heimsiegtipps gegen den Markt. Die aktuelle Personallage wurde geprüft,
+aber keine manuelle Sonderregel eingeführt. Beide neuen Prognoseläufe sind
+separat eingefroren. Vor Spieltag 9 erneut aktualisieren; dessen ursprünglicher
+Vorabzettel und sämtliche früheren Prognosen bleiben erhalten.
+Der Nutzer hat den unveränderten Spieltag-8-Zettel am 30.10. angenommen und
+das Committen und Pushen beauftragt. Die externe App wurde nicht bedient;
+die ursprünglichen Erstellungsmetadaten bleiben unverändert.
 
 ## Ablauf nach jedem abgeschlossenen Spieltag
 

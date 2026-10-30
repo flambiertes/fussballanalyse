@@ -22,6 +22,8 @@ eine ausdrückliche Dateiliste für dieses Archiv. Die
 | Angenommener Spieltag 6 | `spieltag_6_2026_empfehlung_20261016T090611Z/` | Am 16.10. unverändert angenommene 270-Tage-Empfehlung, 420-Tage-Vergleich, Änderungen zum Vorabzettel, Quotenalter und Herkunftsmetadaten. |
 | Auswertung Spieltag 6 | `spieltag_6_2026_auswertung_20261023/` | 20 statt 17 Punkte, Endergebnisse, Einzelpunkte, Eingabeprüfsummen und Excel; [Bericht](Spieltag%206/AUSWERTUNG.md). |
 | Angenommener Spieltag 7 | `spieltag_7_2026_empfehlung_20261023T135516Z/` | Am 23.10. angenommen und laut Nutzer in der App eingetragen; 270-Tage-Empfehlung, 420-Tage-Vergleich, Konfigurationen, Quotenalter und Herkunft. |
+| Auswertung Spieltag 7 | `spieltag_7_2026_auswertung_20261030/` | 13 statt 11 Punkte, Endergebnisse, Einzelpunkte, Eingabeprüfsummen und Excel; [Bericht](Spieltag%207/AUSWERTUNG.md). |
+| Check vor Spieltag 8 | `spieltag_8_2026_empfehlung_20261030T112635Z/` | Alle neun Vorabtipps unverändert bestätigt; neue 270- und 420-Tage-Läufe, Vergleich, unabhängige Erwartungswertprüfung, Quotenalter und Excel; [Bericht](Spieltag%208/EMPFEHLUNG.md). |
 | Vorläufige Spieltage 8 und 9 | `spieltage_8_9_2026_vorlaeufig_20261023T140335Z/` | 18 Rückfalltipps, laut Nutzer am 23.10. bereits in der App eingetragen, zur späteren Aktualisierung; Excel, CSV und vollständige Metadaten; [Zettel](Spieltage%208%20und%209/VORLAEUFIG.md). |
 | Audit-Helfer | Die fünf ausgewählten `data/*.py` | Prüf- und Rekonstruktionsscripte der vorherigen Reviews. |
 

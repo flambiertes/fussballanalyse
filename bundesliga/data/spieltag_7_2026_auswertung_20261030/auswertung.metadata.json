@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-10-30T11:26:37+00:00",
+  "totals": {
+    "empfehlung_270": 13,
+    "basis_420": 11
+  },
+  "inputs": [
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/empfehlung_270.csv",
+      "sha256": "e9eb696f7810c96377772886619815182edef97ebd61f8e8c47417057cbeb5b7"
+    },
+    {
+      "path": "data/spieltag_7_2026_empfehlung_20261023T135516Z/basis_420.csv",
+      "sha256": "f22d455ad335927d3293e29e5f6167232de786f688ba99d2f4de34bbeea9e52f"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/D1.json",
+      "sha256": "b725c2f3e30a3320f75da9891a2cfd2b5b93aed231da16aab253cf81a6bd6b46",
+      "fetched_at_utc": "2026-10-30T11:26:36.266125+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/D2.json",
+      "sha256": "6ddbc39261be3a39d877007a6c1a2e17f69cb30cb5235e54e7c07d8d403f3698",
+      "fetched_at_utc": "2026-10-30T11:26:36.681973+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/7",
+      "path": "data/raw/spieltag_8_2026_20261030T112635Z/spieltag_7.json",
+      "sha256": "8f4e60f2614a485418d2801abc0cc179ee5d4702b0eff1cf420f3969ec40517e",
+      "fetched_at_utc": "2026-10-30T11:26:36.949295+00:00"
+    }
+  ],
+  "checks": [
+    "All nine explicit final results matched separate API round and database",
+    "Frozen predictions joined one-to-one by ID and teams",
+    "Every 4/3/2 score independently verified",
+    "Original prediction files unchanged"
+  ]
+}
