@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-11-06T11:54:03.484380+00:00",
+  "totals": {
+    "empfehlung_270": 8,
+    "basis_420": 8
+  },
+  "inputs": [
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/empfehlung_270.csv",
+      "sha256": "438c39f0e6878fba118a30ab6f5a2b583142f96f1a86ec648cbbe12ed552746d"
+    },
+    {
+      "path": "data/spieltag_8_2026_empfehlung_20261030T112635Z/basis_420.csv",
+      "sha256": "fbae91e8fa532a37e7562fe988466b552fe147b0b98ff4c84bf3519476b33ae3"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/D1.json",
+      "sha256": "2194b63aba45bbb14254e9e3ef394c6a2f32089153e2844bc14a3ef7eaad0acb",
+      "fetched_at_utc": "2026-11-06T11:52:33.917675+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/D2.json",
+      "sha256": "480cc2a206545dc20f3f76c192aa8a8844d51080440191a8f5c2211726fbe52a",
+      "fetched_at_utc": "2026-11-06T11:52:34.288501+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/8",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/spieltag_8.json",
+      "sha256": "218978b481c833c5891f377931e0987c720e505bd03dbebc2e0a664ce6c37b64",
+      "fetched_at_utc": "2026-11-06T11:52:34.517432+00:00"
+    }
+  ],
+  "independent_results_source": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/matchday/8",
+  "checks": [
+    "Nine explicit resultTypeID=2 finals agree with full season and database",
+    "Frozen predictions joined one-to-one by ID and team names",
+    "Every 4/3/2 score independently verified",
+    "Frozen input files unchanged"
+  ]
+}

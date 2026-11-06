@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 30.10.2026
+# Entscheidungen und Stand am 06.11.2026
 
 ## Ziel
 
@@ -130,6 +130,28 @@ Vorabzettel und sämtliche früheren Prognosen bleiben erhalten.
 Der Nutzer hat den unveränderten Spieltag-8-Zettel am 30.10. angenommen und
 das Committen und Pushen beauftragt. Die externe App wurde nicht bedient;
 die ursprünglichen Erstellungsmetadaten bleiben unverändert.
+
+## Auswertung Spieltag 8 und Empfehlung für Spieltag 9
+
+Der angenommene Zettel erzielt [8 statt 8 Punkte](Spieltag%208/AUSWERTUNG.md).
+Elversberg und Bremen bringen intern je zwei zusätzliche Punkte; der exakte
+Vergleichstipp Augsburg–Freiburg 1:2 gleicht diese aus. Kein exakter Treffer
+im angenommenen Zettel. Die fünf dokumentierten Spieltage 3, 5, 6, 7 und 8
+ergeben zusammen **63 statt 65 Punkte**; Spieltag 4 bleibt unbewertet.
+Die Regel und der allgemeine Code-Standard bleiben unverändert.
+
+Die [neue Empfehlung vom 06.11., 12:52 MEZ](Spieltag%209/EMPFEHLUNG.md)
+verwendet frische Endergebnisse beider Ligen und aktuelle Vergleichsquoten.
+Einzige Änderung zum vom Nutzer bereits eingetragenen Vorabzettel vom 23.10.:
+**Paderborn–Frankfurt 0:1 statt 1:2**. Die anderen acht Tipps bleiben gleich.
+Auftakt heute Hamburg–Mönchengladbach, 20:30 Uhr MEZ, Tipp 2:1.
+Beide aktuellen Methoden wählen dieselben Tendenzen; nur Freiburg–Union
+unterscheidet sich in der genauen Torzahl (2:1 statt 1:0).
+Personalnachrichten und Sperren sind geprüft; keine manuellen Anpassungen.
+Der Nutzer hat die neue Empfehlung am 06.11. angenommen und in der App
+gespeichert sowie das Committen und Pushen beauftragt. Die externe App wurde
+vom Assistenten nicht bedient. Beide neuen Läufe, Prüfungen, Konfigurationen und Exporte sind
+separat eingefroren. Originalzettel und ihre Erstellungsmetadaten bleiben erhalten.
 
 ## Ablauf nach jedem abgeschlossenen Spieltag
 

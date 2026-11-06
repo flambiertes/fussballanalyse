@@ -6,6 +6,20 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
+**Stand 06.11.2026, vor Spieltag 9:** Die [frische Empfehlung](Review/Spieltag%209/EMPFEHLUNG.md)
+ändert gegenüber dem bereits eingetragenen Vorabzettel nur
+**Paderborn–Frankfurt von 1:2 auf 0:1**. Acht Tipps bleiben gleich.
+Ergebnisse beider Ligen, Vergleichsquoten und Personalnachrichten sind geprüft;
+weiterhin dieselbe 270-Tage-Regel ohne Quotenübernahme. Auftakt heute
+Hamburg–Mönchengladbach, 20:30 Uhr MEZ, Tipp 2:1. Der Nutzer hat den
+aktualisierten Zettel am 06.11. angenommen und in der App gespeichert
+sowie das Committen und Pushen beauftragt.
+
+Die [Auswertung von Spieltag 8](Review/Spieltag%208/AUSWERTUNG.md) ergibt
+**8 statt 8 Punkte** gegenüber der eingefrorenen 420-Tage-Quotenvariante.
+Die dokumentierten Spieltage 3, 5, 6, 7 und 8 ergeben zusammen **63 statt 65 Punkte**.
+
+
 **Stand 30.10.2026, vor Spieltag 8:** Der [frische Check](Review/Spieltag%208/EMPFEHLUNG.md)
 bestätigt **alle neun bereits eingetragenen Vorabtipps unverändert**.
 Ergebnisse beider Ligen, Vergleichsquoten und aktuelle Personalnachrichten

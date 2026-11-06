@@ -24,6 +24,8 @@ eine ausdrückliche Dateiliste für dieses Archiv. Die
 | Angenommener Spieltag 7 | `spieltag_7_2026_empfehlung_20261023T135516Z/` | Am 23.10. angenommen und laut Nutzer in der App eingetragen; 270-Tage-Empfehlung, 420-Tage-Vergleich, Konfigurationen, Quotenalter und Herkunft. |
 | Auswertung Spieltag 7 | `spieltag_7_2026_auswertung_20261030/` | 13 statt 11 Punkte, Endergebnisse, Einzelpunkte, Eingabeprüfsummen und Excel; [Bericht](Spieltag%207/AUSWERTUNG.md). |
 | Check vor Spieltag 8 | `spieltag_8_2026_empfehlung_20261030T112635Z/` | Alle neun Vorabtipps unverändert bestätigt; neue 270- und 420-Tage-Läufe, Vergleich, unabhängige Erwartungswertprüfung, Quotenalter und Excel; [Bericht](Spieltag%208/EMPFEHLUNG.md). |
+| Auswertung Spieltag 8 | `spieltag_8_2026_auswertung_20261106/` | 8 statt 8 Punkte, Endergebnisse, Einzelpunkte, Eingabeprüfsummen und Excel; [Bericht](Spieltag%208/AUSWERTUNG.md). |
+| Angenommener Spieltag 9 | `spieltag_9_2026_empfehlung_20261106T115233Z/` | Am 06.11. angenommen und laut Nutzer in der App gespeichert. Eine Änderung zum Vorabzettel: Paderborn–Frankfurt 0:1 statt 1:2; neue 270- und 420-Tage-Läufe, Vergleich, Erwartungswertprüfung, Quotenalter und Excel; [Bericht](Spieltag%209/EMPFEHLUNG.md). |
 | Vorläufige Spieltage 8 und 9 | `spieltage_8_9_2026_vorlaeufig_20261023T140335Z/` | 18 Rückfalltipps, laut Nutzer am 23.10. bereits in der App eingetragen, zur späteren Aktualisierung; Excel, CSV und vollständige Metadaten; [Zettel](Spieltage%208%20und%209/VORLAEUFIG.md). |
 | Audit-Helfer | Die fünf ausgewählten `data/*.py` | Prüf- und Rekonstruktionsscripte der vorherigen Reviews. |
 

@@ -1,0 +1,10 @@
+match_id,match_date,home_team,away_team,home_goals,away_goals,tip_home_empfehlung_270,tip_away_empfehlung_270,points_empfehlung_270,tip_home_basis_420,tip_away_basis_420,points_basis_420
+785bd70b548ed5b24810,2026-10-30 19:30:00,SV 07 Elversberg,1. FSV Mainz 05,4.0,1.0,2,1,2,1,2,0
+058e1b234b46777023f5,2026-10-31 14:30:00,Bayer 04 Leverkusen,Stuttgart,2.0,4.0,2,1,0,2,1,0
+41907b0d65da9c41e075,2026-10-31 14:30:00,FC Schalke 04,RB Leipzig,0.0,2.0,0,1,2,0,1,2
+54e8b13f921aebbce8f4,2026-10-31 14:30:00,Borussia Mönchengladbach,SC Paderborn 07,0.0,0.0,1,0,0,1,0,0
+b1a2c958de753d7d0110,2026-10-31 14:30:00,FC Augsburg,SC Freiburg,1.0,2.0,2,1,0,1,2,4
+c5bf87a9de16d72173d4,2026-10-31 14:30:00,SV Werder Bremen,TSG 1899 Hoffenheim,2.0,0.0,2,1,2,1,2,0
+48aee4c41139ca4c34bd,2026-10-31 17:30:00,Bayern München,Borussia Dortmund,2.0,2.0,2,1,0,2,1,0
+7c5e555bc14ddd01a85d,2026-11-01 14:30:00,1. FC Union Berlin,1. FC Köln,1.0,1.0,1,0,0,0,1,0
+8d3cc117f0c29245d367,2026-11-01 16:30:00,Eintracht Frankfurt,Hamburger SV,3.0,1.0,2,1,2,2,1,2

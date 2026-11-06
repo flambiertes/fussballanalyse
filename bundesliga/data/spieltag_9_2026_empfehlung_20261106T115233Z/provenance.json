@@ -1,0 +1,125 @@
+{
+  "stamp": "20261106T115233Z",
+  "as_of_utc": "2026-11-06T11:52:37+00:00",
+  "raw_dir": "data/raw/spieltag_9_2026_20261106T115233Z",
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/D1.json",
+      "sha256": "2194b63aba45bbb14254e9e3ef394c6a2f32089153e2844bc14a3ef7eaad0acb",
+      "fetched_at_utc": "2026-11-06T11:52:33.917675+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/D2.json",
+      "sha256": "480cc2a206545dc20f3f76c192aa8a8844d51080440191a8f5c2211726fbe52a",
+      "fetched_at_utc": "2026-11-06T11:52:34.288501+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/8",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/spieltag_8.json",
+      "sha256": "218978b481c833c5891f377931e0987c720e505bd03dbebc2e0a664ce6c37b64",
+      "fetched_at_utc": "2026-11-06T11:52:34.517432+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/9",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/spieltag_9.json",
+      "sha256": "327695ad30ef775d498721b04e2121fb710af2762e96ffe38ed77c6d60ad58fa",
+      "fetched_at_utc": "2026-11-06T11:52:34.675022+00:00"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_9_2026_20261106T115233Z/odds_D1.json",
+      "sha256": "edc73017b8ae3f33c33298e1d4d4a50d40541978357e0c818ddad7f5d4e127fb",
+      "fetched_at_utc": "2026-11-06T11:52:36.804451+00:00"
+    }
+  ],
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 72
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 90
+    }
+  },
+  "odds_imported": 309,
+  "odds_unmatched": 0,
+  "run_ids": {
+    "empfehlung_270": "live-d1-74d35bba250a",
+    "basis_420": "live-d1-d7caea62522a"
+  },
+  "provisional_input": {
+    "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.csv",
+    "sha256": "f396cc7f011d55a20e0abdff96c4ee37d4fde3cdcf87da522148d571cb46d637"
+  },
+  "changed_tips": 1,
+  "matchday_8_totals": {
+    "empfehlung_270": 8,
+    "basis_420": 8
+  },
+  "status": "recommendation; not confirmed accepted or submitted",
+  "checks": [
+    "Both leagues freshly imported",
+    "Nine future unplayed matchday 9 fixtures at shared UTC cutoff",
+    "Configuration exactly equals frozen provisional configuration",
+    "All 18 distributions and expected 4/3/2 maxima independently checked with scipy Poisson and direct score enumeration",
+    "Nine games have bookmaker snapshots younger than 24h",
+    "Both persisted database runs match archived predictions",
+    "Excel predictions match CSV",
+    "Frozen original prediction files unchanged"
+  ],
+  "review_sources": [
+    {
+      "url": "https://datencenter.dfb.de/en/competitions/bundesliga/seasons/2026-2027/matchday/8",
+      "purpose": "Final-result cross-check"
+    },
+    {
+      "url": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/9",
+      "purpose": "Europe/Berlin fixture cross-check"
+    },
+    {
+      "url": "https://www.bundesliga.com/de/bundesliga/news/voraussichtliche-aufstellungen-9-spieltag-ausfalle-verletzungen-sperren-39889",
+      "purpose": "Current personnel; no manual adjustment"
+    },
+    {
+      "url": "https://www.dfb.de/ueber-uns/verbandsrecht/sperren",
+      "purpose": "Current suspensions; no manual adjustment"
+    }
+  ],
+  "files": [
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/basis_420.csv",
+      "sha256": "5076f9ba5688e43b58ec82d1cab32c6f99ab9f45cc67829fe67564a98308ca24"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/basis_420.metadata.json",
+      "sha256": "afe2bf2a63647f6edac9aebf8c064c5e26c09ec368ea1ca982106f8b2f406125"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/empfehlung_270.csv",
+      "sha256": "815d3587ea8a2749ddca740f03f5cbee389b0371df0fb67f11d65e4a357810d7"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/empfehlung_270.metadata.json",
+      "sha256": "a28025aad67060288e1945aba6b0f3abe6572601e67d8ff8dc98e73a918699e9"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/erwartung_pruefung.csv",
+      "sha256": "0bf28863ee89dca4db77523c5df3a07a0c67c64e5145212a620f7d7a00639770"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/quoten_alter.csv",
+      "sha256": "3b675450da0099836d605baf46b53fdb50f02221a8540cc01e7b743a7ef6b87d"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/tipps_spieltag_9.xlsx",
+      "sha256": "c5669f508a73d8b2c8d3e098efa1e6f87e5e7d1fed35d401e5702465aa193ed9"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/vergleich.csv",
+      "sha256": "5923160d5951f087ace16dd3e8fea981801edce317c04e12b3b85f56332b0b9c"
+    }
+  ]
+}
