@@ -1,0 +1,108 @@
+{
+  "stamp": "20261113T092950Z",
+  "as_of_utc": "2026-11-13T09:29:53.865774+00:00",
+  "raw_dir": "data/raw/spieltag_10_2026_20261113T092950Z",
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/D1.json",
+      "sha256": "d9031af79423b993a439a9c55d6d540ee6926e9785a0d31c95a057039c0bc6bb",
+      "fetched_at_utc": "2026-11-13T09:29:51.549444+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/D2.json",
+      "sha256": "c0f4f4d3f385ebccc8b222eec47dc7ac2e9b3fc43a8e7b7c78cb4177d9c2984d",
+      "fetched_at_utc": "2026-11-13T09:29:52.033156+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/9",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/spieltag_9.json",
+      "sha256": "d017c056220ed32f3bbb7b81db02e6bc35cb168297651b08489eb8da62a89e1e",
+      "fetched_at_utc": "2026-11-13T09:29:52.426652+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/10",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/spieltag_10.json",
+      "sha256": "90ef87aafe4c721cec96e3746d9ab2aea6d597073b24394190d7d95c686d29f2",
+      "fetched_at_utc": "2026-11-13T09:29:52.989986+00:00"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/odds_D1.json",
+      "sha256": "d7395d3b13a1ad663dfc89a38a9478b06690a149f430545b7df733636c3d3c03",
+      "fetched_at_utc": "2026-11-13T09:29:53.865725+00:00"
+    }
+  ],
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 81
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 99
+    }
+  },
+  "odds_imported": 252,
+  "odds_unmatched": 0,
+  "run_ids": {
+    "empfehlung_270": "live-d1-ea4e8a513a6b",
+    "basis_420": "live-d1-69181d4844a5"
+  },
+  "matchday_9_totals": {
+    "empfehlung_270": 22,
+    "basis_420": 22
+  },
+  "status": "provisional; refresh before kickoff; not accepted or submitted",
+  "checks": [
+    "Fresh complete season imports for both leagues",
+    "Round 9 finals and round 10 fixtures cross-checked with DFB",
+    "Same accepted 270-day configuration; LIVE_CONFIG unchanged",
+    "18 probability distributions and expected point maxima independently checked",
+    "Fresh odds for all nine fixtures, with no unmatched rows",
+    "Persisted runs and Excel exports match CSVs",
+    "All previous manifest file hashes unchanged"
+  ],
+  "review_sources": [
+    "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/9",
+    "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/10",
+    "https://www.dfb.de/ueber-uns/verbandsrecht/sperren",
+    "https://fc.de/aktuelles/news/fc-woche-flutlichtspiel-und-laenderspielpause",
+    "https://www.fcaugsburg.de/article/brackelmann-zuruck-auf-dem-trainingsplatz-23683"
+  ],
+  "files": [
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/basis_420.csv",
+      "sha256": "efed1e083664fb42c9e4abb534a4d79a69ab41b247ba03e283132c0f3fe318c5"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/basis_420.metadata.json",
+      "sha256": "5331728a63b50cd92b99059f19b06f04218cd815558d57454f00fade0d567510"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/empfehlung_270.csv",
+      "sha256": "aa268996fed73a6862996fdacbd02db8db84f1fe626f89f2cce230d493cac8c6"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/empfehlung_270.metadata.json",
+      "sha256": "5c477aece7470bed6e3475ca9b65ce9c7f567866affb8b010529e774e3cd65b5"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/erwartung_pruefung.csv",
+      "sha256": "78e057dbd2d64ee935798018bb1631b2e8a783ba8cf1da84ea666ccac1912938"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/quoten_alter.csv",
+      "sha256": "da18a6809d9760ede570f290da6c42fdd18a798abd01481da78ec3ffb850a19a"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/tipps_spieltag_10.xlsx",
+      "sha256": "55887454c70b62c0b21fcd8bcdd8e68e2c945b9f3cb463e84fa23c7f0f815b12"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/vergleich.csv",
+      "sha256": "9dfe1925cde9aaab8c71f3accf0823454ecfa9bcd7e321a0f935026328dccf35"
+    }
+  ]
+}

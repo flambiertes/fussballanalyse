@@ -1,5 +1,5 @@
 {
-  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 to 9, evaluations through matchday 8, and original provisional sheets for matchdays 8 and 9; raw inputs and the local SQLite database are excluded.",
+  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 to 9, evaluations through matchday 9, original provisional sheets for matchdays 8 and 9, and provisional matchdays 10, 11 and 12 confirmed entered in the app on 13 November; raw inputs and the local SQLite database are excluded.",
   "files": [
     {
       "path": "data/audit_frozen_models.py",
@@ -307,6 +307,51 @@
       "sha256": "4d31c9c79274fa7b0ee337bb80393680416ecc13c73fb94c2bec0be361994296"
     },
     {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/basis_420.csv",
+      "bytes": 5011,
+      "sha256": "efed1e083664fb42c9e4abb534a4d79a69ab41b247ba03e283132c0f3fe318c5"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/basis_420.metadata.json",
+      "bytes": 1261,
+      "sha256": "5331728a63b50cd92b99059f19b06f04218cd815558d57454f00fade0d567510"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/empfehlung_270.csv",
+      "bytes": 5011,
+      "sha256": "aa268996fed73a6862996fdacbd02db8db84f1fe626f89f2cce230d493cac8c6"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/empfehlung_270.metadata.json",
+      "bytes": 1262,
+      "sha256": "5c477aece7470bed6e3475ca9b65ce9c7f567866affb8b010529e774e3cd65b5"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/erwartung_pruefung.csv",
+      "bytes": 1163,
+      "sha256": "78e057dbd2d64ee935798018bb1631b2e8a783ba8cf1da84ea666ccac1912938"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/provenance.json",
+      "bytes": 4483,
+      "sha256": "3440074322d3982fb5077ebcf2e37ab6f878b19133545db2a3f3ebaecfe7d86b"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/quoten_alter.csv",
+      "bytes": 807,
+      "sha256": "da18a6809d9760ede570f290da6c42fdd18a798abd01481da78ec3ffb850a19a"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/tipps_spieltag_10.xlsx",
+      "bytes": 11969,
+      "sha256": "55887454c70b62c0b21fcd8bcdd8e68e2c945b9f3cb463e84fa23c7f0f815b12"
+    },
+    {
+      "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/vergleich.csv",
+      "bytes": 1936,
+      "sha256": "9dfe1925cde9aaab8c71f3accf0823454ecfa9bcd7e321a0f935026328dccf35"
+    },
+    {
       "path": "data/spieltag_3_2026_empfehlung_20260909T051715Z/basis_420.csv",
       "bytes": 4882,
       "sha256": "4bd91e3ee0f0309f382b0e9711052682aea5d867886ff7d1a1b83397336a712b"
@@ -557,6 +602,21 @@
       "sha256": "baf0ded4bbc8eef341db626f35f8fa0e10db2b34997688c81e95108ac6ca045e"
     },
     {
+      "path": "data/spieltag_9_2026_auswertung_20261113/auswertung.metadata.json",
+      "bytes": 2081,
+      "sha256": "8ab823e05ed1d7abd4cff524c987cb00cbc6f6da6d6a23de0537e998e87baf64"
+    },
+    {
+      "path": "data/spieltag_9_2026_auswertung_20261113/auswertung.xlsx",
+      "bytes": 5666,
+      "sha256": "beccf6106120c6f00da76bd542b022ef2ee652227468995532b98a92735e949b"
+    },
+    {
+      "path": "data/spieltag_9_2026_auswertung_20261113/vergleich.csv",
+      "bytes": 818,
+      "sha256": "8d7bf5981f091677835adb05138af82f84081d5d25e223feebe9b5957d252b48"
+    },
+    {
       "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/basis_420.csv",
       "bytes": 4996,
       "sha256": "5076f9ba5688e43b58ec82d1cab32c6f99ab9f45cc67829fe67564a98308ca24"
@@ -600,6 +660,26 @@
       "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/vergleich.csv",
       "bytes": 5199,
       "sha256": "5923160d5951f087ace16dd3e8fea981801edce317c04e12b3b85f56332b0b9c"
+    },
+    {
+      "path": "data/spieltage_11_12_2026_vorlaeufig_20261113T095253Z/erwartung_pruefung.csv",
+      "bytes": 993,
+      "sha256": "01f387f9491aa104e59f264ed6aa87b6328ffbfba6b76e40067ffe3175b9564f"
+    },
+    {
+      "path": "data/spieltage_11_12_2026_vorlaeufig_20261113T095253Z/tipps_spieltage_11_12_vorlaeufig.csv",
+      "bytes": 9468,
+      "sha256": "38c875d62f6e962852ef541f58f957ccf398c1e7b08dcf76cae6918a97118e30"
+    },
+    {
+      "path": "data/spieltage_11_12_2026_vorlaeufig_20261113T095253Z/tipps_spieltage_11_12_vorlaeufig.metadata.json",
+      "bytes": 3922,
+      "sha256": "a012fc692c5e3e9dd561b0203ac9239b3f328a732fc40d7ae55235ce80a6411c"
+    },
+    {
+      "path": "data/spieltage_11_12_2026_vorlaeufig_20261113T095253Z/tipps_spieltage_11_12_vorlaeufig.xlsx",
+      "bytes": 12708,
+      "sha256": "b4b333b9a832d571823569af77310e273e6eb69791a4b2335b28c583ae351dfd"
     },
     {
       "path": "data/spieltage_8_9_2026_vorlaeufig_20261023T140335Z/tipps_spieltage_8_9_vorlaeufig.csv",

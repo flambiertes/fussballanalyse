@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 06.11.2026
+# Entscheidungen und Stand am 13.11.2026
 
 ## Ziel
 
@@ -152,6 +152,51 @@ Der Nutzer hat die neue Empfehlung am 06.11. angenommen und in der App
 gespeichert sowie das Committen und Pushen beauftragt. Die externe App wurde
 vom Assistenten nicht bedient. Beide neuen Läufe, Prüfungen, Konfigurationen und Exporte sind
 separat eingefroren. Originalzettel und ihre Erstellungsmetadaten bleiben erhalten.
+
+## Auswertung Spieltag 9 und vorläufiger Spieltag 10
+
+Der angenommene Zettel erzielt [22 statt 22 Punkte](Spieltag%209/AUSWERTUNG.md):
+zwei exakte Treffer, zwei weitere Differenztreffer und vier weitere
+Tendenztreffer. Nur das Remis Paderborn–Frankfurt wurde falsch getippt.
+Freiburg–Union, die einzige Abweichung zwischen den eingefrorenen Methoden,
+bringt beiden zwei Punkte. Eine Platzierung oder Gewinnerpunktzahl ist nicht
+verifiziert. Die sechs dokumentierten Spieltage 3, 5, 6, 7, 8 und 9 ergeben
+zusammen **85 statt 87 Punkte**; Spieltag 4 bleibt unbewertet.
+
+Die [vorläufige Empfehlung vom 13.11., 10:29 MEZ](Spieltag%2010/EMPFEHLUNG.md)
+verwendet frische Ergebnisse beider Ligen und aktuelle Vergleichsquoten bei
+unveränderter 270-Tage-Regel ohne Quotenübernahme. Elversberg–Freiburg und
+Augsburg–Mainz werden jeweils 2:1 statt 1:2 getippt; Bremen–Hamburg 1:0 statt
+2:1. Sechs genaue Tipps stimmen mit der eingefrorenen Vergleichsmethode überein.
+
+**Länderspielpause: Auftakt erst am Freitag, 20.11., Bayern–Köln,
+20:30 Uhr MEZ, Tipp 3:0.** Der neue Zettel bleibt bis zum frischen Check vor
+dem Auftakt vorläufig. Dann Änderungen gegenüber diesem Stand ausweisen.
+Aktuelle Sperren und einzelne Vereinsnachrichten sind dokumentiert; eine
+abschließende Personalprüfung ist erst nach der Länderspielpause sinnvoll.
+Keine manuellen Einzeländerungen. Beide neuen Läufe und ihre vollständigen
+Konfigurationen sind separat eingefroren; bestehende Archivdateien bleiben
+unverändert. Der Nutzer hat am 13.11. bestätigt, dass alle Tipps für die
+Spieltage 10, 11 und 12 in der App eingetragen sind, und das Committen und
+Pushen beauftragt. Die Zettel bleiben vorläufige Referenzen für den frischen
+Check vor jedem Spieltag.
+
+## Vorabzettel für Spieltag 11 und 12
+
+Auf Wunsch des Nutzers sind [beide Zettel vorläufig gespeichert](Spieltage%2011%20und%2012/VORLAEUFIG.md),
+damit die Tipps vorab in die App eingetragen werden können. Informationsstand
+13.11.2026, 10:29:53 MEZ, und vollständige 270-Tage-Konfiguration entsprechen
+dem heutigen Spieltag-10-Zettel. Die noch unbekannten Ergebnisse der Spieltage
+10 und 11 wurden nicht ins Training eingebaut. Der gemeinsame Lauf reproduziert
+alle neun Spieltag-10-Tipps und Wahrscheinlichkeiten; alle 18 neuen Tipps sind
+unabhängig auf maximale erwartete 4/3/2-Punkte geprüft.
+
+Vor jedem Spieltag Ergebnisse beider Ligen, Vergleichsquoten und Personalstand
+aktualisieren, mit derselben Regel rechnen und Änderungen gegenüber diesen
+eingefrorenen Originalzetteln ausdrücklich zeigen. Die Originale samt
+Erstellungsmetadaten bleiben erhalten. Der Nutzer hat die Eintragung aller
+Tipps für die Spieltage 10, 11 und 12 am 13.11. bestätigt und das Committen
+und Pushen beauftragt. Der Assistent hat die App nicht bedient.
 
 ## Ablauf nach jedem abgeschlossenen Spieltag
 

@@ -1,0 +1,50 @@
+{
+  "generated_at_utc": "2026-11-13T09:31:52.825317+00:00",
+  "totals": {
+    "empfehlung_270": 22,
+    "basis_420": 22
+  },
+  "inputs": [
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/empfehlung_270.csv",
+      "sha256": "815d3587ea8a2749ddca740f03f5cbee389b0371df0fb67f11d65e4a357810d7"
+    },
+    {
+      "path": "data/spieltag_9_2026_empfehlung_20261106T115233Z/basis_420.csv",
+      "sha256": "5076f9ba5688e43b58ec82d1cab32c6f99ab9f45cc67829fe67564a98308ca24"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/D1.json",
+      "sha256": "d9031af79423b993a439a9c55d6d540ee6926e9785a0d31c95a057039c0bc6bb",
+      "fetched_at_utc": "2026-11-13T09:29:51.549444+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/D2.json",
+      "sha256": "c0f4f4d3f385ebccc8b222eec47dc7ac2e9b3fc43a8e7b7c78cb4177d9c2984d",
+      "fetched_at_utc": "2026-11-13T09:29:52.033156+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/9",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/spieltag_9.json",
+      "sha256": "d017c056220ed32f3bbb7b81db02e6bc35cb168297651b08489eb8da62a89e1e",
+      "fetched_at_utc": "2026-11-13T09:29:52.426652+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/10",
+      "path": "data/raw/spieltag_10_2026_20261113T092950Z/spieltag_10.json",
+      "sha256": "90ef87aafe4c721cec96e3746d9ab2aea6d597073b24394190d7d95c686d29f2",
+      "fetched_at_utc": "2026-11-13T09:29:52.989986+00:00"
+    }
+  ],
+  "independent_results_source": "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/9",
+  "checks": [
+    "Nine explicit final results agree across round endpoint, season import, database and DFB",
+    "Frozen predictions joined one-to-one by match ID and both team names",
+    "Every 4/3/2 score independently verified",
+    "Frozen inputs unchanged"
+  ]
+}

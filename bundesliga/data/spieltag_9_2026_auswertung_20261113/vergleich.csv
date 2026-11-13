@@ -1,0 +1,10 @@
+match_id,home_team,away_team,home_goals,away_goals,empfehlung_270_home,empfehlung_270_away,empfehlung_270_points,basis_420_home,basis_420_away,basis_420_points
+9ce322c5351876468add,Hamburger SV,Borussia Mönchengladbach,3.0,1.0,2,1,2,2,1,2
+239e5f9eec3b55ce3b45,Borussia Dortmund,SV 07 Elversberg,2.0,1.0,2,1,4,2,1,4
+343025e1bbef30a7c67e,SC Paderborn 07,Eintracht Frankfurt,2.0,2.0,0,1,0,0,1,0
+ae0ebe8de63bfc1a0c0b,1. FSV Mainz 05,Bayern München,1.0,2.0,1,3,2,1,3,2
+ff3e89f4d23debd20a55,RB Leipzig,FC Augsburg,5.0,2.0,2,1,2,2,1,2
+0589dcce118d09914216,Stuttgart,SV Werder Bremen,1.0,0.0,2,1,3,2,1,3
+543a51b5d979e4977100,1. FC Köln,Bayer 04 Leverkusen,1.0,2.0,1,2,4,1,2,4
+e224768ebab9bdce0727,SC Freiburg,1. FC Union Berlin,2.0,0.0,2,1,2,1,0,2
+bf6adce52505204f08d4,TSG 1899 Hoffenheim,FC Schalke 04,2.0,1.0,1,0,3,1,0,3

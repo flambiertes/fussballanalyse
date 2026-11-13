@@ -6,6 +6,24 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
+**Stand 13.11.2026, Länderspielpause:** Spieltag 9 erzielt
+[22 statt 22 Punkte](Review/Spieltag%209/AUSWERTUNG.md), mit zwei exakten
+Treffern und acht richtigen Tendenzen. Die sechs dokumentierten Spieltage
+3, 5, 6, 7, 8 und 9 ergeben zusammen **85 statt 87 Punkte**.
+Die [vorläufige Empfehlung für Spieltag 10](Review/Spieltag%2010/EMPFEHLUNG.md)
+ist mit frischen Ergebnissen beider Ligen und Vergleichsquoten gespeichert.
+Auftakt erst **Freitag, 20.11., Bayern–Köln, 20:30 Uhr MEZ**, Tipp 3:0.
+Weiterhin dieselbe 270-Tage-Regel ohne Quotenübernahme. Elversberg–Freiburg
+und Augsburg–Mainz jeweils 2:1 gegen den Markt; vor dem Auftakt erneut prüfen.
+Der Nutzer hat am 13.11. bestätigt, dass die Tipps für Spieltag 10 bis 12
+in der App eingetragen sind, und das Committen und Pushen beauftragt.
+
+Auf Wunsch sind auch [Spieltag 11 und 12 vorläufig berechnet](Review/Spieltage%2011%20und%2012/VORLAEUFIG.md),
+mit demselben Informationsstand vom 13.11. und derselben Regel wie Spieltag 10.
+Die 18 Tipps sind zur Vorabeingabe in die App gespeichert. Vor jedem Spieltag
+frisch rechnen und nur die Änderungen gegenüber diesen Originalzetteln ausweisen;
+die Eintragung aller drei Spieltage ist vom Nutzer bestätigt.
+
 **Stand 06.11.2026, vor Spieltag 9:** Die [frische Empfehlung](Review/Spieltag%209/EMPFEHLUNG.md)
 ändert gegenüber dem bereits eingetragenen Vorabzettel nur
 **Paderborn–Frankfurt von 1:2 auf 0:1**. Acht Tipps bleiben gleich.
