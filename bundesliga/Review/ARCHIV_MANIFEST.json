@@ -1,5 +1,5 @@
 {
-  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 to 9, evaluations through matchday 9, original provisional sheets for matchdays 8 and 9, and provisional matchdays 10, 11 and 12 confirmed entered in the app on 13 November; raw inputs and the local SQLite database are excluded.",
+  "description": "Frozen evidence for the September 2026 decisions, accepted matchdays 5 to 9, evaluations through matchday 9, original provisional sheets for matchdays 8 and 9, and provisional matchdays 10, 11 and 12 confirmed entered in the app on 13 November; raw inputs and the local SQLite database are excluded. Fresh matchday 10 check of 20 November confirms all nine original tips; accepted by the user on 20 November with instructions to commit and push. Original generation metadata unchanged.",
   "files": [
     {
       "path": "data/audit_frozen_models.py",
@@ -305,6 +305,51 @@
       "path": "data/seven_plus_two_matchdays_1_2.csv",
       "bytes": 9458,
       "sha256": "4d31c9c79274fa7b0ee337bb80393680416ecc13c73fb94c2bec0be361994296"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/basis_420.csv",
+      "bytes": 5075,
+      "sha256": "6fc4a14c84661eda08ba53497e7ca232d181d7b84131ed905975639c51473bea"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/basis_420.metadata.json",
+      "bytes": 1237,
+      "sha256": "88483736b3654094cbc217951784c8500a6e6beaacdc3eec9683ab93d18d3b46"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/empfehlung_270.csv",
+      "bytes": 5077,
+      "sha256": "f8b83e94f3861505632796806d6900003bac1819c529e3779c657e553a675ebd"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/empfehlung_270.metadata.json",
+      "bytes": 1238,
+      "sha256": "2ec9d2ba2bae7879fd4ed7e1de99b46b144a8229d104e9d1270835a1b45d274e"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/erwartung_pruefung.csv",
+      "bytes": 1371,
+      "sha256": "acc58e131d9120544f8cbe4a95721b76131030d3abd8c15f4d77e34412fb964b"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/provenance.json",
+      "bytes": 5102,
+      "sha256": "d7acf626bd9c8b364bc3b5d73c5c93f5cb58ccd139b4aae2c74d26042d39b284"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/quoten_alter.csv",
+      "bytes": 18223,
+      "sha256": "e47b6fa28b0047be8b44fb985cb536b2f3d8007267c5118902c62832a759c0c4"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/tipps_spieltag_10.xlsx",
+      "bytes": 14413,
+      "sha256": "f063711635c1483109d0ade0a29e379277099483513e86b09003d1e242e075b7"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/vergleich.csv",
+      "bytes": 5835,
+      "sha256": "011509dd7999437cf9b77eb480232d23b47a783bc82ff594d66ba6f4b97ac0e5"
     },
     {
       "path": "data/spieltag_10_2026_vorlaeufig_20261113T092950Z/basis_420.csv",

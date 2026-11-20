@@ -1,4 +1,4 @@
-# Entscheidungen und Stand am 13.11.2026
+# Entscheidungen und Stand am 20.11.2026
 
 ## Ziel
 
@@ -197,6 +197,22 @@ eingefrorenen Originalzetteln ausdrücklich zeigen. Die Originale samt
 Erstellungsmetadaten bleiben erhalten. Der Nutzer hat die Eintragung aller
 Tipps für die Spieltage 10, 11 und 12 am 13.11. bestätigt und das Committen
 und Pushen beauftragt. Der Assistent hat die App nicht bedient.
+
+## Freitagscheck vor Spieltag 10
+
+Der [frische Lauf vom 20.11., 20:03 MEZ](Spieltag%2010/FREITAGSCHECK.md)
+bestätigt alle neun bereits eingetragenen Originaltipps vom 13.11.
+Ergebnisse beider Ligen und Vergleichsquoten sind frisch importiert;
+Personalnachrichten und Sperren geprüft. Die Regel bleibt unverändert.
+Elversberg–Freiburg und Augsburg–Mainz bleiben 2:1 gegen den Markt,
+Bremen–Hamburg 1:0 statt 2:1 bei der Vergleichsmethode. Zusätzliche
+Augsburger Ausfälle sind dokumentiert, aber keine expliziten Modellmerkmale.
+Beide neuen Läufe sind separat eingefroren und unabhängig geprüft.
+Der Nutzer hat den unveränderten Zettel am 20.11. angenommen und das
+Committen und Pushen beauftragt. Keine App-Bedienung durch den Assistenten;
+die ursprünglichen Erstellungsmetadaten bleiben unverändert.
+Die Originalzettel für Spieltag 10 bis 12 bleiben erhalten; vor Spieltag 11
+mit den Ergebnissen dieses Wochenendes erneut rechnen und Änderungen zeigen.
 
 ## Ablauf nach jedem abgeschlossenen Spieltag
 

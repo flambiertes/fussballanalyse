@@ -6,6 +6,17 @@ Turniersimulation und Ligaprognose konsequent.
 
 ## Aktueller Stand
 
+**Stand 20.11.2026, vor Spieltag 10:** Der [frische Check](Review/Spieltag%2010/FREITAGSCHECK.md)
+bestätigt **alle neun am 13.11. eingetragenen Tipps unverändert**.
+Ergebnisse beider Ligen, aktuelle Vergleichsquoten und Personalnachrichten
+sind geprüft. Gleiche 270-Tage-Regel ohne Quotenübernahme; Elversberg–Freiburg
+und Augsburg–Mainz bleiben je 2:1 gegen den Markt. Augsburg hat weitere
+Ausfälle, die das Modell nicht explizit berücksichtigt. Auftakt heute
+Bayern–Köln, **20:30 Uhr MEZ, 3:0**. Neue Läufe separat archiviert;
+Der Nutzer hat den unveränderten Zettel am 20.11. angenommen und das
+Committen und Pushen beauftragt. Spieltage 11 und 12
+bleiben vorläufige Originalzettel.
+
 **Stand 13.11.2026, Länderspielpause:** Spieltag 9 erzielt
 [22 statt 22 Punkte](Review/Spieltag%209/AUSWERTUNG.md), mit zwei exakten
 Treffern und acht richtigen Tendenzen. Die sechs dokumentierten Spieltage

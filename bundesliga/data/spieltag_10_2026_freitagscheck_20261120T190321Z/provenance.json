@@ -1,0 +1,117 @@
+{
+  "stamp": "20261120T190321Z",
+  "as_of_utc": "2026-11-20T19:03:23.372101+00:00",
+  "raw_dir": "data/raw/spieltag_10_2026_20261120T190321Z",
+  "sources": [
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026",
+      "path": "data/raw/spieltag_10_2026_20261120T190321Z/D1.json",
+      "sha256": "f47c702b6f6dbd1a899afd3e80083b7fbf52aa10f219e1f8d6205089c056ce64",
+      "fetched_at_utc": "2026-11-20T19:03:22.188878+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl2/2026",
+      "path": "data/raw/spieltag_10_2026_20261120T190321Z/D2.json",
+      "sha256": "2cd390279e3751027363101a277e0230a13ade0e5473125be058e823f8c2bed6",
+      "fetched_at_utc": "2026-11-20T19:03:22.565448+00:00"
+    },
+    {
+      "url": "https://api.openligadb.de/getmatchdata/bl1/2026/10",
+      "path": "data/raw/spieltag_10_2026_20261120T190321Z/spieltag_10.json",
+      "sha256": "db0d67bbe7b1c3b70fad2cd189e1f3b6d287ee60c59eba05a05b894f9e4c75ba",
+      "fetched_at_utc": "2026-11-20T19:03:22.773446+00:00"
+    },
+    {
+      "url": "https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds",
+      "path": "data/raw/spieltag_10_2026_20261120T190321Z/odds_D1.json",
+      "sha256": "f5a90a10d57c1e0c183148194a6d0fce283dab8111193bf5f8cd39d19dfa832c",
+      "fetched_at_utc": "2026-11-20T19:03:23.221327+00:00"
+    }
+  ],
+  "data_coverage": {
+    "D1": {
+      "matches": 306,
+      "finished": 81
+    },
+    "D2": {
+      "matches": 306,
+      "finished": 99
+    }
+  },
+  "odds_imported": 342,
+  "odds_unmatched": 0,
+  "output_dir": "data/spieltag_10_2026_freitagscheck_20261120T190321Z",
+  "run_ids": {
+    "empfehlung_270": "live-d1-03d88330184f",
+    "basis_420": "live-d1-be4d38b3a006"
+  },
+  "status": "fresh check; awaiting user acceptance; no external app action",
+  "changed_tips": 0,
+  "checks": [
+    "Same frozen configurations as 13 November",
+    "All nine identities matched by match ID and both teams",
+    "18 distributions and expected point maxima independently checked",
+    "Persisted run IDs and Excel match CSVs",
+    "All prior archive hashes unchanged"
+  ],
+  "odds_oldest_minutes": 2.57286835,
+  "odds_bookmakers_per_match": {
+    "2750ea80541882f9c126": 23,
+    "3316fa7ac906946c9d9b": 23,
+    "36e634cd85b812326463": 23,
+    "60c002b5c8a32cdcb917": 23,
+    "9b2a56a32859f233644c": 23,
+    "9f32fd0555e8bf50ecee": 23,
+    "9f82596cb2845157ad43": 23,
+    "d427b1ef82757baccfac": 23,
+    "dcd6011d77b46d12c423": 23
+  },
+  "files": [
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/basis_420.csv",
+      "sha256": "6fc4a14c84661eda08ba53497e7ca232d181d7b84131ed905975639c51473bea"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/basis_420.metadata.json",
+      "sha256": "88483736b3654094cbc217951784c8500a6e6beaacdc3eec9683ab93d18d3b46"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/empfehlung_270.csv",
+      "sha256": "f8b83e94f3861505632796806d6900003bac1819c529e3779c657e553a675ebd"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/empfehlung_270.metadata.json",
+      "sha256": "2ec9d2ba2bae7879fd4ed7e1de99b46b144a8229d104e9d1270835a1b45d274e"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/erwartung_pruefung.csv",
+      "sha256": "acc58e131d9120544f8cbe4a95721b76131030d3abd8c15f4d77e34412fb964b"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/quoten_alter.csv",
+      "sha256": "e47b6fa28b0047be8b44fb985cb536b2f3d8007267c5118902c62832a759c0c4"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/tipps_spieltag_10.xlsx",
+      "sha256": "f063711635c1483109d0ade0a29e379277099483513e86b09003d1e242e075b7"
+    },
+    {
+      "path": "data/spieltag_10_2026_freitagscheck_20261120T190321Z/vergleich.csv",
+      "sha256": "011509dd7999437cf9b77eb480232d23b47a783bc82ff594d66ba6f4b97ac0e5"
+    }
+  ],
+  "review_sources": [
+    "https://datencenter.dfb.de/de/competitions/bundesliga/seasons/2026-2027/matchday/10",
+    "https://www.dfb.de/ueber-uns/verbandsrecht/sperren",
+    "https://www.bundesliga.com/de/bundesliga/news/voraussichtliche-aufstellungen-10-spieltag-ausfalle-verletzungen-sperren-40039",
+    "https://www.fcaugsburg.de/article/baum-jeder-muss-verantwortung-uebernehmen-23704",
+    "https://www.scfreiburg.com/aktuell/nachrichten/maenner/vorberichte/2026/27/gute-personalsituation-vor-elversberg",
+    "https://fcbayern.com/de/spiele/profis/bundesliga/2026-2027/fc-bayern-muenchen-1-fc-koeln-21-11-2026/aufstellung"
+  ],
+  "personnel_review_limitations": [
+    "Injuries, suspensions and international workload are not explicit model features; no manual overrides",
+    "Bayern official lineup page returned no published lineup in the accessible response",
+    "Freiburg club preview reports everyone training except suspended Yilmaz; league overview still lists Muslija injured; club report takes precedence",
+    "Augsburg club article available in search excerpts; full page could not be opened"
+  ]
+}
